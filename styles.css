@@ -1,0 +1,199 @@
+        /*******************
+         BASE STYLES
+        ********************/
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fff;
+            color: #d02d00 !important;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            text-align: center;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 65px;
+            font-weight: normal;
+            color: #d02d00;
+            margin: 20px 0 10px 20px;
+            text-align: left;
+        }
+
+        .navbar-text {
+            font-size: 13px;
+            color: #d02d00;
+            text-align: left;
+            margin-left: 20px;
+        }
+
+        /*******************
+         TABLE LAYOUT
+        ********************/
+        .table-container {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0;
+        }
+        
+        th, td {
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid #d02d00;
+            padding: 10px;
+            text-align: left;
+            font-size: 15px;
+            color: #d02d00 !important;
+            vertical-align: top; /* so text lines up at top with images */
+            border-bottom: 1px solid #d02d00;
+        }
+    
+        .expanded td {
+  border-bottom: none !important;
+}
+
+        th {
+            cursor: pointer;
+            font-weight: normal;
+            position: relative;
+            padding-right: 20px;
+            border-bottom: 4px solid #d02d00; 
+            border-top: none;
+            color: #d02d00 !important;
+        }
+
+        /* Sorting arrow styles */
+        th .sort-arrow {
+            font-size: 12px;
+            position: relative;
+            margin-left: 5px;
+            display: inline-block;
+            transition: transform 0.3s;
+            color: rgba(192, 57, 43, 0.5); /* Rosso più chiaro */
+            transition: color 0.3s ease;
+        }
+
+        th .sort-arrow:hover {
+        color: #d02d00; /* Rosso pieno */
+        cursor: pointer;
+        }
+
+        th.desc .sort-arrow {
+            transform: rotate(180deg);
+        }
+        th:last-child .sort-arrow {
+            display: inline-block;
+        }
+     
+        thead tr {
+            border-top: none;
+            border-bottom: 2px solid #d02d00; /* Linea più spessa sotto il titolo */
+        }
+
+        
+        /*******************
+         TOGGLE INFO STYLES
+        ********************/
+        .toggle-info {
+            cursor: pointer;
+            font-weight: normal;
+            font-size: 16px;
+            color: #d02d00 !important;
+            text-align: center;
+        }
+
+        .hidden-info {
+            display: none;
+            background-color: #fff;
+            color: #d02d00 !important;
+            padding: 1.5em;
+        }
+
+        /* Film Title in hidden row */
+        .hidden-info .film-title {
+            font-size: 24px;
+            font-weight: normal;
+            margin: 0 0 0.5em;
+            color: #d02d00;
+        }
+
+        /* The film image, full width up to 300px or so */
+        .hidden-info .film-image {
+            max-width: 30%;
+            height: auto;
+            display: block;
+            margin: 1em 0;
+        }
+
+        .hidden-info .film-details {
+        display: flex;
+        flex-direction: row; /* Disposizione orizzontale su schermi grandi */
+        align-items: center;
+        gap: 1em;
+        }
+
+        .hidden-info .details-left {
+        flex: 0 0 30%; /* L'immagine occupa il 30% dello spazio */
+        max-width: 30%;
+        }
+
+        .hidden-info .details-right {
+        flex: 1; /* Il testo riempie lo spazio rimanente */
+        padding-left: 20px; /* Spazio tra immagine e testo */
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) { /* Tablet e telefoni */
+        .hidden-info .film-details {
+        flex-direction: column; /* Disposizione verticale su schermi piccoli */
+        align-items: center; /* Centra gli elementi */
+        }
+
+        .hidden-info .details-left,
+        .hidden-info .details-right {
+        max-width: 100%; /* Occupa tutta la larghezza */
+        text-align: center; /* Centra il testo */
+        padding-left: 0; /* Rimuove spazio laterale */
+        }
+
+        .hidden-info .film-image {
+        max-width: 80%; /* Ridimensiona l'immagine per adattarsi meglio */
+        height: auto;
+        }
+        }
+
+        .hidden-info .section-heading {
+            font-weight: bold;
+            margin: 0.5em 0 0.3em;
+            color: #d02d00;
+        }
+
+        .hidden-info p {
+            margin: 0.5em 0;
+        }
+
+        /* Trailer button styling */
+        .hidden-info .btn-watch-trailer {
+            display: inline-block;
+            background-color: #fff;
+            color: #d02d00;
+            border: 2px solid #d02d00;
+            padding: 0.5em 1em;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 1em;
+        }
+        .hidden-info .btn-watch-trailer:hover {
+            background-color: #d02d00;
+            color: #fff;
+        }

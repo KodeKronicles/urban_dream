@@ -1,0 +1,310 @@
+{
+    "meta": {
+        "startWith": 0,
+        "startNarrative": "Utopian Visions",
+        "startValue": "Walking City",
+        "narratives": [
+            "Utopian Visions",
+            "Outlawed & Forgotten",
+            "Urban Art Interventions",
+            "Radical Housing",
+            "Future Shock"
+        ]
+    },
+    "items": [
+        {
+            "@sort": "walking_city",
+            "shortName": "Walking City",
+            "image1": "img/walking_city.png",
+            "copyright": "\u00a9 Archigram",
+            "info": {
+                "Name": "Walking City",
+                "Date": "1964",
+                "Location": "United Kingdom",
+                "Type": "Unbuilt"
+            },
+            "shortInfo": "A visionary concept of mobile, self-sustaining cities that could move across landscapes.",
+            "longInfo": "docs/walking_city.html"
+        },
+        {
+            "@sort": "continuous_monument",
+            "shortName": "Continuous Monument",
+            "image1": "img/continuous_monument.png",
+            "copyright": "\u00a9 Superstudio",
+            "info": {
+                "Name": "Continuous Monument",
+                "Date": "1969",
+                "Location": "Italy",
+                "Type": "Unbuilt"
+            },
+            "shortInfo": "A satirical design of a megastructure that wraps around the Earth.",
+            "longInfo": "docs/continuous_monument.html"
+        },
+        {
+            "@sort": "plan_voisin",
+            "shortName": "Plan Voisin",
+            "image1": "img/plan_voisin.png",
+            "copyright": "\u00a9 Le Corbusier",
+            "info": {
+                "Name": "Plan Voisin",
+                "Date": "1925",
+                "Location": "France",
+                "Type": "Unbuilt"
+            },
+            "shortInfo": "A radical urban plan that proposed demolishing historic Paris to build modernist skyscrapers.",
+            "longInfo": "docs/plan_voisin.html"
+        },
+        {
+            "@sort": "nakagin_tower",
+            "shortName": "Nakagin Capsule Tower",
+            "image1": "img/nakagin_tower.png",
+            "copyright": "\u00a9 Kisho Kurokawa",
+            "info": {
+                "Name": "Nakagin Capsule Tower",
+                "Date": "1972",
+                "Location": "Japan",
+                "Type": "Built, Demolished"
+            },
+            "shortInfo": "A modular housing project made of interchangeable pods, designed for rapid urban life.",
+            "longInfo": "docs/nakagin_tower.html"
+        },
+        {
+            "@sort": "kowloon_walled_city",
+            "shortName": "Kowloon Walled City",
+            "image1": "img/kowloon_walled_city.png",
+            "copyright": "\u00a9 Various",
+            "info": {
+                "Name": "Kowloon Walled City",
+                "Date": "1950s-1993",
+                "Location": "Hong Kong",
+                "Type": "Demolished"
+            },
+            "shortInfo": "A hyper-dense, unregulated urban block that housed 33,000 people in an area of just 2.7 hectares.",
+            "longInfo": "docs/kowloon_walled_city.html"
+        },
+        {
+            "@sort": "torre_david",
+            "shortName": "Torre David",
+            "image1": "img/torre_david.png",
+            "copyright": "\u00a9 Urban-Think Tank",
+            "info": {
+                "Name": "Torre David",
+                "Date": "1990s-2014",
+                "Location": "Venezuela",
+                "Type": "Squatted, Cleared"
+            },
+            "shortInfo": "An abandoned skyscraper that became a vertical slum in Caracas.",
+            "longInfo": "docs/torre_david.html"
+        },
+        {
+            "@sort": "the_line",
+            "shortName": "The Line",
+            "image1": "img/the_line.png",
+            "copyright": "\u00a9 Saudi Arabia",
+            "info": {
+                "Name": "The Line",
+                "Date": "2023-Present",
+                "Location": "Saudi Arabia",
+                "Type": "Under Construction"
+            },
+            "shortInfo": "A controversial, 170km-long linear city designed to house 9 million people.",
+            "longInfo": "docs/the_line.html"
+        },
+        {
+            "@sort": "wrapped_reichstag",
+            "shortName": "Wrapped Reichstag",
+            "image1": "img/wrapped_reichstag.png",
+            "copyright": "\u00a9 Christo & Jeanne-Claude",
+            "info": {
+                "Name": "Wrapped Reichstag",
+                "Date": "1995",
+                "Location": "Germany",
+                "Type": "Temporary Art Intervention"
+            },
+            "shortInfo": "A temporary wrapping of Berlin\u2019s Reichstag in silver fabric, transforming its perception.",
+            "longInfo": "docs/wrapped_reichstag.html"
+        },
+        {
+            "@sort": "building_cuts",
+            "shortName": "Building Cuts",
+            "image1": "img/building_cuts.png",
+            "copyright": "\u00a9 Gordon Matta-Clark",
+            "info": {
+                "Name": "Building Cuts",
+                "Date": "1970s",
+                "Location": "USA & France",
+                "Type": "Destroyed after exhibition"
+            },
+            "shortInfo": "Architectural interventions where buildings were cut open to reveal hidden spaces.",
+            "longInfo": "docs/building_cuts.html"
+        },
+        {
+            "@sort": "mars_colony",
+            "shortName": "Mars Terraforming Plan",
+            "image1": "img/mars_colony.png",
+            "copyright": "\u00a9 NASA",
+            "info": {
+                "Name": "Mars Terraforming Plan",
+                "Date": "2020s & Beyond",
+                "Location": "Mars",
+                "Type": "Speculative"
+            },
+            "shortInfo": "A vision for sustainable human settlement on Mars using closed-loop urbanism.",
+            "longInfo": "docs/mars_colony.html"
+        },
+        {
+            "@sort": "no_stop_city",
+            "shortName": "No-Stop City",
+            "image1": "img/no_stop_city.png",
+            "copyright": "\u00a9 Archizoom",
+            "info": {
+                "Name": "No-Stop City",
+                "Date": "1970",
+                "Location": "Italy",
+                "Type": "Unbuilt"
+            },
+            "shortInfo": "A conceptual city without boundaries, an endless grid challenging consumerist urbanism.",
+            "longInfo": "docs/no_stop_city.html"
+        },
+        {
+            "@sort": "futuro_house",
+            "shortName": "Futuro House",
+            "image1": "img/futuro_house.png",
+            "copyright": "\u00a9 Matti Suuronen",
+            "info": {
+                "Name": "Futuro House",
+                "Date": "1968",
+                "Location": "Finland",
+                "Type": "Built, Later Removed in Many Cities"
+            },
+            "shortInfo": "A mass-produced, UFO-shaped house designed for modular and futuristic living.",
+            "longInfo": "docs/futuro_house.html"
+        },
+        {
+            "@sort": "neon_installations",
+            "shortName": "Neon Installations",
+            "image1": "img/neon_installations.png",
+            "copyright": "\u00a9 Dan Flavin",
+            "info": {
+                "Name": "Neon Installations",
+                "Date": "1960s-1980s",
+                "Location": "Global",
+                "Type": "Urban Art Intervention"
+            },
+            "shortInfo": "The use of neon lights to transform architectural perception and urban spaces.",
+            "longInfo": "docs/neon_installations.html"
+        },
+        {
+            "@sort": "led_news_ticker",
+            "shortName": "LED News Ticker",
+            "image1": "img/led_news_ticker.png",
+            "copyright": "\u00a9 BBC",
+            "info": {
+                "Name": "BBC\u2019s First LED News Ticker",
+                "Date": "1980",
+                "Location": "London, UK",
+                "Type": "Technology & Media Architecture"
+            },
+            "shortInfo": "The first electronic news ticker, turning buildings into media interfaces.",
+            "longInfo": "docs/led_news_ticker.html"
+        },
+        {
+            "@sort": "freedom_ship",
+            "shortName": "The Freedom Ship",
+            "image1": "img/freedom_ship.png",
+            "copyright": "\u00a9 Freedom Ship International",
+            "info": {
+                "Name": "Freedom Ship",
+                "Date": "1990s",
+                "Location": "Global",
+                "Type": "Unbuilt"
+            },
+            "shortInfo": "A proposed floating city that aimed to be a tax-free, sovereign urban nation.",
+            "longInfo": "docs/freedom_ship.html"
+        },
+        {
+            "@sort": "hyperloop",
+            "shortName": "Hyperloop Stations",
+            "image1": "img/hyperloop.png",
+            "copyright": "\u00a9 Various",
+            "info": {
+                "Name": "Hyperloop Stations",
+                "Date": "2010s-Present",
+                "Location": "Global",
+                "Type": "Under Development"
+            },
+            "shortInfo": "High-speed underground vacuum trains designed to reshape urban transport.",
+            "longInfo": "docs/hyperloop.html"
+        },
+        {
+            "@sort": "ai_designed_cities",
+            "shortName": "AI-Designed Cities",
+            "image1": "img/ai_designed_cities.png",
+            "copyright": "\u00a9 Various",
+            "info": {
+                "Name": "AI-Designed Cities",
+                "Date": "2020s & Beyond",
+                "Location": "Global",
+                "Type": "Emerging Technology"
+            },
+            "shortInfo": "Cities designed using artificial intelligence for optimal urban layouts.",
+            "longInfo": "docs/ai_designed_cities.html"
+        },
+        {
+            "@sort": "arcosanti",
+            "shortName": "Arcosanti",
+            "image1": "img/arcosanti.png",
+            "copyright": "\u00a9 Paolo Soleri",
+            "info": {
+                "Name": "Arcosanti",
+                "Date": "1970-Present",
+                "Location": "Arizona, USA",
+                "Type": "Experimental Eco-City"
+            },
+            "shortInfo": "A self-sufficient city experiment blending architecture and ecology.",
+            "longInfo": "docs/arcosanti.html"
+        },
+        {
+            "@sort": "rodent_crater",
+            "shortName": "Roden Crater",
+            "image1": "img/rodent_crater.png",
+            "copyright": "\u00a9 James Turrell",
+            "info": {
+                "Name": "Roden Crater",
+                "Date": "1970s-Present",
+                "Location": "Arizona, USA",
+                "Type": "Under Development"
+            },
+            "shortInfo": "An extinct volcano transformed into a massive light-based observatory.",
+            "longInfo": "docs/rodent_crater.html"
+        },
+        {
+            "@sort": "metaverse_urbanism",
+            "shortName": "Metaverse Urbanism",
+            "image1": "img/metaverse_urbanism.png",
+            "copyright": "\u00a9 Meta",
+            "info": {
+                "Name": "Metaverse Urbanism",
+                "Date": "2020s & Beyond",
+                "Location": "Virtual Space",
+                "Type": "Speculative"
+            },
+            "shortInfo": "Digital cities built in virtual environments for a decentralized future.",
+            "longInfo": "docs/metaverse_urbanism.html"
+        },
+        {
+            "@sort": "terraforming_mars",
+            "shortName": "Terraforming Mars",
+            "image1": "img/terraforming_mars.png",
+            "copyright": "\u00a9 NASA",
+            "info": {
+                "Name": "Terraforming Mars",
+                "Date": "2025 & Beyond",
+                "Location": "Mars",
+                "Type": "Speculative"
+            },
+            "shortInfo": "Designing planetary-scale urban systems for human survival on Mars.",
+            "longInfo": "docs/terraforming_mars.html"
+        }
+    ]
+}
