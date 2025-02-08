@@ -1,7 +1,137 @@
-.navbar-breaker {
-    margin-left:5%;
-    width:90%;
+@media (max-width: 575px) {
+    #dataRow1{
+        height:556px;
+    }
+
+    #imageCard {
+        width: 100%;
+        height: 488px;
+    }
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width:540px
+    }
+
+    #dataRow1{
+        height:560px;
+    }
+
+    #imageCard {
+        width: 258px;
+        height: 488px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width:720px
+    }
+
+    #dataRow1{
+        height:500px;
+    }
+
+    #imageCard {
+        width: 348px;
+        height: 428px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width:960px
+    }
+
+    #dataRow1{
+        height:460px;
+    }
+
+    #imageCard {
+        width: 456px;
+        height: 388px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container-itemvisualisation {
+        max-width:1140px
+    }
+
+    #dataRow1{
+        height:460px;
+    }
+
+    #imageCard {
+        width: 558px;
+        height: 388px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container-itemvisualisation {
+        max-width:1320px
+    }
+
+    #dataRow1{
+        height:500px;
+    }
+
+    #imageCard {
+        width: 648px;
+        height: 428px;
+    }
+}
+
+@media (min-width: 2000px) {
+    .container-itemvisualisation {
+        max-width:1620px
+    }
+
+    #dataRow1{
+        height:500px;
+    }
+
+    #imageCard {
+        width: 648px;
+        height: 428px;
+    }
+}
+
+.navbar-nav a {
+    color: #d02e02;
+}
+
+.navbar-nav a.nav-link.active {
+    color: #d02e02;
+    font-weight: bold;
+}
+
+main {
+    color:#d02e02;
+}
+
+.card-img{
+    width: 100%;
+    height: 100%;
+}
+
+.btn-group {
+    padding:5px !important;
+}
+
+#dataRow1 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     border-bottom-width: 4px; 
-    border-bottom-style: inset; 
+    border-bottom-style: solid; 
     border-bottom-color: #d02e02;
+    border-top-width: 4px; 
+    border-top-style: solid; 
+    border-top-color: #d02e02;
+}
+
+#infoTable *{
+    color:#d02e02;
 }

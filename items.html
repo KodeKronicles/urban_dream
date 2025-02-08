@@ -6,6 +6,7 @@
     <title>Items</title>
     <link href="css/items.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- <script src="itemvisualisation.js"></script> uncomment after finishing the json and updating js-->
   </head>
   <body>
     <nav class="navbar navbar-expand-lg">
@@ -48,7 +49,68 @@
     </nav>
     <div class="navbar-breaker"></div>
     <main>
-      
+      <div class="container text-center">
+        <div class="row" id="dataRow1">
+          <div class="col"> <!-- images -->
+            <div class="card" id="imageCard">
+              <img src="img/items-placeholder2.png" class="card-img object-fit-cover" alt="Placeholder image">
+            </div>
+          </div>
+          <div class="col"> <!-- table with key data -->
+            <table class="table d-md-table table-borderless" id="table">
+							<tbody class="table table-borderless text-end" id="infoTable">
+                <tr>
+                  <th></th>
+                  <th><h3>Plan Voisin</h3></th>
+                </tr>
+                <tr>
+                  <th class="text-start">Time</th>
+                  <td>1925</td>
+                </tr>
+                <tr>
+                  <th class="text-start">Status</th>
+                  <td>Unbuilt</td>
+                </tr>
+                <tr>
+                  <th class="text-start">Influence</th>
+                  <td>Urban renewal</td>
+                </tr>
+                <tr>
+                  <th class="text-start">Innovation</th>
+                  <td>Tower-in-the-park concept</td>
+                </tr>
+                <tr>
+                  <th class="text-start">Impact</th>
+                  <td>Proposed demolishing half of Paris</td>
+                </tr>
+                <tr>
+              </tbody>
+						</table>
+            <div class="btn-group btn-group-lg" role="group" aria-label="Previous/next item button group">
+              <button type="button" class="btn btn-danger">Prev</button>
+              <button type="button" class="btn btn-danger">Next</button>
+            </div>
+            <br>
+            <div class="btn-group btn-group-sm" role="group" aria-label="Narrative items list button group">
+              <button type="button" class="btn btn-danger">1</button>
+              <button type="button" class="btn btn-danger">2</button>
+              <button type="button" class="btn btn-danger">3</button>
+              <button type="button" class="btn btn-outline-danger">4</button>
+              <button type="button" class="btn btn-danger">5</button>
+              <button type="button" class="btn btn-danger">6</button>
+              <button type="button" class="btn btn-danger">7</button>
+              <button type="button" class="btn btn-danger">8</button>
+            </div>
+          </div>
+        </div>
+        <div class="row"> <!-- info for item -->
+          <h5 class="text-center" id="item-info-header"></h5>
+				  <p class="text" id="shortInfo"></p>
+				  <p class="text" id="mediumInfo">Le Corbusier's Plan Voisin was an ambitious and controversial vision for the future of Paris. He proposed replacing much of the city's historic core with a series of uniform skyscrapers arranged in a precise grid, surrounded by open green spaces. His goal was to eliminate the chaotic medieval street patterns and create a highly efficient, functionalist urban environment. While never realized, the plan demonstrated his belief in rational urban planning and the supremacy of the modernist high-rise as a solution to urban congestion.</p>
+          <p class="text" id="longInfo"></p>
+          <p style='text-align: center;'><a type="button" class="btn btn-outline-danger btn-sm" onclick="less()" style="--bs-btn-padding-x: .5rem; --bs-btn-color: #d02e02;">Tell me less</a> or <a type="button" class="btn btn-outline-danger btn-sm" onclick="muchMore()" style="--bs-btn-padding-x: .5rem; --bs-btn-color: #d02e02;">Tell me even more...</a></p>
+        </div>
+      </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
