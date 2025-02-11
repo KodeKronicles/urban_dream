@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link href="https://fonts.cdnfonts.com/css/futura-maxi-cg-bold" rel="stylesheet">
+<style>
+    @import url('https://fonts.cdnfonts.com/css/futura-maxi-cg-bold');
+</style>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="3.0.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>The City Reimagined</title>
+</head>
+
+<body>
+    <header class="bg-white">
+
+        <!--NAVBAR-->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center w-100">
+
+                    <!-- Burger Navbar Toggle Button -->
+                    <button class="navbar-toggler custom-toggler" id="navbarToggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                        <span class="toggler-bar"></span>
+                        <span class="toggler-bar"></span>
+                        <span class="toggler-bar"></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-danger mr-2 home-button" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-danger mr-2" href="#">Map</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-danger mr-2" href="#">Exhibition</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-danger mr-2" href="#">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-danger" href="#">Docs</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+<!--NAVBAR SMALL WINDOWS-->
+
+    <script>
+    $(document).ready(function() {
+        const toggler = $("#navbarToggler");
+        const navbar = $("#navbarNav");
+
+        // Show navbar on hover
+        toggler.mouseenter(function() {
+            if ($(window).width() < 992) { // Ensure this only happens on small screens
+                navbar.collapse('show');
+            }
+        });
+
+        // Hide navbar when mouse leaves
+        navbar.mouseleave(function() {
+            if ($(window).width() < 992) {
+                navbar.collapse('hide');
+            }
+        });
+    });
+    
+    document.addEventListener("DOMContentLoaded", function() {
+    const navbarToggleButton = document.querySelector('.navbar-toggler');
+    const navbar = document.getElementById('navbarNav');
+    const navbarLinks = document.querySelectorAll('.navbar-nav .nav-item');
+    
+    function setDropdownWidth() {
+        // Get the width of the first nav item
+        const buttonWidth = navbarLinks[0].offsetWidth;
+        
+        // Set the dropdown menu width to twice the width of the buttons
+        navbar.style.setProperty('--dropdown-width', `${buttonWidth * 2}px`);
+    }
+
+    // Call the function to set the dropdown width on page load
+    setDropdownWidth();
+
+    // Adjust width dynamically when window is resized
+    window.addEventListener('resize', function() {
+        setDropdownWidth();
+        });
+    }); 
+    </script>
+
+    <main>
+        <section class="parallax" section id="mainpage">
+                    <!--GREY BOX-->
+                    <div class="container">
+                        <div class="project-background">
+                            <div class="text-container">
+                                <div class="mx-auto text-center"> <!--logo - MIGHT REMOVE-->
+                                    <a class="navbar-brand" href="#"> <!--logo-->
+                                        <img src="logo.png" alt="Project Logo" class="img-fluid" style="max-width: 50px;">
+                                    </a>
+                                </div>
+                                <span class="project-name">The City Re- imagined</span>
+                                <p class="project-description">This is a brief description of the project.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--BACKROUND GRID-->
+                    <div class="container-fluid">
+                        <div class="row">
+                            <!--IMAGES-->
+                            <div class="background-grid">
+                            
+                                    <!-- Row 1 -->
+                                    <div class="image-container">
+                                        <img src="B&W/Corbusier.jpg" alt="Corbusier">
+                                        <div class="overlay"><a href="#">Corbusier</a></div>
+                                    </div>
+                                    <div class="image-container">
+                                        <img src="B&W/RS.jpg" alt="RS">
+                                        <div class="overlay"><a href="#">RS</a></div>
+                                    </div>
+                                    <div class="image-container">
+                                        <img src="B&W/Paolo Soleri.jpg" alt="Paolo Soleri">
+                                        <div class="overlay"><a href="#">Paolo Soleri</a></div>
+                                    </div>
+                                    <div class="image-container">
+                                        <img src="B&W/TASS.jpg" alt="TASS">
+                                        <div class="overlay"><a href="#">TASS</a></div>
+                                    </div>
+                                    <div class="image-container">
+                                        <img src="B&W/AI city.jpeg" alt="AI City">
+                                        <div class="overlay"><a href="#">AI City</a></div>
+                                    </div>
+                                
+                                    <!-- Row 2 -->
+                                    <div class="image-container">
+                                        <img src="B&W/Behind the Wall.jpg" alt="Behind the Wall">
+                                        <div class="overlay"><a href="#">Behind the Wall</a></div>
+                                    </div>
+                                    <div class="image-container">
+                                        <img src="B&W/Walking city.gif" alt="Walking City">
+                                        <div class="overlay"><a href="#">Walking City</a></div>
+                                    </div>
+                                    <div class="image-container">
+                                        <img src="B&W/HyperLoop.jpg" alt="HyperLoop">
+                                        <div class="overlay"><a href="#">HyperLoop</a></div>
+                                    </div>
+                                    <div class="image-container">
+                                        <img src="B&W/Lambot.jpg" alt="Lambot">
+                                        <div class="overlay"><a href="#">Lambot</a></div>
+                                    </div>
+                                    <div class="image-container">
+                                        <img src="B&W/Capsule tower.jpg" alt="Capsule Tower">
+                                        <div class="overlay"><a href="#">Capsule Tower</a></div>
+                                    </div>
+                                
+                                    <!-- Row 3 -->
+                                    <div class="image-container">
+                                        <img src="B&W/The Line.jpg" alt="The Line">
+                                        <div class="overlay"><a href="#">The Line</a></div>
+                                    </div>
+                                    <div class="image-container">
+                                        <img src="B&W/Arcosanti.jpg" alt="Arcosanti">
+                                        <div class="overlay"><a href="#">Arcosanti</a></div>
+                                    </div>
+                                    <div class="image-container">
+                                        <img src="B&W/Kowloon.jpg" alt="Kowloon">
+                                        <div class="overlay"><a href="#">Kowloon</a></div>
+                                    </div>
+                                    <div class="image-container">
+                                        <img src="B&W/Tacheles.jpg" alt="Tacheles">
+                                        <div class="overlay"><a href="#">Tacheles</a></div>
+                                    </div>
+                                    <div class="image-container">
+                                        <img src="B&W/SUPERSTUDIO REVISITADO.jpg" alt="Superstudio Revisitado">
+                                        <div class="overlay"><a href="#">Superstudio Revisitado</a></div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            const grid = document.querySelector(".background-grid");
+                            const clone = grid.cloneNode(true); // Clone for seamless looping
+                            grid.parentElement.appendChild(clone);
+
+                            let position = 0;
+                            const speed = 0.12; // Adjust for faster/slower movement
+
+                            function animate() {
+                                position -= speed;
+                                grid.style.transform = `translateX(${position}px)`;
+                                clone.style.transform = `translateX(${position + grid.offsetWidth}px)`;
+
+                                // Reset position when the first grid is fully offscreen
+                                if (position <= -grid.offsetWidth) {
+                                    position = 0;
+                                }
+                                requestAnimationFrame(animate);
+                            }
+                        animate();
+                    });
+                    </script>
+        </section>
+    </main>
+
+
+    
+        
+    <footer>
+        <p>© 2025 My Website</p>
+        <a href="https://github.com/KodeKronicles" target="_blank">
+            <img src="GHLogo.png" alt="GitHub" class="github-logo">
+        </a>
+    </footer>
+        
+    <script src="script.js"></script>
+
+
+</body>
+</html>
