@@ -24,6 +24,7 @@
                 "Type": "Unbuilt"
             },
             "shortInfo": "A visionary concept of mobile, self-sustaining cities that could move across landscapes.",
+            "mediumInfo": "Designed by the avant-garde British architectural group Archigram, Walking City was a radical departure from traditional urban planning. It imagined cities as mobile, intelligent structures that could migrate to different locations based on human needs, environmental conditions, or geopolitical shifts. Resembling massive robotic exoskeletons, these autonomous city units would be entirely self-sustaining, integrating housing, industry, and infrastructure into a singular, transportable entity. The idea was inspired by futuristic technology and the increasing mobility of society in the mid-20th century.",
             "longInfo": "docs/walking_city.html"
         },
         {
@@ -38,6 +39,7 @@
                 "Type": "Unbuilt"
             },
             "shortInfo": "A satirical design of a megastructure that wraps around the Earth.",
+            "mediumInfo": "Superstudio\u2019s Continuous Monument was a provocative critique of modernist urban planning. It imagined a future where architecture became an all-encompassing, uniform grid that spanned across continents, erasing geographical and cultural distinctions. This concept was a response to the rapid expansion of functionalist architecture and globalization, which Superstudio viewed as a homogenizing force. The reflective surfaces of the Continuous Monument symbolized a neutral, indifferent landscape that subsumed all historical, natural, and social diversity beneath it.",
             "longInfo": "docs/continuous_monument.html"
         },
         {
@@ -52,6 +54,7 @@
                 "Type": "Unbuilt"
             },
             "shortInfo": "A radical urban plan that proposed demolishing historic Paris to build modernist skyscrapers.",
+            "mediumInfo": "Le Corbusier\u2019s Plan Voisin was an ambitious and controversial vision for the future of Paris. He proposed replacing much of the city\u2019s historic core with a series of uniform skyscrapers arranged in a precise grid, surrounded by open green spaces. His goal was to eliminate the chaotic medieval street patterns and create a highly efficient, functionalist urban environment. While never realized, the plan demonstrated his belief in rational urban planning and the supremacy of the modernist high-rise as a solution to urban congestion.",
             "longInfo": "docs/plan_voisin.html"
         },
         {
@@ -66,6 +69,7 @@
                 "Type": "Built, Demolished"
             },
             "shortInfo": "A modular housing project made of interchangeable pods, designed for rapid urban life.",
+            "mediumInfo": "The Nakagin Capsule Tower was an architectural experiment that embodied Japan\u2019s Metabolist movement. Designed by Kisho Kurokawa, it consisted of small, prefabricated living capsules that could be detached and replaced as needed. The concept was aimed at creating a flexible, adaptable urban housing system that reflected the rapid changes of modern life. Each capsule was a self-contained micro-apartment, featuring built-in furniture and compact amenities, making it ideal for businessmen and transient urban dwellers.",
             "longInfo": "docs/nakagin_tower.html"
         },
         {
@@ -80,6 +84,7 @@
                 "Type": "Demolished"
             },
             "shortInfo": "A hyper-dense, unregulated urban block that housed 33,000 people in an area of just 2.7 hectares.",
+            "mediumInfo": "Kowloon Walled City was an extreme example of organic, unregulated urban development. Located in Hong Kong, it grew without any formal planning or governmental oversight. Buildings were constructed haphazardly, stacked on top of each other with little regard for safety regulations. Despite its chaotic appearance, the city developed its own order, with small businesses, doctors, schools, and food vendors operating within its tight confines.",
             "longInfo": "docs/kowloon_walled_city.html"
         },
         {
@@ -94,6 +99,7 @@
                 "Type": "Squatted, Cleared"
             },
             "shortInfo": "An abandoned skyscraper that became a vertical slum in Caracas.",
+            "mediumInfo": "",
             "longInfo": "docs/torre_david.html"
         },
         {
@@ -108,6 +114,7 @@
                 "Type": "Under Construction"
             },
             "shortInfo": "A controversial, 170km-long linear city designed to house 9 million people.",
+            "mediumInfo": "The Line is a futuristic urban megaproject in Saudi Arabia, promising a zero-carbon, car-free city built in a single continuous line stretching across the desert. Its design challenges traditional city layouts by eliminating roads and centralizing all services within a narrow, high-density corridor.",
             "longInfo": "docs/the_line.html"
         },
         {
@@ -122,6 +129,7 @@
                 "Type": "Temporary Art Intervention"
             },
             "shortInfo": "A temporary wrapping of Berlin\u2019s Reichstag in silver fabric, transforming its perception.",
+            "mediumInfo": "Christo and Jeanne-Claude\u2019s Wrapped Reichstag was an artistic intervention that transformed one of Germany\u2019s most symbolic political buildings into a temporary work of art. The massive structure was completely enveloped in silver fabric, forcing viewers to see it in a new way and raising questions about transparency, history, and national identity.",
             "longInfo": "docs/wrapped_reichstag.html"
         },
         {
@@ -136,6 +144,7 @@
                 "Type": "Destroyed after exhibition"
             },
             "shortInfo": "Architectural interventions where buildings were cut open to reveal hidden spaces.",
+            "mediumInfo": "Gordon Matta-Clark\u2019s Building Cuts were radical deconstructions of abandoned structures, revealing their internal anatomy. By slicing through walls, floors, and facades, he turned architecture itself into an art medium, exposing the hidden layers of urban space.",
             "longInfo": "docs/building_cuts.html"
         },
         {
@@ -150,6 +159,7 @@
                 "Type": "Speculative"
             },
             "shortInfo": "A vision for sustainable human settlement on Mars using closed-loop urbanism.",
+            "mediumInfo": "Mars Colony projects explore how architecture can adapt to extraterrestrial conditions, focusing on self-sustaining habitats capable of supporting human life in extreme environments.",
             "longInfo": "docs/mars_colony.html"
         },
         {
@@ -164,6 +174,7 @@
                 "Type": "Unbuilt"
             },
             "shortInfo": "A conceptual city without boundaries, an endless grid challenging consumerist urbanism.",
+            "mediumInfo": "Archizoom\u2019s No-Stop City was a conceptual project that imagined a city without architectural hierarchy\u2014an infinite urban grid where residential, commercial, and industrial spaces merged seamlessly. It challenged conventional zoning and the idea of buildings as distinct objects.",
             "longInfo": "docs/no_stop_city.html"
         },
         {
@@ -178,6 +189,7 @@
                 "Type": "Built, Later Removed in Many Cities"
             },
             "shortInfo": "A mass-produced, UFO-shaped house designed for modular and futuristic living.",
+            "mediumInfo": "The Futuro House, designed by Finnish architect Matti Suuronen, was a prefabricated home meant to be easily transported and assembled. Its spaceship-like design made it an icon of 1960s futuristic optimism.",
             "longInfo": "docs/futuro_house.html"
         },
         {
@@ -192,6 +204,7 @@
                 "Type": "Urban Art Intervention"
             },
             "shortInfo": "The use of neon lights to transform architectural perception and urban spaces.",
+            "mediumInfo": "Dan Flavin and other artists pioneered neon light installations that blurred the boundaries between architecture and sculpture. These works turned urban environments into dynamic, glowing landscapes, manipulating space through color and illumination.",
             "longInfo": "docs/neon_installations.html"
         },
         {
@@ -206,6 +219,7 @@
                 "Type": "Technology & Media Architecture"
             },
             "shortInfo": "The first electronic news ticker, turning buildings into media interfaces.",
+            "mediumInfo": "",
             "longInfo": "docs/led_news_ticker.html"
         },
         {
@@ -220,6 +234,7 @@
                 "Type": "Unbuilt"
             },
             "shortInfo": "A proposed floating city that aimed to be a tax-free, sovereign urban nation.",
+            "mediumInfo": "The Freedom Ship was an ambitious proposal for a permanently floating city, envisioned as an independent, mobile urban environment. Designed to be a self-sustaining economic hub, the ship would contain residential zones, businesses, schools, and entertainment centers, traveling the world without being bound to any country.",
             "longInfo": "docs/freedom_ship.html"
         },
         {
@@ -234,6 +249,7 @@
                 "Type": "Under Development"
             },
             "shortInfo": "High-speed underground vacuum trains designed to reshape urban transport.",
+            "mediumInfo": "Hyperloop technology, pioneered by Elon Musk, aims to revolutionize transportation by propelling passenger pods through low-pressure tubes at speeds exceeding 1,000 km/h. Its stations would be designed to integrate seamlessly with existing urban networks.",
             "longInfo": "docs/hyperloop.html"
         },
         {
@@ -248,6 +264,7 @@
                 "Type": "Emerging Technology"
             },
             "shortInfo": "Cities designed using artificial intelligence for optimal urban layouts.",
+            "mediumInfo": "AI-Designed Cities use machine learning to generate urban plans based on efficiency, environmental factors, and human behavior. These computational approaches optimize traffic flow, green space distribution, and architectural layouts in ways that human planners might overlook.",
             "longInfo": "docs/ai_designed_cities.html"
         },
         {
@@ -262,6 +279,7 @@
                 "Type": "Experimental Eco-City"
             },
             "shortInfo": "A self-sufficient city experiment blending architecture and ecology.",
+            "mediumInfo": "Arcosanti, founded by Paolo Soleri, is an ongoing architectural experiment that aims to integrate urban planning with ecological principles, promoting sustainable living.",
             "longInfo": "docs/arcosanti.html"
         },
         {
@@ -276,6 +294,7 @@
                 "Type": "Under Development"
             },
             "shortInfo": "An extinct volcano transformed into a massive light-based observatory.",
+            "mediumInfo": "James Turrell\u2019s Roden Crater is an ongoing project that transforms a natural volcanic formation into a space for experiencing light and celestial movements. The work merges art, architecture, and astronomy.",
             "longInfo": "docs/rodent_crater.html"
         },
         {
@@ -290,6 +309,7 @@
                 "Type": "Speculative"
             },
             "shortInfo": "Digital cities built in virtual environments for a decentralized future.",
+            "mediumInfo": "Metaverse urbanism explores how digital architecture can create immersive, functional spaces that exist entirely online. These virtual cities redefine the idea of place, ownership, and interaction.",
             "longInfo": "docs/metaverse_urbanism.html"
         },
         {
@@ -304,6 +324,7 @@
                 "Type": "Speculative"
             },
             "shortInfo": "Designing planetary-scale urban systems for human survival on Mars.",
+            "mediumInfo": "Terraforming Mars involves developing self-sustaining human settlements on the Red Planet. Architects and scientists are exploring domed cities, underground habitats, and bioengineered environments that could support long-term habitation.",
             "longInfo": "docs/terraforming_mars.html"
         }
     ]
