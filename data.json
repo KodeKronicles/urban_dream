@@ -8,7 +8,18 @@
             "Outlawed & Forgotten",
             "Urban Art Interventions",
             "Radical Housing",
-            "Future Shock"
+            "Future Shock",
+            "Technology and Innovation",
+            "Political & Social Impact"
+        ],
+        "narrativeItems": [
+            ["walking_city", "continuous_monument", "plan_voisin", "arcosanti", "freedom_ship", "futuro_house", "no_stop_city"],
+            ["kowloon_walled_city", "torre_david"],
+            ["wrapped_reichstag", "building_cuts", "rodent_crater", "neon_installations"],
+            ["nakagin_tower", "kowloon_walled_city", "torre_david", "arcosanti"],
+            ["the_line", "terraforming_mars", "metaverse_urbanism", "ai_designed_cities", "hyperloop"],
+            ["walking_city", "nakagin_tower", "the_line", "terraforming_mars", "metaverse_urbanism", "ai_designed_cities", "hyperloop", "freedom_ship", "led_news_ticker", "neon_installations", "futuro_house", "no_stop_city"],
+            ["continuous_monument", "plan_voisin", "the_line", "wrapped_reichstag", "building_cuts", "rodent_crater"]
         ]
     },
     "items": [
@@ -146,21 +157,6 @@
             "shortInfo": "Architectural interventions where buildings were cut open to reveal hidden spaces.",
             "mediumInfo": "Gordon Matta-Clark\u2019s Building Cuts were radical deconstructions of abandoned structures, revealing their internal anatomy. By slicing through walls, floors, and facades, he turned architecture itself into an art medium, exposing the hidden layers of urban space.",
             "longInfo": "docs/building_cuts.html"
-        },
-        {
-            "@sort": "mars_colony",
-            "shortName": "Mars Terraforming Plan",
-            "image1": "img/mars_colony.png",
-            "copyright": "\u00a9 NASA",
-            "info": {
-                "Name": "Mars Terraforming Plan",
-                "Date": "2020s & Beyond",
-                "Location": "Mars",
-                "Type": "Speculative"
-            },
-            "shortInfo": "A vision for sustainable human settlement on Mars using closed-loop urbanism.",
-            "mediumInfo": "Mars Colony projects explore how architecture can adapt to extraterrestrial conditions, focusing on self-sustaining habitats capable of supporting human life in extreme environments.",
-            "longInfo": "docs/mars_colony.html"
         },
         {
             "@sort": "no_stop_city",
