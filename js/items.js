@@ -8,14 +8,17 @@ var currentSort = ""
 
 document.addEventListener("DOMContentLoaded", async function(event) {
 	console.log(" DO NOT PEEP o((>ω< ))o")
-	fetch('https://raw.githubusercontent.com/KodeKronicles/citylife/main/json/unbuilt_city_complete.json')
+	//fetch('https://raw.githubusercontent.com/KodeKronicles/citylife/main/data.json')
+	fetch('https://raw.githubusercontent.com/KodeKronicles/citylife/refs/heads/main/data.json?token=GHSAT0AAAAAAC5GGPZGUF4DK7IS46DYARTGZ5N7RDA')
 	.then(response => response.json())
 	.then(data => {	
 		items = data.items
 		var startWith = data.meta.startWith
 		var item = items[startWith]
+		// add reading narrative info from url
 
 		narratives = data.meta.narratives
+		narrativeItems = data.meta.narrativeItems
 		currentNarrative = data.meta.startNarrative
 		currentValue = data.meta.startValue
 		prepareNarratives()
@@ -25,6 +28,7 @@ document.addEventListener("DOMContentLoaded", async function(event) {
 
 
 function prepareNarratives() {
+	// change this filter to check narrativeItems[index] instead
 	currentSelection = items.filter( i => 
 		i.info["Type of device"]?.includes(currentNarrative) 
 	)
@@ -40,6 +44,7 @@ function prepareNarratives() {
 }
 
 function showInfo(index) {
+	// change all this to display correct stuff
 	var item = currentSelection[index]
 	currentSort = item['@sort']
 	inner("fullHeader",item.info.Name);
@@ -65,16 +70,20 @@ function showInfo(index) {
 }
 
 function more() {
+	// possible change
 	hide("shortInfo") ;
 	show("mediumInfo") ;
 	hide("longInfo") ;
 }
+
 function less() {
+	//possible change
 	hide("mediumInfo") ;
 	show("shortInfo") ;
 	hide("longInfo") ;
 }
 function muchMore() {
+	// deffo change
 	var uri = byId("longInfo").dataset['uri'];
 	fetch(uri)
 	.then(response => response.text())
@@ -86,6 +95,7 @@ function muchMore() {
 	})
 }
 function hideLongInfo() {
+	//deffo change
 	hide("mediumInfo") ;
 	show("shortInfo") ;
 	hide("longInfo") ;
@@ -93,6 +103,7 @@ function hideLongInfo() {
 }
 
 function createInfoTable(item) {
+	//change!!!
 	inner("infoTable","",true) ;
 	for (i in item.info) {
 		if (item.info[i] !== null) {
@@ -118,6 +129,7 @@ function createInfoTable(item) {
 	}
 }
 function prepareNavigationButtons(index) {
+	//change
 	if (index > 0) {
 		byId("buttonPrevious").disabled = false
 		byId("buttonPrevious").onclick = () => showInfo(index-1)
@@ -140,6 +152,7 @@ function prepareNavigationButtons(index) {
 }
 
 function changeNarrative(narrative,value) {
+	//imo change
 		currentNarrative = narrative
 		currentValue = value
 		inner('narrative', currentNarrative+": "+currentValue)
@@ -159,11 +172,13 @@ function hide(id) {
 }
 
 function inner(id,content, emptyFirst=true) {
+	//wont be used?
 	if(emptyFirst) document.getElementById(id).innerHTML = "" ; 
 	document.getElementById(id).innerHTML += content ; 
 }
 
 function swapHeadersWithImages() {
+	//wont be used?
 	// Create an array of image URLs
 	const images = [
 		'img/icons/tag.png', // Replace with the actual URL for "Name"
