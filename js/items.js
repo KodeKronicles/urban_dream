@@ -1,5 +1,6 @@
 var items = []
 var narratives = []
+var narrativeItems = []
 var currentSelection = []
 var currentNarrative =""
 var currentValue=""
@@ -8,18 +9,21 @@ var currentSort = ""
 
 document.addEventListener("DOMContentLoaded", async function(event) {
 	console.log(" DO NOT PEEP o((>ω< ))o")
-	//fetch('https://raw.githubusercontent.com/KodeKronicles/citylife/main/data.json')
-	fetch('https://raw.githubusercontent.com/KodeKronicles/citylife/refs/heads/main/data.json?token=GHSAT0AAAAAAC5GGPZGUF4DK7IS46DYARTGZ5N7RDA')
+	fetch('https://gist.githubusercontent.com/krzywonos/dc70cfd2afc8186df65e016e4e6d8908/raw/7ee09a04d864eeb87aec34400d449d147a4dbf5e/data.json/') //TODO: change to a permanent link once we make the repo public
 	.then(response => response.json())
 	.then(data => {	
 		items = data.items
 		var startWith = data.meta.startWith
 		var item = items[startWith]
-		// add reading narrative info from url
-
 		narratives = data.meta.narratives
 		narrativeItems = data.meta.narrativeItems
-		currentNarrative = data.meta.startNarrative
+
+		narrativeObject = Object.fromEntries(
+			narratives.map(narrative => [narrative.split(" ")[0].toLowerCase(), narrative])
+		)
+		urlHash = window.location.hash.substring(1).toLowerCase();
+
+		currentNarrative = narrativeObject[urlHash] || data.meta.startNarrative
 		currentValue = data.meta.startValue
 		prepareNarratives()
 	})
@@ -28,9 +32,8 @@ document.addEventListener("DOMContentLoaded", async function(event) {
 
 
 function prepareNarratives() {
-	// change this filter to check narrativeItems[index] instead
-	currentSelection = items.filter( i => 
-		i.info["Type of device"]?.includes(currentNarrative) 
+	currentSelection = items.filter(item => 
+		narrativeItems[narratives.indexOf(currentNarrative)].includes(item['@sort'])
 	)
 	currentSelection.sort( (i,j) =>  
 		i['@sort'] < j['@sort'] ? -1 : 1 
@@ -44,119 +47,111 @@ function prepareNarratives() {
 }
 
 function showInfo(index) {
-	// change all this to display correct stuff
 	var item = currentSelection[index]
 	currentSort = item['@sort']
-	inner("fullHeader",item.info.Name);
-	var imgdiv = byId("img1-div");
-	var imgpath = "url("+item.image1+")";
-	imgdiv.style.backgroundImage = imgpath;
-	//imgdiv.style.display = "block";
-	imgdiv.style.height = "100%";
-	imgdiv.style.width = "100%";
-	imgdiv.style.backgroundRepeat = "no-repeat";
-	imgdiv.style.backgroundSize = "100% auto";
+	inner("currentNarrative", currentNarrative);
+	var image = byId("imageCardImage");
+	var imgpath = item.image1;
+	image.src = imgpath;
 	var copyrightBox = byId("copyrightBox");
 	copyrightBox.innerText = item.copyright;
-	//byId("img1").src = item.image1
-	//byId("img1").alt = item.shortName
 	createInfoTable(item)
-	swapHeadersWithImages();
-	inner("shortInfo","<p style='border-bottom-width: 4px; border-bottom-style: solid; border-bottom-color: #222828; padding-top: 1.5rem; padding-bottom: 0.5rem;'>"+item.shortInfo + "</p><p style='margin-top: 2rem; margin-bottom: 1rem; text-align: center;'>" + '<a type="button" class="btn btn-outline-danger btn-sm" onclick="more()" style="--bs-btn-padding-x: .5rem; --bs-btn-color: #222828;">Tell me more...</a></p>'); 
-	inner("mediumInfo","<p style='border-bottom-width: 4px; border-bottom-style: solid; border-bottom-color: #222828; padding-top: 1.5rem; padding-bottom: 0.5rem;'>"+item.mediumInfo + "</p><p style='margin-top: 2rem; margin-bottom: 1rem; text-align: center;'>" + '<a type="button" class="btn btn-outline-danger btn-sm" onclick="less()" style="--bs-btn-padding-x: .5rem; --bs-btn-color: #222828;">Tell me less</a> or <a type="button" class="btn btn-outline-danger btn-sm" onclick="muchMore()" style="--bs-btn-padding-x: .5rem; --bs-btn-color: #222828;">Tell me even more...</a></p>'); 
+	inner("shortInfo","<p>"+item.shortInfo + "</p><p text-align: center;'>" + '<a type="button" class="btn btn-outline-danger btn-sm" onclick="more()" style="--bs-btn-padding-x: .5rem; --bs-btn-color: #d02e02;">Tell me more...</a></p>'); 
+	inner("mediumInfo","<p>"+item.mediumInfo + "</p><p text-align: center;'>" + '<a type="button" class="btn btn-outline-danger btn-sm" onclick="less()" style="--bs-btn-padding-x: .5rem; --bs-btn-color: #d02e02;">Tell me less</a> or <a type="button" class="btn btn-outline-danger btn-sm" onclick="muchMore()" style="--bs-btn-padding-x: .5rem; --bs-btn-color: #d02e02;">Tell me even more...</a></p>');
 	byId("longInfo").dataset['uri'] = item.longInfo
 	currentValue = item.shortName
 	prepareNavigationButtons(index)
 }
 
 function more() {
-	// possible change
 	hide("shortInfo") ;
 	show("mediumInfo") ;
 	hide("longInfo") ;
 }
 
 function less() {
-	//possible change
 	hide("mediumInfo") ;
 	show("shortInfo") ;
 	hide("longInfo") ;
 }
+
 function muchMore() {
-	// deffo change
 	var uri = byId("longInfo").dataset['uri'];
-	fetch(uri)
+	fetch(uri) //only works on a published page
 	.then(response => response.text())
 	.then(data => {	
 		inner("longInfoContent",data) ;
-		hide("mainCard") ;
+		hide("itemContainer") ;
 		show("longInfo") ;
 		window.scrollTo(0,0)
 	})
 }
+
 function hideLongInfo() {
-	//deffo change
 	hide("mediumInfo") ;
 	show("shortInfo") ;
 	hide("longInfo") ;
-	show("mainCard") ;
+	show("itemContainer") ;
 }
 
 function createInfoTable(item) {
-	//change!!!
-	inner("infoTable","",true) ;
-	for (i in item.info) {
-		if (item.info[i] !== null) {
-			if(i == "Invention date"){
-				var items = item.info[i].split(", ")
-				var val = []
-				for (j in items) {
-					val.push('<a class="button" role="button" href="#" onclick="changeNarrative(\''+"Timeline"+'\',\''+items[j]+'\')">'+items[j]+'</a>')
-				}
-				inner("infoTable","<tr><th>"+i+"</th><td>"+val.join(", ")+"</td></tr>", false)
-			}
-			else if (narratives.includes(item.info[i])) {
-				var items = item.info[i].split(", ")
-				var val = []
-				for (j in items) {
-					val.push('<a class="button" role="button" href="#" onclick="changeNarrative(\''+item.info[i]+'\',\''+items[j]+'\')">'+items[j]+'</a>')
-				}
-			inner("infoTable","<tr><th>"+i+"</th><td>"+val.join(", ")+"</td></tr>", false)
-			} else {
-				inner("infoTable","<tr><th>"+i+"</th><td>"+item.info[i]+"</td></tr>", false)
-			}
-		}
-	}
+	inner("tableName", "<h3>"+ item.shortName +"</h3>")
+	inner("tableTime", item.info.Date)
+	inner("tablePlace", item.info.Location)
+	inner("tableType", item.info.Type)
+
+	var indices = narrativeItems
+		.map((list, index) => list.includes(item['@sort']) ? index : -1)
+		.filter(index => index !== -1);
+
+	var links = indices.map(index => 
+		`<a href="#" onclick="changeNarrative('${narratives[index]}', currentValue)">${narratives[index]}</a>`
+	).join(" | ");
+
+	inner("tableLinks", links);
 }
+
 function prepareNavigationButtons(index) {
-	//change
 	if (index > 0) {
 		byId("buttonPrevious").disabled = false
-		byId("buttonPrevious").onclick = () => showInfo(index-1)
-		byId("buttonPrevious").innerHTML = currentSelection[index-1].shortName		
+		byId("buttonPrevious").onclick = () => showInfo(index-1)		
 	} else {
 		byId("buttonPrevious").disabled = true
 		byId("buttonPrevious").onclick = null
-		byId("buttonPrevious").innerHTML = "--"
 	}
 	if (index < currentSelection.length-1) {
 		byId("buttonNext").disabled = false
 		byId("buttonNext").onclick = () => showInfo(index+1)
-		byId("buttonNext").innerHTML = currentSelection[index+1].shortName
 	} else {
 		byId("buttonNext").disabled = true
 		byId("buttonNext").onclick = null
-		byId("buttonNext").innerHTML = "--"
 	}
-	inner('narrative', currentNarrative+": "+currentValue)
+	const buttons = document.querySelectorAll('[role="group-2"] button');
+	buttons.forEach((button, i) => {
+		if (i < currentSelection.length) {
+			button.style.display = "inline-block";
+			// Reset all buttons to btn-danger
+			button.classList.remove('btn-outline-danger');
+			button.classList.add('btn-danger');
+			
+			// Set the button corresponding to the current index to btn-outline-danger
+			if (i === index) {
+				button.classList.remove('btn-danger');
+				button.classList.add('btn-outline-danger');
+			}
+			
+			button.onclick = () => showInfo(i);
+		} else {
+			button.style.display = "none";
+		}
+	});
 }
 
 function changeNarrative(narrative,value) {
-	//imo change
 		currentNarrative = narrative
 		currentValue = value
-		inner('narrative', currentNarrative+": "+currentValue)
 		prepareNarratives()
+
 }
 
 function byId(id) {
@@ -172,32 +167,6 @@ function hide(id) {
 }
 
 function inner(id,content, emptyFirst=true) {
-	//wont be used?
 	if(emptyFirst) document.getElementById(id).innerHTML = "" ; 
 	document.getElementById(id).innerHTML += content ; 
-}
-
-function swapHeadersWithImages() {
-	//wont be used?
-	// Create an array of image URLs
-	const images = [
-		'img/icons/tag.png', // Replace with the actual URL for "Name"
-		'img/icons/calendar.png', // Replace with the actual URL for "Invention date"
-		'img/icons/location-pin.png', // Replace with the actual URL for "Invention place"
-		'img/icons/settings.png' // Replace with the actual URL for "Type of device"
-	];
-
-	// Get all the elements in the table
-	const headers = document.querySelectorAll('#infoTable th');
-
-	// Loop through each header and replace text with image
-	headers.forEach((header, index) => {
-		if (images[index]) {
-			const img = document.createElement('img');
-			img.src = images[index];
-			img.alt = header.innerText; // Set alt text for accessibility
-			header.innerHTML = ''; // Clear the existing text
-			header.appendChild(img); // Append the image
-		}
-	});
 }
