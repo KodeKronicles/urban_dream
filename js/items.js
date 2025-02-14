@@ -9,7 +9,7 @@ var currentSort = ""
 
 document.addEventListener("DOMContentLoaded", async function(event) {
 	console.log(" DO NOT PEEP o((>ω< ))o")
-	fetch('https://gist.githubusercontent.com/krzywonos/dc70cfd2afc8186df65e016e4e6d8908/raw/7ee09a04d864eeb87aec34400d449d147a4dbf5e/data.json/') //TODO: change to a permanent link once we make the repo public
+	fetch('https://gist.githubusercontent.com/krzywonos/f71c6986338fc996d0a67527849428eb/raw/7cd037035068d342d47b7382a6248314fc9005df/data.json') //TODO: change to a permanent link once we make the repo public
 	.then(response => response.json())
 	.then(data => {	
 		items = data.items

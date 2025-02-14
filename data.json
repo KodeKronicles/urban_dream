@@ -26,7 +26,7 @@
         {
             "@sort": "walking_city",
             "shortName": "Walking City",
-            "image1": "img/walking_city.png",
+            "image1": "img/Walking city.gif",
             "copyright": "\u00a9 Archigram",
             "info": {
                 "Name": "Walking City",
@@ -41,7 +41,7 @@
         {
             "@sort": "continuous_monument",
             "shortName": "Continuous Monument",
-            "image1": "img/continuous_monument.png",
+            "image1": "img/SUPERSTUDIO REVISITADO.jpg",
             "copyright": "\u00a9 Superstudio",
             "info": {
                 "Name": "Continuous Monument",
@@ -56,7 +56,7 @@
         {
             "@sort": "plan_voisin",
             "shortName": "Plan Voisin",
-            "image1": "img/plan_voisin.png",
+            "image1": "img/Corbusier.jpg",
             "copyright": "\u00a9 Le Corbusier",
             "info": {
                 "Name": "Plan Voisin",
@@ -71,7 +71,7 @@
         {
             "@sort": "nakagin_tower",
             "shortName": "Nakagin Capsule Tower",
-            "image1": "img/nakagin_tower.png",
+            "image1": "img/Capsule tower.jpg",
             "copyright": "\u00a9 Kisho Kurokawa",
             "info": {
                 "Name": "Nakagin Capsule Tower",
@@ -86,7 +86,7 @@
         {
             "@sort": "kowloon_walled_city",
             "shortName": "Kowloon Walled City",
-            "image1": "img/kowloon_walled_city.png",
+            "image1": "img/Kowloon.jpg",
             "copyright": "\u00a9 Various",
             "info": {
                 "Name": "Kowloon Walled City",
@@ -101,7 +101,7 @@
         {
             "@sort": "torre_david",
             "shortName": "Torre David",
-            "image1": "img/torre_david.png",
+            "image1": "img/Torre de David.jpg",
             "copyright": "\u00a9 Urban-Think Tank",
             "info": {
                 "Name": "Torre David",
@@ -116,7 +116,7 @@
         {
             "@sort": "the_line",
             "shortName": "The Line",
-            "image1": "img/the_line.png",
+            "image1": "img/The Line.jpg",
             "copyright": "\u00a9 Saudi Arabia",
             "info": {
                 "Name": "The Line",
@@ -131,7 +131,7 @@
         {
             "@sort": "wrapped_reichstag",
             "shortName": "Wrapped Reichstag",
-            "image1": "img/wrapped_reichstag.png",
+            "image1": "img/Reichstag.jpg",
             "copyright": "\u00a9 Christo & Jeanne-Claude",
             "info": {
                 "Name": "Wrapped Reichstag",
@@ -146,7 +146,7 @@
         {
             "@sort": "building_cuts",
             "shortName": "Building Cuts",
-            "image1": "img/building_cuts.png",
+            "image1": "img/Behind the Wall.jpg",
             "copyright": "\u00a9 Gordon Matta-Clark",
             "info": {
                 "Name": "Building Cuts",
@@ -161,7 +161,7 @@
         {
             "@sort": "no_stop_city",
             "shortName": "No-Stop City",
-            "image1": "img/no_stop_city.png",
+            "image1": "img/No-stop city.jpg",
             "copyright": "\u00a9 Archizoom",
             "info": {
                 "Name": "No-Stop City",
@@ -176,7 +176,7 @@
         {
             "@sort": "futuro_house",
             "shortName": "Futuro House",
-            "image1": "img/futuro_house.png",
+            "image1": "img/FuturoHouse.jpg",
             "copyright": "\u00a9 Matti Suuronen",
             "info": {
                 "Name": "Futuro House",
@@ -191,7 +191,7 @@
         {
             "@sort": "neon_installations",
             "shortName": "Neon Installations",
-            "image1": "img/neon_installations.png",
+            "image1": "img/neon.jpg",
             "copyright": "\u00a9 Dan Flavin",
             "info": {
                 "Name": "Neon Installations",
@@ -206,7 +206,7 @@
         {
             "@sort": "led_news_ticker",
             "shortName": "LED News Ticker",
-            "image1": "img/led_news_ticker.png",
+            "image1": "img/ticker.jpg",
             "copyright": "\u00a9 BBC",
             "info": {
                 "Name": "BBC\u2019s First LED News Ticker",
@@ -221,7 +221,7 @@
         {
             "@sort": "freedom_ship",
             "shortName": "The Freedom Ship",
-            "image1": "img/freedom_ship.png",
+            "image1": "img/freedom ship.jpg",
             "copyright": "\u00a9 Freedom Ship International",
             "info": {
                 "Name": "Freedom Ship",
@@ -236,7 +236,7 @@
         {
             "@sort": "hyperloop",
             "shortName": "Hyperloop Stations",
-            "image1": "img/hyperloop.png",
+            "image1": "img/HyperLoop.jpg",
             "copyright": "\u00a9 Various",
             "info": {
                 "Name": "Hyperloop Stations",
@@ -251,7 +251,7 @@
         {
             "@sort": "ai_designed_cities",
             "shortName": "AI-Designed Cities",
-            "image1": "img/ai_designed_cities.png",
+            "image1": "img/AI Zaha Hadid.jpg",
             "copyright": "\u00a9 Various",
             "info": {
                 "Name": "AI-Designed Cities",
@@ -266,7 +266,7 @@
         {
             "@sort": "arcosanti",
             "shortName": "Arcosanti",
-            "image1": "img/arcosanti.png",
+            "image1": "img/Arcosanti.jpg",
             "copyright": "\u00a9 Paolo Soleri",
             "info": {
                 "Name": "Arcosanti",
@@ -281,7 +281,7 @@
         {
             "@sort": "rodent_crater",
             "shortName": "Roden Crater",
-            "image1": "img/rodent_crater.png",
+            "image1": "img/Roden-Crater-James-Turell.jpg",
             "copyright": "\u00a9 James Turrell",
             "info": {
                 "Name": "Roden Crater",
@@ -296,7 +296,7 @@
         {
             "@sort": "metaverse_urbanism",
             "shortName": "Metaverse Urbanism",
-            "image1": "img/metaverse_urbanism.png",
+            "image1": "img/AI city.jpeg",
             "copyright": "\u00a9 Meta",
             "info": {
                 "Name": "Metaverse Urbanism",
@@ -311,7 +311,7 @@
         {
             "@sort": "terraforming_mars",
             "shortName": "Terraforming Mars",
-            "image1": "img/terraforming_mars.png",
+            "image1": "img/Mars Terraforming.jpg",
             "copyright": "\u00a9 NASA",
             "info": {
                 "Name": "Terraforming Mars",
