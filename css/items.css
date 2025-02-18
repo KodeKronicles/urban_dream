@@ -146,6 +146,10 @@ main {
     font-family: "Futura", sans-serif;
 }
 
+#infoTable a{
+    padding-top: 0rem;
+}
+
 #disclaimer-container {
     padding-top: 2rem;
     border-top-width: 4px; 
