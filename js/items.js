@@ -50,9 +50,17 @@ function showInfo(index) {
 	var item = currentSelection[index]
 	currentSort = item['@sort']
 	inner("currentNarrative", currentNarrative);
-	var image = byId("imageCardImage");
-	var imgpath = item.image1;
-	image.src = imgpath;
+	//var image = byId("imageCardImage");
+	//var imgpath = item.image1;
+	//image.src = imgpath;
+	var imgdiv = byId("img1-div");
+	var imgpath = "url('"+item.image1+"')";
+	imgdiv.style.backgroundImage = imgpath;
+	//imgdiv.style.display = "block";
+	imgdiv.style.height = "100%";
+	imgdiv.style.width = "100%";
+	imgdiv.style.backgroundRepeat = "no-repeat";
+	imgdiv.style.backgroundSize = "cover";
 	var copyrightBox = byId("copyrightBox");
 	copyrightBox.innerText = item.copyright;
 	createInfoTable(item)
@@ -105,7 +113,7 @@ function createInfoTable(item) {
 		.filter(index => index !== -1);
 
 	var links = indices.map(index => 
-		`<a href="#" onclick="changeNarrative('${narratives[index]}', currentValue)">${narratives[index]}</a>`
+		`<a style="margin-bottom:10rem;" href="#" onclick="changeNarrative('${narratives[index]}', currentValue)">${narratives[index]}</a>`
 	).join(" | ");
 
 	inner("tableLinks", links);
