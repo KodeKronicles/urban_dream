@@ -53,6 +53,10 @@ NAV BAR
     padding-top: 0.25rem; /* Adjust top padding */
     padding-bottom: 0.45rem; /* Adjust bottom padding */
     padding-left: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 /* Custom styles for the navbar toggler */
@@ -66,7 +70,7 @@ NAV BAR
     position: relative;
     border: none;
     background: transparent;
-    padding: 5px;
+
 }
 
 /* Style the three bars */
@@ -89,11 +93,22 @@ NAV BAR
 
 /* Ensure dropdown behaves as a menu */
 @media (max-width: 992px) {
+    .navbar {
+        padding-left: ;
+    }
+    .navbar-toggler {
+        margin-left: auto; /* Pushes the button to the right */
+        border: none; /* Optional: Removes default border */
+        outline: none;
+        box-shadow: none;
+    }
     .navbar-collapse {
         position: absolute;
         top: 100%;
-        left: 78.8%;
-        transform: translateX(-50%);
+        right: 0;
+        /*left: 78.8%;*/
+        left: auto;
+        /*transform: translateX(-50%);*/
         width: auto;
         background: white;
         border-radius: 10px;
@@ -188,7 +203,8 @@ NAME BLOCK
 @media (max-width: 992px) { 
     .navbar-brand img {
         max-height: 40px; /* Reduce size on smaller screens */
-        margin-top: 8.4px;
+        margin-top: 1.5%;
+        
     }
 }
 
@@ -219,7 +235,7 @@ BACKROUND PICTURES
 /* Image container for each grid item */
 .image-container {
     width: 100%;
-    height: 200px; /* Set a fixed height for images */
+    height: auto; /* Set a fixed height for images */
     overflow: hidden !important;
 }
 
@@ -268,6 +284,57 @@ HOVER
 .image-container:hover .overlay {
     opacity: 1;
 }
+
+
+
+
+
+/***********
+SECTION 2
+***********/
+
+.parallax-section {
+    position: relative;
+    height: 100vh; /* Full-screen height */
+    background-color: white; /* Set the background to white */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black; /* Text color can be adjusted as needed */
+    font-size: 2rem;
+}
+
+.parallax-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+.parallax-section .container {
+    display: flex;
+    justify-content: space-between; /* This aligns the text and image on opposite sides */
+    align-items: center;
+}
+
+.parallax-section .text-container {
+    flex: 1; /* Takes up remaining space */
+    padding: 20px;
+}
+
+.parallax-section .image-container {
+    flex: 1; /* Takes up remaining space */
+    padding: 20px;
+}
+
+.parallax-section .image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
 
 /*******************
 FOOTER
