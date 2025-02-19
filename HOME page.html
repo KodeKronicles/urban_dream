@@ -11,10 +11,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="3.0.css">
+    <link rel="stylesheet" href="3.1.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+
     <title>The City Reimagined</title>
+    
 </head>
 
 <body>
@@ -126,67 +131,67 @@
                             
                                     <!-- Row 1 -->
                                     <div class="image-container">
-                                        <img src="img/Corbusier.jpg" alt="Corbusier">
+                                        <img src="B&W/Corbusier.jpg" alt="Corbusier">
                                         <div class="overlay"><a href="#">Corbusier</a></div>
                                     </div>
                                     <div class="image-container">
-                                        <img src="img/RS.jpg" alt="RS">
+                                        <img src="B&W/RS.jpg" alt="RS">
                                         <div class="overlay"><a href="#">RS</a></div>
                                     </div>
                                     <div class="image-container">
-                                        <img src="img/Paolo Soleri.jpg" alt="Paolo Soleri">
+                                        <img src="B&W/Paolo Soleri.jpg" alt="Paolo Soleri">
                                         <div class="overlay"><a href="#">Paolo Soleri</a></div>
                                     </div>
                                     <div class="image-container">
-                                        <img src="img/TASS.jpg" alt="TASS">
+                                        <img src="B&W/TASS.jpg" alt="TASS">
                                         <div class="overlay"><a href="#">TASS</a></div>
                                     </div>
                                     <div class="image-container">
-                                        <img src="img/AI city.jpeg" alt="AI City">
+                                        <img src="B&W/AI city.jpeg" alt="AI City">
                                         <div class="overlay"><a href="#">AI City</a></div>
                                     </div>
                                 
                                     <!-- Row 2 -->
                                     <div class="image-container">
-                                        <img src="img/Behind the Wall.jpg" alt="Behind the Wall">
+                                        <img src="B&W/Behind the Wall.jpg" alt="Behind the Wall">
                                         <div class="overlay"><a href="#">Behind the Wall</a></div>
                                     </div>
                                     <div class="image-container">
-                                        <img src="img/Walking city.gif" alt="Walking City">
+                                        <img src="B&W/Walking city.gif" alt="Walking City">
                                         <div class="overlay"><a href="#">Walking City</a></div>
                                     </div>
                                     <div class="image-container">
-                                        <img src="img/HyperLoop.jpg" alt="HyperLoop">
+                                        <img src="B&W/HyperLoop.jpg" alt="HyperLoop">
                                         <div class="overlay"><a href="#">HyperLoop</a></div>
                                     </div>
                                     <div class="image-container">
-                                        <img src="img/Lambot.jpg" alt="Lambot">
+                                        <img src="B&W/Lambot.jpg" alt="Lambot">
                                         <div class="overlay"><a href="#">Lambot</a></div>
                                     </div>
                                     <div class="image-container">
-                                        <img src="img/Capsule tower.jpg" alt="Capsule Tower">
+                                        <img src="B&W/Capsule tower.jpg" alt="Capsule Tower">
                                         <div class="overlay"><a href="#">Capsule Tower</a></div>
                                     </div>
                                 
                                     <!-- Row 3 -->
                                     <div class="image-container">
-                                        <img src="img/The Line.jpg" alt="The Line">
+                                        <img src="B&W/The Line.jpg" alt="The Line">
                                         <div class="overlay"><a href="#">The Line</a></div>
                                     </div>
                                     <div class="image-container">
-                                        <img src="img/Arcosanti.jpg" alt="Arcosanti">
+                                        <img src="B&W/Arcosanti.jpg" alt="Arcosanti">
                                         <div class="overlay"><a href="#">Arcosanti</a></div>
                                     </div>
                                     <div class="image-container">
-                                        <img src="img/Kowloon.jpg" alt="Kowloon">
+                                        <img src="B&W/Kowloon.jpg" alt="Kowloon">
                                         <div class="overlay"><a href="#">Kowloon</a></div>
                                     </div>
                                     <div class="image-container">
-                                        <img src="img/Tacheles.jpg" alt="Tacheles">
+                                        <img src="B&W/Tacheles.jpg" alt="Tacheles">
                                         <div class="overlay"><a href="#">Tacheles</a></div>
                                     </div>
                                     <div class="image-container">
-                                        <img src="img/SUPERSTUDIO REVISITADO.jpg" alt="Superstudio Revisitado">
+                                        <img src="B&W/SUPERSTUDIO REVISITADO.jpg" alt="Superstudio Revisitado">
                                         <div class="overlay"><a href="#">Superstudio Revisitado</a></div>
                                     </div>
                             </div>
@@ -213,10 +218,62 @@
                                 }
                                 requestAnimationFrame(animate);
                             }
+                            function adjustGridOnResize() {
+                                position = 0;  // Reset position on resize
+                                grid.style.transform = `translateX(0px)`;
+                                clone.style.transform = `translateX(${grid.offsetWidth}px)`;
+                            }
+
+                            window.addEventListener("resize", adjustGridOnResize);
+
                         animate();
                     });
                     </script>
         </section>
+
+
+        
+
+        
+            <!-- First Section: Text on Left, Image on Right -->
+        <section class="parallax-section">
+            <div class="container d-flex align-items-center justify-content-between">
+                <div class="text-container">
+                    <h2>Section Title</h2>
+                        <p>This is some text content on the left side of the section.</p>
+                    </div>
+                <div class="image-container">
+                    <img src="your-image.jpg" alt="Descriptive Alt Text" class="img-fluid">
+                </div>
+            </div>
+        </section>
+        
+            <!-- Second Section: Image on Left, Text on Right -->
+        <section class="parallax-section">
+            <div class="container d-flex align-items-center justify-content-between">
+                <div class="image-container">
+                    <img src="your-image-2.jpg" alt="Descriptive Alt Text" class="img-fluid">
+                </div>
+                <div class="text-container">
+                    <h2>Another Section Title</h2>
+                    <p>This is some text content on the right side of the section.</p>
+                </div>
+            </div>
+        </section>
+        
+            <!-- Last Section: Google Map Embed -->
+       <section class="parallax-section">
+            <div class="container">
+                <h2>Location</h2>
+                <p>Here is the map of our location:</p>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=YOUR_GOOGLE_MAP_EMBED_LINK" 
+                            width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </section>
+        
+        
     </main>
 
 
@@ -231,6 +288,22 @@
         
     <script src="script.js"></script>
 
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var controller = new ScrollMagic.Controller();
+    
+            new ScrollMagic.Scene({
+                triggerElement: ".parallax-section",
+                triggerHook: 1, // Start the effect when the top of .parallax-section is at the top of the viewport
+                duration: "100%"
+            })
+            .setTween(gsap.from(".parallax-section", { opacity: 0, y: 100, duration: 1 }))
+            .addTo(controller);
+        });
+    </script>
+    
 
 </body>
 </html>
