@@ -57,6 +57,7 @@ NAV BAR
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    color: transparent;
 }
 
 /* Custom styles for the navbar toggler */
