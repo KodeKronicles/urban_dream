@@ -234,6 +234,7 @@ BACKROUND PICTURES
 
 /* Image container for each grid item */
 .image-container {
+    position: relative;
     width: 100%;
     height: auto; /* Set a fixed height for images */
     overflow: hidden !important;
@@ -262,22 +263,30 @@ HOVER
 ********************/
 
 .image-container:hover img {
-    opacity: 0.7;  /* more saturated on hover */
+    filter: saturate(1.5);
+    opacity: 0.8;  /* more saturated on hover */
 }
 
-/* Overlay styles remain unchanged */
+/* Overlay styles */
 .overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.7);  /* Semi-transparent overlay */
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none; /* Prevents blocking hover */
+    text-decoration: none;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.7);  /* Semi-transparent background */
+    border: 2px solid red;
+    
 }
 
 /* Show overlay on hover */
@@ -287,71 +296,220 @@ HOVER
 
 
 
-
-
 /***********
-SECTION 2
+ABOUT SECTION (Parallax Style with Shrunk Height)
 ***********/
 
-.parallax-section {
+.about-section {
     position: relative;
-    height: 100vh; /* Full-screen height */
-    background-color: white; /* Set the background to white */
+    height: auto; /* Let the height be determined by the content */
+    max-height: 350px; /* Limit max height, adjust to get the feel you want */
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: black; /* Text color can be adjusted as needed */
+    color: black;
     font-size: 2rem;
+    padding: 40px 20px; /* Added padding to control spacing */
 }
 
-.parallax-content {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-
-.parallax-section .container {
+.about-section .container {
     display: flex;
-    justify-content: space-between; /* This aligns the text and image on opposite sides */
+    justify-content: center; /* Ensures the text is centered */
     align-items: center;
+    width: 100%; /* Ensures full width */
 }
 
-.parallax-section .text-container {
-    flex: 1; /* Takes up remaining space */
+.about-section .text-container {
+    max-width: 800px; /* Keeps text neatly aligned */
+    text-align: center;
     padding: 20px;
 }
 
-.parallax-section .image-container {
-    flex: 1; /* Takes up remaining space */
+.about-header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #D02E02; /* Red color for header */
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.2rem; /* Text size */
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*******************
+MOBILE
+********************/
+
+/**********
+TIMELINE
+**********/
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 50px auto;
+    padding-bottom: 50px; /* Adjust the padding to make sure the content fits properly */
+    z-index: 1; /* Ensure it's below the map section */
+}
+
+.timeline::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    background-color: #D02E02;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Individual timeline items */
+.timeline-item {
+    position: relative;
+    width: 50%;
     padding: 20px;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
-.parallax-section .image-container img {
-    max-width: 100%;
-    height: auto;
+/* Left-side content */
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+    transform: translateX(-50px);
+}
+
+/* Right-side content */
+.timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+    transform: translateX(50px);
+}
+
+/* YEAR POSITIONING */
+.timeline-year {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #D02E02;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Push the years for alignment */
+.timeline-item:nth-child(odd) .timeline-year { 
+    left: calc(100% + 20px); /* Moves year to the right of right-side content */
+}
+
+.timeline-item:nth-child(even) .timeline-year { 
+    right: calc(100% + 20px); /* Moves year to the left of left-side content */
+}
+
+/* CONTENT BOX */
+.timeline-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* HEADINGS INSIDE CONTENT */
+.timeline-content h3 {
+    font-size: 1.5rem; /* Adjust this for bigger headers */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* FADE-IN EFFECT */
+.timeline-item.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/***********
+MAP SECTION
+***********/
+
+.map-section {
+    width: 100vw; 
+    margin-left: calc(-50vw + 50%);
+    background-color: white;
+    padding: 50px 20px 0 20px;  /* Top and side padding only, no bottom padding */
+    box-sizing: border-box;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 0;
+}
+
+.map-content {
+    max-width: 1200px;  /* Optionally constrain inner content width */
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 0;  /* Remove any bottom padding */
+}
+
+/* Remove default margins on headings and paragraphs */
+
+.map-content p {
+    margin: 0;
+    padding: 0;
+}
+
+.map-content h2 {
+    font-weight: bold;
+    color: #D02E02; /* red */
 }
 
 
+.map-container {
+    width: 100%;
+    margin-bottom: 0; /* Remove any gap below the map */
+}
 
+.map-description {
+    text-align: center;
+    font-size: 1.25rem;
+    margin-top: 0;    /* Remove gap above the description */
+    margin-bottom: 0; /* Remove gap below the description */
+}
 
 /*******************
 FOOTER
 ********************/
 
 footer {
+    margin-top: 0;  /* Force no gap above the footer */
     padding: 20px 0;
     width: 100%;
-    background-color: #D02E02; /* Red with reduced opacity */
-    color: white; /* Ensures text is readable */
-    text-align: center; /* Centers the text */
-    padding: 20px 0; /* Gives some space above and below the text */
-    position: relative; /* Keeps it in flow with the content */
+    background-color: #D02E02;
+    color: white;
+    text-align: center;
+    position: relative;
 }
+
 .github-logo {
     width: 65px; /* Adjust size as needed */
     height: auto;
-    display: block; /* Ensures proper spacing */
-    margin: 10px auto 0; /* Centers the logo below text */
+    display: block;
+    margin: 10px auto 0;
 }
