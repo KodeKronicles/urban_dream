@@ -49,6 +49,7 @@ NAV BAR
 }
 
 .navbar {
+    background-color: #e0dcdc;
     position: relative;
     padding-top: 0.25rem; /* Adjust top padding */
     padding-bottom: 0.45rem; /* Adjust bottom padding */
@@ -362,8 +363,9 @@ TIMELINE
 .timeline {
     position: relative;
     max-width: 800px;
-    margin: 50px auto;
-    padding-bottom: 50px; /* Adjust the padding to make sure the content fits properly */
+    margin-left: auto;
+    margin-right: auto;
+
     z-index: 1; /* Ensure it's below the map section */
 }
 
@@ -376,6 +378,7 @@ TIMELINE
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+}
 
 /* Individual timeline items */
 .timeline-item {
