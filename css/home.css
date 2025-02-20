@@ -49,6 +49,7 @@ NAV BAR
 }
 
 .navbar {
+    background-color: #e0dcdc;
     position: relative;
     padding-top: 0.25rem; /* Adjust top padding */
     padding-bottom: 0.45rem; /* Adjust bottom padding */
