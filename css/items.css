@@ -140,10 +140,10 @@ main {
     padding-top: 2rem;
     padding-bottom: 2rem;
     margin-bottom: 4rem;
-    border-bottom-width: 4px; 
+    border-bottom-width: 2px; 
     border-bottom-style: solid; 
     border-bottom-color: #d02e02;
-    border-top-width: 4px; 
+    border-top-width: 2px; 
     border-top-style: solid; 
     border-top-color: #d02e02;
 }
@@ -159,14 +159,14 @@ main {
 
 #disclaimer-container {
     padding-top: 2rem;
-    border-top-width: 4px; 
+    border-top-width: 2px; 
     border-top-style: solid; 
     border-top-color: #d02e02;
 }
 
 #about {
     padding-bottom: 4rem;
-    border-bottom-width: 4px; 
+    border-bottom-width: 2px; 
     border-bottom-style: solid; 
     border-bottom-color: #d02e02;
 }
