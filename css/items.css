@@ -6,6 +6,13 @@
 }
 
 @font-face {
+    font-family: "Inter";
+    src: url('../fonts/Inter.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: "Bitstream Vera Serif Bold";
     src: url("https://mdn.github.io/shared-assets/fonts/VeraSeBd.ttf");
   }
@@ -106,18 +113,18 @@
 
 .navbar-nav a {
     color: #d02e02;
-    font-family: 'Futura', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .navbar-nav a.nav-link.active {
     color: #d02e02;
     font-weight: bold;
-    font-family: 'Futura', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 main {
     color:#d02e02;
-    font-family: 'Futura', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .card-img{
@@ -143,7 +150,7 @@ main {
 
 #infoTable *{
     color:#d02e02;
-    font-family: "Futura", sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 #infoTable a{
@@ -186,7 +193,7 @@ main {
     right: 0px; 
     background-color: #d02e02; 
     color: white;
-    font-family: "Futura", sans-serif;
+    font-family: "Inter", sans-serif;
 
 }
 
