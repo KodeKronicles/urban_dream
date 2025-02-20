@@ -260,3 +260,13 @@ function filterByStatus(status) {
     
     document.getElementById('mainImage').src = `img/${status}.jpg`;
 }
+
+function handleTimeFilter(filterClass) {
+    document.querySelectorAll('.item').forEach(item => {
+        if (filterClass === "" || item.classList.contains(filterClass)) {
+            item.style.display = 'table-row';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
