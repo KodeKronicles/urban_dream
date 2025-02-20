@@ -362,9 +362,8 @@ TIMELINE
 .timeline {
     position: relative;
     max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-   
+    margin: 50px auto;
+    padding-bottom: 50px; /* Adjust the padding to make sure the content fits properly */
     z-index: 1; /* Ensure it's below the map section */
 }
 
