@@ -1,0 +1,171 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Futura Maxi CG', sans-serif;
+    background-color: #dddddd;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    position: absolute;
+    left: 75%;
+    z-index: 500; /* Below the image */
+    
+}
+
+/* LOGO: Placed above the image */
+.logo {
+    position: absolute;
+    top: -50px; /* Adjust positioning as needed */
+    left: 20px;
+    z-index: 999; /* Above everything */
+}
+
+.logo img {
+    max-width: 50px;
+}
+
+/* BURGER MENU */
+.burger-menu {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #D02E02;
+}
+
+.current-page {
+    font-size: 18px;
+    color: #D02E02;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.burger-icon {
+    font-size: 30px;
+    color: #D02E02;
+    cursor: pointer;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    width: 150px;
+    z-index: 200;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #D02E02;
+    border-bottom: 1px solid #eee;
+}
+
+.burger-menu.active .menu {
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    width: 150px;
+    z-index: 999; 
+}
+
+/* MAIN CONTENT */
+main {
+    position: relative;
+    height: 100vh;
+}
+
+/* IMAGE CONTAINER */
+.image-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 37.33%;
+    height: 100vh;
+    background-color: white;
+    z-index: 1; /* Below logo, above header */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 45%;
+}
+
+/* TEXT CONTAINER */
+.text-container {
+    margin-left: 37.33%;
+    width: 66.67%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+
+.text-container h1 {
+    font-size: 2.5rem;
+    color: #D02E02;
+    text-align: center;
+}
+
+/* FOOTER (Now above the image) */
+footer {
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #D02E02;
+    color: white;
+    z-index: 2; /* Ensures it's above the image */
+}
+
+.arrow-line {
+    width: 80%;
+    height: 2px;
+    background: #D02E02;
+    margin: 10px auto 0;
+}
+
+.github-logo {
+    width: 65px;
+    height: auto;
+    display: block;
+    margin: 10px auto 0;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 375px) {
+    .text-container h1 {
+        font-size: 2rem;
+    }
+    .current-page {
+        font-size: 16px;
+    }
+    .burger-icon {
+        font-size: 26px;
+    }
+}
