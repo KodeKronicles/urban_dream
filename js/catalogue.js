@@ -230,26 +230,66 @@ document.addEventListener('click', function(event) {
     }
 });
 
-// Nuova funzione di filtraggio
 function filterByTime(time) {
     const items = document.querySelectorAll('.item');
-    
+    const tableContainer = document.querySelector('.table-container');
+
+    // Controlla se la tabella è nascosta e la mostra
+    if (tableContainer.style.display === "none" || !tableContainer.style.display) {
+        tableContainer.style.display = "block";
+    }
+
+    let hasMatch = false; // Controlla se esistono elementi corrispondenti al filtro
+
     items.forEach(item => {
         if (item.classList.contains(time)) {
             item.style.display = 'table-row';
+            hasMatch = true;
         } else {
             item.style.display = 'none';
         }
     });
-    
-    // Aggiorna l'immagine se necessario
-    document.getElementById('mainImage').src = `img/${time}.jpg`;
+
+    // Se non ci sono corrispondenze, nasconde la tabella di nuovo
+    if (!hasMatch) {
+        tableContainer.style.display = "none";
+    }
+
+    // Cambia l'immagine principale in base al filtro selezionato
+    document.getElementById('mainImage').src = hasMatch ? `img/${time}.jpg` : "img/map/cerchicompleti.png";
 }
+
 
 // Modifica la funzione esistente per lo status
 function filterByStatus(status) {
     const items = document.querySelectorAll('.item');
-    
+    const backButton = document.getElementById("backButton");
+    const tableContainer = document.querySelector('.table-container'); 
+
+    // Mostra la tabella se è nascosta
+    if (tableContainer.style.display === "none" || !tableContainer.style.display) {
+        tableContainer.style.display = "block"; 
+    }
+
+    // Se viene selezionato "Status" (vuoto), mostra tutti gli elementi
+    if (status === "") {
+        items.forEach(item => {
+            item.style.display = 'table-row';
+        });
+        document.querySelectorAll(".hidden-info").forEach(detailRow => {
+            detailRow.style.display = "none"; // Nasconde i dettagli al reset
+        });
+
+        // Ripristina immagine predefinita
+        document.getElementById('mainImage').src = "img/map/cerchicompleti.png";
+
+        // Nasconde il bottone "Back"
+        backButton.classList.add("hidden");
+
+        return; // Esce dalla funzione
+    }
+
+    // Altrimenti, filtra gli elementi per stato
     items.forEach(item => {
         if (item.classList.contains(status)) {
             item.style.display = 'table-row';
@@ -257,9 +297,14 @@ function filterByStatus(status) {
             item.style.display = 'none';
         }
     });
-    
+
+    // Cambia l'immagine principale in base al filtro
     document.getElementById('mainImage').src = `img/${status}.jpg`;
+
+    // Mostra il bottone "Back" quando un filtro è attivo
+    backButton.classList.remove("hidden");
 }
+
 
 function handleTimeFilter(filterClass) {
     document.querySelectorAll('.item').forEach(item => {
@@ -269,4 +314,12 @@ function handleTimeFilter(filterClass) {
             item.style.display = 'none';
         }
     });
+     // Toggle the arrow rotation
+     const timeArrow = document.getElementById('timeArrow');
+     if (timeArrow) {
+         timeArrow.classList.toggle('desc');
+     }
+
+     // Cambia l'immagine principale in base al filtro
+    document.getElementById('mainImage').src = `img/${time}.jpg`;
 }
