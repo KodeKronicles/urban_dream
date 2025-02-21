@@ -48,6 +48,12 @@
     font-family: 'Inter', sans-serif;
 }
 
+.navbar-breaker {
+    width: 90%;
+    height: 2px; /* Imposta un'altezza per renderlo visibile */
+    background-color: #d02d00; /* Imposta un colore di sfondo per renderlo visibile */
+    margin-left: auto; /* Fa partire l'elemento da destra */
+}
         
         /*******************
          TABLE LAYOUT
