@@ -37,6 +37,18 @@
             margin-left: 20px;
         }
 
+.navbar-nav a {
+    color: #d02e02;
+    font-family: 'Inter', sans-serif;
+}
+
+.navbar-nav a.nav-link.active {
+    color: #d02e02;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+}
+
+        
         /*******************
          TABLE LAYOUT
         ********************/
@@ -583,14 +595,3 @@ a {
     display: none;
 }
 
-
-.navbar-nav a {
-    color: #d02e02;
-    font-family: 'Inter', sans-serif;
-}
-
-.navbar-nav a.nav-link.active {
-    color: #d02e02;
-    font-weight: bold;
-    font-family: 'Inter', sans-serif;
-}

@@ -1,0 +1,60 @@
+@font-face {
+    font-family: "Inter";
+    src: url('../fonts/Inter.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.navbar-text {
+    font-size: 13px;
+    color: #d02d00;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.navbar-nav a {
+    color: #d02e02;
+    font-family: 'Inter', sans-serif;
+}
+
+.navbar-nav a.nav-link.active {
+    color: #d02e02;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+}
+
+/*   FOOTER STYLES */
+
+.site-footer {
+    background-color: white;
+    color: #d02d00;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 2px solid #d02d00;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-nav {
+    margin-top: 10px;
+}
+
+.footer-nav a {
+    color: #d02d00;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #a32200;
+    text-decoration: underline;
+}
