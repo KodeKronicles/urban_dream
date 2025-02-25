@@ -199,7 +199,7 @@
 .hidden-info .details-right {
     flex: 1; /* Occupa lo spazio restante */
     text-align: left;
-    padding-left: 9.54%; /* Regola questo valore in base alle tue esigenze */
+    padding-left: 9.55%; /* Regola questo valore in base alle tue esigenze */
     box-sizing: border-box;
 }
 

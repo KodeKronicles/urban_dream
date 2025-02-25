@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Map</title>
-
+ <!-- ADD PNG ICON FOR THE TAB VIEW Favicons -->
+ <link href="img/circle_icon.png" rel="icon">
+ <link href="img/circle_icon.png" rel="circle-icon">
     <!-- Google Font: Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/map.css">   
 </head>
 <body>
@@ -57,7 +59,7 @@
             <div class="col-md-6 info-section mt-0 pt-0">
                 <h1>The Map</h1>
                 <h2>Navigate Visionary Urban Concepts.</h2>
-                <p>This map catalogues architectural ideas, from utopian visions to radical urban experiments. Explore visionary projects, track their historical ideals, and refine your view to uncover patterns across different eras and ideas. Discover how these concepts shaped the built environment, influenced future designs, and challenged traditional notions of space, function, and aesthetics. </p>
+                <p>This map showcases architectural concepts ranging from utopian visions to radical urban experiments. Explore visionary projects, trace their historical ideals, and uncover patterns across different eras and ideologies. Discover how these ideas have shaped the built environment, influenced future designs, and challenged conventional notions of space, function, and aesthetics. The exhibition follows a progression—from unbuilt projects to realized structures, culminating in speculative and futuristic designs.</p>
                 <h3><span class="underline" onclick="toggleTable()" style="cursor: pointer;">Open the Catalogue ></span></h3>
             </div>
              <!-- Colonna Immagine -->
@@ -136,63 +138,78 @@
             
             
 
-               <!-- ITEM 2: Continuous Monument -->
-            <tr id="continuous_monument" class="item unbuilt megastructure artistic dystopian before-2000">
-                <td>2</td>
-                <td class="filter-item"><a href="docs/continuous_monument.html">Continuous Monument</a></td>
-                <td class="filter-year">1969</td>
-                <td class="filter-status">Unbuilt</td>
-                <td><span class="filter-context">Megastructure</span></td>
-                <td>
-                    <span class="filter-ideals">Artistic</span>, 
-                    <span class="filter-ideals">Dystopian</span>
-                </td>
-                <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
-            </tr>
-            <tr class="hidden-info">
-                <td colspan="7">
-                    <div class="film-details">
-                        <div class="details-left">
-                            <img class="film-image" src="img/SUPERSTUDIO REVISITADO.jpg" alt="Continuous Monument Image">
-                        </div>
-                        <div class="details-right">
-                            <p><strong>Short Info:</strong> A satirical design of a megastructure that wraps around the Earth.</p>
-                            <p><strong>Location:</strong> Italy</p>
-                            <a href="docs/continuous_monument.html" class="btn-watch-trailer">Read More</a>
-                        </div>
-                    </div>
-                </td>
-            </tr>
+              <!-- ITEM 2: Continuous Monument -->
+<tr id="continuous_monument" class="item unbuilt megastructure artistic dystopian before-2000">
+    <td>2</td>
+    <td class="filter-item"><a href="docs/continuous_monument.html">Continuous Monument</a></td>
+    <td class="filter-year">1969</td>
+    <td class="filter-status">Unbuilt</td>
+    <td><span class="filter-context">Megastructure</span></td>
+    <td>
+        <span class="filter-ideals">Artistic</span>, 
+        <span class="filter-ideals">Dystopian</span>
+    </td>
+    <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+</tr>
+<tr class="hidden-info">
+    <td colspan="7">
+        <div class="container">
+            <div class="row">
+                <!-- Colonna 1: Immagine -->
+                <div class="col-md-4 details-left">
+                    <img class="film-image" src="img/SUPERSTUDIO REVISITADO.jpg" alt="Continuous Monument Image">
+                </div>
 
-            <!-- ITEM 3: Plan Voisin -->
-            <tr id="plan_voisin" class="item unbuilt urban_planning dystopian before-2000">
-                <td>3</td>
-                <td class="filter-item"><a href="docs/plan_voisin.html">Plan Voisin</a></td>
-                <td class="filter-year">1925</td>
-                <td class="filter-status">Unbuilt</td>
-                <td><span class="filter-context">Urban Planning</span></td>
-                <td>
-                    <span class="filter-ideals">Dystopian</span>
-                </td>
-                <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
-            </tr>
-            <tr class="hidden-info">
-                <td colspan="7">
-                    <div class="film-details">
-                        <div class="details-left">
-                            <img class="film-image" src="img/Corbusier.jpg" alt="Plan Voisin Image">
-                        </div>
-                        <div class="details-right">
-                            <p><strong>Short Info:</strong> A radical urban plan that proposed demolishing historic Paris to build modernist skyscrapers.</p>
-                            <p><strong>Location:</strong> France</p>
-                            <a href="docs/plan_voisin.html" class="btn-watch-trailer">Read More</a>
-                        </div>
-                    </div>
-                </td>
-            </tr>
+                <!-- Colonna 2: Testo -->
+                <div class="col-md-8 details-right">
+                    <p>Continuous Monument, designed by the avant-garde Italian collective Superstudio, was a speculative architectural project criticizing the homogenization of modern urban spaces. It envisioned a single, seamless megastructure enveloping the world, erasing cultural and geographical distinctions in favor of a uniform, totalizing grid. The design reflected the anxieties of globalization, challenging the blind expansion of modernist architecture and its dehumanizing effects.</p>
+                    <p>Location: Italy</p>
+                    <p>Check out if you like: Conceptual megastructures. Art as urban critique. Minimalist, dystopian visions.</p>
+                    <p>Recommended by: Hubert</p>
+                    <a href="docs/continuous_monument.html" class="btn-watch-trailer">Read More</a>
+                </div>
+            </div>
+        </div>
+    </td>
+</tr>
 
- <!-- ITEM 4: No-Stop City -->
- <tr id="no_stop_city" class="item unbuilt urban_planning futuristic utopian before-2000">
+<!-- ITEM 3: Plan Voisin -->
+<tr id="plan_voisin" class="item unbuilt urban_planning dystopian before-2000">
+    <td>3</td>
+    <td class="filter-item"><a href="docs/plan_voisin.html">Plan Voisin</a></td>
+    <td class="filter-year">1925</td>
+    <td class="filter-status">Unbuilt</td>
+    <td><span class="filter-context">Urban Planning</span></td>
+    <td>
+        <span class="filter-ideals">Dystopian</span>
+    </td>
+    <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+</tr>
+<tr class="hidden-info">
+    <td colspan="7">
+        <div class="container">
+            <div class="row">
+                <!-- Colonna 1: Immagine -->
+                <div class="col-md-4 details-left">
+                    <img class="film-image" src="img/Corbusier.jpg" alt="Plan Voisin Image">
+                </div>
+
+                <!-- Colonna 2: Testo -->
+                <div class="col-md-8 details-right">
+                    <p>Plan Voisin, proposed by Le Corbusier in 1925, was a radical urban renewal project that aimed to demolish a significant portion of historic Paris and replace it with a grid of uniform high-rise towers surrounded by green spaces. It embodied the principles of modernist urbanism, prioritizing efficiency, order, and the segregation of functions within the city. While never realized, it sparked heated debates about modernization versus heritage preservation and heavily influenced later city planning models.</p>
+                    <p>Location: France</p>
+                    <p>Check out if you like: Modernist urbanism. High-density city grids. Functionalist architecture.</p>
+                    <p>Recommended by: Elena</p>
+                    <a href="docs/plan_voisin.html" class="btn-watch-trailer">Read More</a>
+                </div>
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+<!-- ITEM 4: No-Stop City -->
+<tr id="no_stop_city" class="item unbuilt urban_planning futuristic utopian before-2000">
     <td>4</td>
     <td class="filter-item"><a href="docs/no_stop_city.html">No-Stop City</a></td>
     <td class="filter-year">1970</td>
@@ -206,14 +223,21 @@
 </tr>
 <tr class="hidden-info">
     <td colspan="7">
-        <div class="film-details">
-            <div class="details-left">
-                <img class="film-image" src="img/No-stop city.jpg" alt="No-Stop City Image">
-            </div>
-            <div class="details-right">
-                <p><strong>Short Info:</strong> A conceptual city without boundaries, an endless grid challenging consumerist urbanism.</p>
-                <p><strong>Location:</strong> Italy</p>
-                <a href="docs/no_stop_city.html" class="btn-watch-trailer">Read More</a>
+        <div class="container">
+            <div class="row">
+                <!-- Colonna 1: Immagine -->
+                <div class="col-md-4 details-left">
+                    <img class="film-image" src="img/No-stop city.jpg" alt="No-Stop City Image">
+                </div>
+
+                <!-- Colonna 2: Testo -->
+                <div class="col-md-8 details-right">
+                    <p>No-Stop City, conceptualized by the radical Italian collective Archizoom in 1970, imagined a boundless urban environment where zoning disappeared entirely. This infinite, grid-based megastructure challenged traditional ideas of city planning by blending residential, commercial, and industrial functions into one seamless, non-hierarchical space. The project served as a critique of consumer society, suggesting that architecture should adapt to human activity rather than dictate it.</p>
+                    <p>Location: Italy</p>
+                    <p>Check out if you like: Postmodern urban theories. Utopian urbanism. Unzoned megastructures.</p>
+                    <p>Recommended by: Alice</p>
+                    <a href="docs/no_stop_city.html" class="btn-watch-trailer">Read More</a>
+                </div>
             </div>
         </div>
     </td>
@@ -233,18 +257,26 @@
 </tr>
 <tr class="hidden-info">
     <td colspan="7">
-        <div class="film-details">
-            <div class="details-left">
-                <img class="film-image" src="img/freedom_ship.jpg" alt="Freedom Ship Image">
-            </div>
-            <div class="details-right">
-                <p><strong>Short Info:</strong> A proposed floating city that aimed to be a tax-free, sovereign urban nation.</p>
-                <p><strong>Location:</strong> Global</p>
-                <a href="docs/freedom_ship.html" class="btn-watch-trailer">Read More</a>
+        <div class="container">
+            <div class="row">
+                <!-- Colonna 1: Immagine -->
+                <div class="col-md-4 details-left">
+                    <img class="film-image" src="img/freedom_ship.jpg" alt="Freedom Ship Image">
+                </div>
+
+                <!-- Colonna 2: Testo -->
+                <div class="col-md-8 details-right">
+                    <p>Freedom Ship was a visionary proposal for a floating city, designed to be a permanently mobile, self-sufficient urban environment. Envisioned as an independent micronation, the ship would have housed 50,000 residents, along with businesses, schools, hospitals, and recreational areas. The concept was inspired by the idea of seasteading, offering an alternative to land-based living, free from governmental constraints and traditional city planning.</p>
+                    <p>Location: Global</p>
+                    <p>Check out if you like: Seasteading concepts. Floating megastructures. Self-sufficient communities.</p>
+                    <p>Recommended by: Hubert</p>
+                    <a href="docs/freedom_ship.html" class="btn-watch-trailer">Read More</a>
+                </div>
             </div>
         </div>
     </td>
 </tr>
+
 
 <!-- ITEM 6: Nakagin Capsule Tower -->
 <tr id="nakagin_tower" class="item built housing futuristic modular before-2000">
@@ -674,11 +706,15 @@
         <button id="backButton" class="back-button">Back</button>
     </div>
 
-    <footer class="site-footer">
+    <footer class="site-footer text-center">
         <div>
             <p>&copy; 2025. Ideascapes — The Architectures of Tomorrow. All rights reserved.</p>
+            <a href="https://github.com" target="_blank" class="github-link d-block">
+                <i class="fab fa-github" style="font-size: 24px; color: #333;"></i>
+            </a>
         </div>
     </footer>
+
     <script src="js/map.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
