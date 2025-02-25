@@ -1,3 +1,21 @@
+// TO OPERATE OPEN THE CATALOGUE
+function toggleTable() {
+    const tableContainer = document.querySelector('.table-container');
+    
+    if (tableContainer.style.display === 'none' || tableContainer.style.display === '') {
+        tableContainer.style.display = 'block';
+        document.getElementById('mainImage').src = 'img/map/cerchicompleti.png';
+    } else {
+        tableContainer.style.display = 'none';
+    }
+}
+
+function filterByStatus(status) {
+    const category = status === 'all' ? '' : status.toLowerCase();
+    filterTable(category, '.filter-status');
+    toggleStatusDropdown(); // Chiude il dropdown dopo la selezione
+}
+// TO FILTER THE TABLE
 document.addEventListener("DOMContentLoaded", function () {
     const backButtonContainer = document.querySelector(".back-button-container");
     const backButton = document.getElementById("backButton");
@@ -64,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
         updateImage("Default");
     });
 
-    // Funzione per espandere/nascondere le informazioni dettagliate
+    // Funzione per espandere/nascondere le informazioni dettagliate DEGLI ITEM
     function toggleInfo(event, element) {
         let mainRow = element.parentElement;
         let infoRow = mainRow.nextElementSibling;
@@ -89,68 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-function toggleDropdown(id) {
-    let dropdown = document.getElementById(id);
-    let allDropdowns = document.querySelectorAll('.dropdown-menu');
-
-    allDropdowns.forEach(menu => {
-        if (menu.id !== id) {
-            menu.classList.add('hidden');
-        }
-    });
-
-    dropdown.classList.toggle('hidden');
-}
-
-// Chiudi il menu se si clicca fuori
-document.addEventListener('click', function(event) {
-    if (!event.target.closest('th')) {
-        document.querySelectorAll('.dropdown-menu').forEach(menu => {
-            menu.classList.add('hidden');
-        });
-    }
-});
-
-// Funzione per filtrare gli item in base allo status
-function filterByStatus(status) {
-    const items = document.querySelectorAll('.item');
-    items.forEach(item => {
-        if (item.classList.contains(status)) {
-            item.style.display = 'table-row';
-        } else {
-            item.style.display = 'none';
-        }
-    });
-    // Cambia l'immagine principale in base al filtro
-    document.getElementById('mainImage').src = `img/${status}.jpg`;
-}
-
-// Funzione per filtrare gli item in base al domain
-function filterByDomain(domain) {
-    const items = document.querySelectorAll('.item');
-    items.forEach(item => {
-        if (item.classList.contains(domain)) {
-            item.style.display = 'table-row';
-        } else {
-            item.style.display = 'none';
-        }
-    });
-    // Cambia l'immagine principale in base al filtro
-    document.getElementById('mainImage').src = `img/${domain}.jpg`;
-}
-
-// Funzione per mostrare tutti gli item
-function showAll() {
-    const items = document.querySelectorAll('.item');
-    items.forEach(item => {
-        item.style.display = 'table-row';
-    });
-    document.getElementById('mainImage').src = 'img/map/cerchicompleti.png';
-    
-    // Mostra la tabella
-    document.querySelector('.table-container').style.display = 'block';
-}
-
+// ARROW WORK: ABC & 123 x id x title x year
 function sortTable(columnIndex, element) {
     let table = document.getElementById("Table");
     let tbody = table.querySelector("tbody");
@@ -194,132 +151,88 @@ function sortTable(columnIndex, element) {
 }
 
 
-function toggleTable() {
-    const tableContainer = document.querySelector('.table-container');
-    
-    if (tableContainer.style.display === 'none' || tableContainer.style.display === '') {
-        tableContainer.style.display = 'block';
-        document.getElementById('mainImage').src = 'img/map/cerchicompleti.png';
-    } else {
-        tableContainer.style.display = 'none';
-    }
-}
 
-function toggleDropdown(id) {
-    const dropdown = document.getElementById(id);
-    const arrow = dropdown.previousElementSibling.querySelector('.arrow');
+
+
+
+
+// Nuove funzioni per gestire il dropdown
+function toggleStatusDropdown() {
+    const dropdown = document.getElementById("statusDropdown");
+    const arrow = document.querySelector(".custom-arrow");
     
-    document.querySelectorAll('.dropdown-menu').forEach(menu => {
-        if (menu.id !== id) {
-            menu.classList.add('hidden');
-            menu.previousElementSibling.querySelector('.arrow').classList.remove('rotated');
+    dropdown.classList.toggle("hidden");
+    arrow.classList.toggle("arrow-up");
+    
+    // Chiudi altri dropdown aperti
+    document.querySelectorAll(".dropdown-menu").forEach(menu => {
+        if (menu !== dropdown) {
+            menu.classList.add("hidden");
+            menu.previousElementSibling.querySelector(".sort-arrow")?.classList.remove("arrow-up");
         }
     });
-
-    dropdown.classList.toggle('hidden');
-    arrow.classList.toggle('rotated');
 }
 
-// Chiudi i dropdown cliccando fuori
-document.addEventListener('click', function(event) {
-    if (!event.target.closest('.custom-dropdown')) {
-        document.querySelectorAll('.dropdown-menu').forEach(menu => {
-            menu.classList.add('hidden');
-            menu.previousElementSibling.querySelector('.arrow').classList.remove('rotated');
+function filterByStatus(status) {
+    const selector = ".filter-status";
+    let category = status === "all" ? "" : status;
+    
+    // Chiama la tua esistente funzione filterTable
+    filterTable(category, selector);
+    
+    // Chiudi dropdown
+    toggleStatusDropdown();
+}
+
+// Chiudi dropdown cliccando fuori
+document.addEventListener("click", function(event) {
+    if (!event.target.closest(".custom-dropdown")) {
+        document.querySelectorAll(".dropdown-menu").forEach(menu => {
+            menu.classList.add("hidden");
+        });
+        document.querySelectorAll(".sort-arrow").forEach(arrow => {
+            arrow.classList.remove("arrow-up");
         });
     }
 });
 
-function filterByTime(time) {
-    const items = document.querySelectorAll('.item');
-    const tableContainer = document.querySelector('.table-container');
 
-    // Controlla se la tabella è nascosta e la mostra
-    if (tableContainer.style.display === "none" || !tableContainer.style.display) {
-        tableContainer.style.display = "block";
-    }
-
-    let hasMatch = false; // Controlla se esistono elementi corrispondenti al filtro
-
-    items.forEach(item => {
-        if (item.classList.contains(time)) {
-            item.style.display = 'table-row';
-            hasMatch = true;
-        } else {
-            item.style.display = 'none';
+// FOR THE STUPID DROPDOWN AND FILTERING BY STATUS
+function toggleStatusDropdown() {
+    const dropdown = document.getElementById("statusDropdown");
+    const arrow = document.querySelector(".status-header .sort-arrow");
+    
+    dropdown.classList.toggle("show");
+    arrow.classList.toggle("desc");
+    
+    // Chiudi altri dropdown aperti
+    document.querySelectorAll(".dropdown-menu").forEach(menu => {
+        if (menu !== dropdown) {
+            menu.classList.remove("show");
+            menu.closest("th")?.querySelector(".sort-arrow")?.classList.remove("desc");
         }
     });
-
-    // Se non ci sono corrispondenze, nasconde la tabella di nuovo
-    if (!hasMatch) {
-        tableContainer.style.display = "none";
-    }
-
-    // Cambia l'immagine principale in base al filtro selezionato
-    document.getElementById('mainImage').src = hasMatch ? `img/${time}.jpg` : "img/map/cerchicompleti.png";
 }
-
-
-// Modifica la funzione esistente per lo status
+// Funzione filtro aggiornata che richiama l'esistente filterTable
 function filterByStatus(status) {
-    const items = document.querySelectorAll('.item');
-    const backButton = document.getElementById("backButton");
-    const tableContainer = document.querySelector('.table-container'); 
-
-    // Mostra la tabella se è nascosta
-    if (tableContainer.style.display === "none" || !tableContainer.style.display) {
-        tableContainer.style.display = "block"; 
-    }
-
-    // Se viene selezionato "Status" (vuoto), mostra tutti gli elementi
-    if (status === "") {
-        items.forEach(item => {
-            item.style.display = 'table-row';
-        });
-        document.querySelectorAll(".hidden-info").forEach(detailRow => {
-            detailRow.style.display = "none"; // Nasconde i dettagli al reset
-        });
-
-        // Ripristina immagine predefinita
-        document.getElementById('mainImage').src = "img/map/cerchicompleti.png";
-
-        // Nasconde il bottone "Back"
-        backButton.classList.add("hidden");
-
-        return; // Esce dalla funzione
-    }
-
-    // Altrimenti, filtra gli elementi per stato
-    items.forEach(item => {
-        if (item.classList.contains(status)) {
-            item.style.display = 'table-row';
-        } else {
-            item.style.display = 'none';
-        }
-    });
-
-    // Cambia l'immagine principale in base al filtro
-    document.getElementById('mainImage').src = `img/${status}.jpg`;
-
-    // Mostra il bottone "Back" quando un filtro è attivo
-    backButton.classList.remove("hidden");
+    const selector = ".filter-status";
+    let category = status === "all" ? "" : status;
+    
+    // Chiamata alla funzione di filtro esistente
+    filterTable(category, selector);
+    
+    // Chiudi dropdown e resetta freccia
+    toggleStatusDropdown();
 }
 
-
-function handleTimeFilter(filterClass) {
-    document.querySelectorAll('.item').forEach(item => {
-        if (filterClass === "" || item.classList.contains(filterClass)) {
-            item.style.display = 'table-row';
-        } else {
-            item.style.display = 'none';
-        }
-    });
-     // Toggle the arrow rotation
-     const timeArrow = document.getElementById('timeArrow');
-     if (timeArrow) {
-         timeArrow.classList.toggle('desc');
-     }
-
-     // Cambia l'immagine principale in base al filtro
-    document.getElementById('mainImage').src = `img/${time}.jpg`;
-}
+// Listener per chiudere il dropdown
+document.addEventListener("click", function(e) {
+    if (!e.target.closest(".status-header")) {
+        document.querySelectorAll(".dropdown-menu").forEach(menu => {
+            menu.classList.remove("show");
+        });
+        document.querySelectorAll(".sort-arrow").forEach(arrow => {
+            arrow.classList.remove("desc");
+        });
+    }
+});

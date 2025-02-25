@@ -14,6 +14,8 @@
             color: #d02d00 !important;
             margin: 0;
             padding: 0;
+            overflow-x: visible !important; /* Previene lo scroll orizzontale che nasconde il dropdown */
+
         }
 
         .container {
@@ -139,7 +141,7 @@
         th:last-child .sort-arrow {
             display: inline-block;
         }
-     
+
         thead tr {
             border-top: none;
             border-bottom: 2px solid #d02d00; /* Linea più spessa sotto il titolo */
@@ -364,6 +366,7 @@
         padding: 5px 0;
         width: 150px;
         z-index: 10;
+        pointer-events: auto; /* Permette il click */
     }
     
     .dropdown-menu li {
@@ -526,52 +529,52 @@ a {
     display: none;
 }
 
+
+/* mostra il menu dropdown */
+
+.dropdown-menu.show {
+    display: block !important; /* Mostra il dropdown quando ha la classe show */
+}
+
 .custom-dropdown {
     position: relative;
     display: inline-block;
-    margin-right: 10px;
-}
-
-.dropdown-header {
-    padding: 8px 12px;
-    border: 2px solid #d02d00;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 5px;
 }
 
-.arrow {
-    transition: transform 0.3s;
-    display: inline-block;
+.dropdown-trigger {
+    padding-right: 25px;
+    position: relative;
+    color: #d02d00;
 }
 
 .dropdown-menu {
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     background: white;
     border: 2px solid #d02d00;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 150px;
+    min-width: 120px;
     z-index: 1000;
+    margin-top: 5px;
 }
 
-.dropdown-menu li {
+.menu-item {
     padding: 8px 12px;
-    cursor: pointer;
     color: #d02d00;
+    font-size: 14px;
     transition: background 0.3s;
 }
 
-.dropdown-menu li:hover {
+.menu-item:hover {
     background-color: #fff0ec;
 }
 
-.rotated {
-    transform: rotate(180deg);
+.menu-divider {
+    height: 1px;
+    background: #d02d00;
+    margin: 5px 0;
 }
 
 .hidden {

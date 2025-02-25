@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Map</title>
+
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/map.css">   
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid"> <!-- change class to just container to move logo -->
+          <a class="navbar-brand" href="#">
+            <img src="img/circle_icon.png" alt="Unbuilt City Logo" width="50" height="50" class="d-inline-block align-text-top">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav ms-md-auto">
+              <li>
+                        <a class="nav-link" href="index.html">HOME</a>
+              </li>
+              <li class="nav-link">
+                <a class="nav-link" href="exhibition.html">EXHIBITION</a>
+              </li>
+              <li>
+                <a class="nav-link" href="map.html">MAP</a>
+              </li>
+              <li>
+                <a class="nav-link" href="items.html">ITEMS</a>
+              </li>
+              <li>
+                <a class="nav-link" href="documentation.html">DOCUMENTATION</a>
+              </li>
+              <li>
+                <a class="nav-link" href="disclaimer.html">DISCLAIMER</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+
+<!-- Add this inside the body after the filter-navbar -->
+<div class="map-info-wrapper">
+    <!-- Existing map container -->
+    <div class="main-image-container">
+        <img id="mainImage" src="img/map/cerchicompleti.png" alt="Default Image" class="map-image">
+    </div>
+
+    <div class="info-section">
+        <h1>The Map & The Fury</h1>
+        <h2>Navigate Visionary Urban Concepts</h2>
+        <p>This map catalogues architectural ideas, from utopian visions to radical urban experiments. Explore visionary projects, track their historical ideals, and refine your view to uncover patterns across different eras and ideas. Discover how these concepts shaped the built environment, influenced future designs, and challenged traditional notions of space, function, and aesthetics. </p>
+        <p><span class="underline" onclick="toggleTable()" style="cursor: pointer;">Open the Catalogue ></span></p>
+        
+    </div>
+</div>
+
+
+<!-- Tabella degli item -->
+<div class="table-container">
+    <table class="table" id="Table">
+        <thead>
+            <tr>
+                <th onclick="sortTable(0, this)">ID<span class="sort-arrow">↑</span></th>
+                <th onclick="sortTable(1, this)">Title<span class="sort-arrow">↑</span></th>
+                <th onclick="sortTable(2, this)">Year<span class="sort-arrow">↑</span></th>
+
+                <!-- Modifica l'header della colonna Status -->
+<th class="status-header">
+    <div class="custom-dropdown">
+        <div class="dropdown-trigger" onclick="toggleStatusDropdown()">
+            Status
+            <span class="sort-arrow">↑</span>
+        </div>
+        <div id="statusDropdown" class="dropdown-menu">
+            <div class="menu-item" onclick="filterByStatus('unbuilt')">Unbuilt</div>
+            <div class="menu-item" onclick="filterByStatus('built')">Built</div>
+            <div class="menu-item" onclick="filterByStatus('speculative')">Speculative</div>
+        </div>
+    </div>
+</th>
+
+                <th onclick="sortTable(4, this)">Context<span class="sort-arrow">↑</span></th>
+                <th onclick="sortTable(5, this)">Ideals <span class="sort-arrow">↑</span></th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- ITEM 1: Walking City -->
+            <tr id="walking_city" class="item unbuilt urban_planning futuristic utopian before-2000">
+                <td>1</td>
+                <td class="filter-item"><a href="docs/walking_city.html">Walking City</a></td>
+                <td class="filter-year">1964</td>
+                <td class="filter-status">Unbuilt</td>
+                <td><span class="filter-context">Urban Planning</span></td>
+                <td>
+                    <span class="filter-ideals">Futuristic</span>, 
+                    <span class="filter-ideals">Utopian</span>
+                </td>
+                <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+            </tr>
+            <tr class="hidden-info">
+                <td colspan="7">
+                    <div class="film-details">
+                        <div class="details-left">
+                            <img class="film-image" src="img/Walking city.gif" alt="Walking City Image">
+                        </div>
+                        <div class="details-right">
+                            <p><strong>Short Info:</strong> A visionary concept of mobile, self-sustaining cities that could move across landscapes.</p>
+                            <p><strong>Location:</strong> United Kingdom</p>
+                            <a href="docs/walking_city.html" class="btn-watch-trailer">Read More</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+               <!-- ITEM 2: Continuous Monument -->
+            <tr id="continuous_monument" class="item unbuilt megastructure artistic dystopian before-2000">
+                <td>2</td>
+                <td class="filter-item"><a href="docs/continuous_monument.html">Continuous Monument</a></td>
+                <td class="filter-year">1969</td>
+                <td class="filter-status">Unbuilt</td>
+                <td><span class="filter-context">Megastructure</span></td>
+                <td>
+                    <span class="filter-ideals">Artistic</span>, 
+                    <span class="filter-ideals">Dystopian</span>
+                </td>
+                <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+            </tr>
+            <tr class="hidden-info">
+                <td colspan="7">
+                    <div class="film-details">
+                        <div class="details-left">
+                            <img class="film-image" src="img/SUPERSTUDIO REVISITADO.jpg" alt="Continuous Monument Image">
+                        </div>
+                        <div class="details-right">
+                            <p><strong>Short Info:</strong> A satirical design of a megastructure that wraps around the Earth.</p>
+                            <p><strong>Location:</strong> Italy</p>
+                            <a href="docs/continuous_monument.html" class="btn-watch-trailer">Read More</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- ITEM 3: Plan Voisin -->
+            <tr id="plan_voisin" class="item unbuilt urban_planning dystopian before-2000">
+                <td>3</td>
+                <td class="filter-item"><a href="docs/plan_voisin.html">Plan Voisin</a></td>
+                <td class="filter-year">1925</td>
+                <td class="filter-status">Unbuilt</td>
+                <td><span class="filter-context">Urban Planning</span></td>
+                <td>
+                    <span class="filter-ideals">Dystopian</span>
+                </td>
+                <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+            </tr>
+            <tr class="hidden-info">
+                <td colspan="7">
+                    <div class="film-details">
+                        <div class="details-left">
+                            <img class="film-image" src="img/Corbusier.jpg" alt="Plan Voisin Image">
+                        </div>
+                        <div class="details-right">
+                            <p><strong>Short Info:</strong> A radical urban plan that proposed demolishing historic Paris to build modernist skyscrapers.</p>
+                            <p><strong>Location:</strong> France</p>
+                            <a href="docs/plan_voisin.html" class="btn-watch-trailer">Read More</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+ <!-- ITEM 4: No-Stop City -->
+ <tr id="no_stop_city" class="item unbuilt urban_planning futuristic utopian before-2000">
+    <td>4</td>
+    <td class="filter-item"><a href="docs/no_stop_city.html">No-Stop City</a></td>
+    <td class="filter-year">1970</td>
+    <td class="filter-status">Unbuilt</td>
+    <td><span class="filter-context">Urban Planning</span></td>
+    <td>
+        <span class="filter-ideals">Futuristic</span>, 
+        <span class="filter-ideals">Utopian</span>
+    </td>
+    <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+</tr>
+<tr class="hidden-info">
+    <td colspan="7">
+        <div class="film-details">
+            <div class="details-left">
+                <img class="film-image" src="img/No-stop city.jpg" alt="No-Stop City Image">
+            </div>
+            <div class="details-right">
+                <p><strong>Short Info:</strong> A conceptual city without boundaries, an endless grid challenging consumerist urbanism.</p>
+                <p><strong>Location:</strong> Italy</p>
+                <a href="docs/no_stop_city.html" class="btn-watch-trailer">Read More</a>
+            </div>
+        </div>
+    </td>
+</tr>
+
+<!-- ITEM 5: Freedom Ship -->
+<tr id="freedom_ship" class="item unbuilt megastructure futuristic before-2000">
+    <td>5</td>
+    <td class="filter-item"><a href="docs/freedom_ship.html">Freedom Ship</a></td>
+    <td class="filter-year">1990s</td>
+    <td class="filter-status">Unbuilt</td>
+    <td><span class="filter-context">Megastructure</span></td>
+    <td>
+        <span class="filter-ideals">Futuristic</span>
+    </td>
+    <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+</tr>
+<tr class="hidden-info">
+    <td colspan="7">
+        <div class="film-details">
+            <div class="details-left">
+                <img class="film-image" src="img/freedom_ship.jpg" alt="Freedom Ship Image">
+            </div>
+            <div class="details-right">
+                <p><strong>Short Info:</strong> A proposed floating city that aimed to be a tax-free, sovereign urban nation.</p>
+                <p><strong>Location:</strong> Global</p>
+                <a href="docs/freedom_ship.html" class="btn-watch-trailer">Read More</a>
+            </div>
+        </div>
+    </td>
+</tr>
+
+<!-- ITEM 6: Nakagin Capsule Tower -->
+<tr id="nakagin_tower" class="item built housing futuristic modular before-2000">
+    <td>6</td>
+    <td class="filter-item"><a href="docs/nakagin_tower.html">Nakagin Capsule Tower</a></td>
+    <td class="filter-year">1972</td>
+    <td class="filter-status">Built, Demolished</td>
+    <td><span class="filter-context">Housing</span></td>
+    <td>
+        <span class="filter-ideals">Futuristic</span>, 
+        <span class="filter-ideals">Modular</span>
+    </td>
+    <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+</tr>
+<tr class="hidden-info">
+    <td colspan="7">
+        <div class="film-details">
+            <div class="details-left">
+                <img class="film-image" src="img/Capsule tower.jpg" alt="Nakagin Capsule Tower Image">
+            </div>
+            <div class="details-right">
+                <p><strong>Short Info:</strong> A modular housing project made of interchangeable pods, designed for rapid urban life.</p>
+                <p><strong>Location:</strong> Japan</p>
+                <a href="docs/nakagin_tower.html" class="btn-watch-trailer">Read More</a>
+            </div>
+        </div>
+    </td>
+</tr>
+
+<!-- ITEM 7: Kowloon Walled City -->
+<tr id="kowloon_walled_city" class="item demolished housing organic chaotic before-2000">
+    <td>7</td>
+    <td class="filter-item"><a href="docs/kowloon_walled_city.html">Kowloon Walled City</a></td>
+    <td class="filter-year">1950s-1993</td>
+    <td class="filter-status">Demolished</td>
+    <td><span class="filter-context">Housing</span></td>
+    <td>
+        <span class="filter-ideals">Organic</span>, 
+        <span class="filter-ideals">Chaotic</span>
+    </td>
+    <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+</tr>
+<tr class="hidden-info">
+    <td colspan="7">
+        <div class="film-details">
+            <div class="details-left">
+                <img class="film-image" src="img/Kowloon.jpg" alt="Kowloon Walled City Image">
+            </div>
+            <div class="details-right">
+                <p><strong>Short Info:</strong> A hyper-dense, unregulated urban block that housed 33,000 people in an area of just 2.7 hectares.</p>
+                <p><strong>Location:</strong> Hong Kong</p>
+                <a href="docs/kowloon_walled_city.html" class="btn-watch-trailer">Read More</a>
+            </div>
+        </div>
+    </td>
+</tr>
+
+<!-- ITEM 8: Torre David -->
+<tr id="torre_david" class="item squatted housing organic chaotic after-2000">
+    <td>8</td>
+    <td class="filter-item"><a href="docs/torre_david.html">Torre David</a></td>
+    <td class="filter-year">1990s-2014</td>
+    <td class="filter-status">Squatted, Cleared</td>
+    <td><span class="filter-context">Housing</span></td>
+    <td>
+        <span class="filter-ideals">Organic</span>, 
+        <span class="filter-ideals">Chaotic</span>
+    </td>
+    <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+</tr>
+<tr class="hidden-info">
+    <td colspan="7">
+        <div class="film-details">
+            <div class="details-left">
+                <img class="film-image" src="img/Torre de David.jpg" alt="Torre David Image">
+            </div>
+            <div class="details-right">
+                <p><strong>Short Info:</strong> An abandoned skyscraper that became a vertical slum in Caracas.</p>
+                <p><strong>Location:</strong> Venezuela</p>
+                <a href="docs/torre_david.html" class="btn-watch-trailer">Read More</a>
+            </div>
+        </div>
+    </td>
+</tr>
+
+<!-- ITEM 9: The Line -->
+<tr id="the_line" class="item under_development urban_planning futuristic utopian after-2000">
+    <td>9</td>
+                    <td class="filter-item"><a href="docs/the_line.html">The Line</a></td>
+                    <td class="filter-year" onclick="filterByYear('2023-Present')">2023-Present</td>
+                    <td class="filter-status" onclick="filterByStatus('Under Development')">Under Development</td>
+                    <td><span class="filter-context" onclick="filterBycontext('Urban Planning')">Urban Planning</span></td>
+                    <td>
+                        <span class="filter-ideals" onclick="filterByideals('Futuristic')">Futuristic</span>, 
+                        <span class="filter-ideals" onclick="filterByideals('Utopian')">Utopian</span>
+                    </td>
+                    <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+                </tr>
+                <tr class="hidden-info">
+                    <td colspan="6">
+                        <div class="film-details">
+                            <div class="details-left">
+                                <img class="film-image" src="img/The Line.jpg" alt="The Line Image">
+                            </div>
+                            <div class="details-right">
+                                <p><strong>Short Info:</strong> A controversial, 170km-long linear city designed to house 9 million people.</p>
+                                <p><strong>Location:</strong> Saudi Arabia</p>
+                                <a href="docs/the_line.html" class="btn-watch-trailer">Read More</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                
+
+            <!-- ITEM 10: Futuro House -->
+            <tr id="futuro_house" class="item built housing futuristic modular before-2000">
+                <td>10</td>
+                <td class="filter-item"><a href="docs/futuro_house.html">Futuro House</a></td>
+                <td class="filter-year">1968</td>
+                <td class="filter-status">Built, Removed</td>
+                <td><span class="filter-context">Housing</span></td>
+                <td>
+                    <span class="filter-ideals">Futuristic</span>, 
+                    <span class="filter-ideals">Modular</span>
+                </td>
+                <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+            </tr>
+            <tr class="hidden-info">
+                <td colspan="7">
+                    <div class="film-details">
+                        <div class="details-left">
+                            <img class="film-image" src="img/FuturoHouse.jpg" alt="Futuro House Image">
+                        </div>
+                        <div class="details-right">
+                            <p><strong>Short Info:</strong> A mass-produced, UFO-shaped house designed for modular and futuristic living.</p>
+                            <p><strong>Location:</strong> Finland</p>
+                            <a href="docs/futuro_house.html" class="btn-watch-trailer">Read More</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- ITEM 11: LED News Ticker -->
+            <tr id="led_news_ticker" class="item built technology_media technological before-2000">
+                <td>11</td>
+                <td class="filter-item"><a href="docs/led_news_ticker.html">LED News Ticker</a></td>
+                <td class="filter-year">1980</td>
+                <td class="filter-status">Built</td>
+                <td><span class="filter-context">Technology & Media</span></td>
+                <td>
+                    <span class="filter-ideals">Technological</span>
+                </td>
+                <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+            </tr>
+            <tr class="hidden-info">
+                <td colspan="7">
+                    <div class="film-details">
+                        <div class="details-left">
+                            <img class="film-image" src="img/ticker.jpg" alt="LED News Ticker Image">
+                        </div>
+                        <div class="details-right">
+                            <p><strong>Short Info:</strong> The first electronic news ticker, turning buildings into media interfaces.</p>
+                            <p><strong>Location:</strong> London, UK</p>
+                            <a href="docs/led_news_ticker.html" class="btn-watch-trailer">Read More</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- ITEM 12: Arcosanti -->
+            <tr id="arcosanti" class="item existing housing ecological utopian before-2000">
+                <td>12</td>
+                <td class="filter-item"><a href="docs/arcosanti.html">Arcosanti</a></td>
+                <td class="filter-year">1970-Present</td>
+                <td class="filter-status">Existing</td>
+                <td><span class="filter-context">Housing</span></td>
+                <td>
+                    <span class="filter-ideals">Ecological</span>, 
+                    <span class="filter-ideals">Utopian</span>
+                </td>
+                <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+            </tr>
+            <tr class="hidden-info">
+                <td colspan="7">
+                    <div class="film-details">
+                        <div class="details-left">
+                            <img class="film-image" src="img/Arcosanti.jpg" alt="Arcosanti Image">
+                        </div>
+                        <div class="details-right">
+                            <p><strong>Short Info:</strong> A self-sufficient city experiment blending architecture and ecology.</p>
+                            <p><strong>Location:</strong> Arizona, USA</p>
+                            <a href="docs/arcosanti.html" class="btn-watch-trailer">Read More</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- ITEM 13: Wrapped Reichstag -->
+            <tr id="wrapped_reichstag" class="item temporary artistic_intervention artistic before-2000">
+                <td>13</td>
+                <td class="filter-item"><a href="docs/wrapped_reichstag.html">Wrapped Reichstag</a></td>
+                <td class="filter-year">1995</td>
+                <td class="filter-status">Temporary</td>
+                <td><span class="filter-context">Artistic Intervention</span></td>
+                <td>
+                    <span class="filter-ideals">Artistic</span>
+                </td>
+                <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+            </tr>
+            <tr class="hidden-info">
+                <td colspan="7">
+                    <div class="film-details">
+                        <div class="details-left">
+                            <img class="film-image" src="img/Reichstag.jpg" alt="Wrapped Reichstag Image">
+                        </div>
+                        <div class="details-right">
+                            <p><strong>Short Info:</strong> A temporary wrapping of Berlin’s Reichstag in silver fabric, transforming its perception.</p>
+                            <p><strong>Location:</strong> Germany</p>
+                            <a href="docs/wrapped_reichstag.html" class="btn-watch-trailer">Read More</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- ITEM 14: Building Cuts -->
+            <tr id="building_cuts" class="item destroyed artistic_intervention artistic deconstructive before-2000">
+                <td>14</td>
+                <td class="filter-item"><a href="docs/building_cuts.html">Building Cuts</a></td>
+                <td class="filter-year">1970s</td>
+                <td class="filter-status">Destroyed</td>
+                <td><span class="filter-context">Artistic Intervention</span></td>
+                <td>
+                    <span class="filter-ideals">Artistic</span>, 
+                    <span class="filter-ideals">Deconstructive</span>
+                </td>
+                <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+            </tr>
+            <tr class="hidden-info">
+                <td colspan="7">
+                    <div class="film-details">
+                        <div class="details-left">
+                            <img class="film-image" src="img/Behind the Wall.jpg" alt="Building Cuts Image">
+                        </div>
+                        <div class="details-right">
+                            <p><strong>Short Info:</strong> Architectural interventions where buildings were cut open to reveal hidden spaces.</p>
+                            <p><strong>Location:</strong> USA & France</p>
+                            <a href="docs/building_cuts.html" class="btn-watch-trailer">Read More</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- ITEM 15: Neon Installations -->
+            <tr id="neon_installations" class="item built artistic_intervention artistic technological before-2000">
+                <td>15</td>
+                <td class="filter-item"><a href="docs/neon_installations.html">Neon Installations</a></td>
+                <td class="filter-year">1960s-1980s</td>
+                <td class="filter-status">Built</td>
+                <td><span class="filter-context">Artistic Intervention</span></td>
+                <td>
+                    <span class="filter-ideals">Artistic</span>, 
+                    <span class="filter-ideals">Technological</span>
+                </td>
+                <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+            </tr>
+            <tr class="hidden-info">
+                <td colspan="7">
+                    <div class="film-details">
+                        <div class="details-left">
+                            <img class="film-image" src="img/neon.jpg" alt="Neon Installations Image">
+                        </div>
+                        <div class="details-right">
+                            <p><strong>Short Info:</strong> The use of neon lights to transform architectural perception and urban spaces.</p>
+                            <p><strong>Location:</strong> Global</p>
+                            <a href="docs/neon_installations.html" class="btn-watch-trailer">Read More</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- ITEM 16: Hyperloop Stations -->
+            <tr id="hyperloop" class="item under_development transportation futuristic technological after-2000">
+                <td>16</td>
+                <td class="filter-item"><a href="docs/hyperloop.html">Hyperloop Stations</a></td>
+                <td class="filter-year">2010s-Present</td>
+                <td class="filter-status">Under Development</td>
+                <td><span class="filter-context">Transportation</span></td>
+                <td>
+                    <span class="filter-ideals">Futuristic</span>, 
+                    <span class="filter-ideals">Technological</span>
+                </td>
+                <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+            </tr>
+            <tr class="hidden-info">
+                <td colspan="7">
+                    <div class="film-details">
+                        <div class="details-left">
+                            <img class="film-image" src="img/HyperLoop.jpg" alt="Hyperloop Stations Image">
+                        </div>
+                        <div class="details-right">
+                            <p><strong>Short Info:</strong> High-speed underground vacuum trains designed to reshape urban transport.</p>
+                            <p><strong>Location:</strong> Global</p>
+                            <a href="docs/hyperloop.html" class="btn-watch-trailer">Read More</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- ITEM 17: AI-Designed Cities -->
+            <tr id="ai_designed_cities" class="item speculative urban_planning futuristic technological after-2000">
+                <td>17</td>
+                <td class="filter-item"><a href="docs/ai_designed_cities.html">AI-Designed Cities</a></td>
+                <td class="filter-year">2020s & Beyond</td>
+                <td class="filter-status">Speculative</td>
+                <td><span class="filter-context">Urban Planning</span></td>
+                <td>
+                    <span class="filter-ideals">Futuristic</span>, 
+                    <span class="filter-ideals">Technological</span>
+                </td>
+                <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+            </tr>
+            <tr class="hidden-info">
+                <td colspan="7">
+                    <div class="film-details">
+                        <div class="details-left">
+                            <img class="film-image" src="img/AI Zaha Hadid.jpg" alt="AI-Designed Cities Image">
+                        </div>
+                        <div class="details-right">
+                            <p><strong>Short Info:</strong> Cities designed using artificial intelligence for optimal urban layouts.</p>
+                            <p><strong>Location:</strong> Global</p>
+                            <a href="docs/ai_designed_cities.html" class="btn-watch-trailer">Read More</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- ITEM 18: Roden Crater -->
+            <tr id="roden_crater" class="item under_development artistic_intervention artistic ecological before-2000">
+                <td>18</td>
+                <td class="filter-item"><a href="docs/roden_crater.html">Roden Crater</a></td>
+                <td class="filter-year">1970s-Present</td>
+                <td class="filter-status">Under Development</td>
+                <td><span class="filter-context">Artistic Intervention</span></td>
+                <td>
+                    <span class="filter-ideals">Artistic</span>, 
+                    <span class="filter-ideals">Ecological</span>
+                </td>
+                <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+            </tr>
+            <tr class="hidden-info">
+                <td colspan="7">
+                    <div class="film-details">
+                        <div class="details-left">
+                            <img class="film-image" src="img/Roden-Crater-James-Turell.jpg" alt="Roden Crater Image">
+                        </div>
+                        <div class="details-right">
+                            <p><strong>Short Info:</strong> An extinct volcano transformed into a massive light-based observatory.</p>
+                            <p><strong>Location:</strong> Arizona, USA</p>
+                            <a href="docs/roden_crater.html" class="btn-watch-trailer">Read More</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- ITEM 19: Metaverse Urbanism -->
+            <tr id="metaverse_urbanism" class="item speculative virtual_space futuristic virtual after-2000">
+                <td>19</td>
+                <td class="filter-item"><a href="docs/metaverse_urbanism.html">Metaverse Urbanism</a></td>
+                <td class="filter-year">2020s & Beyond</td>
+                <td class="filter-status">Speculative</td>
+                <td><span class="filter-context">Virtual Space</span></td>
+                <td>
+                    <span class="filter-ideals">Futuristic</span>, 
+                    <span class="filter-ideals">Virtual</span>
+                </td>
+                <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+            </tr>
+            <tr class="hidden-info">
+                <td colspan="7">
+                    <div class="film-details">
+                        <div class="details-left">
+                            <img class="film-image" src="img/AI city.jpeg" alt="Metaverse Urbanism Image">
+                        </div>
+                        <div class="details-right">
+                            <p><strong>Short Info:</strong> Digital cities built in virtual environments for a decentralized future.</p>
+                            <p><strong>Location:</strong> Virtual Space</p>
+                            <a href="docs/metaverse_urbanism.html" class="btn-watch-trailer">Read More</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- ITEM 20: Terraforming Mars -->
+            <tr id="terraforming_mars" class="item speculative planetary_urbanism futuristic ecological after-2000">
+                <td>20</td>
+                <td class="filter-item"><a href="docs/terraforming_mars.html">Terraforming Mars</a></td>
+                <td class="filter-year">2025 & Beyond</td>
+                <td class="filter-status">Speculative</td>
+                <td><span class="filter-context">Planetary Urbanism</span></td>
+                <td>
+                    <span class="filter-ideals">Futuristic</span>, 
+                    <span class="filter-ideals">Ecological</span>
+                </td>
+                <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+            </tr>
+            <tr class="hidden-info">
+                <td colspan="7">
+                    <div class="film-details">
+                        <div class="details-left">
+                            <img class="film-image" src="img/Mars Terraforming.jpg" alt="Terraforming Mars Image">
+                        </div>
+                        <div class="details-right">
+                            <p><strong>Short Info:</strong> Designing planetary-scale urban systems for human survival on Mars.</p>
+                            <p><strong>Location:</strong> Mars</p>
+                            <a href="docs/terraforming_mars.html" class="btn-watch-trailer">Read More</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="back-button-container hidden">
+        <button id="backButton" class="back-button">Back</button>
+    </div>
+
+    <footer class="site-footer">
+        <div>
+            <p>&copy; 2025 Unbuilt City. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/map.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
