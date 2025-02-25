@@ -124,6 +124,10 @@ h1, h2, p, a {
     font-family: 'Inter', sans-serif; /* Se vuoi mantenere la stessa font */
 }
 
+ul {
+    font-family: 'Inter', sans-serif; /* Se vuoi mantenere la stessa font */
+}
+
 .text-danger {
     color: #d02d00 !important; /* Assicura il rosso personalizzato */
 }
