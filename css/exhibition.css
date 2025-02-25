@@ -137,34 +137,45 @@ a.text-danger:hover {
 }
 
 
-.text-content {
-    max-width: 1000px; /* Controlla la larghezza massima per evitare che il testo sia troppo esteso */
-    margin: auto; /* Centra il testo all'interno della colonna */
-    text-align: justify; /* Giustifica il testo */
-    padding: 20px; /* Aggiunge un po' di spazio intorno */
+
+.info-section {
+    flex: 0 0 670px;
+    padding-top: 3rem;
 }
 
-.text-content h1 {
-    font-size: 2.5rem; /* Riduce il titolo principale */
-    font-weight: normal;
-    color: #d02d00;
-    margin-bottom: 10px;
-}
-
-.text-content h2 {
-    font-size: 1.2rem; /* Riduce il sottotitolo */
-    font-weight: normal;
-    color: #d02d00;
-    margin-bottom: 15px;
-}
-
-.text-content p {
-    font-size: 1rem; /* Rende il testo più piccolo */
-    line-height: 1.5; /* Aggiunge spaziatura tra le righe per migliorare la leggibilità */
+/* Info Section Styling */
+.info-section h1 {
+    font-size: 3.5rem;
+    font-weight: 2500;
+    margin-bottom: 1.3rem;
     color: #d02d00;
 }
 
-.text-content a {
+.info-section h2 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: #d02d00;
+    text-align: justify;
+}
+
+.info-section p {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+    text-align: justify;
+    color: #d02d00;
+}
+
+.info-section ul {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+    text-align: justify;
+    color: #d02d00;
+}
+
+.info-section a {
     text-decoration: underline;
     font-weight: bold;
     color: #d02d00;
