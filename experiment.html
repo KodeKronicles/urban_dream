@@ -25,9 +25,9 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <ul class="navbar-nav ms-md-auto">
               <li>
-                        <a class="nav-link" href="index.html">HOME</a>
+                <a class="nav-link" href="index.html">HOME</a>
               </li>
-              <li class="nav-link">
+              <li>
                 <a class="nav-link" href="exhibition.html">EXHIBITION</a>
               </li>
               <li>
@@ -49,21 +49,23 @@
 
 
 
-<!-- Add this inside the body after the filter-navbar -->
-<div class="map-info-wrapper">
-    <!-- Existing map container -->
-    <div class="main-image-container">
-        <img id="mainImage" src="img/map/cerchicompleti.png" alt="Default Image" class="map-image">
-    </div>
+    <div class="container mt-5">
+        <div class="row align-items-start">
+           
 
-    <div class="info-section">
-        <h1>The Map & The Fury</h1>
-        <h2>Navigate Visionary Urban Concepts</h2>
-        <p>This map catalogues architectural ideas, from utopian visions to radical urban experiments. Explore visionary projects, track their historical ideals, and refine your view to uncover patterns across different eras and ideas. Discover how these concepts shaped the built environment, influenced future designs, and challenged traditional notions of space, function, and aesthetics. </p>
-        <p><span class="underline" onclick="toggleTable()" style="cursor: pointer;">Open the Catalogue ></span></p>
-        
+            <!-- Colonna Testo -->
+            <div class="col-md-6 info-section mt-0 pt-0">
+                <h1>The Map</h1>
+                <h2>Navigate Visionary Urban Concepts.</h2>
+                <p>This map catalogues architectural ideas, from utopian visions to radical urban experiments. Explore visionary projects, track their historical ideals, and refine your view to uncover patterns across different eras and ideas. Discover how these concepts shaped the built environment, influenced future designs, and challenged traditional notions of space, function, and aesthetics. </p>
+                <h3><span class="underline" onclick="toggleTable()" style="cursor: pointer;">Open the Catalogue ></span></h3>
+            </div>
+             <!-- Colonna Immagine -->
+             <div class="col-md-6 mt-0 pt-0">
+                <img src="img/map/cerchicompleti.png" alt="Map Image" class="img-fluid">
+            </div>
+        </div>
     </div>
-</div>
 
 
 <!-- Tabella degli item -->
@@ -112,18 +114,27 @@
             </tr>
             <tr class="hidden-info">
                 <td colspan="7">
-                    <div class="film-details">
-                        <div class="details-left">
-                            <img class="film-image" src="img/Walking city.gif" alt="Walking City Image">
-                        </div>
-                        <div class="details-right">
-                            <p><strong>Short Info:</strong> A visionary concept of mobile, self-sustaining cities that could move across landscapes.</p>
-                            <p><strong>Location:</strong> United Kingdom</p>
-                            <a href="docs/walking_city.html" class="btn-watch-trailer">Read More</a>
+                    <div class="container">
+                        <div class="row">
+                            <!-- Colonna 1: Immagine -->
+                            <div class="col-md-4 details-left">
+                                <img class="film-image" src="img/Walking city.gif" alt="Walking City Image">
+                            </div>
+            
+                            <!-- Colonna 2: Testo -->
+                            <div class="col-md-8 details-right">
+                            <p>Walking City, envisioned by the radical British architecture group Archigram, proposed a future where entire cities could move, adapting to environmental changes and human needs. Designed as a series of autonomous, intelligent megastructures, each unit would function as a self-contained metropolis equipped with housing, infrastructure, and industry. The concept was heavily inspired by advancements in space travel and cybernetics, emphasizing mobility, adaptability, and technological integration in urban planning.</p>                    <p>Location: United Kingdom</p>
+                        <p>Check out if you like: Radical urbanism. Futuristic mobility. High-tech megastructures.</p>
+                            <p>Recommended by: Alice</p>
+                                <a href="docs/walking_city.html" class="btn-watch-trailer">Read More</a>
+                            </div>
                         </div>
                     </div>
                 </td>
             </tr>
+            
+            
+            
 
                <!-- ITEM 2: Continuous Monument -->
             <tr id="continuous_monument" class="item unbuilt megastructure artistic dystopian before-2000">
@@ -665,7 +676,7 @@
 
     <footer class="site-footer">
         <div>
-            <p>&copy; 2025 Unbuilt City. All rights reserved.</p>
+            <p>&copy; 2025. Ideascapes — The Architectures of Tomorrow. All rights reserved.</p>
         </div>
     </footer>
     <script src="js/map.js"></script>

@@ -25,9 +25,9 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <ul class="navbar-nav ms-md-auto">
               <li>
-                        <a class="nav-link" href="index.html">HOME</a>
+                <a class="nav-link" href="index.html">HOME</a>
               </li>
-              <li class="nav-item dropdown">
+              <li>
                 <a class="nav-link" href="exhibition.html">EXHIBITION</a>
               </li>
               <li>
@@ -47,50 +47,25 @@
         </div>
       </nav>
 
-      <div class="navbar-breaker"></div>
 
 
-<!-- Add this inside the body after the filter-navbar -->
-<div class="map-info-wrapper">
-    <!-- Existing map container -->
-    <div class="main-image-container">
-        <img id="mainImage" src="img/map/cerchicompleti.png" alt="Default Image" class="map-image">
-    </div>
+    <div class="container mt-5">
+        <div class="row align-items-start">
+           
 
-    <div class="info-section">
-        <h1>The Map & The Fury</h1>
-        <h2>Navigate Visionary Urban Concepts</h2>
-        <p>This map catalogues architectural ideas, from utopian visions to radical urban experiments. Explore visionary projects, track their historical ideals, and refine your view to uncover patterns across different eras and ideas. Discover how these concepts shaped the built environment, influenced future designs, and challenged traditional notions of space, function, and aesthetics. <span class="underline" style="cursor: pointer;"><a href="exhibition.html">Explore the Exhibition ></a></span></p>
-        <p><span class="underline" onclick="toggleTable()" style="cursor: pointer;">Read the Catalogue ></span></p>
-        <div class="filter-options">
-            <span>Sort by:</span>
-            <select class="filter-dropdown" id="timeFilter" onchange="handleTimeFilter(this.value)">
-                <option value="">Time <span class="sort-arrow" id="timeArrow">↑</span></option>
-                <option value="before-2000">Before 2000</option>
-                <option value="after-2000">After 2000</option>
-            </select>
-
-            <select class="filter-dropdown" id="statusFilter" onchange="filterByStatus(this.value)">
-                <option value="">Status <span class="sort-arrow" id="statusArrow">↑</span></option>
-                <option value="unbuilt">Unbuilt</option>
-                <option value="built">Built</option>
-                <option value="speculative">Speculative</option>
-            </select>
-            <select class="filter-dropdown" onchange="sortCatalogue('context')">
-                <option value="">context <span class="sort-arrow">↑</span></option>
-                <option value="urban">Urban Planning</option>
-                <option value="housing">Housing</option>
-                <option value="art">Artistic Intervention</option>
-            </select>
-            <select class="filter-dropdown" onchange="sortCatalogue('ideals')">
-                <option value="">ideals <span class="sort-arrow">↑</span></option>
-                <option value="futuristic">Futuristic</option>
-                <option value="utopian">Utopian</option>
-                <option value="dystopian">Dystopian</option>
-            </select>
+            <!-- Colonna Testo -->
+            <div class="col-md-6 info-section mt-0 pt-0">
+                <h1>The Map</h1>
+                <h2>Navigate Visionary Urban Concepts.</h2>
+                <p>This map catalogues architectural ideas, from utopian visions to radical urban experiments. Explore visionary projects, track their historical ideals, and refine your view to uncover patterns across different eras and ideas. Discover how these concepts shaped the built environment, influenced future designs, and challenged traditional notions of space, function, and aesthetics. </p>
+                <h3><span class="underline" onclick="toggleTable()" style="cursor: pointer;">Open the Catalogue ></span></h3>
+            </div>
+             <!-- Colonna Immagine -->
+             <div class="col-md-6 mt-0 pt-0">
+                <img src="img/map/cerchicompleti.png" alt="Map Image" class="img-fluid">
+            </div>
         </div>
     </div>
-</div>
 
 
 <!-- Tabella degli item -->
@@ -101,9 +76,24 @@
                 <th onclick="sortTable(0, this)">ID<span class="sort-arrow">↑</span></th>
                 <th onclick="sortTable(1, this)">Title<span class="sort-arrow">↑</span></th>
                 <th onclick="sortTable(2, this)">Year<span class="sort-arrow">↑</span></th>
-                <th onclick="sortTable(3, this)">Status<span class="sort-arrow">↑</span></th>
-                <th onclick="sortTable(4, this)">context<span class="sort-arrow">↑</span></th>
-                <th onclick="sortTable(5, this)">ideals <span class="sort-arrow">↑</span></th>
+
+                <!-- Modifica l'header della colonna Status -->
+<th class="status-header">
+    <div class="custom-dropdown">
+        <div class="dropdown-trigger" onclick="toggleStatusDropdown()">
+            Status
+            <span class="sort-arrow">↑</span>
+        </div>
+        <div id="statusDropdown" class="dropdown-menu">
+            <div class="menu-item" onclick="filterByStatus('unbuilt')">Unbuilt</div>
+            <div class="menu-item" onclick="filterByStatus('built')">Built</div>
+            <div class="menu-item" onclick="filterByStatus('speculative')">Speculative</div>
+        </div>
+    </div>
+</th>
+
+                <th onclick="sortTable(4, this)">Context<span class="sort-arrow">↑</span></th>
+                <th onclick="sortTable(5, this)">Ideals <span class="sort-arrow">↑</span></th>
                 <th></th>
             </tr>
         </thead>
@@ -124,18 +114,27 @@
             </tr>
             <tr class="hidden-info">
                 <td colspan="7">
-                    <div class="film-details">
-                        <div class="details-left">
-                            <img class="film-image" src="img/Walking city.gif" alt="Walking City Image">
-                        </div>
-                        <div class="details-right">
-                            <p><strong>Short Info:</strong> A visionary concept of mobile, self-sustaining cities that could move across landscapes.</p>
-                            <p><strong>Location:</strong> United Kingdom</p>
-                            <a href="docs/walking_city.html" class="btn-watch-trailer">Read More</a>
+                    <div class="container">
+                        <div class="row">
+                            <!-- Colonna 1: Immagine -->
+                            <div class="col-md-4 details-left">
+                                <img class="film-image" src="img/Walking city.gif" alt="Walking City Image">
+                            </div>
+            
+                            <!-- Colonna 2: Testo -->
+                            <div class="col-md-8 details-right">
+                            <p>Walking City, envisioned by the radical British architecture group Archigram, proposed a future where entire cities could move, adapting to environmental changes and human needs. Designed as a series of autonomous, intelligent megastructures, each unit would function as a self-contained metropolis equipped with housing, infrastructure, and industry. The concept was heavily inspired by advancements in space travel and cybernetics, emphasizing mobility, adaptability, and technological integration in urban planning.</p>                    <p>Location: United Kingdom</p>
+                        <p>Check out if you like: Radical urbanism. Futuristic mobility. High-tech megastructures.</p>
+                            <p>Recommended by: Alice</p>
+                                <a href="docs/walking_city.html" class="btn-watch-trailer">Read More</a>
+                            </div>
                         </div>
                     </div>
                 </td>
             </tr>
+            
+            
+            
 
                <!-- ITEM 2: Continuous Monument -->
             <tr id="continuous_monument" class="item unbuilt megastructure artistic dystopian before-2000">
@@ -677,9 +676,11 @@
 
     <footer class="site-footer">
         <div>
-            <p>&copy; 2025 Unbuilt City. All rights reserved.</p>
+            <p>&copy; 2025. Ideascapes — The Architectures of Tomorrow. All rights reserved.</p>
         </div>
     </footer>
     <script src="js/map.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
