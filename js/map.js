@@ -39,16 +39,16 @@ document.addEventListener("DOMContentLoaded", function () {
         filter.addEventListener("click", () => filterTable(filter.textContent, ".filter-year"));
     });
 
-    document.querySelectorAll(".filter-type").forEach(filter => {
-        filter.addEventListener("click", () => filterTable(filter.textContent, ".filter-type"));
+    document.querySelectorAll(".filter-context").forEach(filter => {
+        filter.addEventListener("click", () => filterTable(filter.textContent, ".filter-context"));
     });
 
     document.querySelectorAll(".filter-status").forEach(filter => {
         filter.addEventListener("click", () => filterTable(filter.textContent, ".filter-status"));
     });
 
-    document.querySelectorAll(".filter-philosophy").forEach(filter => {
-        filter.addEventListener("click", () => filterTable(filter.textContent, ".filter-philosophy"));
+    document.querySelectorAll(".filter-ideals").forEach(filter => {
+        filter.addEventListener("click", () => filterTable(filter.textContent, ".filter-ideals"));
     });
 
     // Pulsante "Back" per ripristinare tutto

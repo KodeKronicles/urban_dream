@@ -58,3 +58,148 @@
     color: #a32200;
     text-decoration: underline;
 }
+
+
+/* NAV PILLS - MENU VERTICALE */
+.nav-pills {
+    margin-top: 50px; /* Sposta il menu più in basso */
+    align-items: flex-end; /* Allinea la parte finale delle parole */
+}
+
+.nav-pills .nav-link {
+    font-size: 1rem !important;
+    color: #d02d00 !important; /* Sempre rosso */
+    font-weight: normal !important;
+    text-decoration: underline !important; /* Sempre sottolineato */
+    text-underline-offset: 4px !important;
+    text-decoration-thickness: 1.3px !important; /* Mantiene sempre lo stesso spessore */
+    text-align: right !important; /* Allinea il testo alla destra */
+    padding: 10px 15px !important;
+    border-radius: 0 !important; /* Nessun angolo arrotondato */
+    background: transparent !important; /* Nessuno sfondo */
+    border: none !important; /* Rimuove bordi visibili */
+    box-shadow: none !important; /* Rimuove l'effetto di selezione */
+    transition: none !important; /* Nessuna transizione per evitare ingrandimenti */
+}
+
+/* Impedisce qualsiasi cambiamento in hover */
+.nav-pills .nav-link:hover,
+.nav-pills .nav-link:focus,
+.nav-pills .nav-link:active {
+    font-size: 1rem !important; /* Nessun aumento di grandezza */
+    font-weight: normal !important; /* Nessun aumento di peso */
+    text-decoration: underline !important; /* Mantiene la sottolineatura */
+    text-underline-offset: 4px !important;
+    text-decoration-thickness: 1.5px !important;
+    color: #d02d00 !important; /* Mantiene il rosso */
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Impedisce qualsiasi cambiamento nel tab attivo */
+.nav-pills .nav-link.active {
+    font-size: 1rem !important; /* Nessun aumento di grandezza */
+    font-weight: normal !important; /* Nessun aumento di peso */
+    text-decoration: underline !important; /* Mantiene la sottolineatura */
+    text-underline-offset: 4px !important;
+    text-decoration-thickness: 1.5px !important;
+    color: #d02d00 !important; /* Mantiene il rosso */
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* NAV PILLS - CONTAINER GENERALE */
+.nav-container {
+    display: flex;
+    justify-content: flex-end; /* Allinea le voci alla fine */
+    flex-direction: column;
+}
+
+
+h1, h2, p, a {
+    font-family: 'Inter', sans-serif; /* Se vuoi mantenere la stessa font */
+}
+
+.text-danger {
+    color: #d02d00 !important; /* Assicura il rosso personalizzato */
+}
+
+a.text-danger:hover {
+    text-decoration: underline; /* Mantiene sempre il sottolineato */
+}
+
+
+.text-content {
+    max-width: 1000px; /* Controlla la larghezza massima per evitare che il testo sia troppo esteso */
+    margin: auto; /* Centra il testo all'interno della colonna */
+    text-align: justify; /* Giustifica il testo */
+    padding: 20px; /* Aggiunge un po' di spazio intorno */
+}
+
+.text-content h1 {
+    font-size: 2.5rem; /* Riduce il titolo principale */
+    font-weight: normal;
+    color: #d02d00;
+    margin-bottom: 10px;
+}
+
+.text-content h2 {
+    font-size: 1.2rem; /* Riduce il sottotitolo */
+    font-weight: normal;
+    color: #d02d00;
+    margin-bottom: 15px;
+}
+
+.text-content p {
+    font-size: 1rem; /* Rende il testo più piccolo */
+    line-height: 1.5; /* Aggiunge spaziatura tra le righe per migliorare la leggibilità */
+    color: #d02d00;
+}
+
+.text-content a {
+    text-decoration: underline;
+    font-weight: bold;
+    color: #d02d00;
+}
+
+/* Spaziatura per allineare meglio con l'immagine */
+.row {
+    justify-content: center; /* Centra il contenuto */
+    margin: 40px 0; /* Aggiunge margine sopra e sotto */
+}
+
+/* Allinea il contenuto al centro della pagina */
+
+
+.navbar-breaker {
+    width: 90%;
+    height: 2px; /* Imposta un'altezza per renderlo visibile */
+    background-color: #d02d00; /* Imposta un colore di sfondo per renderlo visibile */
+    margin-left: auto; /* Fa partire l'elemento da destra */
+}
+
+
+/* CARD STUFF */
+
+.filter-btn {
+    margin: 5px;
+    font-weight: bold;
+}
+
+.filter-btn.active {
+    background-color: #d02d00;
+    color: white;
+}
+
+.card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+

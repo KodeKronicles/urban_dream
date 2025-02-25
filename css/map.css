@@ -322,29 +322,6 @@
         margin-top: 40px;
     }
     
-    .footer-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-    
-    .footer-nav {
-        margin-top: 10px;
-    }
-    
-    .footer-nav a {
-        color: #d02d00;
-        text-decoration: none;
-        margin: 0 10px;
-        font-weight: 600;
-        text-transform: uppercase;
-        transition: color 0.3s ease;
-    }
-    
-    .footer-nav a:hover {
-        color: #a32200;
-        text-decoration: underline;
-    }
     
     .map-wrapper {
         position: relative;

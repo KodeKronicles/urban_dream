@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MAP</title>
+    <title>Map</title>
 
     <!-- Google Font: Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -58,9 +58,9 @@
     </div>
 
     <div class="info-section">
-        <h1>The Exhibition Map</h1>
+        <h1>The Map & The Fury</h1>
         <h2>Navigate Visionary Urban Concepts</h2>
-        <p>This map catalogues architectural ideas, from utopian visions to radical urban experiments. Explore visionary projects, track their historical context, and refine your view to uncover patterns across different eras and ideas. Discover how these concepts shaped the built environment, influenced future designs, and challenged traditional notions of space, function, and aesthetics. <span class="underline" style="cursor: pointer;"><a href="narratives.html">Explore the Narratives ></a></span></p>
+        <p>This map catalogues architectural ideas, from utopian visions to radical urban experiments. Explore visionary projects, track their historical ideals, and refine your view to uncover patterns across different eras and ideas. Discover how these concepts shaped the built environment, influenced future designs, and challenged traditional notions of space, function, and aesthetics. <span class="underline" style="cursor: pointer;"><a href="narratives.html">Explore the Narratives ></a></span></p>
         <p><span class="underline" onclick="toggleTable()" style="cursor: pointer;">Read the Catalogue ></span></p>
         <div class="filter-options">
             <span>Sort by:</span>
@@ -76,14 +76,14 @@
                 <option value="built">Built</option>
                 <option value="speculative">Speculative</option>
             </select>
-            <select class="filter-dropdown" onchange="sortCatalogue('domain')">
-                <option value="">Domain <span class="sort-arrow">↑</span></option>
+            <select class="filter-dropdown" onchange="sortCatalogue('context')">
+                <option value="">context <span class="sort-arrow">↑</span></option>
                 <option value="urban">Urban Planning</option>
                 <option value="housing">Housing</option>
                 <option value="art">Artistic Intervention</option>
             </select>
-            <select class="filter-dropdown" onchange="sortCatalogue('philosophy')">
-                <option value="">Philosophy <span class="sort-arrow">↑</span></option>
+            <select class="filter-dropdown" onchange="sortCatalogue('ideals')">
+                <option value="">ideals <span class="sort-arrow">↑</span></option>
                 <option value="futuristic">Futuristic</option>
                 <option value="utopian">Utopian</option>
                 <option value="dystopian">Dystopian</option>
@@ -102,8 +102,8 @@
                 <th onclick="sortTable(1, this)">Title<span class="sort-arrow">↑</span></th>
                 <th onclick="sortTable(2, this)">Year<span class="sort-arrow">↑</span></th>
                 <th onclick="sortTable(3, this)">Status<span class="sort-arrow">↑</span></th>
-                <th onclick="sortTable(4, this)">Domain<span class="sort-arrow">↑</span></th>
-                <th onclick="sortTable(5, this)">Philosophy <span class="sort-arrow">↑</span></th>
+                <th onclick="sortTable(4, this)">context<span class="sort-arrow">↑</span></th>
+                <th onclick="sortTable(5, this)">ideals <span class="sort-arrow">↑</span></th>
                 <th></th>
             </tr>
         </thead>
@@ -115,10 +115,10 @@
                 <td class="filter-item"><a href="docs/walking_city.html">Walking City</a></td>
                 <td class="filter-year">1964</td>
                 <td class="filter-status">Unbuilt</td>
-                <td><span class="filter-type">Urban Planning</span></td>
+                <td><span class="filter-context">Urban Planning</span></td>
                 <td>
-                    <span class="filter-philosophy">Futuristic</span>, 
-                    <span class="filter-philosophy">Utopian</span>
+                    <span class="filter-ideals">Futuristic</span>, 
+                    <span class="filter-ideals">Utopian</span>
                 </td>
                 <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
             </tr>
@@ -143,10 +143,10 @@
                 <td class="filter-item"><a href="docs/continuous_monument.html">Continuous Monument</a></td>
                 <td class="filter-year">1969</td>
                 <td class="filter-status">Unbuilt</td>
-                <td><span class="filter-type">Megastructure</span></td>
+                <td><span class="filter-context">Megastructure</span></td>
                 <td>
-                    <span class="filter-philosophy">Artistic</span>, 
-                    <span class="filter-philosophy">Dystopian</span>
+                    <span class="filter-ideals">Artistic</span>, 
+                    <span class="filter-ideals">Dystopian</span>
                 </td>
                 <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
             </tr>
@@ -171,9 +171,9 @@
                 <td class="filter-item"><a href="docs/plan_voisin.html">Plan Voisin</a></td>
                 <td class="filter-year">1925</td>
                 <td class="filter-status">Unbuilt</td>
-                <td><span class="filter-type">Urban Planning</span></td>
+                <td><span class="filter-context">Urban Planning</span></td>
                 <td>
-                    <span class="filter-philosophy">Dystopian</span>
+                    <span class="filter-ideals">Dystopian</span>
                 </td>
                 <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
             </tr>
@@ -198,10 +198,10 @@
     <td class="filter-item"><a href="docs/no_stop_city.html">No-Stop City</a></td>
     <td class="filter-year">1970</td>
     <td class="filter-status">Unbuilt</td>
-    <td><span class="filter-type">Urban Planning</span></td>
+    <td><span class="filter-context">Urban Planning</span></td>
     <td>
-        <span class="filter-philosophy">Futuristic</span>, 
-        <span class="filter-philosophy">Utopian</span>
+        <span class="filter-ideals">Futuristic</span>, 
+        <span class="filter-ideals">Utopian</span>
     </td>
     <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
 </tr>
@@ -226,9 +226,9 @@
     <td class="filter-item"><a href="docs/freedom_ship.html">Freedom Ship</a></td>
     <td class="filter-year">1990s</td>
     <td class="filter-status">Unbuilt</td>
-    <td><span class="filter-type">Megastructure</span></td>
+    <td><span class="filter-context">Megastructure</span></td>
     <td>
-        <span class="filter-philosophy">Futuristic</span>
+        <span class="filter-ideals">Futuristic</span>
     </td>
     <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
 </tr>
@@ -253,10 +253,10 @@
     <td class="filter-item"><a href="docs/nakagin_tower.html">Nakagin Capsule Tower</a></td>
     <td class="filter-year">1972</td>
     <td class="filter-status">Built, Demolished</td>
-    <td><span class="filter-type">Housing</span></td>
+    <td><span class="filter-context">Housing</span></td>
     <td>
-        <span class="filter-philosophy">Futuristic</span>, 
-        <span class="filter-philosophy">Modular</span>
+        <span class="filter-ideals">Futuristic</span>, 
+        <span class="filter-ideals">Modular</span>
     </td>
     <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
 </tr>
@@ -281,10 +281,10 @@
     <td class="filter-item"><a href="docs/kowloon_walled_city.html">Kowloon Walled City</a></td>
     <td class="filter-year">1950s-1993</td>
     <td class="filter-status">Demolished</td>
-    <td><span class="filter-type">Housing</span></td>
+    <td><span class="filter-context">Housing</span></td>
     <td>
-        <span class="filter-philosophy">Organic</span>, 
-        <span class="filter-philosophy">Chaotic</span>
+        <span class="filter-ideals">Organic</span>, 
+        <span class="filter-ideals">Chaotic</span>
     </td>
     <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
 </tr>
@@ -309,10 +309,10 @@
     <td class="filter-item"><a href="docs/torre_david.html">Torre David</a></td>
     <td class="filter-year">1990s-2014</td>
     <td class="filter-status">Squatted, Cleared</td>
-    <td><span class="filter-type">Housing</span></td>
+    <td><span class="filter-context">Housing</span></td>
     <td>
-        <span class="filter-philosophy">Organic</span>, 
-        <span class="filter-philosophy">Chaotic</span>
+        <span class="filter-ideals">Organic</span>, 
+        <span class="filter-ideals">Chaotic</span>
     </td>
     <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
 </tr>
@@ -337,10 +337,10 @@
                     <td class="filter-item"><a href="docs/the_line.html">The Line</a></td>
                     <td class="filter-year" onclick="filterByYear('2023-Present')">2023-Present</td>
                     <td class="filter-status" onclick="filterByStatus('Under Development')">Under Development</td>
-                    <td><span class="filter-type" onclick="filterByType('Urban Planning')">Urban Planning</span></td>
+                    <td><span class="filter-context" onclick="filterBycontext('Urban Planning')">Urban Planning</span></td>
                     <td>
-                        <span class="filter-philosophy" onclick="filterByPhilosophy('Futuristic')">Futuristic</span>, 
-                        <span class="filter-philosophy" onclick="filterByPhilosophy('Utopian')">Utopian</span>
+                        <span class="filter-ideals" onclick="filterByideals('Futuristic')">Futuristic</span>, 
+                        <span class="filter-ideals" onclick="filterByideals('Utopian')">Utopian</span>
                     </td>
                     <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
                 </tr>
@@ -367,10 +367,10 @@
                 <td class="filter-item"><a href="docs/futuro_house.html">Futuro House</a></td>
                 <td class="filter-year">1968</td>
                 <td class="filter-status">Built, Removed</td>
-                <td><span class="filter-type">Housing</span></td>
+                <td><span class="filter-context">Housing</span></td>
                 <td>
-                    <span class="filter-philosophy">Futuristic</span>, 
-                    <span class="filter-philosophy">Modular</span>
+                    <span class="filter-ideals">Futuristic</span>, 
+                    <span class="filter-ideals">Modular</span>
                 </td>
                 <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
             </tr>
@@ -395,9 +395,9 @@
                 <td class="filter-item"><a href="docs/led_news_ticker.html">LED News Ticker</a></td>
                 <td class="filter-year">1980</td>
                 <td class="filter-status">Built</td>
-                <td><span class="filter-type">Technology & Media</span></td>
+                <td><span class="filter-context">Technology & Media</span></td>
                 <td>
-                    <span class="filter-philosophy">Technological</span>
+                    <span class="filter-ideals">Technological</span>
                 </td>
                 <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
             </tr>
@@ -422,10 +422,10 @@
                 <td class="filter-item"><a href="docs/arcosanti.html">Arcosanti</a></td>
                 <td class="filter-year">1970-Present</td>
                 <td class="filter-status">Existing</td>
-                <td><span class="filter-type">Housing</span></td>
+                <td><span class="filter-context">Housing</span></td>
                 <td>
-                    <span class="filter-philosophy">Ecological</span>, 
-                    <span class="filter-philosophy">Utopian</span>
+                    <span class="filter-ideals">Ecological</span>, 
+                    <span class="filter-ideals">Utopian</span>
                 </td>
                 <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
             </tr>
@@ -450,9 +450,9 @@
                 <td class="filter-item"><a href="docs/wrapped_reichstag.html">Wrapped Reichstag</a></td>
                 <td class="filter-year">1995</td>
                 <td class="filter-status">Temporary</td>
-                <td><span class="filter-type">Artistic Intervention</span></td>
+                <td><span class="filter-context">Artistic Intervention</span></td>
                 <td>
-                    <span class="filter-philosophy">Artistic</span>
+                    <span class="filter-ideals">Artistic</span>
                 </td>
                 <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
             </tr>
@@ -477,10 +477,10 @@
                 <td class="filter-item"><a href="docs/building_cuts.html">Building Cuts</a></td>
                 <td class="filter-year">1970s</td>
                 <td class="filter-status">Destroyed</td>
-                <td><span class="filter-type">Artistic Intervention</span></td>
+                <td><span class="filter-context">Artistic Intervention</span></td>
                 <td>
-                    <span class="filter-philosophy">Artistic</span>, 
-                    <span class="filter-philosophy">Deconstructive</span>
+                    <span class="filter-ideals">Artistic</span>, 
+                    <span class="filter-ideals">Deconstructive</span>
                 </td>
                 <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
             </tr>
@@ -505,10 +505,10 @@
                 <td class="filter-item"><a href="docs/neon_installations.html">Neon Installations</a></td>
                 <td class="filter-year">1960s-1980s</td>
                 <td class="filter-status">Built</td>
-                <td><span class="filter-type">Artistic Intervention</span></td>
+                <td><span class="filter-context">Artistic Intervention</span></td>
                 <td>
-                    <span class="filter-philosophy">Artistic</span>, 
-                    <span class="filter-philosophy">Technological</span>
+                    <span class="filter-ideals">Artistic</span>, 
+                    <span class="filter-ideals">Technological</span>
                 </td>
                 <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
             </tr>
@@ -533,10 +533,10 @@
                 <td class="filter-item"><a href="docs/hyperloop.html">Hyperloop Stations</a></td>
                 <td class="filter-year">2010s-Present</td>
                 <td class="filter-status">Under Development</td>
-                <td><span class="filter-type">Transportation</span></td>
+                <td><span class="filter-context">Transportation</span></td>
                 <td>
-                    <span class="filter-philosophy">Futuristic</span>, 
-                    <span class="filter-philosophy">Technological</span>
+                    <span class="filter-ideals">Futuristic</span>, 
+                    <span class="filter-ideals">Technological</span>
                 </td>
                 <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
             </tr>
@@ -561,10 +561,10 @@
                 <td class="filter-item"><a href="docs/ai_designed_cities.html">AI-Designed Cities</a></td>
                 <td class="filter-year">2020s & Beyond</td>
                 <td class="filter-status">Speculative</td>
-                <td><span class="filter-type">Urban Planning</span></td>
+                <td><span class="filter-context">Urban Planning</span></td>
                 <td>
-                    <span class="filter-philosophy">Futuristic</span>, 
-                    <span class="filter-philosophy">Technological</span>
+                    <span class="filter-ideals">Futuristic</span>, 
+                    <span class="filter-ideals">Technological</span>
                 </td>
                 <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
             </tr>
@@ -589,10 +589,10 @@
                 <td class="filter-item"><a href="docs/roden_crater.html">Roden Crater</a></td>
                 <td class="filter-year">1970s-Present</td>
                 <td class="filter-status">Under Development</td>
-                <td><span class="filter-type">Artistic Intervention</span></td>
+                <td><span class="filter-context">Artistic Intervention</span></td>
                 <td>
-                    <span class="filter-philosophy">Artistic</span>, 
-                    <span class="filter-philosophy">Ecological</span>
+                    <span class="filter-ideals">Artistic</span>, 
+                    <span class="filter-ideals">Ecological</span>
                 </td>
                 <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
             </tr>
@@ -617,10 +617,10 @@
                 <td class="filter-item"><a href="docs/metaverse_urbanism.html">Metaverse Urbanism</a></td>
                 <td class="filter-year">2020s & Beyond</td>
                 <td class="filter-status">Speculative</td>
-                <td><span class="filter-type">Virtual Space</span></td>
+                <td><span class="filter-context">Virtual Space</span></td>
                 <td>
-                    <span class="filter-philosophy">Futuristic</span>, 
-                    <span class="filter-philosophy">Virtual</span>
+                    <span class="filter-ideals">Futuristic</span>, 
+                    <span class="filter-ideals">Virtual</span>
                 </td>
                 <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
             </tr>
@@ -645,10 +645,10 @@
                 <td class="filter-item"><a href="docs/terraforming_mars.html">Terraforming Mars</a></td>
                 <td class="filter-year">2025 & Beyond</td>
                 <td class="filter-status">Speculative</td>
-                <td><span class="filter-type">Planetary Urbanism</span></td>
+                <td><span class="filter-context">Planetary Urbanism</span></td>
                 <td>
-                    <span class="filter-philosophy">Futuristic</span>, 
-                    <span class="filter-philosophy">Ecological</span>
+                    <span class="filter-ideals">Futuristic</span>, 
+                    <span class="filter-ideals">Ecological</span>
                 </td>
                 <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
             </tr>
@@ -676,10 +676,10 @@
     </div>
 
     <footer class="site-footer">
-        <div class="footer-container">
+        <div>
             <p>&copy; 2025 Unbuilt City. All rights reserved.</p>
-            </div>
+        </div>
     </footer>
-    <script src="js/catalogue.js"></script>
+    <script src="js/map.js"></script>
 </body>
 </html>

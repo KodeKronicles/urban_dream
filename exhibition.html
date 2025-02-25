@@ -3,10 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>EXHIBITION</title>
+    <title>Exhibition</title>
     <link href="css/exhibition.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="js/exhibition.js"></script>
+    <!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Bundle con JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
   </head>
   <body>
     <nav class="navbar navbar-expand-lg">
@@ -41,36 +46,530 @@
         </div>
       </div>
     </nav>
-
-
-    <div class="container-fluid p-0">
-        <div class="row">
-            <div class="col-md-2">
-                <nav class="nav flex-column">
-                    <a class="nav-link active" data-bs-toggle="pill" href="#history" role="tab" aria-controls="history" aria-selected="true">History</a>
-                    <a class="nav-link" data-bs-toggle="pill" href="#designers" role="tab" aria-controls="designers" aria-selected="false">Designers</a>
-                    <a class="nav-link" data-bs-toggle="pill" href="#usage" role="tab" aria-controls="usage" aria-selected="false">Usage</a>
-                    <a class="nav-link" data-bs-toggle="pill" href="#spaces" role="tab" aria-controls="spaces" aria-selected="false">Spaces</a>
-                </nav>
+    <div class="container-fluid p-0 m-0">
+        <div class="row m-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 offset-md-1 text-center">
+                        <div class="text-content">
+                            <h1>Exploring the Boundaries of Architecture</h1>
+                            <p>
+                                Architecture is more than just buildings—it is a reflection of human ambition, societal shifts, and technological evolution. 
+                                From <strong>utopian visions</strong> to <strong>dystopian realities</strong>, from <strong>radical experiments</strong> 
+                                to <strong>practical innovations</strong>, architectural ideas shape and redefine how we interact with the world.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- CAROUSEL -->
+                <div id="narrativeCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/AI city.jpeg" class="d-block w-100" alt="In Space">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>In Space</h3>
+                                <p>How visionary projects are shaped by geography and spatial constraints.</p>
+                                <a href="#space" class="btn btn-outline-light">Explore</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/Walking city.gif" class="d-block w-100" alt="In Time">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>In Time</h3>
+                                <p>How architecture responds to and influences historical changes.</p>
+                                <a href="#time" class="btn btn-outline-light">Explore</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/Arcosanti.jpg" class="d-block w-100" alt="In Action">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>In Action</h3>
+                                <p>The transition from speculative concepts to real-world applications.</p>
+                                <a href="#reality" class="btn btn-outline-light">Explore</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/Corbusier.jpg" class="d-block w-100" alt="In Context">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>In Context</h3>
+                                <p>The role of architecture within urbanism, housing, art, and technology.</p>
+                                <a href="#context" class="btn btn-outline-light">Explore</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/Corbusier.jpg" class="d-block w-100" alt="In Ideals">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>In Ideals</h3>
+                                <p>The principles and philosophies that guide architectural thinking.</p>
+                                <a href="#ideals" class="btn btn-outline-light">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- CONTROLS -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#narrativeCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#narrativeCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
             </div>
-    
-            <div class="col-md-10">
-                <div class="tab-content">
-                    <div class="tab-pane fade show active" id="history" role="tabpanel">Content for History</div>
-                    <div class="tab-pane fade" id="designers" role="tabpanel">Content for Designers</div>
-                    <div class="tab-pane fade" id="usage" role="tabpanel">Content for Usage</div>
-                    <div class="tab-pane fade" id="spaces" role="tabpanel">Content for Spaces</div>
+            
+            <!-- PLACE IT RIGHT BEFORE THIS -->
+            <div class="container-fluid p-0 m-0">
+                <div class="row m-0">
+            
+            <!-- NAVIGATION PILLS -->
+            <div class="col-md-2 p-0">
+                <ul class="nav nav-pills flex-column" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="space-tab" data-bs-toggle="pill" href="#space" role="tab" aria-controls="space" aria-selected="false">IN SPACE ></a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="time-tab" data-bs-toggle="pill" href="#time" role="tab" aria-controls="time" aria-selected="false">IN TIME ></a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="reality-tab" data-bs-toggle="pill" href="#reality" role="tab" aria-controls="reality" aria-selected="false">IN REALITY ></a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="context-tab" data-bs-toggle="pill" href="#context" role="tab" aria-controls="context" aria-selected="false">IN CONTEXT ></a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="ideals-tab" data-bs-toggle="pill" href="#ideals" role="tab" aria-controls="ideals" aria-selected="false">IN IDEALS ></a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- TAB CONTENT -->
+<div class="col-md-10 p-0">
+    <div class="tab-content">
+        <!-- IN SPACE -->
+        <div class="tab-pane fade" id="space" role="tabpanel" aria-labelledby="space-tab">
+            <div class="row">
+                <!-- TESTO A SINISTRA -->
+                <div class="col-md-10 d-flex align-items-center">
+                    <div class="text-content">
+                        <h1>In Space</h1>
+                        <h2>How Architecture Redefines Geography</h2>
+                        <p>
+                            Cities are not static—they expand, contract, and evolve based on geography, technology, and political forces. From floating metropolises to subterranean habitats, from hyper-dense informal settlements to futuristic AI-generated designs, urban concepts are shaped by space itself. This section explores visionary projects and radical interventions across different regions of the world. Some propose entirely new ways of living, while others challenge existing spatial hierarchies and geopolitical boundaries.
+                            <br>Here, you can explore how urban experiments differ by location, climate, and socio-political context. Click on a region below to filter architectural ideas that reshape our world.
+                        </p>
+                        <div class="btn-group" role="group" aria-label="Region filters">
+                            <button type="button" class="btn btn-outline-danger filter-btn active" data-filter="all">ALL</button>
+                            <button type="button" class="btn btn-outline-danger filter-btn" data-filter="global">GLOBAL</button>
+                            <button type="button" class="btn btn-outline-danger filter-btn" data-filter="europe">EUROPE</button>
+                            <button type="button" class="btn btn-outline-danger filter-btn" data-filter="asia">ASIA</button>
+                            <button type="button" class="btn btn-outline-danger filter-btn" data-filter="america">AMERICA</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="navbar-breaker"></div>
+
+               <!-- GRID SYSTEM -->
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+
+            <!-- GLOBAL -->
+            <div class="col filter-item global">
+                <div class="card h-100">
+                    <img src="img/Freedom ship.jpg" class="card-img-top img-fluid" alt="Freedom Ship">
+                    <div class="card-body">
+                        <h5 class="card-title">Freedom Ship</h5>
+                        <p class="card-text">A floating city as a sovereign nation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item global">
+                <div class="card h-100">
+                    <img src="img/HyperLoop.jpg" class="card-img-top img-fluid" alt="Hyperloop">
+                    <div class="card-body">
+                        <h5 class="card-title">Hyperloop</h5>
+                        <p class="card-text">High-speed underground vacuum train.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item global">
+                <div class="card h-100">
+                    <img src="img/AI Zaha Hadid.jpg" class="card-img-top img-fluid" alt="AI-Designed Cities">
+                    <div class="card-body">
+                        <h5 class="card-title">AI-Designed Cities</h5>
+                        <p class="card-text">Urban planning optimized by AI.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item global">
+                <div class="card h-100">
+                    <img src="img/AI city.jpeg" class="card-img-top img-fluid" alt="Metaverse Urbanism">
+                    <div class="card-body">
+                        <h5 class="card-title">Metaverse Urbanism</h5>
+                        <p class="card-text">Virtual cityscapes redefining urban life.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item global">
+                <div class="card h-100">
+                    <img src="img/Mars Terraforming.jpg" class="card-img-top img-fluid" alt="Terraforming Mars">
+                    <div class="card-body">
+                        <h5 class="card-title">Terraforming Mars</h5>
+                        <p class="card-text">Urban systems for human survival on Mars.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EUROPE -->
+            <div class="col filter-item europe">
+                <div class="card h-100">
+                    <img src="img/Corbusier.jpg" class="card-img-top img-fluid" alt="Plan Voisin">
+                    <div class="card-body">
+                        <h5 class="card-title">Plan Voisin</h5>
+                        <p class="card-text">Replacing Paris with modernist skyscrapers.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item europe">
+                <div class="card h-100">
+                    <img src="img/SUPERSTUDIO REVISITADO.jpg" class="card-img-top img-fluid" alt="Continuous Monument">
+                    <div class="card-body">
+                        <h5 class="card-title">Continuous Monument</h5>
+                        <p class="card-text">A satirical endless megastructure.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item europe">
+                <div class="card h-100">
+                    <img src="img/Reichstag.jpg" class="card-img-top img-fluid" alt="Wrapped Reichstag">
+                    <div class="card-body">
+                        <h5 class="card-title">Wrapped Reichstag</h5>
+                        <p class="card-text">A political landmark transformed into art.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item europe">
+                <div class="card h-100">
+                    <img src="img/ticker.jpg" class="card-img-top img-fluid" alt="LED News Ticker">
+                    <div class="card-body">
+                        <h5 class="card-title">LED News Ticker</h5>
+                        <p class="card-text">Buildings turned into media interfaces.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ASIA -->
+            <div class="col filter-item asia">
+                <div class="card h-100">
+                    <img src="img/Kowloon.jpg" class="card-img-top img-fluid" alt="Kowloon Walled City">
+                    <div class="card-body">
+                        <h5 class="card-title">Kowloon Walled City</h5>
+                        <p class="card-text">Unregulated, hyper-dense urbanism.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item asia">
+                <div class="card h-100">
+                    <img src="img/Capsule tower.jpg" class="card-img-top img-fluid" alt="Nakagin Capsule Tower">
+                    <div class="card-body">
+                        <h5 class="card-title">Nakagin Capsule Tower</h5>
+                        <p class="card-text">Modular living spaces in Japan.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item asia">
+                <div class="card h-100">
+                    <img src="img/The Line.jpg" class="card-img-top img-fluid" alt="The Line">
+                    <div class="card-body">
+                        <h5 class="card-title">The Line</h5>
+                        <p class="card-text">A futuristic, car-free city.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AMERICA -->
+            <div class="col filter-item america">
+                <div class="card h-100">
+                    <img src="img/Arcosanti.jpg" class="card-img-top img-fluid" alt="Arcosanti">
+                    <div class="card-body">
+                        <h5 class="card-title">Arcosanti</h5>
+                        <p class="card-text">An experimental eco-city in Arizona.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item america">
+                <div class="card h-100">
+                    <img src="img/Roden-Crater-James-Turell.jpg" class="card-img-top img-fluid" alt="Roden Crater">
+                    <div class="card-body">
+                        <h5 class="card-title">Roden Crater</h5>
+                        <p class="card-text">A light-based observatory in a volcano.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item america">
+                <div class="card h-100">
+                    <img src="img/Torre de David.jpg" class="card-img-top img-fluid" alt="Torre David">
+                    <div class="card-body">
+                        <h5 class="card-title">Torre David</h5>
+                        <p class="card-text">A vertical slum in Caracas.</p>
+                    </div>
                 </div>
             </div>
         </div>
+            </div>
+        </div>
     </div>
+</div>
+
+<div class="col-md-10 p-0">
+    <div class="tab-content">
+        <!-- IN TIME -->
+        <div class="tab-pane fade" id="time" role="tabpanel" aria-labelledby="time-tab">
+            <div class="row">
+                <!-- TESTO A SINISTRA -->
+                <div class="col-md-10 d-flex align-items-center">
+                    <div class="text-content">
+                        <h1>In Time</h1>
+                        <h2>How Architecture Shapes and Is Shaped by History</h2>
+                        <p>
+                            Architecture is a reflection of its time—both responding to and influencing cultural, technological, and social change. 
+                            Some projects emerge as radical experiments, pushing boundaries of materiality and urban form, while others are shaped 
+                            by crises, technological shifts, or speculative futures.<br>This section categorizes visionary urban concepts based on their historical context. You can explore projects developed before 2000, when modernist, utopian, and experimental movements dominated, or those conceived after 2000, where digital technology, AI, and sustainability redefine architecture. Click below to filter and explore how time influences the built environment.
+                        </p>
+                       <!-- FILTRI TIME -->
+                <div class="btn-group mt-3" role="group" aria-label="Time filters">
+                    <button type="button" class="btn btn-outline-danger filter-btn active" data-filter="all">ALL</button>
+                    <button type="button" class="btn btn-outline-danger filter-btn" data-filter="before-2000">BEFORE 2000</button>
+                    <button type="button" class="btn btn-outline-danger filter-btn" data-filter="after-2000">AFTER 2000</button>
+                </div>
+                    </div>
+                </div>
+                
+                <div class="navbar-breaker"></div>
+
+
+ <!-- GRID SYSTEM -->
+ <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+
+    <!-- BEFORE 2000 -->
+    <div class="col filter-item before-2000"><div class="card h-100"><img src="img/Walking city.gif" class="card-img-top img-fluid" alt="Walking City"><div class="card-body"><h5 class="card-title">Walking City (1964)</h5></div></div></div>
+    <div class="col filter-item before-2000"><div class="card h-100"><img src="img/SUPERSTUDIO REVISITADO.jpg" class="card-img-top img-fluid" alt="Continuous Monument"><div class="card-body"><h5 class="card-title">Continuous Monument (1969)</h5></div></div></div>
+    <div class="col filter-item before-2000"><div class="card h-100"><img src="img/Corbusier.jpg" class="card-img-top img-fluid" alt="Plan Voisin"><div class="card-body"><h5 class="card-title">Plan Voisin (1925)</h5></div></div></div>
+    <div class="col filter-item before-2000"><div class="card h-100"><img src="img/No-stop city.jpg" class="card-img-top img-fluid" alt="No-Stop City"><div class="card-body"><h5 class="card-title">No-Stop City (1970)</h5></div></div></div>
+    <div class="col filter-item before-2000"><div class="card h-100"><img src="img/Freedom ship.jpg" class="card-img-top img-fluid" alt="Freedom Ship"><div class="card-body"><h5 class="card-title">Freedom Ship (1990s)</h5></div></div></div>
+    <div class="col filter-item before-2000"><div class="card h-100"><img src="img/Capsule tower.jpg" class="card-img-top img-fluid" alt="Nakagin Capsule Tower"><div class="card-body"><h5 class="card-title">Nakagin Capsule Tower (1972)</h5></div></div></div>
+    <div class="col filter-item before-2000"><div class="card h-100"><img src="img/Kowloon.jpg" class="card-img-top img-fluid" alt="Kowloon Walled City"><div class="card-body"><h5 class="card-title">Kowloon Walled City (1950s-1993)</h5></div></div></div>
+    <div class="col filter-item before-2000"><div class="card h-100"><img src="img/Reichstag.jpg" class="card-img-top img-fluid" alt="Wrapped Reichstag"><div class="card-body"><h5 class="card-title">Wrapped Reichstag (1995)</h5></div></div></div>
+    <div class="col filter-item before-2000"><div class="card h-100"><img src="img/Behind the Wall.jpg" class="card-img-top img-fluid" alt="Building Cuts"><div class="card-body"><h5 class="card-title">Building Cuts (1970s)</h5></div></div></div>
+    <div class="col filter-item before-2000"><div class="card h-100"><img src="img/FuturoHouse.jpg" class="card-img-top img-fluid" alt="Futuro House"><div class="card-body"><h5 class="card-title">Futuro House (1968)</h5></div></div></div>
+    <div class="col filter-item before-2000"><div class="card h-100"><img src="img/ticker.jpg" class="card-img-top img-fluid" alt="LED News Ticker"><div class="card-body"><h5 class="card-title">LED News Ticker (1980)</h5></div></div></div>
+    <div class="col filter-item before-2000"><div class="card h-100"><img src="img/Arcosanti.jpg" class="card-img-top img-fluid" alt="Arcosanti"><div class="card-body"><h5 class="card-title">Arcosanti (1970-Present)</h5></div></div></div>
+    <div class="col filter-item before-2000"><div class="card h-100"><img src="img/Roden-Crater-James-Turell.jpg" class="card-img-top img-fluid" alt="Roden Crater"><div class="card-body"><h5 class="card-title">Roden Crater (1970s-Present)</h5></div></div></div>
+
+    <!-- AFTER 2000 -->
+    <div class="col filter-item after-2000"><div class="card h-100"><img src="img/Torre de David.jpg" class="card-img-top img-fluid" alt="Torre David"><div class="card-body"><h5 class="card-title">Torre David (1990s-2014)</h5></div></div></div>
+    <div class="col filter-item after-2000"><div class="card h-100"><img src="img/The Line.jpg" class="card-img-top img-fluid" alt="The Line"><div class="card-body"><h5 class="card-title">The Line (2023-Present)</h5></div></div></div>
+    <div class="col filter-item after-2000"><div class="card h-100"><img src="img/HyperLoop.jpg" class="card-img-top img-fluid" alt="Hyperloop"><div class="card-body"><h5 class="card-title">Hyperloop (2010s-Present)</h5></div></div></div>
+    <div class="col filter-item after-2000"><div class="card h-100"><img src="img/AI Zaha Hadid.jpg" class="card-img-top img-fluid" alt="AI-Designed Cities"><div class="card-body"><h5 class="card-title">AI-Designed Cities (2020s & Beyond)</h5></div></div></div>
+    <div class="col filter-item after-2000"><div class="card h-100"><img src="img/AI city.jpeg" class="card-img-top img-fluid" alt="Metaverse Urbanism"><div class="card-body"><h5 class="card-title">Metaverse Urbanism (2020s & Beyond)</h5></div></div></div>
+    <div class="col filter-item after-2000"><div class="card h-100"><img src="img/Mars Terraforming.jpg" class="card-img-top img-fluid" alt="Terraforming Mars"><div class="card-body"><h5 class="card-title">Terraforming Mars (2025 & Beyond)</h5></div></div></div>
+
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
     
 
+<div class="col-md-10 p-0">
+    <div class="tab-content">
+        <!-- IN reality -->
+        <div class="tab-pane fade" id="reality" role="tabpanel" aria-labelledby="reality-tab">
+            <div class="row">
+                <!-- TESTO A SINISTRA -->
+                <div class="col-md-10 d-flex align-items-center">
+                    <div class="text-content">
+                        <h1>In Reality</h1>
+                        <h2>From Speculative Concepts to Realized Projects</h2>
+                        <p>Architecture is not just about ideas—it’s about how those ideas take form, whether as speculative visions or built structures that reshape reality. Some projects remain in the realm of theory, challenging conventional thinking and offering radical alternatives. Others move into practice, transforming cities, landscapes, and social structures.
+                        <br>This section categorizes visionary urban concepts based on their realization. You can explore projects that remained speculative, pushing boundaries in In Theory, or those that have been built, occupied, or tested in In Practice. Click below to filter and see how ideas translate into action.
+                    </p>
+
+                <div class="btn-group mt-3" role="group" aria-label="Reality filters">
+                    <button type="button" class="btn btn-outline-danger filter-btn active" data-filter="all">ALL</button>
+                    <button type="button" class="btn btn-outline-danger filter-btn" data-filter="in-theory">IN THEORY</button>
+                    <button type="button" class="btn btn-outline-danger filter-btn" data-filter="in-practice">IN PRACTICE</button>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-breaker"></div>
+
+        <!-- GRID SYSTEM -->
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+
+            <!-- IN THEORY -->
+            <div class="col filter-item in-theory"><div class="card h-100"><img src="img/Walking city.gif" class="card-img-top img-fluid" alt="Walking City"><div class="card-body"><h5 class="card-title">Walking City</h5></div></div></div>
+            <div class="col filter-item in-theory"><div class="card h-100"><img src="img/SUPERSTUDIO REVISITADO.jpg" class="card-img-top img-fluid" alt="Continuous Monument"><div class="card-body"><h5 class="card-title">Continuous Monument</h5></div></div></div>
+            <div class="col filter-item in-theory"><div class="card h-100"><img src="img/No-stop city.jpg" class="card-img-top img-fluid" alt="No-Stop City"><div class="card-body"><h5 class="card-title">No-Stop City</h5></div></div></div>
+            <div class="col filter-item in-theory"><div class="card h-100"><img src="img/The Line.jpg" class="card-img-top img-fluid" alt="The Line"><div class="card-body"><h5 class="card-title">The Line</h5></div></div></div>
+            <div class="col filter-item in-theory"><div class="card h-100"><img src="img/AI city.jpeg" class="card-img-top img-fluid" alt="Metaverse Urbanism"><div class="card-body"><h5 class="card-title">Metaverse Urbanism</h5></div></div></div>
+            <div class="col filter-item in-theory"><div class="card h-100"><img src="img/Mars Terraforming.jpg" class="card-img-top img-fluid" alt="Terraforming Mars"><div class="card-body"><h5 class="card-title">Terraforming Mars</h5></div></div></div>
+            <div class="col filter-item in-theory"><div class="card h-100"><img src="img/AI Zaha Hadid.jpg" class="card-img-top img-fluid" alt="AI-Designed Cities"><div class="card-body"><h5 class="card-title">AI-Designed Cities</h5></div></div></div>
+            <div class="col filter-item in-theory"><div class="card h-100"><img src="img/Corbusier.jpg" class="card-img-top img-fluid" alt="Plan Voisin"><div class="card-body"><h5 class="card-title">Plan Voisin</h5></div></div></div>
+            <div class="col filter-item in-theory"><div class="card h-100"><img src="img/Freedom ship.jpg" class="card-img-top img-fluid" alt="Freedom Ship"><div class="card-body"><h5 class="card-title">Freedom Ship</h5></div></div></div>
+            <div class="col filter-item in-theory"><div class="card h-100"><img src="img/Kowloon.jpg" class="card-img-top img-fluid" alt="Kowloon Walled City"><div class="card-body"><h5 class="card-title">Kowloon Walled City</h5></div></div></div>
+
+            <!-- IN PRACTICE -->
+            <div class="col filter-item in-practice"><div class="card h-100"><img src="img/Capsule tower.jpg" class="card-img-top img-fluid" alt="Nakagin Capsule Tower"><div class="card-body"><h5 class="card-title">Nakagin Capsule Tower</h5></div></div></div>
+            <div class="col filter-item in-practice"><div class="card h-100"><img src="img/Reichstag.jpg" class="card-img-top img-fluid" alt="Wrapped Reichstag"><div class="card-body"><h5 class="card-title">Wrapped Reichstag</h5></div></div></div>
+            <div class="col filter-item in-practice"><div class="card h-100"><img src="img/Behind the Wall.jpg" class="card-img-top img-fluid" alt="Building Cuts"><div class="card-body"><h5 class="card-title">Building Cuts</h5></div></div></div>
+            <div class="col filter-item in-practice"><div class="card h-100"><img src="img/FuturoHouse.jpg" class="card-img-top img-fluid" alt="Futuro House"><div class="card-body"><h5 class="card-title">Futuro House</h5></div></div></div>
+            <div class="col filter-item in-practice"><div class="card h-100"><img src="img/ticker.jpg" class="card-img-top img-fluid" alt="LED News Ticker"><div class="card-body"><h5 class="card-title">LED News Ticker</h5></div></div></div>
+            <div class="col filter-item in-practice"><div class="card h-100"><img src="img/Arcosanti.jpg" class="card-img-top img-fluid" alt="Arcosanti"><div class="card-body"><h5 class="card-title">Arcosanti</h5></div></div></div>
+            <div class="col filter-item in-practice"><div class="card h-100"><img src="img/Roden-Crater-James-Turell.jpg" class="card-img-top img-fluid" alt="Roden Crater"><div class="card-body"><h5 class="card-title">Roden Crater</h5></div></div></div>
+            <div class="col filter-item in-practice"><div class="card h-100"><img src="img/Torre de David.jpg" class="card-img-top img-fluid" alt="Torre David"><div class="card-body"><h5 class="card-title">Torre David</h5></div></div></div>
+            <div class="col filter-item in-practice"><div class="card h-100"><img src="img/HyperLoop.jpg" class="card-img-top img-fluid" alt="Hyperloop"><div class="card-body"><h5 class="card-title">Hyperloop</h5></div></div></div>
+
+        </div>
+    </div>
+</div>
 
 
+<div class="col-md-10 p-0">
+    <div class="tab-content">
+        <!-- IN context -->
+        <div class="tab-pane fade" id="context" role="tabpanel" aria-labelledby="context-tab">
+            <div class="row">
+                <!-- TESTO A SINISTRA -->
+                <div class="col-md-10 d-flex align-items-center">
+                    <div class="text-content">
+                        <h1>In Context</h1>
+                        <h2>How Visionary Projects Fit into the Real World</h2>
+                    <p>Architectural ideas do not exist in isolation; they emerge within specific disciplines, shaping and being shaped by urban planning, housing, artistic interventions, and technological advancements. Some projects redefine how we live in cities, others push the boundaries of radical housing experiments, while some function as artistic provocations or pioneering infrastructure projects.
+                    <br>This section categorizes projects based on their real-world domain. Click below to explore how each concept fits within urbanism, radical living, artistic experimentation, or technology and infrastructure.
+                    </p>
+
+<!-- FILTRI CONTEXT -->
+<div class="btn-group mt-3" role="group" aria-label="Context filters">
+    <button type="button" class="btn btn-outline-danger filter-btn active" data-filter="all">ALL</button>
+    <button type="button" class="btn btn-outline-danger filter-btn" data-filter="urbanism">URBANISM</button>
+    <button type="button" class="btn btn-outline-danger filter-btn" data-filter="housing">RADICAL LIVING</button>
+    <button type="button" class="btn btn-outline-danger filter-btn" data-filter="art">ART & ARCHITECTURE</button>
+    <button type="button" class="btn btn-outline-danger filter-btn" data-filter="technology">TECHNOLOGY & INFRASTRUCTURE</button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="navbar-breaker"></div>
+
+<!-- GRID SYSTEM -->
+<div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+
+<!-- URBANISM -->
+<div class="col filter-item urbanism"><div class="card h-100"><img src="img/Walking city.gif" class="card-img-top img-fluid" alt="Walking City"><div class="card-body"><h5 class="card-title">Walking City</h5></div></div></div>
+<div class="col filter-item urbanism"><div class="card h-100"><img src="img/No-stop city.jpg" class="card-img-top img-fluid" alt="No-Stop City"><div class="card-body"><h5 class="card-title">No-Stop City</h5></div></div></div>
+<div class="col filter-item urbanism"><div class="card h-100"><img src="img/The Line.jpg" class="card-img-top img-fluid" alt="The Line"><div class="card-body"><h5 class="card-title">The Line</h5></div></div></div>
+<div class="col filter-item urbanism"><div class="card h-100"><img src="img/Corbusier.jpg" class="card-img-top img-fluid" alt="Plan Voisin"><div class="card-body"><h5 class="card-title">Plan Voisin</h5></div></div></div>
+<div class="col filter-item urbanism"><div class="card h-100"><img src="img/AI Zaha Hadid.jpg" class="card-img-top img-fluid" alt="AI-Designed Cities"><div class="card-body"><h5 class="card-title">AI-Designed Cities</h5></div></div></div>
+
+<!-- RADICAL LIVING -->
+<div class="col filter-item housing"><div class="card h-100"><img src="img/Capsule tower.jpg" class="card-img-top img-fluid" alt="Nakagin Capsule Tower"><div class="card-body"><h5 class="card-title">Nakagin Capsule Tower</h5></div></div></div>
+<div class="col filter-item housing"><div class="card h-100"><img src="img/Kowloon.jpg" class="card-img-top img-fluid" alt="Kowloon Walled City"><div class="card-body"><h5 class="card-title">Kowloon Walled City</h5></div></div></div>
+<div class="col filter-item housing"><div class="card h-100"><img src="img/Torre de David.jpg" class="card-img-top img-fluid" alt="Torre David"><div class="card-body"><h5 class="card-title">Torre David</h5></div></div></div>
+<div class="col filter-item housing"><div class="card h-100"><img src="img/Freedom ship.jpg" class="card-img-top img-fluid" alt="Freedom Ship"><div class="card-body"><h5 class="card-title">Freedom Ship</h5></div></div></div>
+
+<!-- ART & ARCHITECTURE -->
+<div class="col filter-item art"><div class="card h-100"><img src="img/Reichstag.jpg" class="card-img-top img-fluid" alt="Wrapped Reichstag"><div class="card-body"><h5 class="card-title">Wrapped Reichstag</h5></div></div></div>
+<div class="col filter-item art"><div class="card h-100"><img src="img/Behind the Wall.jpg" class="card-img-top img-fluid" alt="Building Cuts"><div class="card-body"><h5 class="card-title">Building Cuts</h5></div></div></div>
+<div class="col filter-item art"><div class="card h-100"><img src="img/neon.jpg" class="card-img-top img-fluid" alt="Neon Installations"><div class="card-body"><h5 class="card-title">Neon Installations</h5></div></div></div>
+<div class="col filter-item art"><div class="card h-100"><img src="img/Roden-Crater-James-Turell.jpg" class="card-img-top img-fluid" alt="Roden Crater"><div class="card-body"><h5 class="card-title">Roden Crater</h5></div></div></div>
+
+<!-- TECHNOLOGY & INFRASTRUCTURE -->
+<div class="col filter-item technology"><div class="card h-100"><img src="img/HyperLoop.jpg" class="card-img-top img-fluid" alt="Hyperloop"><div class="card-body"><h5 class="card-title">Hyperloop</h5></div></div></div>
+<div class="col filter-item technology"><div class="card h-100"><img src="img/ticker.jpg" class="card-img-top img-fluid" alt="LED News Ticker"><div class="card-body"><h5 class="card-title">LED News Ticker</h5></div></div></div>
+<div class="col filter-item technology"><div class="card h-100"><img src="img/AI city.jpeg" class="card-img-top img-fluid" alt="Metaverse Urbanism"><div class="card-body"><h5 class="card-title">Metaverse Urbanism</h5></div></div></div>
+<div class="col filter-item technology"><div class="card h-100"><img src="img/Mars Terraforming.jpg" class="card-img-top img-fluid" alt="Terraforming Mars"><div class="card-body"><h5 class="card-title">Terraforming Mars</h5></div></div></div>
+
+</div>
+</div>
+</div>
+                   
+                   
+<div class="col-md-10 p-0">
+    <div class="tab-content">
+        <!-- IN IDEALS -->
+        <div class="tab-pane fade" id="ideals" role="tabpanel" aria-labelledby="ideals-tab">
+            <div class="row">
+                <!-- TESTO A SINISTRA -->
+                <div class="col-md-10 d-flex align-items-center">
+                    <div class="text-content">
+                        <h1>In Ideals</h1>
+                        <h2>The Principles and Values Behind Architectural Concepts
+                        </h2>
+                    <p>Every architectural vision is shaped by an underlying set of ideals—some projects are guided by utopian aspirations, others warn of dystopian futures, while some celebrate technological innovation or challenge spatial conventions through artistic deconstruction.
+                        <br>                    
+                        This section categorizes architectural concepts based on their guiding principles. Click below to explore projects that embody futuristic utopias, urban dystopias, technological advancements, or artistic interventions.</p>
+
+                        <!-- FILTER BUTTONS -->
+                    <div class="btn-group mt-3" role="group" aria-label="Ideals filters">
+                        <button type="button" class="btn btn-outline-danger filter-btn active" data-filter="all">ALL</button>
+                        <button type="button" class="btn btn-outline-danger filter-btn" data-filter="utopian">FUTURISTIC UTOPIAS</button>
+                        <button type="button" class="btn btn-outline-danger filter-btn" data-filter="dystopian">URBAN DYSTOPIAS</button>
+                        <button type="button" class="btn btn-outline-danger filter-btn" data-filter="technological">TECHNOLOGY & INNOVATION</button>
+                        <button type="button" class="btn btn-outline-danger filter-btn" data-filter="artistic">ART & SPATIAL DECONSTRUCTION</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar-breaker"></div>
+
+        <!-- GRID SYSTEM -->
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+
+            <!-- FUTURISTIC UTOPIAS -->
+            <div class="col filter-item utopian"><div class="card h-100"><img src="img/Walking city.gif" class="card-img-top img-fluid" alt="Walking City"><div class="card-body"><h5 class="card-title">Walking City</h5></div></div></div>
+            <div class="col filter-item utopian"><div class="card h-100"><img src="img/No-stop city.jpg" class="card-img-top img-fluid" alt="No-Stop City"><div class="card-body"><h5 class="card-title">No-Stop City</h5></div></div></div>
+            <div class="col filter-item utopian"><div class="card h-100"><img src="img/The Line.jpg" class="card-img-top img-fluid" alt="The Line"><div class="card-body"><h5 class="card-title">The Line</h5></div></div></div>
+            <div class="col filter-item utopian"><div class="card h-100"><img src="img/Arcosanti.jpg" class="card-img-top img-fluid" alt="Arcosanti"><div class="card-body"><h5 class="card-title">Arcosanti</h5></div></div></div>
+
+            <!-- URBAN DYSTOPIAS -->
+            <div class="col filter-item dystopian"><div class="card h-100"><img src="img/SUPERSTUDIO REVISITADO.jpg" class="card-img-top img-fluid" alt="Continuous Monument"><div class="card-body"><h5 class="card-title">Continuous Monument</h5></div></div></div>
+            <div class="col filter-item dystopian"><div class="card h-100"><img src="img/Corbusier.jpg" class="card-img-top img-fluid" alt="Plan Voisin"><div class="card-body"><h5 class="card-title">Plan Voisin</h5></div></div></div>
+            <div class="col filter-item dystopian"><div class="card h-100"><img src="img/Kowloon.jpg" class="card-img-top img-fluid" alt="Kowloon Walled City"><div class="card-body"><h5 class="card-title">Kowloon Walled City</h5></div></div></div>
+
+            <!-- TECHNOLOGY & INNOVATION -->
+            <div class="col filter-item technological"><div class="card h-100"><img src="img/HyperLoop.jpg" class="card-img-top img-fluid" alt="Hyperloop"><div class="card-body"><h5 class="card-title">Hyperloop</h5></div></div></div>
+            <div class="col filter-item technological"><div class="card h-100"><img src="img/AI Zaha Hadid.jpg" class="card-img-top img-fluid" alt="AI-Designed Cities"><div class="card-body"><h5 class="card-title">AI-Designed Cities</h5></div></div></div>
+            <div class="col filter-item technological"><div class="card h-100"><img src="img/AI city.jpeg" class="card-img-top img-fluid" alt="Metaverse Urbanism"><div class="card-body"><h5 class="card-title">Metaverse Urbanism</h5></div></div></div>
+            <div class="col filter-item technological"><div class="card h-100"><img src="img/Mars Terraforming.jpg" class="card-img-top img-fluid" alt="Terraforming Mars"><div class="card-body"><h5 class="card-title">Terraforming Mars</h5></div></div></div>
+            <div class="col filter-item technological"><div class="card h-100"><img src="img/FuturoHouse.jpg" class="card-img-top img-fluid" alt="Futuro House"><div class="card-body"><h5 class="card-title">Futuro House</h5></div></div></div>
+
+            <!-- ART & SPATIAL DECONSTRUCTION -->
+            <div class="col filter-item artistic"><div class="card h-100"><img src="img/Reichstag.jpg" class="card-img-top img-fluid" alt="Wrapped Reichstag"><div class="card-body"><h5 class="card-title">Wrapped Reichstag</h5></div></div></div>
+            <div class="col filter-item artistic"><div class="card h-100"><img src="img/Behind the Wall.jpg" class="card-img-top img-fluid" alt="Building Cuts"><div class="card-body"><h5 class="card-title">Building Cuts</h5></div></div></div>
+            <div class="col filter-item artistic"><div class="card h-100"><img src="img/neon.jpg" class="card-img-top img-fluid" alt="Neon Installations"><div class="card-body"><h5 class="card-title">Neon Installations</h5></div></div></div>
+            <div class="col filter-item artistic"><div class="card h-100"><img src="img/Roden-Crater-James-Turell.jpg" class="card-img-top img-fluid" alt="Roden Crater"><div class="card-body"><h5 class="card-title">Roden Crater</h5></div></div></div>
+
+        </div>
+    </div>
+</div>
     <footer class="site-footer">
         <div class="footer-container">
-            <p>&copy; 2025 Unbuilt City. All rights reserved.</p>
+            <p>&copy; 2025 whatever city. All rights reserved.</p>
             </div>
     </footer>
     <script src="js/exhibition.js"></script>
