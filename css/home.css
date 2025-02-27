@@ -381,10 +381,11 @@ TIMELINE
 
 /* Left-side content */
 .timeline-item:nth-child(odd) {
-    left: 0;
+    left: -25%;
     text-align: right;
     transform: translateX(-50px);
 }
+
 
 /* Right-side content */
 .timeline-item:nth-child(even) {
@@ -404,6 +405,9 @@ TIMELINE
     background: white;
     padding: 5px 10px;
     border-radius: 5px;
+    white-space: nowrap; /* Prevents year from wrapping */
+    display: inline-block; /* Ensures the box fits its content */
+
 }
 
 /* Push the years for alignment */
