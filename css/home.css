@@ -195,7 +195,7 @@ NAME BLOCK
     padding: 0; /* Remove unnecessary padding */
     margin: 0 auto; /* Ensures centering */
     margin-bottom: 50px;
-    margin-top: -75px;
+    margin-top: -65px;
 }
 
 .navbar-brand img {
@@ -359,9 +359,9 @@ TIMELINE
     z-index: 1; /* Ensure it's below the map section */
 
     width: 100vw; 
-    margin-left: calc(-50vw + 50%);
+    
     background-color: white;
-    padding: 50px 20px 0 20px;  /* Top and side padding only, no bottom padding */
+    
     box-sizing: border-box;
     position: relative;
     
