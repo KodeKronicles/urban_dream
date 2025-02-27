@@ -269,6 +269,7 @@ HOVER
 .image-container:hover img {
     filter: saturate(1.5);
     opacity: 0.8;  /* more saturated on hover */
+    z-index: 55;
 }
 
 /* Overlay styles */
@@ -287,7 +288,7 @@ HOVER
     transition: opacity 0.3s ease-in-out;
     pointer-events: none; /* Prevents blocking hover */
     text-decoration: none;
-    z-index: 2;
+    z-index: 55;
     background-color: rgba(255, 255, 255, 0.7);  /* Semi-transparent background */
     border: 2px solid red;
     
@@ -296,6 +297,7 @@ HOVER
 /* Show overlay on hover */
 .image-container:hover .overlay {
     opacity: 1;
+    z-index: 55:
 }
 
 
@@ -344,21 +346,6 @@ ABOUT SECTION (Parallax Style with Shrunk Height)
     font-weight: 400;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-/*******************
-MOBILE
-********************/
-
 /**********
 TIMELINE
 **********/
@@ -386,7 +373,7 @@ TIMELINE
 /* Individual timeline items */
 .timeline-item {
     position: relative;
-    width: 50%;
+    width: 75%;
     padding: 20px;
     opacity: 0;
     transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
