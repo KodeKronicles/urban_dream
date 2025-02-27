@@ -61,6 +61,11 @@ NAV BAR
     font-family: 'Inter', sans-serif;
 }
 
+.navbar-nav .nav-link:hover {
+    color: grey !important;
+}
+
+
 
 
 /* Custom styles for the navbar toggler */
