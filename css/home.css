@@ -35,30 +35,33 @@ NAV BAR
     }
 }
 
-.nav-link.btn {
-    color: #D02E02 !important; 
-    background-color: transparent; /* Make sure the background is transparent */
-    border: 2px solid #D02E02; /* Set border color to red */
-    padding: 0.150rem 0.75rem; /* Adjust padding to reduce height */
-    font-size: 1rem; /* Adjust font size if needed */
+
+@font-face {
+    font-family: "Inter";
+    src: url('../fonts/Inter.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.nav-link.btn:hover {
-    color: white !important; /* Change text color to white on hover */
-    background-color: #D02E02; /* Change background color to red on hover */
+.navbar-text {
+    font-size: 13px;
+    color: #d02d00;
+    text-align: left;
+    margin-left: 20px;
 }
 
-.navbar {
-    background-color: #e0dcdc;
-    position: relative;
-    padding-top: 0.25rem; /* Adjust top padding */
-    padding-bottom: 0.45rem; /* Adjust bottom padding */
-    padding-left: 20%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+.navbar-nav a {
+    color: #d02e02;
+    font-family: 'Inter', sans-serif;
 }
+
+.navbar-nav a.nav-link.active {
+    color: #d02e02;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+}
+
+
 
 /* Custom styles for the navbar toggler */
 .custom-toggler {
