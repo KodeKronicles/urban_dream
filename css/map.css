@@ -84,7 +84,7 @@
             border-bottom: 1px solid #d02d00;
             padding: 10px;
             text-align: left;
-            font-size: 15px;
+            font-size: 0.9rem;
             color: #d02d00 !important;
             vertical-align: top; /* so text lines up at top with images */
             border-bottom: 1px solid #d02d00;
@@ -201,6 +201,8 @@
     text-align: left;
     padding-left: 9.55%; /* Regola questo valore in base alle tue esigenze */
     box-sizing: border-box;
+    font-size: 0.9rem;
+
 }
 
 @media (max-width: 768px) {
@@ -346,7 +348,7 @@ a {
 }
 
 .info-section p {
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.4;
     margin-top: 1rem; /* Aggiunge un margine superiore per spostare l'elemento più in basso */
     margin-bottom: 1rem;
@@ -448,4 +450,8 @@ a {
 .hidden {
     display: none;
 }
+
+
+
+
 

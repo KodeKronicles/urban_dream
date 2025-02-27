@@ -24,3 +24,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.getElementById("toggle-exhibition");
+    const exhibitionText = document.getElementById("exhibition-text");
+
+    toggleButton.addEventListener("click", function () {
+        exhibitionText.classList.toggle("hidden");
+    });
+});
