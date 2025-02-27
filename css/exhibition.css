@@ -5,6 +5,12 @@
     font-style: normal;
 }
 
+/* Aggiunge un margine a sinistra per spostare l'elemento a destra */
+.icon-margin-right {
+    margin-left: 20px; /* Puoi regolare il valore secondo le tue esigenze */
+    margin-top: 3px;
+}
+
 .navbar-text {
     font-size: 13px;
     color: #d02d00;
@@ -62,7 +68,7 @@
 
 /* NAV PILLS - MENU VERTICALE */
 .nav-pills {
-    margin-top: 50px; /* Sposta il menu più in basso */
+    margin-top: 90px; /* Sposta il menu più in basso */
     align-items: flex-end; /* Allinea la parte finale delle parole */
 }
 
@@ -119,34 +125,22 @@
     flex-direction: column;
 }
 
-
-h1, h2, p, a {
-    font-family: 'Inter', sans-serif; /* Se vuoi mantenere la stessa font */
+.transparent {
+    opacity: 0;
 }
-
-ul {
-    font-family: 'Inter', sans-serif; /* Se vuoi mantenere la stessa font */
-}
-
-.text-danger {
-    color: #d02d00 !important; /* Assicura il rosso personalizzato */
-}
-
-a.text-danger:hover {
-    text-decoration: underline; /* Mantiene sempre il sottolineato */
-}
-
-
 
 .info-section {
     flex: 0 0 670px;
     padding-top: 3rem;
+    padding-left: 80px; 
+    margin-right: 80px;
 }
+    
 
 /* Info Section Styling */
 .info-section h1 {
     font-size: 3.5rem;
-    font-weight: 2500;
+    font-weight: 400;
     margin-bottom: 1.3rem;
     color: #d02d00;
 }
@@ -159,7 +153,7 @@ a.text-danger:hover {
     text-align: justify;
 }
 
-.info-section p {
+.info-section p, ul {
     font-size: 1rem;
     line-height: 1.4;
     margin-bottom: 0.5rem;
@@ -167,13 +161,6 @@ a.text-danger:hover {
     color: #d02d00;
 }
 
-.info-section ul {
-    font-size: 1rem;
-    line-height: 1.4;
-    margin-bottom: 0.5rem;
-    text-align: justify;
-    color: #d02d00;
-}
 
 .info-section a {
     text-decoration: underline;
@@ -186,8 +173,6 @@ a.text-danger:hover {
     justify-content: center; /* Centra il contenuto */
     margin: 40px 0; /* Aggiunge margine sopra e sotto */
 }
-
-/* Allinea il contenuto al centro della pagina */
 
 
 .navbar-breaker {
@@ -210,10 +195,55 @@ a.text-danger:hover {
     color: white;
 }
 
+/* Dimensioni card fisse */
 .card {
+    max-width: 320px;
+    margin: 0 auto;
     transition: transform 0.3s ease-in-out;
+
 }
 
+/* Immagini card con altezza fissa */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Titoli centrati */
+.card-title {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+/* Link per dettagli */
+.card-link {
+    display: block;
+    text-align: center;
+    color: #d02d00 !important;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    padding: 0.5rem;
+    transition: opacity 0.3s;
+}
+
+.card-link:hover {
+    opacity: 0.8;
+    color: #d02d00 !important;
+}
+
+/* Margini contenuto */
+.tab-content {
+    padding: 0 2rem;
+}
+
+/* Riduci spazio verticale */
+.row.g-4 {
+    gap: 1rem !important;
+    margin-top: 1.5rem !important;
+}
+
+/* Adatta transizione hover */
 .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }

@@ -10,48 +10,68 @@ function toggleTable() {
     }
 }
 
-function filterByStatus(status) {
-    const category = status === 'all' ? '' : status.toLowerCase();
-    filterTable(category, '.filter-status');
-    toggleStatusDropdown(); // Chiude il dropdown dopo la selezione
-}
-// TO FILTER THE TABLE
-document.addEventListener("DOMContentLoaded", function () {
-    const backButtonContainer = document.querySelector(".back-button-container");
-    const backButton = document.getElementById("backButton");
+// Sposta queste variabili in scope globale
+let backButtonContainer;
+let backButton;
 
-    // Funzione per mostrare/nascondere il bottone Back
-    function checkBackButton() {
-        const selectedItems = document.querySelectorAll("tr.filtered");
-        backButtonContainer.classList.toggle("hidden", selectedItems.length === 0);
-    }
+// Sposta filterTable fuori dall'event listener
+function filterTable(category, selector) {
+    let hasMatch = false;
+    document.querySelectorAll("tbody tr").forEach(row => {
+        let cell = row.querySelector(selector);
+        let detailRow = row.nextElementSibling;
 
-    // Funzione per filtrare la tabella
-    function filterTable(category, selector) {
-        let hasMatch = false;
-        document.querySelectorAll("tbody tr").forEach(row => {
-            let cell = row.querySelector(selector);
-            let detailRow = row.nextElementSibling; // La riga con i dettagli
-
-            if (cell && cell.textContent.includes(category)) {
-                row.classList.add("filtered");
-                row.style.display = "";
-                if (detailRow && detailRow.classList.contains("hidden-info")) {
-                    detailRow.style.display = "none"; // Nasconde i dettagli finché non si clicca "+"
-                }
-                hasMatch = true;
-            } else {
-                row.classList.remove("filtered");
-                row.style.display = "none";
-                if (detailRow && detailRow.classList.contains("hidden-info")) {
-                    detailRow.style.display = "none"; // Nasconde i dettagli degli elementi non selezionati
-                }
+        if (cell && cell.textContent.includes(category)) {
+            row.classList.add("filtered");
+            row.style.display = "";
+            if (detailRow && detailRow.classList.contains("hidden-info")) {
+                detailRow.style.display = "none";
             }
+            hasMatch = true;
+        } else {
+            row.classList.remove("filtered");
+            row.style.display = "none";
+            if (detailRow && detailRow.classList.contains("hidden-info")) {
+                detailRow.style.display = "none";
+            }
+        }
+    });
+    checkBackButton();
+    updateImage(hasMatch ? category : "Default");
+}
+
+// Sposta checkBackButton fuori dall'event listener
+function checkBackButton() {
+    const selectedItems = document.querySelectorAll("tr.filtered");
+    backButtonContainer.classList.toggle("hidden", selectedItems.length === 0);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Inizializza le variabili
+    backButtonContainer = document.querySelector(".back-button-container");
+    backButton = document.getElementById("backButton");
+
+    // Resto del codice invariato...
+    backButton.addEventListener("click", function () {
+        document.querySelectorAll("tr").forEach(row => {
+            row.classList.remove("filtered");
+            row.style.display = "";
+        });
+        document.querySelectorAll(".hidden-info").forEach(detailRow => {
+            detailRow.style.display = "none";
         });
         checkBackButton();
-        updateImage(hasMatch ? category : "Default");
-    }
+        updateImage("Default");
+    });
 
+
+        // Keep the existing event listener setup
+        document.querySelectorAll(".toggle-info").forEach(button => {
+            button.addEventListener("click", function (event) {
+                toggleInfo(event, this);
+            });
+        });
+    
     // Aggiunge eventi ai filtri
     document.querySelectorAll(".filter-year").forEach(filter => {
         filter.addEventListener("click", () => filterTable(filter.textContent, ".filter-year"));
@@ -69,6 +89,12 @@ document.addEventListener("DOMContentLoaded", function () {
         filter.addEventListener("click", () => filterTable(filter.textContent, ".filter-ideals"));
     });
 
+//
+    // Funzione per mostrare/nascondere il bottone Back
+    function checkBackButton() {
+        const selectedItems = document.querySelectorAll("tr.filtered");
+        backButtonContainer.classList.toggle("hidden", selectedItems.length === 0);
+    }
     // Pulsante "Back" per ripristinare tutto
     backButton.addEventListener("click", function () {
         document.querySelectorAll("tr").forEach(row => {
@@ -82,22 +108,6 @@ document.addEventListener("DOMContentLoaded", function () {
         updateImage("Default");
     });
 
-    // Funzione per espandere/nascondere le informazioni dettagliate DEGLI ITEM
-    function toggleInfo(event, element) {
-        let mainRow = element.parentElement;
-        let infoRow = mainRow.nextElementSibling;
-
-        if (infoRow.style.display === "none" || !infoRow.style.display) {
-            infoRow.style.display = "table-row";
-            mainRow.classList.add("expanded");
-            element.innerText = "×";
-        } else {
-            infoRow.style.display = "none";
-            mainRow.classList.remove("expanded");
-            element.innerText = "+";
-        }
-    }
-
     // Aggiunge il listener per il click su "+"
     document.querySelectorAll(".toggle-info").forEach(button => {
         button.addEventListener("click", function (event) {
@@ -106,6 +116,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// Funzione per espandere/nascondere le informazioni dettagliate DEGLI ITEM
+function toggleInfo(event, element) {
+    let mainRow = element.parentElement;
+    let infoRow = mainRow.nextElementSibling;
+
+    if (infoRow.style.display === "none" || !infoRow.style.display) {
+        infoRow.style.display = "table-row";
+        mainRow.classList.add("expanded");
+        element.innerText = "×";
+    } else {
+        infoRow.style.display = "none";
+        mainRow.classList.remove("expanded");
+        element.innerText = "+";
+    }
+}
 
 // ARROW WORK: ABC & 123 x id x title x year
 function sortTable(columnIndex, element) {
@@ -151,52 +176,6 @@ function sortTable(columnIndex, element) {
 }
 
 
-
-
-
-
-
-// Nuove funzioni per gestire il dropdown
-function toggleStatusDropdown() {
-    const dropdown = document.getElementById("statusDropdown");
-    const arrow = document.querySelector(".custom-arrow");
-    
-    dropdown.classList.toggle("hidden");
-    arrow.classList.toggle("arrow-up");
-    
-    // Chiudi altri dropdown aperti
-    document.querySelectorAll(".dropdown-menu").forEach(menu => {
-        if (menu !== dropdown) {
-            menu.classList.add("hidden");
-            menu.previousElementSibling.querySelector(".sort-arrow")?.classList.remove("arrow-up");
-        }
-    });
-}
-
-function filterByStatus(status) {
-    const selector = ".filter-status";
-    let category = status === "all" ? "" : status;
-    
-    // Chiama la tua esistente funzione filterTable
-    filterTable(category, selector);
-    
-    // Chiudi dropdown
-    toggleStatusDropdown();
-}
-
-// Chiudi dropdown cliccando fuori
-document.addEventListener("click", function(event) {
-    if (!event.target.closest(".custom-dropdown")) {
-        document.querySelectorAll(".dropdown-menu").forEach(menu => {
-            menu.classList.add("hidden");
-        });
-        document.querySelectorAll(".sort-arrow").forEach(arrow => {
-            arrow.classList.remove("arrow-up");
-        });
-    }
-});
-
-
 // FOR THE STUPID DROPDOWN AND FILTERING BY STATUS
 function toggleStatusDropdown() {
     const dropdown = document.getElementById("statusDropdown");
@@ -213,6 +192,7 @@ function toggleStatusDropdown() {
         }
     });
 }
+
 // Funzione filtro aggiornata che richiama l'esistente filterTable
 function filterByStatus(status) {
     const selector = ".filter-status";

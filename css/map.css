@@ -334,7 +334,7 @@ a {
 /* Info Section Styling */
 .info-section h1 {
     font-size: 3.5rem;
-    font-weight: 2500;
+    font-weight: 400;
     margin-bottom: 1.3rem;
     color: #d02d00;
 }
@@ -427,7 +427,7 @@ a {
     border: 2px solid #d02d00;
     min-width: 120px;
     z-index: 1000;
-    margin-top: 5px;
+    margin-top: 4px;
 }
 
 .menu-item {
