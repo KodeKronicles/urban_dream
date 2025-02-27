@@ -80,6 +80,7 @@ h1, h2, p, a {
 .info-section {
     flex: 0 0 670px;
     padding-top: 3rem;
+    padding-left: 80px; /* Sposta il testo verso destra */
 }
 
 .info-section h1 {
