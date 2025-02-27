@@ -357,6 +357,15 @@ TIMELINE
     margin-right: auto;
 
     z-index: 1; /* Ensure it's below the map section */
+
+    width: 100vw; 
+    margin-left: calc(-50vw + 50%);
+    background-color: white;
+    padding: 50px 20px 0 20px;  /* Top and side padding only, no bottom padding */
+    box-sizing: border-box;
+    position: relative;
+    
+    margin-bottom: 0;
 }
 
 .timeline::after {
