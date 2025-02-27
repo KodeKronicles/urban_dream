@@ -35,30 +35,33 @@ NAV BAR
     }
 }
 
-.nav-link.btn {
-    color: #D02E02 !important; 
-    background-color: transparent; /* Make sure the background is transparent */
-    border: 2px solid #D02E02; /* Set border color to red */
-    padding: 0.150rem 0.75rem; /* Adjust padding to reduce height */
-    font-size: 1rem; /* Adjust font size if needed */
+
+@font-face {
+    font-family: "Inter";
+    src: url('../fonts/Inter.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.nav-link.btn:hover {
-    color: white !important; /* Change text color to white on hover */
-    background-color: #D02E02; /* Change background color to red on hover */
+.navbar-text {
+    font-size: 13px;
+    color: #d02d00 !important;
+    text-align: left;
+    margin-left: 20px;
 }
 
-.navbar {
-    background-color: #e0dcdc;
-    position: relative;
-    padding-top: 0.25rem; /* Adjust top padding */
-    padding-bottom: 0.45rem; /* Adjust bottom padding */
-    padding-left: 20%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+.navbar-nav a {
+    color: #d02e02 !important;
+    font-family: 'Inter', sans-serif;
 }
+
+.navbar-nav a.nav-link.active {
+    color: #d02e02 !important;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+}
+
+
 
 /* Custom styles for the navbar toggler */
 .custom-toggler {
@@ -192,13 +195,13 @@ NAME BLOCK
     padding: 0; /* Remove unnecessary padding */
     margin: 0 auto; /* Ensures centering */
     margin-bottom: 50px;
-    margin-top: -56px;
+    margin-top: -30px;
 }
 
 .navbar-brand img {
     max-width: 100%; /* Ensures the logo doesn’t overflow */
     height: auto; /* Keeps proportions */
-    max-height: 60px; /* Adjust this to fit your navbar */
+    max-height: 40px; /* Adjust this to fit your navbar */
 }
 
 @media (max-width: 992px) { 
@@ -266,6 +269,7 @@ HOVER
 .image-container:hover img {
     filter: saturate(1.5);
     opacity: 0.8;  /* more saturated on hover */
+    z-index: 55;
 }
 
 /* Overlay styles */
@@ -284,7 +288,7 @@ HOVER
     transition: opacity 0.3s ease-in-out;
     pointer-events: none; /* Prevents blocking hover */
     text-decoration: none;
-    z-index: 2;
+    z-index: 55;
     background-color: rgba(255, 255, 255, 0.7);  /* Semi-transparent background */
     border: 2px solid red;
     
@@ -293,6 +297,7 @@ HOVER
 /* Show overlay on hover */
 .image-container:hover .overlay {
     opacity: 1;
+    z-index: 55:
 }
 
 
@@ -341,21 +346,6 @@ ABOUT SECTION (Parallax Style with Shrunk Height)
     font-weight: 400;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-/*******************
-MOBILE
-********************/
-
 /**********
 TIMELINE
 **********/
@@ -383,7 +373,7 @@ TIMELINE
 /* Individual timeline items */
 .timeline-item {
     position: relative;
-    width: 50%;
+    width: 75%;
     padding: 20px;
     opacity: 0;
     transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
@@ -391,10 +381,11 @@ TIMELINE
 
 /* Left-side content */
 .timeline-item:nth-child(odd) {
-    left: 0;
+    left: -25%;
     text-align: right;
     transform: translateX(-50px);
 }
+
 
 /* Right-side content */
 .timeline-item:nth-child(even) {
@@ -414,6 +405,9 @@ TIMELINE
     background: white;
     padding: 5px 10px;
     border-radius: 5px;
+    white-space: nowrap; /* Prevents year from wrapping */
+    display: inline-block; /* Ensures the box fits its content */
+
 }
 
 /* Push the years for alignment */
