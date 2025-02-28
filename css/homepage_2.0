@@ -138,10 +138,10 @@ NAME BLOCK
 .project-background {
     background-color: #E9E9E9; /* Set the background color */
     padding: 10px; /* Add some padding for spacing */
-    border-radius: 5px; /* Optional: Add rounded corners */
+    border-radius: 0px; /* Optional: rounded corners (was 5) */
     margin:  0; /* Remove margin to keep it aligned */
     width: 100%; /* Make the width fit the container */
-    max-width: 315px; /* Set a maximum width */
+    max-width: 275px; /* Set a maximum width (315) */
     height: calc(100vh - 50px);
     display: block; /* Allow the block to fit the content width */
 }
@@ -177,6 +177,7 @@ NAME BLOCK
     font-size: 18px; 
     margin-bottom: 0; 
     padding-left: 0; /* Remove left padding */
+    padding-right: 2%; /* NEW */
     text-align: right; 
     padding-top: 40px; 
     margin-left: auto; /* Automatically align to the right */
