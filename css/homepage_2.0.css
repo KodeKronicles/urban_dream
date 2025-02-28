@@ -412,23 +412,14 @@ INTERMEDIATE screens
         padding: 20px;
     }
     .timeline-item:nth-child(odd) {
-        /*left: -15%;
+        left: 5%;
         text-align: right;
-        transform: translateX(-25px);*/
-
-        left: auto;
-        right: 50%;
-        transform: translateX(50%);
-        text-align: right;
+        transform: translateX(0) /*(-25px);*/
     }
     .timeline-item:nth-child(even) {
-        /*left: 50%;
-        text-align: left;
-        transform: translateX(25px);*/
-
         left: 50%;
-        transform: translateX(-50%);
         text-align: left;
+        transform: translateX(25px);
     }
     .timeline-content {
         text-align: center;
