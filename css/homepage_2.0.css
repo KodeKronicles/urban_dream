@@ -425,15 +425,16 @@ INTERMEDIATE screens
         text-align: center;
     }
         /* Move the year label above the content box */
-    .timeline-year {
-        position: relative;
-        top: auto;
-        left: auto;
-        right: auto;
-        transform: none;
-        display: block;
-        margin-bottom: 10px;
-        text-align: center;
+    .timeline-item:nth-child(odd) .timeline-year,
+    .timeline-item:nth-child(even) .timeline-year {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        transform: none !important;
+        display: block !important;
+        margin-bottom: 10px !important;
+        text-align: center !important;
     }
 }
 
@@ -457,14 +458,14 @@ MOBILE
 
     /* Move the year label above the content box */
     .timeline-year {
-        position: relative;
-        top: auto;
-        left: auto;
-        right: auto;
-        transform: none;
-        display: block;
-        margin-bottom: 10px; /* Adds space between year and content */
-        text-align: center;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        transform: none !important;
+        display: block !important;
+        margin-bottom: 10px !important; /* Adds space between year and content */
+        text-align: center !important;
     }
 
     /* Center align text inside content box */
