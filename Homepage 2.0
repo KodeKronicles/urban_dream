@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link href="https://fonts.cdnfonts.com/css/futura-maxi-cg-bold" rel="stylesheet">
+<style>
+    @import url('https://fonts.cdnfonts.com/css/futura-maxi-cg-bold');
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/homepage_2.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+
+<!-- PNG ICON FOR THE TAB VIEW Favicons -->
+     <link href="img/circle_icon.png" rel="icon">
+     <link href="img/circle_icon.png" rel="circle-icon">
+
+<!-- Google Font: Inter -->
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/documentation.css">   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>The City</title>
+    
+</head>
+
+<body>
+    <header class="bg-white">
+
+        <!--NAVBAR-->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center w-100">
+
+                    <!-- Burger Navbar Toggle Button -->
+                    <button class="navbar-toggler custom-toggler" id="navbarToggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                        <span class="toggler-bar"></span>
+                        <span class="toggler-bar"></span>
+                        <span class="toggler-bar"></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto justify-content-between">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">HOME</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="exhibition.html">EXHIBITION</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="map.html">MAP</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="items.html">ITEMS</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="disclaimer.html">PROJECT</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+<!--NAVBAR SMALL WINDOWS-->
+
+    <script>
+    $(document).ready(function() {
+        const toggler = $("#navbarToggler");
+        const navbar = $("#navbarNav");
+
+        // Show navbar on hover
+        toggler.mouseenter(function() {
+            if ($(window).width() < 992) { // Ensure this only happens on small screens
+                navbar.collapse('show');
+            }
+        });
+
+        // Hide navbar when mouse leaves
+        navbar.mouseleave(function() {
+            if ($(window).width() < 992) {
+                navbar.collapse('hide');
+            }
+        });
+    });
+    
+    document.addEventListener("DOMContentLoaded", function() {
+    const navbarToggleButton = document.querySelector('.navbar-toggler');
+    const navbar = document.getElementById('navbarNav');
+    const navbarLinks = document.querySelectorAll('.navbar-nav .nav-item');
+    
+    function setDropdownWidth() {
+        // Get the width of the first nav item
+        const buttonWidth = navbarLinks[0].offsetWidth;
+        
+        // Set the dropdown menu width to twice the width of the buttons
+        navbar.style.setProperty('--dropdown-width', `${buttonWidth * 2}px`);
+    }
+
+    // Call the function to set the dropdown width on page load
+    setDropdownWidth();
+
+    // Adjust width dynamically when window is resized
+    window.addEventListener('resize', function() {
+        setDropdownWidth();
+        });
+    }); 
+    </script>
+
+    <main>
+        <section class="parallax" section id="mainpage">
+                    <!--GREY BOX-->
+                    <div class="container">
+                        <div class="project-background">
+                            <div class="text-container">
+                                <div class="mx-auto text-center"> <!--logo - MIGHT REMOVE-->
+                                    <a class="navbar-brand" href="#"> <!--logo-->
+                                        <img src="img/circle_icon.png" alt="Project Logo" class="img-fluid" style="max-width: 50px;">
+                                    </a>
+                                </div>
+                                <span class="project-name">URBAN DREAM</span>
+                                <p class="project-description">This is a brief description of the project.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--BACKROUND GRID-->
+                    <div class="container-fluid">
+                        <div class="row">
+                            <!--IMAGES-->
+                            <div class="background-grid">
+                            
+                                    <!-- Row 1 -->
+                                    <div class="image-container">
+                                        <img src="img/Corbusier.jpg" alt="Corbusier">
+                                        <div class="overlay"><a href="#">Corbusier</a></div>
+                                    </div>
+                                    <div class="image-container">
+                                        <img src="img/RS.jpg" alt="RS">
+                                        <div class="overlay"><a href="#">RS</a></div>
+                                    </div>
+                                    <div class="image-container">
+                                        <img src="img/Paolo Soleri.jpg" alt="Paolo Soleri">
+                                        <div class="overlay"><a href="#">Paolo Soleri</a></div>
+                                    </div>
+                                    <div class="image-container">
+                                        <img src="img/TASS.jpg" alt="TASS">
+                                        <div class="overlay"><a href="#">TASS</a></div>
+                                    </div>
+                                    <div class="image-container">
+                                        <img src="img/AI city.jpeg" alt="AI City">
+                                        <div class="overlay"><a href="#">AI City</a></div>
+                                    </div>
+                                
+                                    <!-- Row 2 -->
+                                    <div class="image-container">
+                                        <img src="img/Behind the Wall.jpg" alt="Behind the Wall">
+                                        <div class="overlay"><a href="#">Behind the Wall</a></div>
+                                    </div>
+                                    <div class="image-container">
+                                        <img src="img/Walking city.gif" alt="Walking City">
+                                        <div class="overlay"><a href="#">Walking City</a></div>
+                                    </div>
+                                    <div class="image-container">
+                                        <img src="img/HyperLoop.jpg" alt="HyperLoop">
+                                        <div class="overlay"><a href="#">HyperLoop</a></div>
+                                    </div>
+                                    <div class="image-container">
+                                        <img src="img/Lambot.jpg" alt="Lambot">
+                                        <div class="overlay"><a href="#">Lambot</a></div>
+                                    </div>
+                                    <div class="image-container">
+                                        <img src="img/Capsule tower.jpg" alt="Capsule Tower">
+                                        <div class="overlay"><a href="#">Capsule Tower</a></div>
+                                    </div>
+                                
+                                    <!-- Row 3 -->
+                                    <div class="image-container">
+                                        <img src="img/The Line.jpg" alt="The Line">
+                                        <div class="overlay"><a href="#">The Line</a></div>
+                                    </div>
+                                    <div class="image-container">
+                                        <img src="img/Arcosanti.jpg" alt="Arcosanti">
+                                        <div class="overlay"><a href="#">Arcosanti</a></div>
+                                    </div>
+                                    <div class="image-container">
+                                        <img src="img/Kowloon.jpg" alt="Kowloon">
+                                        <div class="overlay"><a href="#">Kowloon</a></div>
+                                    </div>
+                                    <div class="image-container">
+                                        <img src="img/Tacheles.jpg" alt="Tacheles">
+                                        <div class="overlay"><a href="#">Tacheles</a></div>
+                                    </div>
+                                    <div class="image-container">
+                                        <img src="img/SUPERSTUDIO REVISITADO.jpg" alt="Superstudio Revisitado">
+                                        <div class="overlay"><a href="#">Superstudio Revisitado</a></div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            const grid = document.querySelector(".background-grid");
+                            const clone = grid.cloneNode(true); // Clone for seamless looping
+                            grid.parentElement.appendChild(clone);
+
+                            let position = 0;
+                            const speed = 0.12; // Adjust for faster/slower movement
+
+                            function animate() {
+                                position -= speed;
+                                grid.style.transform = `translateX(${position}px)`;
+                                clone.style.transform = `translateX(${position + grid.offsetWidth}px)`;
+
+                                // Reset position when the first grid is fully offscreen
+                                if (position <= -grid.offsetWidth) {
+                                    position = 0;
+                                }
+                                requestAnimationFrame(animate);
+                            }
+                            function adjustGridOnResize() {
+                                position = 0;  // Reset position on resize
+                                grid.style.transform = `translateX(0px)`;
+                                clone.style.transform = `translateX(${grid.offsetWidth}px)`;
+                            }
+
+                            window.addEventListener("resize", adjustGridOnResize);
+
+                        animate();
+                    });
+                    </script>
+        </section>
+        
+        <!-- ABOUT SECTION -->
+        <section class="parallax-section about-section">
+            <div class="container d-flex align-items-center justify-content-center">
+                <div class="text-container">
+                    <h2 class="about-header">ABOUT</h2>
+                    <p>
+                        Our project "URBAN DREAM" explores radical urban visions that came to be througout the last century.  
+                        From utopian megastructures to rebellious counter-architecture,  
+                        we uncover ideas that challenged the limits of the possible.  
+                        The future of cities begins with the dreams of the past.  
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TIMELINE -->
+
+        <div class="timeline-container">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">1920s-1950s</div>
+                    <div class="timeline-content">
+                        <h3>“A city is not a tree”</h3>
+                        <p>“Le Corbusier imagined demolishing half of Paris for modernist towers, replacing chaotic streets with ordered high-rises. Archigram envisioned mobile, self-sustaining megastructures, cities that could travel across landscapes. Superstudio proposed a seamless urban grid wrapping the planet, a bold critique of modernist expansion. These visions sought to redefine the way humans inhabit space, yet remained confined to paper and debate, setting the stage for future radicalism in architecture.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">1970s</div>
+                    <div class="timeline-content">
+                        <h3>“We must invent new cities”</h3>
+                        <p>Archizoom Tokyo introduced modular urbanism with futuristic capsule towers, imagining a city where individual living units could be swapped and replaced like machine parts. Radical thinkers blurred the boundaries between architecture and consumerism, proposing endless shopping landscapes without hierarchies or zoning. Experimental communities sought self-sufficient urban utopias, rejecting conventional city planning in favor of organic, cooperative settlements. While many of these ideas never materialized, they reshaped discourse on what a city could be.</p>
+                    </div>
+                </div>
+            
+                <div class="timeline-item">
+                    <div class="timeline-year">1980s</div>
+                    <div class="timeline-content">
+                        <h3>“Buildings are political”</h3>
+                        <p>Artists reclaimed urban ruins as countercultural hubs, turning abandoned buildings into vibrant centers of resistance. Political architecture was transformed into temporary art, as seen in Christo’s wrapped buildings, where monumental structures became ephemeral statements. Deconstructivist interventions revealed hidden urban structures, slicing through walls to expose the layers beneath. This era marked a transition from static urban planning to a more fluid, performative interaction with city spaces.</p>
+                    </div>
+                </div>
+            
+                <div class="timeline-item">
+                    <div class="timeline-year">1990s</div>
+                    <div class="timeline-content">
+                        <h3>“The city is the interface”</h3>
+                        <p>Media-driven urbanism reshaped public spaces, turning facades into digital canvases displaying real-time data. High-speed transport concepts reimagined connectivity, promising to collapse distances and reshape urban sprawl. Digital algorithms began shaping futuristic cityscapes, experimenting with generative designs that adapted to environmental and social data. The city was no longer just a collection of buildings—it was an evolving network of information and movement.</p>
+                    </div>
+                </div>
+            
+                <div class="timeline-item">
+                    <div class="timeline-year">2020s</div>
+                    <div class="timeline-content">
+                        <h3>“The future belongs to those who imagine it”</h3>
+                        <p>Radical urban planning challenges traditional city sprawl, introducing linear megacities and vertical forests. Extraterrestrial colonies emerge as the next frontier, with architects designing self-sustaining habitats for Mars and beyond. Digital environments question the necessity of physical cities, offering entire metropolises in virtual space, where architecture is freed from material constraints. The city is no longer just where we live—it is a space we construct, deconstruct, and reimagine endlessly.</p>
+                    </div>
+                </div>
+
+                <div class=" timeline-item">
+                    <div class="timeline-year">& Beyond</div>
+                    <div class="timeline-content">
+                        <h3>“A city is never finished”</h3>
+                        <p>The "Unbuilt City" is a story of ambition, resistance, and reinvention. It reminds us that cities evolve with the dreams of those who dare to challenge the limits of the possible.
+                    </div>
+            </div>
+        </div>
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+    const timelineItems = document.querySelectorAll(".timeline-item");
+
+    function checkScroll() {
+        let triggerPoint = window.innerHeight * 0.8;
+
+        timelineItems.forEach(item => {
+            let itemTop = item.getBoundingClientRect().top;
+
+            if (itemTop < triggerPoint) {
+                item.classList.add("show");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", checkScroll);
+    checkScroll(); // Run on load
+});
+
+        </script>
+        
+    <!--MAP EMBEDDED-->
+    <section class="parallax-section map-section">
+        <div class="map-content">
+            <h2>HOW TO FIND US</h2>
+                <br> </br>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.692830468662!2d11.341035076607706!3d44.49297519782559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd497ca10bfb3%3A0x21766cd1b2973b56!2sV.%20dell&#39;Archiginnasio%2C%202%2C%2040124%20Bologna%20BO%2C%20Italy!5e0!3m2!1sen!2sus!4v1708432931203!5m2!1sen!2sus" 
+                        width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+            <p class="map-description">WE ARE OPEN</p>
+                <br> </br>
+            <p class="map-description"> SUMMER </p>
+            <p class="map-description">Daily (except non-holiday Tuesdays): from 10 a.m. to 7 p.m.</p>
+            <p class="map-description">Closed: Tuesday (if not a public holiday), 25 December, I May</p>
+                <br> </br>
+            <p class="map-description"> WINTER </p>
+            <p class="map-description">Monday, Wednesday, Thursday and Friday: 9 a.m. to 6 p.m.</p>
+            <p class="map-description">Saturday, Sunday and public holidays: 10 a.m. to 7 p.m.</p>
+                <br> </br>
+            <p class="map-description">The ticket office closes one hour earlier</p>
+        </div>
+    </section>
+        
+    </main>
+    
+    <!-- FOOTER -->
+
+    <footer>
+        <p>URBAN DREAM</p>
+        <p>© 2025</p>
+        <a href="https://github.com/KodeKronicles" target="_blank">
+            <img src="GHLogo.png" alt="GitHub" class="github-logo">
+        </a>
+    </footer>
+        
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var controller = new ScrollMagic.Controller();
+    
+            new ScrollMagic.Scene({
+                triggerElement: ".parallax-section",
+                triggerHook: 1, // Start the effect when the top of .parallax-section is at the top of the viewport
+                duration: "100%"
+            })
+            .setTween(gsap.from(".parallax-section", { opacity: 0, y: 100, duration: 1 }))
+            .addTo(controller);
+        });
+    </script>
+    
+
+</body>
+</html>
