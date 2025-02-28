@@ -356,7 +356,6 @@ TIMELINE
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-
     z-index: 1; /* Ensure it's below the map section */
 }
 
@@ -439,6 +438,57 @@ TIMELINE
 .timeline-item.show {
     opacity: 1;
     transform: translateX(0);
+}
+
+/**********
+RESPONSIVE STYLES
+**********/
+
+@media (max-width: 768px) {
+    .timeline-item {
+        width: 100%; /* Full width for smaller screens */
+        left: 0; /* Center alignment */
+        transform: translateX(0);
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    .timeline-year {
+        font-size: 1.8rem; /* Smaller year font size */
+    }
+
+    .timeline-item:nth-child(odd) .timeline-year, 
+    .timeline-item:nth-child(even) .timeline-year {
+        left: 0; /* Center year positioning */
+        right: 0;
+        transform: translateX(0); /* Center year horizontally */
+    }
+
+    .timeline-content {
+        padding: 15px; /* Reduce content padding for smaller screens */
+    }
+
+    .timeline-content h3 {
+        font-size: 1.3rem; /* Smaller heading font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-item {
+        width: 100%; /* Full width for very small screens */
+        padding: 10px; /* Smaller padding */
+    }
+
+    .timeline-year {
+        font-size: 1.5rem; /* Smaller font size for year */
+    }
+
+    .timeline-content {
+        padding: 10px; /* Further reduce content padding */
+    }
+
+    .timeline-content h3 {
+        font-size: 1.2rem; /* Adjust heading font size for small screens */
+    }
 }
 
 /***********
