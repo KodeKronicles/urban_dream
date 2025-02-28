@@ -169,6 +169,7 @@ NAME BLOCK
     letter-spacing: 2px;
     padding-top: 115px; /* Adjust this value to move the text down */
     line-height: 1.5;
+    text-align: center;
 }
 
 .project-description {
