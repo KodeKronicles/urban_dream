@@ -402,9 +402,9 @@ TIMELINE
     transform: translateX(0);
 }
 
-/****************
-RESPONSIVE STYLES
-****************/
+/*******************
+INTERMEDIATE screens
+*******************/
 
 @media (max-width: 1162px) and (min-width: 770px) {
     .timeline-item {
@@ -422,6 +422,17 @@ RESPONSIVE STYLES
         transform: translateX(25px);
     }
     .timeline-content {
+        text-align: center;
+    }
+        /* Move the year label above the content box */
+    .timeline-year {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        transform: none;
+        display: block;
+        margin-bottom: 10px;
         text-align: center;
     }
 }
