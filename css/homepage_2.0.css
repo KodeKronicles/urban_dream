@@ -257,44 +257,6 @@ BACKROUND PICTURES
     transform: translateX(80px); /* Adjust for a slight shift */
 }
 
-/*******************
-HOVER
-********************/
-
-.image-container:hover img {
-    filter: saturate(1.5);
-    opacity: 0.8;  /* more saturated on hover */
-}
-
-/* Overlay styles */
-.overlay {
-    position: absolute;
-    left: 50%;
-    bottom: 10px;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 5px 10px;
-    font-size: 14px;
-    font-weight: bold;
-    border-radius: 5px;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    pointer-events: none; /* Prevents blocking hover */
-    text-decoration: none;
-    z-index: 2;
-    background-color: rgba(255, 255, 255, 0.7);  /* Semi-transparent background */
-    border: 2px solid red;
-    
-}
-
-/* Show overlay on hover */
-.image-container:hover .overlay {
-    opacity: 1;
-}
-
-
-
 /***********
 ABOUT SECTION (Parallax Style with Shrunk Height)
 ***********/
@@ -338,7 +300,6 @@ ABOUT SECTION (Parallax Style with Shrunk Height)
     line-height: 1.6;
     font-weight: 400;
 }
-
 
 /**********
 TIMELINE
@@ -444,15 +405,16 @@ TIMELINE
 RESPONSIVE STYLES
 **********/
 
+/* For medium-sized screens (tablets and small laptops) */
 @media (max-width: 768px) {
-    .timeline-item {
+    .timeline .timeline-item {
         width: 100%; /* Full width for smaller screens */
         left: 0; /* Center alignment */
         transform: translateX(0);
         padding: 15px; /* Reduce padding for smaller screens */
     }
 
-    .timeline-year {
+    .timeline .timeline-year {
         font-size: 1.8rem; /* Smaller year font size */
     }
 
@@ -463,30 +425,31 @@ RESPONSIVE STYLES
         transform: translateX(0); /* Center year horizontally */
     }
 
-    .timeline-content {
+    .timeline .timeline-content {
         padding: 15px; /* Reduce content padding for smaller screens */
     }
 
-    .timeline-content h3 {
+    .timeline .timeline-content h3 {
         font-size: 1.3rem; /* Smaller heading font size */
     }
 }
 
+/* For smaller screens like phones */
 @media (max-width: 480px) {
-    .timeline-item {
+    .timeline .timeline-item {
         width: 100%; /* Full width for very small screens */
         padding: 10px; /* Smaller padding */
     }
 
-    .timeline-year {
+    .timeline .timeline-year {
         font-size: 1.5rem; /* Smaller font size for year */
     }
 
-    .timeline-content {
+    .timeline .timeline-content {
         padding: 10px; /* Further reduce content padding */
     }
 
-    .timeline-content h3 {
+    .timeline .timeline-content h3 {
         font-size: 1.2rem; /* Adjust heading font size for small screens */
     }
 }
