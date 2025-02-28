@@ -40,7 +40,6 @@ function filterTable(category, selector) {
     updateImage(hasMatch ? category : "Default");
 }
 
-// Sposta checkBackButton fuori dall'event listener
 function checkBackButton() {
     const selectedItems = document.querySelectorAll("tr.filtered");
     backButtonContainer.classList.toggle("hidden", selectedItems.length === 0);
@@ -51,18 +50,25 @@ document.addEventListener("DOMContentLoaded", function () {
     backButtonContainer = document.querySelector(".back-button-container");
     backButton = document.getElementById("backButton");
 
-    // Resto del codice invariato...
-    backButton.addEventListener("click", function () {
-        document.querySelectorAll("tr").forEach(row => {
-            row.classList.remove("filtered");
-            row.style.display = "";
-        });
-        document.querySelectorAll(".hidden-info").forEach(detailRow => {
-            detailRow.style.display = "none";
-        });
-        checkBackButton();
-        updateImage("Default");
+    // In the Back button click handler (inside DOMContentLoaded)
+backButton.addEventListener("click", function () {
+    document.querySelectorAll("tr").forEach(row => {
+        row.classList.remove("filtered", "expanded"); // Reset expanded state
+        row.style.display = "";
     });
+    
+    document.querySelectorAll(".hidden-info").forEach(detailRow => {
+        detailRow.style.display = "none";
+    });
+
+    // Reset all toggle buttons to "+"
+    document.querySelectorAll(".toggle-info").forEach(button => {
+        button.innerText = "+";
+    });
+    
+    checkBackButton();
+    updateImage("Default");
+});
 
 
         // Keep the existing event listener setup

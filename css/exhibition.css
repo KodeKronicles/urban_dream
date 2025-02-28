@@ -199,57 +199,68 @@
     display: flex;
     justify-content: center; /* Centra i pulsanti orizzontalmente */
 }
+/* Reduce the height of the text inside the card */
+.card-body {
+    padding: 0.5rem 1rem;  /* Reduce padding to decrease height */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 60px;  /* Set a minimum height */
+}
 
-/* Dimensioni card fisse */
+/* Make the card border more transparent */
 .card {
     max-width: 320px;
     margin: 0 auto;
     transition: transform 0.3s ease-in-out;
-
+    border: 1px solid rgba(208, 45, 0, 0.3);  /* Adjust transparency */
+    background: rgba(255, 255, 255, 0.85);  /* Slight transparency */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
-/* Immagini card con altezza fissa */
-.card-img-top {
-    height: 200px;
-    object-fit: cover;
-    object-position: center;
-}
 
-/* Titoli centrati */
-.card-title {
-    text-align: center;
-    margin: 1rem 0;
-}
-
-/* Link per dettagli */
-.card-link {
-    display: block;
-    text-align: center;
-    color: #d02d00 !important;
-    text-underline-offset: 4px;
-    padding: 0.5rem;
-    transition: opacity 0.3s;
-}
-
-.card-link:hover {
-    opacity: 0.8;
-    color: #d02d00 !important;
-}
-
-/* Margini contenuto */
-.tab-content {
-    padding: 0 2rem;
-}
-
-/* Riduci spazio verticale */
-.row.g-4 {
-    gap: 1rem !important;
-    margin-top: 1.5rem !important;
-}
-
-/* Adatta transizione hover */
+/* Make card borders fully visible on hover */
 .card:hover {
     transform: scale(1.03);
+    border: 1px solid rgba(208, 45, 0, 0.6);  /* Increase border visibility */
+}
+
+/* Keep card title styling */
+.card-title {
+    text-align: center;
+    margin: 0.3rem auto;  /* Reduce top & bottom margin to decrease height */
+    font-size: 1rem;
+    font-weight: 400;
+    color: #d02d00;
+}
+
+/* Remove underline and set color for card titles */
+.card-title a {
+    text-decoration: none;  /* Removes underline */
+    color: #d02d00 !important;  /* Sets color to match theme */
+}
+
+/* Ensure underline appears ONLY on hover */
+.card-title a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px !important;
+}
+
+/* Reduce gap between cards */
+.row.g-4 {
+    gap: 0.3rem !important;
+    margin-top: 1rem !important;
+}
+
+/* Ensure all card images have the same height */
+.card-img-top {
+    height: 200px;  /* Set uniform height */
+    object-fit: cover;  /* Ensures images fill the space */
+    object-position: center;
 }
 
 
@@ -266,3 +277,6 @@
         margin-top: 40px;
     }
     
+
+
+  

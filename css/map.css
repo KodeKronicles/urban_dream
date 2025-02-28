@@ -154,6 +154,11 @@
             display: none;
         }
         
+
+/* Aggiunge un margine negativo a sinistra per spostare l'elemento più a sinistra */
+.custom-margin-left {
+    margin-left: -30px; /* Puoi regolare il valore secondo le tue esigenze */
+}
      /*******************
  TOGGLE INFO STYLES
 ********************/
@@ -354,7 +359,8 @@ a {
     margin-bottom: 1rem;
     text-align: justify;
     color: #d02d00;
-    
+    max-width: 600px; /* Imposta una larghezza massima per restringere il paragrafo */
+
 }
 
 .info-section h3 {
