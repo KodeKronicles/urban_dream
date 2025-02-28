@@ -362,14 +362,11 @@ TIMELINE
    /* margin-left: auto; */
     margin-right: auto;
 
-
     width: 100vw; 
-    margin-left: calc(-50vw + 50%);
+    margin-left: 0;
     background-color: white;
 
-    z-index: 1; /* Ensure it's below the map section */
-
-    
+    z-index: 1; /* Ensure it's below the map section */    
     box-sizing: border-box;
     position: relative;
     
