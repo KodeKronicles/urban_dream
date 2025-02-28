@@ -244,3 +244,24 @@ p {
     width: 75px;
     height: 75px;
 }
+
+/*******************
+FOOTER (Alice style)
+********************/
+
+footer {
+    margin-top: 0;  /* Force no gap above the footer */
+    padding: 20px 0;
+    width: 100%;
+    background-color: #D02E02;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.github-logo {
+    width: 65px; /* Adjust size as needed */
+    height: auto;
+    display: block;
+    margin: 10px auto 0;
+}
