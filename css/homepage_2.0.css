@@ -315,8 +315,9 @@ TIMELINE
 .timeline {
     position: relative;
     max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    /*margin-left: auto;
+    margin-right: auto; */
+    margin: 0;
     z-index: 1; /* Ensure it's below the map section */
 }
 
@@ -331,7 +332,7 @@ TIMELINE
     transform: translateX(-50%);
 }
 
-/* Individual timeline items */
+/* Individual timeline items - DESKTOP*/
 .timeline-item {
     position: relative;
     width: 75%;
@@ -401,21 +402,35 @@ TIMELINE
     transform: translateX(0);
 }
 
-@media (max-width: 1024px) {
+/**********
+RESPONSIVE STYLES
+**********/
+
+/* For viewports between 768px and 1162px:
+   Keep the side positioning, but shrink the width to avoid overflow.
+   This will force content to wrap, making the boxes taller. */
+@media (max-width: 1162px) and (min-width: 768px) {
     .timeline-item {
-        width: 90%; /* Reduce width so it doesn't spill */
-        left: 5% !important; /* Keep it centered */
+        width: 65%; /* Reduced width for a more elongated look */
+        padding: 20px;
+    }
+    .timeline-item:nth-child(odd) {
+        /* When the width is reduced, the right edge should still align near the center.
+           With a 65% width, setting left to -15% aligns the box’s right edge to roughly 50% */
+        left: -15%;
+        text-align: right;
+        transform: translateX(-25px);
+    }
+    .timeline-item:nth-child(even) {
+        left: 50%;
+        text-align: left;
+        transform: translateX(25px);
     }
 }
 
-@media (max-width: 770px) {
-    .timeline-item {
-        width: 100%; /* Full width for smaller screens */
-        left: 0 !important;
-        text-align: center;
-        transform: none;
-    }
-}
+/******
+MOBILE
+******/
 
 @media (max-width: 770px) { 
     /* Hide the red timeline line */
