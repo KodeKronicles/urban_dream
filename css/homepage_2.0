@@ -52,6 +52,7 @@ NAV BAR
     color: #d02e02 !important;
     font-weight: bold;
     font-family: 'Inter', sans-serif;
+    padding: 0 20px;
 }
 
 .navbar-nav .nav-link:hover {
