@@ -463,59 +463,6 @@ MOBILE
     }
 }
 
-/**********
-RESPONSIVE STYLES
-**********/
-
-/* For medium-sized screens (tablets and small laptops) */
-@media (max-width: 770px) {
-    .timeline .timeline-item {
-        width: 100%; /* Full width for smaller screens */
-        left: 0; /* Center alignment */
-        transform: translateX(0);
-        padding: 15px; /* Reduce padding for smaller screens */
-    }
-
-    .timeline .timeline-year {
-        font-size: 1.8rem; /* Smaller year font size */
-    }
-
-    .timeline-item:nth-child(odd) .timeline-year, 
-    .timeline-item:nth-child(even) .timeline-year {
-        left: 0; /* Center year positioning */
-        right: 0;
-        transform: translateX(0); /* Center year horizontally */
-    }
-
-    .timeline .timeline-content {
-        padding: 15px; /* Reduce content padding for smaller screens */
-    }
-
-    .timeline .timeline-content h3 {
-        font-size: 1.3rem; /* Smaller heading font size */
-    }
-}
-
-/* For smaller screens like phones */
-@media (max-width: 480px) {
-    .timeline .timeline-item {
-        width: 100%; /* Full width for very small screens */
-        padding: 10px; /* Smaller padding */
-    }
-
-    .timeline .timeline-year {
-        font-size: 1.5rem; /* Smaller font size for year */
-    }
-
-    .timeline .timeline-content {
-        padding: 10px; /* Further reduce content padding */
-    }
-
-    .timeline .timeline-content h3 {
-        font-size: 1.2rem; /* Adjust heading font size for small screens */
-    }
-}
-
 /***********
 MAP SECTION
 ***********/
