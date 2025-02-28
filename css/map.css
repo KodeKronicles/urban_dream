@@ -297,7 +297,7 @@
     }
 
 
-    /*   FOOTER STYLES */
+    /*   FOOTER STYLES
 
     .site-footer {
         background-color: white;
@@ -307,9 +307,29 @@
         border-top: 2px solid #d02d00;
         font-size: 14px;
         margin-top: 40px;
-    }
-    
- 
+    } */
+
+
+/*******************
+FOOTER (Alice style)
+********************/
+
+footer {
+    margin-top: 0;  /* Force no gap above the footer */
+    padding: 20px 0;
+    width: 100%;
+    background-color: #D02E02;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.github-logo {
+    width: 65px; /* Adjust size as needed */
+    height: auto;
+    display: block;
+    margin: 10px auto 0;
+}
     
     /* Riduci il padding orizzontale tra le colonne ID e Title */
 .table td:first-child, .table th:first-child {
