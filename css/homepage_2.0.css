@@ -413,8 +413,8 @@ INTERMEDIATE screens
     }
     .timeline-item:nth-child(odd) {
         left: 5%;
-        text-align: right;
-        transform: translateX(0) /*(-25px);*/
+        /* text-align: right; */
+        transform: translateX(-25px) /*(-25px);*/
     }
     .timeline-item:nth-child(even) {
         left: 50%;
