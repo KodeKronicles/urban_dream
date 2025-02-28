@@ -365,24 +365,6 @@ a {
     text-align: justify;
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
-    .map-info-wrapper {
-        flex-direction: column;
-        padding: 2rem;
-    }
-    
-    .main-image-container {
-        min-width: auto;
-        max-width: 100%;
-    }
-    
-    .info-section {
-        flex: none;
-        width: 100%;
-        padding-top: 1rem;
-    }
-}
 
 .underline {
     text-decoration: underline;
