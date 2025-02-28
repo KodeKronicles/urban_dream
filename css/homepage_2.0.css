@@ -401,6 +401,38 @@ TIMELINE
     transform: translateX(0);
 }
 
+@media (max-width: 600px) { 
+    /* Hide the red timeline line */
+    .timeline::after {
+        display: none;
+    }
+
+    /* Make timeline items full width */
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        text-align: center;
+        transform: none;
+    }
+
+    /* Move the year label above the content box */
+    .timeline-year {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        transform: none;
+        display: block;
+        margin-bottom: 10px; /* Adds space between year and content */
+        text-align: center;
+    }
+
+    /* Center align text inside content box */
+    .timeline-content {
+        text-align: center;
+    }
+}
+
 /**********
 RESPONSIVE STYLES
 **********/
