@@ -78,6 +78,37 @@
               For further insights into our research, design process, and methodologies, please visit our <a href="documentation.html">Documentation</a> page.
                         </p>
             <p>2025 © Unbuilt City Project</p>
+
+
+
+           <!-- FOOTER -->
+
+    <footer>
+        <p>URBAN DREAM</p>
+        <p>© 2025</p>
+        <a href="https://github.com/KodeKronicles" target="_blank">
+            <img src="img/GHLogo.png" alt="GitHub" class="github-logo">
+        </a>
+    </footer>
+        
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var controller = new ScrollMagic.Controller();
+    
+            new ScrollMagic.Scene({
+                triggerElement: ".parallax-section",
+                triggerHook: 1, // Start the effect when the top of .parallax-section is at the top of the viewport
+                duration: "100%"
+            })
+            .setTween(gsap.from(".parallax-section", { opacity: 0, y: 100, duration: 1 }))
+            .addTo(controller);
+        });
+    </script>
+
+
+
           
         </div>
       </div>
