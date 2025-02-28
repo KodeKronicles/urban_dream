@@ -84,7 +84,7 @@ NAV BAR
 
 .navbar-nav .nav-link {
     text-align: center;
-    width: 105px; /* Ensure consistent width */
+    /*width: 105px; /* Ensure consistent width */
     margin-top: 5px;
 }
 
