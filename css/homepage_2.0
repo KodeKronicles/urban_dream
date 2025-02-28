@@ -188,7 +188,7 @@ NAME BLOCK
     padding: 0; /* Remove unnecessary padding */
     margin: 0 auto; /* Ensures centering */
     margin-bottom: 50px;
-    margin-top: -62.5px;
+    margin-top: -63px;
 }
 
 .navbar-brand img {
