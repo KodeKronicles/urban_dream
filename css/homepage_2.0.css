@@ -401,7 +401,7 @@ TIMELINE
     transform: translateX(0);
 }
 
-@media (max-width: 600px) { 
+@media (max-width: 770px) { 
     /* Hide the red timeline line */
     .timeline::after {
         display: none;
