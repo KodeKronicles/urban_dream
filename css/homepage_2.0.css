@@ -417,7 +417,7 @@ INTERMEDIATE screens
         transform: translateX(0px) /*(-25px);*/
 
         left: auto;
-        right: calc(50% + 25px);
+        right: calc(50% /*+ 25px*/);
         text-align: right;
         transform: none;
         
