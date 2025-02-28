@@ -359,18 +359,20 @@ TIMELINE
 .timeline {
     position: relative;
     max-width: 800px;
-   /* margin-left: auto; */
+    margin-left: auto;
     margin-right: auto;
-
-    width: 100vw; 
-    margin-left: 0;
-    background-color: white;
 
     z-index: 1; /* Ensure it's below the map section */    
     box-sizing: border-box;
     position: relative;
     
     margin-bottom: 0;
+
+.timeline .container{    
+    display: flex;
+    justify-content: center; /* Ensures the text is centered */
+    align-items: center;
+    width: 100%; 
 }
 
 .timeline::after {
