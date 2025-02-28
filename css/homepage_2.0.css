@@ -408,7 +408,7 @@ INTERMEDIATE screens
 
 @media (max-width: 1162px) and (min-width: 770px) {
     .timeline-item {
-        width: 45%; /* Reduced width for a more elongated look */
+        width: clamp(48%, 48vw, 65%);
         padding: 20px;
     }
     .timeline-item:nth-child(odd) {
