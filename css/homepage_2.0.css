@@ -401,6 +401,22 @@ TIMELINE
     transform: translateX(0);
 }
 
+@media (max-width: 1024px) {
+    .timeline-item {
+        width: 90%; /* Reduce width so it doesn't spill */
+        left: 5% !important; /* Keep it centered */
+    }
+}
+
+@media (max-width: 770px) {
+    .timeline-item {
+        width: 100%; /* Full width for smaller screens */
+        left: 0 !important;
+        text-align: center;
+        transform: none;
+    }
+}
+
 @media (max-width: 770px) { 
     /* Hide the red timeline line */
     .timeline::after {
@@ -438,7 +454,7 @@ RESPONSIVE STYLES
 **********/
 
 /* For medium-sized screens (tablets and small laptops) */
-@media (max-width: 768px) {
+@media (max-width: 770px) {
     .timeline .timeline-item {
         width: 100%; /* Full width for smaller screens */
         left: 0; /* Center alignment */
