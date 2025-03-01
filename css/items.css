@@ -26,6 +26,10 @@
     #logoNavbar {
         transform: rotate(90deg);
     }
+
+    footer{
+        position: relative;
+    }
 }
 
 @media (min-width: 576px) {
@@ -42,6 +46,9 @@
         transform: rotate(90deg);
     }
 
+    footer{
+        position: relative;
+    }
 }
 
 @media (min-width: 768px) {
@@ -62,6 +69,9 @@
         transform: rotate(90deg);
     }
 
+    footer{
+        position: relative;
+    }
 }
 
 @media (min-width: 992px) {
@@ -82,6 +92,10 @@
         transform: rotate(90deg) translateX(20px);
     }
 
+    footer{
+        position: absolute;
+        bottom: 0px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -102,6 +116,10 @@
         transform: rotate(90deg) translateX(20px);
     }
 
+    footer{
+        position: absolute;
+        bottom: 0px;
+    }
 }
 
 @media (min-width: 1400px) {
@@ -122,6 +140,10 @@
         transform: rotate(90deg) translateX(20px);
     }
 
+    footer{
+        position: absolute;
+        bottom: 0px;
+    }
 }
 
 @media (min-width: 2000px) {
@@ -140,6 +162,11 @@
 
     #logoNavbar {
         transform: rotate(90deg) translateX(20px);
+    }
+
+    footer{
+        position: absolute;
+        bottom: 0px;
     }
 }
 
@@ -243,6 +270,11 @@ p {
 #numberedButtons {
     margin-top: 1rem;
 }
+
+.btn-danger {
+    --bs-btn-bg: #d02e02 !important;
+    --bs-btn-border-color: #d02e02 !important; 
+}
 /*******************
 FOOTER (Alice style)
 ********************/
@@ -254,7 +286,6 @@ footer {
     background-color: #D02E02;
     color: white;
     text-align: center;
-    position: relative;
 }
 
 .github-logo {
