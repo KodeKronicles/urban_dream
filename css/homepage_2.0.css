@@ -414,12 +414,21 @@ INTERMEDIATE screens
     .timeline-item:nth-child(odd) {
         /*left: calc(50% - 52%);
         /* text-align: right; 
-        transform: translateX(0px) /*(-25px);*/
+        transform: translateX(0px) /*(-25px);
 
         left: auto;
-        right: calc(50% /*+ 25px*/);
+        right: calc(50%);
         text-align: right;
-        transform: none;
+        transform: none; */
+
+        /*left: auto;
+        right: calc(50%);
+        text-align: right;
+        transform: translateX(-50px); */
+        left: calc(47% - clamp(48%, 48vw, 65%));
+        text-align: right;
+        transform: translateX(0);
+    }
         
     }
     .timeline-item:nth-child(even) {
