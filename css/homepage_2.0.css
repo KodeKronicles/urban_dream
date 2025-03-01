@@ -460,15 +460,15 @@ MOBILE
 @media (max-width: 770px) { 
     /* Hide the red timeline line */
     .timeline::after {
-        display: none;
+        display: none !important;
     }
 
     /* Make timeline items full width */
     .timeline-item {
-        width: 100%;
+        width: 100% !important;
         left: 0 !important;
-        text-align: center;
-        transform: none;
+        text-align: center !important;
+        transform: none !important;
     }
 
     /* Move the year label above the content box */
@@ -485,7 +485,7 @@ MOBILE
 
     /* Center align text inside content box */
     .timeline-content {
-        text-align: center;
+        text-align: center !important;
     }
 }
 
