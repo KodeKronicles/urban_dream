@@ -6,7 +6,7 @@ body {
     /*font-family: 'Inter', sans-serif;*/
     margin: 0;
     padding: 0;
-    background-color: #dddddd; /* Fallback background color */
+    background-color: #dddddd !important; /* Fallback background color */
     background-size: cover; /* Cover the entire area */
     font-family: 'Futura Maxi CG', sans-serif;
     font-weight: normal; /* Ensures the default weight is applied */
@@ -191,7 +191,13 @@ NAME BLOCK
     padding: 0; /* Remove unnecessary padding */
     margin: 0 auto; /* Ensures centering */
     margin-bottom: 50px;
-    margin-top: -63px;
+    margin-top: -25.7px;
+}
+
+@media (max-width: 994px) {
+  .navbar-brand {
+    margin-top: -22.5%;
+  }
 }
 
 .navbar-brand img {
