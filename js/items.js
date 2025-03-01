@@ -9,7 +9,7 @@ var currentSort = ""
 
 document.addEventListener("DOMContentLoaded", async function(event) {
 	console.log(" DO NOT PEEP o((>ω< ))o")
-	fetch('https://gist.githubusercontent.com/krzywonos/f71c6986338fc996d0a67527849428eb/raw/7cd037035068d342d47b7382a6248314fc9005df/data.json') //TODO: change to a permanent link once we make the repo public
+	fetch('https://raw.githubusercontent.com/KodeKronicles/citylife/refs/heads/main/data.json')
 	.then(response => response.json())
 	.then(data => {	
 		items = data.items
