@@ -168,12 +168,6 @@ main {
     padding:5px !important;
 }
 
-#navbarNavAltMarkup {
-    border-bottom-width: 2px; 
-    border-bottom-style: solid; 
-    border-bottom-color: #d02e02;
-}
-
 #dataRow1 {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -194,9 +188,6 @@ main {
 
 #disclaimer-container {
     padding-top: 2rem;
-    border-top-width: 2px; 
-    border-top-style: solid; 
-    border-top-color: #d02e02;
 }
 
 #about {
