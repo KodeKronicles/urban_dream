@@ -275,6 +275,23 @@ p {
     --bs-btn-bg: #d02e02 !important;
     --bs-btn-border-color: #d02e02 !important; 
 }
+
+.card-header {
+    background-color: var(--bs-body-bg) !important;
+}
+
+#longInfo {
+    --bs-card-border-color: var(--bs-body-bg) !important;
+    --bs-card-border-width: 0px !important;
+}
+
+.card-footer {
+    background-color: var(--bs-body-bg) !important;
+}
+
+#longInfoContent img{
+
+}
 /*******************
 FOOTER (Alice style)
 ********************/
