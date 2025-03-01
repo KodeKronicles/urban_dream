@@ -221,7 +221,7 @@
         {
             "@sort": "freedom_ship",
             "shortName": "The Freedom Ship",
-            "image1": "img/freedom ship.jpg",
+            "image1": "img/freedom_ship.jpg",
             "copyright": "\u00a9 Freedom Ship International",
             "info": {
                 "Name": "Freedom Ship",
