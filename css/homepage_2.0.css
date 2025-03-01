@@ -427,10 +427,9 @@ INTERMEDIATE screens
         transform: translateX(-50px); */
         left: calc(47% - clamp(48%, 48vw, 65%));
         text-align: right;
-        transform: translateX(0);
+        transform: translateX(0);        
     }
-        
-    }
+    
     .timeline-item:nth-child(even) {
         left: 50%;
         text-align: left;
