@@ -288,7 +288,7 @@ FOOTER (Alice style)
 footer {
     margin-top: 2%;  /* Force no gap above the footer */
     padding: 20px 0;
-    width: vw;
+    width: 100%;
     background-color: #D02E02;
     color: white;
     text-align: center;
@@ -301,3 +301,5 @@ footer {
     display: block;
     margin: 10px auto 0;
 }
+
+

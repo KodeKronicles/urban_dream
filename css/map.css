@@ -316,7 +316,7 @@ FOOTER (Alice style)
 
 footer {
     margin-top: 0;  /* Force no gap above the footer */
-    padding: 20px 0;
+    padding: 5px 0;
     width: 100%;
     background-color: #D02E02;
     color: white;
@@ -397,16 +397,6 @@ a {
     text-underline-offset: 4px;
     text-decoration-thickness: 1.4px; /* Aumenta lo spessore della linea */
 }
-.underline {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    text-decoration-thickness: 1.4px; /* Aumenta lo spessore della linea */
-}
-
-.table-container {
-    display: none;
-}
-
 
 /* mostra il menu dropdown */
 
@@ -464,4 +454,79 @@ a {
 }
 
 
+
+@media (max-width: 768px) {
+    /* Navbar adjustments */
+    .navbar-nav {
+        padding: 10px 0;
+    }
+
+    .nav-link {
+        margin-left: 0;
+        padding: 8px 15px;
+    }
+
+    /* Main content container */
+    .container.mt-5 {
+        margin-top: 1rem !important;
+        padding: 0 15px;
+    }
+
+    /* Text column */
+    .info-section {
+        padding: 1rem 15px;
+        flex: none;
+        width: 100%;
+    }
+
+    .info-section h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.8rem;
+    }
+
+    /* Image column */
+    .custom-margin-left {
+        margin-left: 0;
+        padding: 0 15px;
+    }
+
+    /* Table adjustments */
+    .table-container {
+        margin: 15px 0;
+        padding: 0 10px;
+    }
+
+    th, td {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+
+    /* Hidden info sections */
+    .hidden-info {
+        padding: 1rem;
+    }
+
+    /* Footer adjustments */
+    footer {
+        padding: 15px 10px;
+    }
+
+    footer p {
+        margin-bottom: 5px;
+    }
+
+    .github-logo {
+        width: 50px;
+    }
+
+    /* General spacing */
+    body {
+        padding: 0 10px;
+    }
+
+    /* Button spacing */
+    .back-button-container {
+        margin: 15px 10px;
+    }
+}
 

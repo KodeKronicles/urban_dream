@@ -1,12 +1,21 @@
-// TO OPERATE OPEN THE CATALOGUE
-function toggleTable() {
-    const tableContainer = document.querySelector('.table-container');
-    
-    if (tableContainer.style.display === 'none' || tableContainer.style.display === '') {
-        tableContainer.style.display = 'block';
-        document.getElementById('mainImage').src = 'img/map/cerchicompleti.png';
-    } else {
-        tableContainer.style.display = 'none';
+
+
+function updateImage(category) {
+    const mainImage = document.getElementById('mainImage');
+    let imagePath = 'img/map/all.png'; // Immagine predefinita
+
+    switch(category) {
+        case 'Unbuilt':
+            imagePath = 'img/map/unbuilt.png';
+            break;
+        case 'Built':
+            imagePath = 'img/map/built.png';
+            break;
+        // Aggiungi altri casi se necessario
+    }
+
+    if(mainImage) {
+        mainImage.src = imagePath;
     }
 }
 

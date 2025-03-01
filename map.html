@@ -50,19 +50,20 @@
          <div class="row align-items-start">
             <!-- Colonna Testo -->
             <div class="col-md-6 info-section mt-0 pt-0">
-               <h1>The Map & The Fury</h1>
+               <h1>The Map</h1>
                <h2>Navigate Visionary Urban Concepts.</h2>
                <p>This map explores architectural ideas, from utopian visions to radical experiments. It traces how these concepts shaped the built environment, influenced design, and challenged spatial norms. The exhibition progresses from unbuilt projects to realized structures, ending with speculative and futuristic designs.
-                  Click on the map to be disappointed.
                </p>
-               <h3><span class="underline" onclick="toggleTable()" style="cursor: pointer;">Open the Catalogue ></span></h3>
+               <h3><span class="underline" onclick="checkBackButton()" style="cursor: pointer;">Check out the Catalogue ></span></h3>
             </div>
             <!-- Colonna Immagine -->
             <div class="col-md-6 mt-0 pt-0 custom-margin-left">
-               <img src="img/map/cerchicompleti.png" alt="Map Image" class="img-fluid">
+                <img src="img/map/all.png" alt="Map Image" id="mainImage" class="img-fluid">
             </div>
          </div>
       </div>
+
+
       <!-- Tabella degli item -->
       <div class="table-container">
          <table class="table" id="Table">
@@ -81,7 +82,6 @@
                         <div id="statusDropdown" class="dropdown-menu">
                            <div class="menu-item" onclick="filterByStatus('Unbuilt')">Unbuilt</div>
                            <div class="menu-item" onclick="filterByStatus('Built')">Built</div>
-                           <div class="menu-item" onclick="filterByStatus('Speculative')">Speculative</div>
                         </div>
                      </div>
                   </th>
@@ -286,11 +286,11 @@
                   </td>
                </tr>
                <!-- ITEM 7: Kowloon Walled City -->
-               <tr id="kowloon_walled_city" class="item demolished housing organic chaotic before-2000">
+               <tr id="kowloon_walled_city" class="item built housing organic chaotic before-2000">
                   <td>7</td>
                   <td class="filter-item"><a href="docs/kowloon_walled_city.html">Kowloon Walled City</a></td>
                   <td class="filter-year">1950s-1993</td>
-                  <td class="filter-status">Demolished</td>
+                  <td class="filter-status">Built, Demolished</td>
                   <td><span class="filter-context">Housing</span></td>
                   <td>
                      <span class="filter-ideals">Organic</span>, 
@@ -317,11 +317,11 @@
                   </td>
                </tr>
                <!-- ITEM 8: Torre David -->
-               <tr id="torre_david" class="item squatted housing organic chaotic after-2000">
+               <tr id="torre_david" class="item built housing organic chaotic after-2000">
                   <td>8</td>
                   <td class="filter-item"><a href="docs/torre_david.html">Torre David</a></td>
                   <td class="filter-year">1990s-2014</td>
-                  <td class="filter-status">Squatted, Cleared</td>
+                  <td class="filter-status">Built, Squatted, Cleared</td>
                   <td><span class="filter-context">Housing</span></td>
                   <td>
                      <span class="filter-ideals">Organic</span>, 
@@ -347,37 +347,38 @@
                      </div>
                   </td>
                </tr>
-               <!-- ITEM 9: The Line -->
-               <tr id="the_line" class="item under_development urban_planning futuristic utopian after-2000">
-                  <td>9</td>
-                  <td class="filter-item"><a href="docs/the_line.html">The Line</a></td>
-                  <td class="filter-year">2023-Present</td>
-                  <td class="filter-status">Under Development</td>
-                  <td><span class="filter-context">Urban Planning</span></td>
-                  <td>
-                     <span class="filter-ideals">Futuristic</span>, 
-                     <span class="filter-ideals">Utopian</span>
-                  </td>
-                  <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
-               </tr>
-               <tr class="hidden-info">
-                  <td colspan="7">
-                     <div class="container">
-                        <div class="row">
-                           <div class="col-md-4 details-left">
-                              <img class="film-image" src="img/The Line.jpg" alt="The Line Image">
-                           </div>
-                           <div class="col-md-8 details-right">
-                              <p>The Line is a futuristic and controversial city project, designed to stretch 170 km and accommodate 9 million people. It envisions a car-free, zero-carbon environment, redefining traditional urban planning.</p>
-                              <p>Location: Saudi Arabia</p>
-                              <p>Check out if you like: Experimental urbanism. Large-scale futuristic projects. Sustainable cities.</p>
-                              <p>Recommended by: Elena</p>
-                              <a href="docs/the_line.html" class="btn-watch-trailer">Read More</a>
-                           </div>
-                        </div>
-                     </div>
-                  </td>
-               </tr>
+            
+               <!-- ITEM 9: Metaverse Urbanism -->
+               <tr id="futuro_house" class="item unbuilt housing futuristic modular before-2000">
+                <td>9</td>
+                <td class="filter-item">Terraforming Mars<a href="docs/terraforming_mars.html"></a></td>
+                <td class="filter-year">2020s & Beyond</td>
+                <td class="filter-status">Unbuilt</td>
+                <td><span class="filter-context"></span></td>
+                <td>
+                   <span class="filter-ideals"></span>, 
+                   <span class="filter-ideals"></span>
+                </td>
+                <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+             </tr>
+             <tr class="hidden-info">
+                <td colspan="7">
+                   <div class="container">
+                      <div class="row">
+                         <div class="col-md-4 details-left">
+                            <img class="film-image" src="img/Mars Terraforming.jpg" alt="Mars Terraforming Image">
+                         </div>
+                         <div class="col-md-8 details-right">
+                            <p>The Futuro House is a prefabricated, UFO-shaped home, designed to be easily transported and assembled. An icon of 1960s futuristic design, it was conceived as a modular and highly innovative living space.</p>
+                            <p>Location: Finland</p>
+                            <p>Check out if you like: Futuristic design. Modular architecture. Visionary projects.</p>
+                            <p>Recommended by: Elena</p>
+                            <a href="docs/futuro_house.html" class="btn-watch-trailer">Read More</a>
+                         </div>
+                      </div>
+                   </div>
+                </td>
+             </tr>
                <!-- ITEM 10: Futuro House -->
                <tr id="futuro_house" class="item built housing futuristic modular before-2000">
                   <td>10</td>
@@ -440,11 +441,11 @@
                   </td>
                </tr>
                <!-- ITEM 12: Arcosanti -->
-               <tr id="arcosanti" class="item existing housing ecological utopian before-2000">
+               <tr id="arcosanti" class="item built housing ecological utopian before-2000">
                   <td>12</td>
                   <td class="filter-item"><a href="docs/arcosanti.html">Arcosanti</a></td>
                   <td class="filter-year">1970-Present</td>
-                  <td class="filter-status">Existing</td>
+                  <td class="filter-status">Built</td>
                   <td><span class="filter-context">Housing</span></td>
                   <td>
                      <span class="filter-ideals">Ecological</span>, 
@@ -471,11 +472,11 @@
                   </td>
                </tr>
                <!-- ITEM 13: Wrapped Reichstag -->
-               <tr id="wrapped_reichstag" class="item temporary artistic_intervention artistic before-2000">
+               <tr id="wrapped_reichstag" class="item built artistic_intervention artistic before-2000">
                   <td>13</td>
                   <td class="filter-item"><a href="docs/wrapped_reichstag.html">Wrapped Reichstag</a></td>
                   <td class="filter-year">1995</td>
-                  <td class="filter-status">Temporary</td>
+                  <td class="filter-status">Built, Temporary</td>
                   <td><span class="filter-context">Artistic Intervention</span></td>
                   <td>
                      <span class="filter-ideals">Artistic</span>
@@ -501,11 +502,11 @@
                   </td>
                </tr>
                <!-- ITEM 14: Building Cuts -->
-               <tr id="building_cuts" class="item destroyed artistic_intervention artistic deconstructive before-2000">
+               <tr id="building_cuts" class="item built artistic_intervention artistic deconstructive before-2000">
                   <td>14</td>
                   <td class="filter-item"><a href="docs/building_cuts.html">Building Cuts</a></td>
                   <td class="filter-year">1970s</td>
-                  <td class="filter-status">Destroyed</td>
+                  <td class="filter-status">Built, Destroyed</td>
                   <td><span class="filter-context">Artistic Intervention</span></td>
                   <td>
                      <span class="filter-ideals">Artistic</span>, 
@@ -563,11 +564,11 @@
                   </td>
                </tr>
                <!-- ITEM 16: Hyperloop Stations -->
-               <tr id="hyperloop" class="item under_development transportation futuristic technological after-2000">
+               <tr id="hyperloop" class="item unbuilt transportation futuristic technological after-2000">
                   <td>16</td>
                   <td class="filter-item"><a href="docs/hyperloop.html">Hyperloop Stations</a></td>
                   <td class="filter-year">2010s-Present</td>
-                  <td class="filter-status">Under Development</td>
+                  <td class="filter-status">Unbuilt, Under Development</td>
                   <td><span class="filter-context">Transportation</span></td>
                   <td>
                      <span class="filter-ideals">Futuristic</span>, 
@@ -594,11 +595,11 @@
                   </td>
                </tr>
                <!-- ITEM 17: AI-Designed Cities -->
-               <tr id="ai_designed_cities" class="item speculative urban_planning futuristic technological after-2000">
+               <tr id="ai_designed_cities" class="item unbuilt urban_planning futuristic technological after-2000">
                   <td>17</td>
                   <td class="filter-item"><a href="docs/ai_designed_cities.html">AI-Designed Cities</a></td>
                   <td class="filter-year">2020s & Beyond</td>
-                  <td class="filter-status">Speculative</td>
+                  <td class="filter-status">Unbuilt, Speculative</td>
                   <td><span class="filter-context">Urban Planning</span></td>
                   <td>
                      <span class="filter-ideals">Futuristic</span>, 
@@ -625,11 +626,11 @@
                   </td>
                </tr>
                <!-- ITEM 18: Roden Crater -->
-               <tr id="roden_crater" class="item under_development artistic_intervention artistic ecological before-2000">
+               <tr id="roden_crater" class="item unbuilt artistic_intervention artistic ecological before-2000">
                   <td>18</td>
                   <td class="filter-item"><a href="docs/roden_crater.html">Roden Crater</a></td>
                   <td class="filter-year">1970s-Present</td>
-                  <td class="filter-status">Under Development</td>
+                  <td class="filter-status">Unbuilt, Under Development</td>
                   <td><span class="filter-context">Artistic Intervention</span></td>
                   <td>
                      <span class="filter-ideals">Artistic</span>, 
@@ -656,11 +657,11 @@
                   </td>
                </tr>
                <!-- ITEM 19: Metaverse Urbanism -->
-               <tr id="metaverse_urbanism" class="item speculative virtual_space futuristic virtual after-2000">
+               <tr id="metaverse_urbanism" class="item unbuilt virtual_space futuristic virtual after-2000">
                   <td>19</td>
                   <td class="filter-item"><a href="docs/metaverse_urbanism.html">Metaverse Urbanism</a></td>
                   <td class="filter-year">2020s & Beyond</td>
-                  <td class="filter-status">Speculative</td>
+                  <td class="filter-status">Unbuilt, Speculative</td>
                   <td><span class="filter-context">Virtual Space</span></td>
                   <td>
                      <span class="filter-ideals">Futuristic</span>, 
@@ -686,6 +687,37 @@
                      </div>
                   </td>
                </tr>
+               <!-- ITEM 20: The Line -->
+               <tr id="the_line" class="item unbuilt urban_planning futuristic utopian after-2000">
+                <td>20</td>
+                <td class="filter-item"><a href="docs/the_line.html">The Line</a></td>
+                <td class="filter-year">2023-Present</td>
+                <td class="filter-status">Unbuilt, Under Development</td>
+                <td><span class="filter-context">Urban Planning</span></td>
+                <td>
+                   <span class="filter-ideals">Futuristic</span>, 
+                   <span class="filter-ideals">Utopian</span>
+                </td>
+                <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+             </tr>
+             <tr class="hidden-info">
+                <td colspan="7">
+                   <div class="container">
+                      <div class="row">
+                         <div class="col-md-4 details-left">
+                            <img class="film-image" src="img/The Line.jpg" alt="The Line Image">
+                         </div>
+                         <div class="col-md-8 details-right">
+                            <p>The Line is a futuristic and controversial city project, designed to stretch 170 km and accommodate 9 million people. It envisions a car-free, zero-carbon environment, redefining traditional urban planning.</p>
+                            <p>Location: Saudi Arabia</p>
+                            <p>Check out if you like: Experimental urbanism. Large-scale futuristic projects. Sustainable cities.</p>
+                            <p>Recommended by: Elena</p>
+                            <a href="docs/the_line.html" class="btn-watch-trailer">Read More</a>
+                         </div>
+                      </div>
+                   </div>
+                </td>
+             </tr>
             </tbody>
          </table>
       </div>
@@ -703,8 +735,6 @@
       <script src="js/map.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-
-
        <!-- FOOTER -->
 
     <footer>
@@ -714,22 +744,6 @@
             <img src="img/GHLogo.png" alt="GitHub" class="github-logo">
         </a>
     </footer>
-        
-    <script src="script.js"></script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var controller = new ScrollMagic.Controller();
-    
-            new ScrollMagic.Scene({
-                triggerElement: ".parallax-section",
-                triggerHook: 1, // Start the effect when the top of .parallax-section is at the top of the viewport
-                duration: "100%"
-            })
-            .setTween(gsap.from(".parallax-section", { opacity: 0, y: 100, duration: 1 }))
-            .addTo(controller);
-        });
-    </script>
 
       
    </body>
