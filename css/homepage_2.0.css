@@ -342,7 +342,7 @@ TIMELINE
 
 /* Left-side content */
 .timeline-item:nth-child(odd) {
-    left: -25%;
+    left: -28%;
     text-align: right;
     transform: translateX(-50px);
 }
