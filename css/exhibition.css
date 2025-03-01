@@ -29,6 +29,10 @@
     font-family: 'Inter', sans-serif;
 }
 
+.nav-link {
+    margin-left: 1rem;
+}
+
 /*   FOOTER STYLES */
 
 .site-footer {

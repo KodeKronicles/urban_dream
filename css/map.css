@@ -459,7 +459,9 @@ a {
     display: none;
 }
 
-
+.nav-link {
+    margin-left: 1rem;
+}
 
 
 
