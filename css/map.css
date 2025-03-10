@@ -137,6 +137,8 @@
             display: flex;
             justify-content: center;
             margin-top: 20px;
+            margin: 15px 10px;
+    
         }
         .back-button {
             background-color: red;
@@ -276,15 +278,16 @@
     .back-button {
         background-color: transparent;
         color: #d02d00;
-        padding: 10px 10px;
-        font-size: 15px;
+        padding: 0.5em 1em;
+        font-size: 1.1rem;
         border: 1px solid #d02d00;
         cursor: pointer;
         border-radius: 0;
-        font-weight: 600;
-        text-transform: uppercase;
         transition: none;
+        text-decoration: none;
+        background-color: #fff;
     }
+
 
     .back-button:hover,
     .back-button:focus,
@@ -528,11 +531,7 @@ a {
         padding: 0 10px;
     }
 
-    /* Button spacing */
-    .back-button-container {
-        margin: 15px 10px;
-    }
-    
+  
 }
 
 .image-mapper-shape {
@@ -545,3 +544,11 @@ a {
     fill-opacity: 0.6;
     fill: #D02E02;
 }
+
+image {
+    pointer-events: none;
+    transition: opacity 0.3s ease; /* Aggiungi transizione */
+}
+
+
+
