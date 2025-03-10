@@ -54,17 +54,75 @@
                   From utopian visions to dystopian realities, from radical experiments to practical innovations, architectural ideas shape and redefine how we interact with the world.
                   This exhibition delves into five core narratives, each offering a unique lens on how cities, spaces, and ideas evolve:
                <p>
-               <ul>
-                  <li>In Space – How visionary projects are shaped by geography and spatial constraints.</li>
-                  <li>In Time – How architecture responds to and influences historical changes.</li>
-                  <li>In Action – The transition from speculative concepts to real-world applications.</li>
-                  <li>In Context – The role of architecture within urbanism, housing, art, and technology.</li>
-                  <li>In Ideals – The principles and philosophies that guide architectural thinking.</li>
-               </ul>
-               <p>
                   Explore the past, present, and future of architecture—where boundaries are challenged, cities are imagined, and reality is constantly reshaped.
                </p>
+               <!-- Carousel Section -->
+<div class="carousel-container">
+   <div id="exhibitionCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
+       <div class="carousel-indicators">
+           <button type="button" data-bs-target="#exhibitionCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="In Space"></button>
+           <button type="button" data-bs-target="#exhibitionCarousel" data-bs-slide-to="1" aria-label="In Time"></button>
+           <button type="button" data-bs-target="#exhibitionCarousel" data-bs-slide-to="2" aria-label="In Reality"></button>
+           <button type="button" data-bs-target="#exhibitionCarousel" data-bs-slide-to="3" aria-label="In Context"></button>
+           <button type="button" data-bs-target="#exhibitionCarousel" data-bs-slide-to="4" aria-label="In Ideals"></button>
+       </div>
+       <div class="carousel-inner">
+           <!-- In Space -->
+           <div class="carousel-item active">
+               <img src="img/Freedom_ship.jpg" class="d-block w-100" alt="Freedom Ship">
+               <div class="carousel-caption d-none d-md-block">
+                   <h5><a href="https://kodekronicles.github.io/citylife/exhibition.html/#space" class="title-link">In Space</a></h5>
+                   <p>How visionary projects are shaped by geography and spatial constraints.</p>
+               </div>
+           </div>
+           <!-- In Time -->
+           <div class="carousel-item">
+               <img src="img/Walking city.gif" class="d-block w-100" alt="Walking City">
+               <div class="carousel-caption d-none d-md-block">
+                  <h5><a href="https://kodekronicles.github.io/citylife/exhibition.html/#time" class="title-link">In Time</a></h5>
+                  <p>How architecture responds to and influences historical changes.</p>
+               </div>
+           </div>
+           <!-- In Reality -->
+           <div class="carousel-item">
+               <img src="img/HyperLoop.jpg" class="d-block w-100" alt="Hyperloop">
+               <div class="carousel-caption d-none d-md-block">
+                  <h5><a href="https://kodekronicles.github.io/citylife/exhibition.html/#reality" class="title-link">In Reality</a></h5>
+                  <p>From speculative concepts to real-world architectural applications.</p>
+               </div>
+           </div>
+           <!-- In Context -->
+           <div class="carousel-item">
+               <img src="img/Kowloon.jpg" class="d-block w-100" alt="Kowloon Walled City">
+               <div class="carousel-caption d-none d-md-block">
+                  <h5><a href="https://kodekronicles.github.io/citylife/exhibition.html/#context" class="title-link">In Context</a></h5>
+                  <p>How visionary projects interact with urbanism, art, and infrastructure.</p>
+               </div>
+           </div>
+           <!-- In Ideals -->
+           <div class="carousel-item">
+               <img src="img/AI city.jpeg" class="d-block w-100" alt="AI-Designed Cities">
+               <div class="carousel-caption d-none d-md-block">
+                  <h5><a href="https://kodekronicles.github.io/citylife/exhibition.html/#ideals" class="title-link">In Ideals</a></h5>
+                  <p>The principles and philosophies that guide architectural thinking.</p>
+               </div>
+           </div>
+       </div>
+       <button class="carousel-control-prev" type="button" data-bs-target="#exhibitionCarousel" data-bs-slide="prev">
+           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+           <span class="visually-hidden">Previous</span>
+       </button>
+       <button class="carousel-control-next" type="button" data-bs-target="#exhibitionCarousel" data-bs-slide="next">
+           <span class="carousel-control-next-icon" aria-hidden="true"></span>
+           <span class="visually-hidden">Next</span>
+       </button>
+   </div>
+</div>
+
             </div>
+               <!-- Bootstrap Carousel -->
+
+
          </div>
          <div class="tab-pane fade" id="space" role="tabpanel">
             <div class="info-section">
@@ -82,6 +140,8 @@
                </div>
             </div>
             <div class="row row-cols-1 row-cols-md-3 g-4">
+                               <!-- GLOBAL -->
+
                 <div class="col filter-item global">
                    <div class="card h-100">
                       <img src="img/Freedom_ship.jpg" class="card-img-top img-fluid" alt="Freedom Ship">
@@ -90,6 +150,14 @@
                       </div>
                    </div>
                 </div>
+                <div class="col filter-item global">
+                  <div class="card h-100">
+                     <img src="img/neon.jpg" class="card-img-top img-fluid" alt="Neon Installations">
+                     <div class="card-body">
+                        <h5 class="card-title"><a href="docs/neon_installations.html">Neon Installations</a></h5>
+                     </div>
+                  </div>
+               </div>
                 <div class="col filter-item global">
                    <div class="card h-100">
                       <img src="img/HyperLoop.jpg" class="card-img-top img-fluid" alt="Hyperloop">
@@ -125,6 +193,22 @@
              
                 <!-- EUROPE -->
                 <div class="col filter-item europe">
+                  <div class="card h-100">
+                     <img src="img/Walking city.gif" class="card-img-top img-fluid" alt="Walking City">
+                     <div class="card-body">
+                        <h5 class="card-title"><a href="docs/walking_city.html">Walking City</a></h5>
+                     </div>
+                  </div>
+               </div>
+               <div class="col filter-item europe">
+                  <div class="card h-100">
+                     <img src="img/No-stop city.jpg" class="card-img-top img-fluid" alt="No-Stop City">
+                     <div class="card-body">
+                        <h5 class="card-title"><a href="docs/no_stop_city.html">No-Stop City</a></h5>
+                     </div>
+                  </div>
+               </div>
+                <div class="col filter-item europe">
                    <div class="card h-100">
                       <img src="img/Corbusier.jpg" class="card-img-top img-fluid" alt="Plan Voisin">
                       <div class="card-body">
@@ -156,6 +240,14 @@
                       </div>
                    </div>
                 </div>
+                <div class="col filter-item europe">
+                  <div class="card h-100">
+                     <img src="img/FuturoHouse.jpg" class="card-img-top img-fluid" alt="Futuro House">
+                     <div class="card-body">
+                        <h5 class="card-title"><a href="docs/futuro_house.html">Futuro House</a></h5>
+                     </div>
+                  </div>
+               </div>
              
                 <!-- ASIA -->
                 <div class="col filter-item asia">
@@ -184,6 +276,15 @@
                 </div>
              
                 <!-- AMERICA -->
+                <div class="col filter-item america">
+                  <div class="card h-100">
+                     <img src="img/Behind the Wall.jpg" class="card-img-top img-fluid" alt="Building Cuts">
+                     <div class="card-body">
+                        <h5 class="card-title"><a href="docs/building_cuts.html">Building Cuts</a></h5>
+                     </div>
+                  </div>
+               </div>
+
                 <div class="col filter-item america">
                    <div class="card h-100">
                       <img src="img/Arcosanti.jpg" class="card-img-top img-fluid" alt="Arcosanti">
@@ -231,7 +332,7 @@
     <div class="card h-100">
        <img src="img/Walking city.gif" class="card-img-top img-fluid" alt="Walking City">
        <div class="card-body">
-          <h5 class="card-title"><a href="docs/walking_city.html">WALKING CITY</a></h5>
+          <h5 class="card-title"><a href="docs/walking_city.html">Walking City</a></h5>
        </div>
     </div>
  </div>
@@ -340,6 +441,15 @@
        <img src="img/Roden-Crater-James-Turell.jpg" class="card-img-top img-fluid" alt="Roden Crater">
        <div class="card-body">
           <h5 class="card-title"><a href="docs/roden_crater.html">Roden Crater</a></h5>
+       </div>
+    </div>
+ </div>
+
+ <div class="col filter-item before-2000">
+    <div class="card h-100">
+       <img src="img/neon.jpg" class="card-img-top img-fluid" alt="Neon Installations">
+       <div class="card-body">
+          <h5 class="card-title"><a href="docs/neon_installations.html">Neon Installations</a></h5>
        </div>
     </div>
  </div>
@@ -496,8 +606,35 @@
        </div>
     </div>
  </div>
- 
+
  <div class="col filter-item in-theory">
+    <div class="card h-100">
+       <img src="img/HyperLoop.jpg" class="card-img-top img-fluid" alt="Hyperloop">
+       <div class="card-body">
+          <h5 class="card-title"><a href="docs/hyperloop.html">Hyperloop</a></h5>
+       </div>
+    </div>
+ </div>
+
+ <div class="col filter-item in-theory">
+    <div class="card h-100">
+       <img src="img/Roden-Crater-James-Turell.jpg" class="card-img-top img-fluid" alt="Roden Crater">
+       <div class="card-body">
+          <h5 class="card-title"><a href="docs/roden_crater.html">Roden Crater</a></h5>
+       </div>
+    </div>
+ </div>
+  <!-- IN PRACTICE -->
+  <div class="col filter-item in-practice">
+    <div class="card h-100">
+       <img src="img/neon.jpg" class="card-img-top img-fluid" alt="Neon Installations">
+       <div class="card-body">
+          <h5 class="card-title"><a href="docs/neon_installations.html">Neon Installations</a></h5>
+       </div>
+    </div>
+ </div>
+
+ <div class="col filter-item in-practice">
     <div class="card h-100">
        <img src="img/Kowloon.jpg" class="card-img-top img-fluid" alt="Kowloon Walled City">
        <div class="card-body">
@@ -506,7 +643,6 @@
     </div>
  </div>
  
- <!-- IN PRACTICE -->
  <div class="col filter-item in-practice">
     <div class="card h-100">
        <img src="img/Capsule tower.jpg" class="card-img-top img-fluid" alt="Nakagin Capsule Tower">
@@ -561,14 +697,7 @@
     </div>
  </div>
  
- <div class="col filter-item in-practice">
-    <div class="card h-100">
-       <img src="img/Roden-Crater-James-Turell.jpg" class="card-img-top img-fluid" alt="Roden Crater">
-       <div class="card-body">
-          <h5 class="card-title"><a href="docs/roden_crater.html">Roden Crater</a></h5>
-       </div>
-    </div>
- </div>
+ 
  
  <div class="col filter-item in-practice">
     <div class="card h-100">
@@ -579,14 +708,7 @@
     </div>
  </div>
  
- <div class="col filter-item in-practice">
-    <div class="card h-100">
-       <img src="img/HyperLoop.jpg" class="card-img-top img-fluid" alt="Hyperloop">
-       <div class="card-body">
-          <h5 class="card-title"><a href="docs/hyperloop.html">Hyperloop</a></h5>
-       </div>
-    </div>
- </div>
+ 
  
             </div>
          </div>
@@ -600,8 +722,8 @@
                <div class="btn-group" role="group" aria-label="Context filters">
                   <button type="button" class="btn btn-outline-danger filter-btn" data-filter="urbanism">URBANISM</button>
                   <button type="button" class="btn btn-outline-danger filter-btn" data-filter="housing">RADICAL LIVING</button>
-                  <button type="button" class="btn btn-outline-danger filter-btn" data-filter="art">ART & ARCHITECTURE</button>
-                  <button type="button" class="btn btn-outline-danger filter-btn" data-filter="technology">TECHNOLOGY & INFRASTRUCTURE</button>
+                  <button type="button" class="btn btn-outline-danger filter-btn" data-filter="art">ARTISTIC INTERVENTION</button>
+                  <button type="button" class="btn btn-outline-danger filter-btn" data-filter="technology">TECH INFRASTRUCTURE</button>
                </div>
             </div>
             <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -615,6 +737,15 @@
     </div>
  </div>
  
+ <div class="col filter-item urbanism">
+   <div class="card h-100">
+      <img src="img/Arcosanti.jpg" class="card-img-top img-fluid" alt="Arcosanti">
+      <div class="card-body">
+         <h5 class="card-title"><a href="docs/arcosanti.html">Arcosanti</a></h5>
+      </div>
+   </div>
+</div>
+
  <div class="col filter-item urbanism">
     <div class="card h-100">
        <img src="img/No-stop city.jpg" class="card-img-top img-fluid" alt="No-Stop City">
@@ -687,8 +818,17 @@
        </div>
     </div>
  </div>
+
+ <div class="col filter-item housing">
+   <div class="card h-100">
+      <img src="img/FuturoHouse.jpg" class="card-img-top img-fluid" alt="Futuro House">
+      <div class="card-body">
+         <h5 class="card-title"><a href="docs/futuro_house.html">Futuro House</a></h5>
+      </div>
+   </div>
+</div>
  
- <!-- ART & ARCHITECTURE -->
+ <!-- ARTISTIC INTERVENTION -->
  <div class="col filter-item art">
     <div class="card h-100">
        <img src="img/Reichstag.jpg" class="card-img-top img-fluid" alt="Wrapped Reichstag">
@@ -697,7 +837,14 @@
        </div>
     </div>
  </div>
- 
+ <div class="col filter-item art">
+   <div class="card h-100">
+      <img src="img/SUPERSTUDIO REVISITADO.jpg" class="card-img-top img-fluid" alt="Continuous Monument">
+      <div class="card-body">
+         <h5 class="card-title"><a href="docs/continuous_monument.html">Continuous Monument</a></h5>
+      </div>
+   </div>
+</div>
  <div class="col filter-item art">
     <div class="card h-100">
        <img src="img/Behind the Wall.jpg" class="card-img-top img-fluid" alt="Building Cuts">
@@ -725,7 +872,7 @@
     </div>
  </div>
  
- <!-- TECHNOLOGY & INFRASTRUCTURE -->
+ <!-- TECH INFRASTRUCTURE -->
  <div class="col filter-item technology">
     <div class="card h-100">
        <img src="img/HyperLoop.jpg" class="card-img-top img-fluid" alt="Hyperloop">
@@ -772,8 +919,8 @@
                <div class="btn-group" role="group" aria-label="Ideals filters">
                   <button type="button" class="btn btn-outline-danger filter-btn" data-filter="utopian">FUTURISTIC UTOPIAS</button>
                   <button type="button" class="btn btn-outline-danger filter-btn" data-filter="dystopian">URBAN DYSTOPIAS</button>
-                  <button type="button" class="btn btn-outline-danger filter-btn" data-filter="technological">TECHNOLOGY & INNOVATION</button>
-                  <button type="button" class="btn btn-outline-danger filter-btn" data-filter="artistic">ART & SPATIAL DECONSTRUCTION</button>
+                  <button type="button" class="btn btn-outline-danger filter-btn" data-filter="innovation">INNOVATION</button>
+                  <button type="button" class="btn btn-outline-danger filter-btn" data-filter="deconstruction">SPATIAL DECONSTRUCTION</button>
                </div>
             </div>
             <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -813,6 +960,15 @@
        </div>
     </div>
  </div>
+
+ <div class="col filter-item utopian">
+   <div class="card h-100">
+      <img src="img/FuturoHouse.jpg" class="card-img-top img-fluid" alt="Futuro House">
+      <div class="card-body">
+         <h5 class="card-title"><a href="docs/futuro_house.html">Futuro House</a></h5>
+      </div>
+   </div>
+</div>
  
  <!-- URBAN DYSTOPIAS -->
  <div class="col filter-item dystopian">
@@ -842,8 +998,17 @@
     </div>
  </div>
  
- <!-- TECHNOLOGY & INNOVATION -->
- <div class="col filter-item technological">
+ <div class="col filter-item dystopian">
+   <div class="card h-100">
+      <img src="img/Freedom_ship.jpg" class="card-img-top img-fluid" alt="Freedom Ship">
+      <div class="card-body">
+         <h5 class="card-title"><a href="docs/freedom_ship.html">Freedom Ship</a></h5>
+      </div>
+   </div>
+</div>
+
+ <!-- INNOVATION -->
+ <div class="col filter-item innovation">
     <div class="card h-100">
        <img src="img/HyperLoop.jpg" class="card-img-top img-fluid" alt="Hyperloop">
        <div class="card-body">
@@ -852,7 +1017,7 @@
     </div>
  </div>
  
- <div class="col filter-item technological">
+ <div class="col filter-item innovation">
     <div class="card h-100">
        <img src="img/AI Zaha Hadid.jpg" class="card-img-top img-fluid" alt="AI-Designed Cities">
        <div class="card-body">
@@ -861,7 +1026,7 @@
     </div>
  </div>
  
- <div class="col filter-item technological">
+ <div class="col filter-item innovation">
     <div class="card h-100">
        <img src="img/AI city.jpeg" class="card-img-top img-fluid" alt="Metaverse Urbanism">
        <div class="card-body">
@@ -870,7 +1035,7 @@
     </div>
  </div>
  
- <div class="col filter-item technological">
+ <div class="col filter-item innovation">
     <div class="card h-100">
        <img src="img/Mars Terraforming.jpg" class="card-img-top img-fluid" alt="Terraforming Mars">
        <div class="card-body">
@@ -879,17 +1044,35 @@
     </div>
  </div>
  
- <div class="col filter-item technological">
-    <div class="card h-100">
-       <img src="img/FuturoHouse.jpg" class="card-img-top img-fluid" alt="Futuro House">
-       <div class="card-body">
-          <h5 class="card-title"><a href="docs/futuro_house.html">Futuro House</a></h5>
-       </div>
-    </div>
- </div>
+ <div class="col filter-item innovation">
+   <div class="card h-100">
+      <img src="img/ticker.jpg" class="card-img-top img-fluid" alt="LED News Ticker">
+      <div class="card-body">
+         <h5 class="card-title"><a href="docs/led_news_ticker.html">LED News Ticker</a></h5>
+      </div>
+   </div>
+</div>
  
- <!-- ART & SPATIAL DECONSTRUCTION -->
- <div class="col filter-item artistic">
+<div class="col filter-item innovation">
+   <div class="card h-100">
+      <img src="img/Capsule tower.jpg" class="card-img-top img-fluid" alt="Nakagin Capsule Tower">
+      <div class="card-body">
+         <h5 class="card-title"><a href="docs/nakagin_tower.html">Nakagin Capsule Tower</a></h5>
+      </div>
+   </div>
+</div>
+
+<div class="col filter-item innovation">
+   <div class="card h-100">
+      <img src="img/neon.jpg" class="card-img-top img-fluid" alt="Neon Installations">
+      <div class="card-body">
+         <h5 class="card-title"><a href="docs/neon_installations.html">Neon Installations</a></h5>
+      </div>
+   </div>
+</div>
+
+ <!-- SPATIAL DECONSTRUCTION -->
+ <div class="col filter-item deconstruction">
     <div class="card h-100">
        <img src="img/Reichstag.jpg" class="card-img-top img-fluid" alt="Wrapped Reichstag">
        <div class="card-body">
@@ -898,7 +1081,7 @@
     </div>
  </div>
  
- <div class="col filter-item artistic">
+ <div class="col filter-item deconstruction">
     <div class="card h-100">
        <img src="img/Behind the Wall.jpg" class="card-img-top img-fluid" alt="Building Cuts">
        <div class="card-body">
@@ -907,16 +1090,9 @@
     </div>
  </div>
  
- <div class="col filter-item artistic">
-    <div class="card h-100">
-       <img src="img/neon.jpg" class="card-img-top img-fluid" alt="Neon Installations">
-       <div class="card-body">
-          <h5 class="card-title"><a href="docs/neon_installations.html">Neon Installations</a></h5>
-       </div>
-    </div>
- </div>
+
  
- <div class="col filter-item artistic">
+ <div class="col filter-item deconstruction">
     <div class="card h-100">
        <img src="img/Roden-Crater-James-Turell.jpg" class="card-img-top img-fluid" alt="Roden Crater">
        <div class="card-body">

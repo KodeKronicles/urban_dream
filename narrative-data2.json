@@ -1,0 +1,178 @@
+{
+    "narratives": [
+        {
+            "name": "Status",
+            "subnarratives": [
+                {
+                    "name": "Unbuilt",
+                    "icon": "icons/placeholder.png",
+                    "pic": "pics/placeholder.jpg",
+                    "short-desc": "Conceptual projects that were never constructed.",
+                    "description": "<p>Unbuilt projects represent visionary ideas that remained theoretical. Examples include:</p><ul><li><strong>Walking City</strong> (Archigram): Mobile, self-sustaining cities.</li><li><strong>Continuous Monument</strong> (Superstudio): A dystopian megastructure wrapping the Earth.</li><li><strong>Hyperloop Stations</strong>: Futuristic high-speed transit hubs.</li><li><strong>The Line</strong> (Saudi Arabia): A 170km-long linear city.</li></ul>",
+                    "map": "plan-of-museum/map_fin/placeholder.png"
+                },
+                {
+                    "name": "Built",
+                    "icon": "icons/placeholder.png",
+                    "pic": "pics/placeholder.jpg",
+                    "short-desc": "Projects realized in physical form.",
+                    "description": "<p>Built projects demonstrate architectural execution. Examples include:</p><ul><li><strong>Nakagin Capsule Tower</strong> (Japan): Modular housing experiment.</li><li><strong>Kowloon Walled City</strong> (Hong Kong): Hyper-dense urban block.</li><li><strong>Arcosanti</strong> (USA): Sustainable desert city.</li><li><strong>Wrapped Reichstag</strong> (Germany): Art-wrapped parliament building.</li></ul>",
+                    "map": "plan-of-museum/map_fin/placeholder.png"
+                }
+            ]
+        },
+        {
+            "name": "Space",
+            "subnarratives": [
+                {
+                    "name": "Europe",
+                    "icon": "icons/placeholder.png",
+                    "pic": "pics/placeholder.jpg",
+                    "short-desc": "Projects located in Europe.",
+                    "description": "<p>European projects span historical and futuristic visions:</p><ul><li><strong>Plan Voisin</strong> (France): Le Corbusier's radical skyscraper plan for Paris.</li><li><strong>No-Stop City</strong> (Italy): Boundless urban grid challenging consumerism.</li><li><strong>Futuro House</strong> (Finland): UFO-shaped modular homes.</li></ul>",
+                    "map": "plan-of-museum/map_fin/placeholder.png"
+                },
+                {
+                    "name": "Asia",
+                    "icon": "icons/placeholder.png",
+                    "pic": "pics/placeholder.jpg",
+                    "short-desc": "Projects located in Asia.",
+                    "description": "<p>Asian projects blend tradition and innovation:</p><ul><li><strong>Nakagin Capsule Tower</strong> (Japan): Metabolist modular architecture.</li><li><strong>Kowloon Walled City</strong> (Hong Kong): Organic, unregulated urban growth.</li><li><strong>The Line</strong> (Saudi Arabia): Futuristic linear desert city.</li></ul>",
+                    "map": "plan-of-museum/map_fin/placeholder.png"
+                },
+                {
+                    "name": "America",
+                    "icon": "icons/placeholder.png",
+                    "pic": "pics/placeholder.jpg",
+                    "short-desc": "Projects located in the Americas.",
+                    "description": "<p>American projects emphasize experimentation:</p><ul><li><strong>Torre David</strong> (Venezuela): Vertical slum in an abandoned skyscraper.</li><li><strong>Arcosanti</strong> (USA): Paolo Soleri's ecological city.</li><li><strong>Roden Crater</strong> (USA): James Turrell's light observatory.</li></ul>",
+                    "map": "plan-of-museum/map_fin/placeholder.png"
+                },
+                {
+                    "name": "Global",
+                    "icon": "icons/placeholder.png",
+                    "pic": "pics/placeholder.jpg",
+                    "short-desc": "Projects with global or virtual scope.",
+                    "description": "<p>Global/virtual projects transcend geography:</p><ul><li><strong>Freedom Ship</strong>: Floating sovereign city.</li><li><strong>Metaverse Urbanism</strong>: Digital cities in virtual space.</li><li><strong>Terraforming Mars</strong>: Planetary-scale habitats.</li></ul>",
+                    "map": "plan-of-museum/map_fin/placeholder.png"
+                }
+            ]
+        },
+        {
+            "name": "Time",
+            "subnarratives": [
+                {
+                    "name": "Before 2000",
+                    "icon": "icons/placeholder.png",
+                    "pic": "pics/placeholder.jpg",
+                    "short-desc": "Projects conceived or built pre-21st century.",
+                    "description": "<p>Pre-2000 projects reflect 20th-century ideals:</p><ul><li><strong>Walking City</strong> (1964): Mobile urban units.</li><li><strong>Continuous Monument</strong> (1969): Critique of modernism.</li><li><strong>Building Cuts</strong> (1970s): Deconstructed architecture.</li></ul>",
+                    "map": "plan-of-museum/map_fin/placeholder.png"
+                },
+                {
+                    "name": "After 2000",
+                    "icon": "icons/placeholder.png",
+                    "pic": "pics/placeholder.jpg",
+                    "short-desc": "21st-century and future-oriented projects.",
+                    "description": "<p>Post-2000 projects embrace technology:</p><ul><li><strong>Hyperloop Stations</strong>: High-speed vacuum transit.</li><li><strong>AI-Designed Cities</strong>: Algorithmic urban planning.</li><li><strong>Metaverse Urbanism</strong>: Virtual decentralized spaces.</li></ul>",
+                    "map": "plan-of-museum/map_fin/placeholder.png"
+                }
+            ]
+        },
+        {
+            "name": "Context",
+            "subnarratives": [
+                {
+                    "name": "Urbanism",
+                    "icon": "icons/placeholder.png",
+                    "pic": "pics/placeholder.jpg",
+                    "short-desc": "Projects addressing urban planning and design.",
+                    "description": "<p>Urbanism-focused projects reimagine cityscapes:</p><ul><li><strong>Plan Voisin</strong>: Demolition-based modernist grid.</li><li><strong>Arcosanti</strong>: Eco-integrated desert city.</li><li><strong>The Line</strong>: Car-free linear desert metropolis.</li></ul>",
+                    "map": "plan-of-museum/map_fin/placeholder.png"
+                },
+                {
+                    "name": "Radical Living",
+                    "icon": "icons/placeholder.png",
+                    "pic": "pics/placeholder.jpg",
+                    "short-desc": "Experiments in unconventional habitation.",
+                    "description": "<p>Radical living projects challenge norms:</p><ul><li><strong>Nakagin Capsule Tower</strong>: Replaceable micro-apartments.</li><li><strong>Kowloon Walled City</strong>: Lawless hyper-density.</li><li><strong>Torre David</strong>: Informal vertical community.</li></ul>",
+                    "map": "plan-of-museum/map_fin/placeholder.png"
+                },
+                {
+                    "name": "Artistic Intervention",
+                    "icon": "icons/placeholder.png",
+                    "pic": "pics/placeholder.jpg",
+                    "short-desc": "Architecture as art or critique.",
+                    "description": "<p>Artistic projects redefine space:</p><ul><li><strong>Wrapped Reichstag</strong>: Parliament building in fabric.</li><li><strong>Building Cuts</strong>: Sliced-open structures.</li><li><strong>Neon Installations</strong>: Light-transformed urban spaces.</li></ul>",
+                    "map": "plan-of-museum/map_fin/placeholder.png"
+                },
+                {
+                    "name": "Tech Infrastructure",
+                    "icon": "icons/placeholder.png",
+                    "pic": "pics/placeholder.jpg",
+                    "short-desc": "Projects leveraging advanced technology.",
+                    "description": "<p>Tech-driven infrastructure innovations:</p><ul><li><strong>Hyperloop Stations</strong>: Ultra-fast transit hubs.</li><li><strong>LED News Ticker</strong> (BBC): Building-as-media-interface.</li><li><strong>AI-Designed Cities</strong>: Algorithm-optimized layouts.</li></ul>",
+                    "map": "plan-of-museum/map_fin/placeholder.png"
+                }
+            ]
+        },
+        {
+            "name": "Ideals",
+            "subnarratives": [
+                {
+                    "name": "Futuristic Utopias",
+                    "icon": "icons/placeholder.png",
+                    "pic": "pics/placeholder.jpg",
+                    "short-desc": "Visionary optimism for ideal societies.",
+                    "description": "<p>Utopian projects imagine better futures:</p><ul><li><strong>Walking City</strong>: Nomadic urban units.</li><li><strong>No-Stop City</strong>: Limitless anti-hierarchy grid.</li><li><strong>Terraforming Mars</strong>: Extraterrestrial habitats.</li></ul>",
+                    "map": "plan-of-museum/map_fin/placeholder.png"
+                },
+                {
+                    "name": "Urban Dystopias",
+                    "icon": "icons/placeholder.png",
+                    "pic": "pics/placeholder.jpg",
+                    "short-desc": "Critiques of urbanization and control.",
+                    "description": "<p>Dystopian projects warn of urban excess:</p><ul><li><strong>Continuous Monument</strong>: Homogenizing global grid.</li><li><strong>Plan Voisin</strong>: Historic erasure for efficiency.</li><li><strong>Kowloon Walled City</strong>: Chaos as order.</li></ul>",
+                    "map": "plan-of-museum/map_fin/placeholder.png"
+                },
+                {
+                    "name": "Innovation",
+                    "icon": "icons/placeholder.png",
+                    "pic": "pics/placeholder.jpg",
+                    "short-desc": "Pioneering technological or social advances.",
+                    "description": "<p>Innovative projects break new ground:</p><ul><li><strong>Nakagin Capsule Tower</strong>: Modular metabolism.</li><li><strong>LED News Ticker</strong>: Architecture as media.</li><li><strong>Metaverse Urbanism</strong>: Digital placemaking.</li></ul>",
+                    "map": "plan-of-museum/map_fin/placeholder.png"
+                },
+                {
+                    "name": "Spatial Deconstruction",
+                    "icon": "icons/placeholder.png",
+                    "pic": "pics/placeholder.jpg",
+                    "short-desc": "Reimagining physical and perceptual space.",
+                    "description": "<p>Deconstructive projects challenge form:</p><ul><li><strong>Building Cuts</strong>: Exposing hidden layers.</li><li><strong>Wrapped Reichstag</strong>: Transforming perception.</li><li><strong>Roden Crater</strong>: Celestial light observatory.</li></ul>",
+                    "map": "plan-of-museum/map_fin/placeholder.png"
+                }
+            ]
+        },
+        {
+            "name": "Reality",
+            "subnarratives": [
+                {
+                    "name": "In Theory",
+                    "icon": "icons/placeholder.png",
+                    "pic": "pics/placeholder.jpg",
+                    "short-desc": "Conceptual or speculative projects.",
+                    "description": "<p>Theoretical projects exist as ideas:</p><ul><li><strong>Walking City</strong>: Mobile urban theory.</li><li><strong>AI-Designed Cities</strong>: Computational urbanism.</li><li><strong>Freedom Ship</strong>: Floating tax-free nation.</li></ul>",
+                    "map": "plan-of-museum/map_fin/placeholder.png"
+                },
+                {
+                    "name": "In Practice",
+                    "icon": "icons/placeholder.png",
+                    "pic": "pics/placeholder.jpg",
+                    "short-desc": "Realized or partially built projects.",
+                    "description": "<p>Practical projects achieved physical form:</p><ul><li><strong>Nakagin Capsule Tower</strong>: Built metabolist experiment.</li><li><strong>Arcosanti</strong>: Ongoing eco-city.</li><li><strong>Kowloon Walled City</strong>: Organic urban growth.</li></ul>",
+                    "map": "plan-of-museum/map_fin/placeholder.png"
+                }
+            ]
+        }
+    ]
+}

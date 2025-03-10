@@ -303,3 +303,21 @@ footer {
 }
 
 
+.carousel-inner img {
+    max-height: 500px; /* Limita l'altezza delle immagini */
+    object-fit: cover; /* Mantiene il focus sull'immagine */
+}
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.8); /* Sfondo semitrasparente */
+    padding: 30px;
+    border-radius: 5px;
+}
+
+/* Stile per il link del titolo */
+.title-link {
+    text-decoration: none !important; /* Rimuove la sottolineatura */
+}
+
+.title-link:hover {
+    text-decoration: underline; /* Aggiunge la sottolineatura al passaggio del mouse */
+}

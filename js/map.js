@@ -30,23 +30,23 @@ function filterTable(category, selector) {
         let cell = row.querySelector(selector);
         let detailRow = row.nextElementSibling;
 
-        if (cell && cell.textContent.includes(category)) {
+        // Controllo esatto per gli ID
+        const match = cell && cell.textContent.trim() === category.toString();
+        
+        if(match) {
             row.classList.add("filtered");
             row.style.display = "";
-            if (detailRow && detailRow.classList.contains("hidden-info")) {
-                detailRow.style.display = "none";
-            }
+            if(detailRow) detailRow.style.display = "none";
             hasMatch = true;
         } else {
             row.classList.remove("filtered");
             row.style.display = "none";
-            if (detailRow && detailRow.classList.contains("hidden-info")) {
-                detailRow.style.display = "none";
-            }
+            if(detailRow) detailRow.style.display = "none";
         }
     });
+    
     checkBackButton();
-    updateImage(hasMatch ? category : "Default");
+    updateImage(hasMatch ? "Default" : "Default");
 }
 
 function checkBackButton() {
@@ -79,6 +79,22 @@ backButton.addEventListener("click", function () {
     updateImage("Default");
 });
 
+// Aggiungi listener per i cerchi della mappa
+document.querySelectorAll('.image-mapper-shape').forEach(circle => {
+    circle.addEventListener('click', function(e) {
+        const anchor = e.target.closest('a');
+        const itemId = anchor?.getAttribute('xlink:title')?.replace('id', '');
+        
+        if(itemId) {
+            filterTable(itemId, 'td:first-child');
+            
+            // Scroll alla tabella se necessario
+            document.querySelector('.table-container')?.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+});
 
         // Keep the existing event listener setup
         document.querySelectorAll(".toggle-info").forEach(button => {
@@ -231,3 +247,5 @@ document.addEventListener("click", function(e) {
         });
     }
 });
+
+
