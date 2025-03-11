@@ -552,3 +552,27 @@ image {
 
 
 
+
+
+
+/* Aggiungi queste regole */
+.row.row-cols-1.row-cols-md-3.g-4 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 0 -0.5rem; /* Compensa il gap per allineare con i bottoni */
+}
+
+.row.row-cols-1.row-cols-md-3.g-4 > .col {
+    padding: 0 0.5rem; /* Mantiene l'allineamento con i margini dei bottoni */
+    width: 100%;
+}
+
+/* Mantieni lo stile esistente dei bottoni */
+.btn-group {
+    margin-bottom: 1.5rem; /* Aggiunge spazio sotto i bottoni */
+}
+
+.filter-btn {
+    margin: 0 5px; /* Mantiene i margini laterali dei bottoni */
+}

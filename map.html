@@ -185,30 +185,57 @@
                            <span class="sort-arrow">↑</span>
                         </div>
                         <div id="statusDropdown" class="dropdown-menu">
-                           <div class="menu-item" onclick="filterByStatus('Unbuilt')">Unbuilt</div>
-                           <div class="menu-item" onclick="filterByStatus('Built')">Built</div>
+                           <div class="menu-item" onclick="filterByStatus('unbuilt')">Unbuilt</div>
+                           <div class="menu-item" onclick="filterByStatus('built')">Built</div>
                         </div>
                      </div>
                   </th>
-                  <th onclick="sortTable(4, this)">Context<span class="sort-arrow">↑</span></th>
-                  <th onclick="sortTable(5, this)">Ideals <span class="sort-arrow">↑</span></th>
-                  <th></th>
+                    <!-- Context Dropdown -->
+<th class="status-header">
+   <div class="custom-dropdown">
+       <div class="dropdown-trigger" onclick="toggleContextDropdown()">
+           Context
+           <span class="sort-arrow">↑</span>
+       </div>
+       <div id="contextDropdown" class="dropdown-menu">
+           <div class="menu-item" onclick="filterByContext('urbanism')">Urbanism</div>
+           <div class="menu-item" onclick="filterByContext('artistic-intervention')">Artistic Intervention</div>
+           <div class="menu-item" onclick="filterByContext('radical-living')">Radical Living</div>
+           <div class="menu-item" onclick="filterByContext('tech-infrastructure')">Tech Infrastructure</div>
+       </div>
+   </div>
+</th>
+
+<!-- Ideals Dropdown -->
+<th class="status-header">
+   <div class="custom-dropdown">
+       <div class="dropdown-trigger" onclick="toggleIdealsDropdown()">
+           Ideals
+           <span class="sort-arrow">↑</span>
+       </div>
+       <div id="idealsDropdown" class="dropdown-menu">
+           <div class="menu-item" onclick="filterByIdeals('utopian')">Utopian</div>
+           <div class="menu-item" onclick="filterByIdeals('dystopian')">Dystopian</div>
+           <div class="menu-item" onclick="filterByIdeals('innovation')">Innovation</div>
+           <div class="menu-item" onclick="filterByIdeals('deconstruction')">Deconstruction</div>
+       </div>
+   </div>
+</th>       <th></th>
                </tr>
             </thead>
             <tbody>
-               <!-- ITEM 1: Walking City -->
-               <tr id="id1" class="item unbuilt urban_planning futuristic utopian before-2000">
-                  <td>1</td>
-                  <td class="filter-item"><a href="docs/walking_city.html">Walking City</a></td>
-                  <td class="filter-year">1964</td>
-                  <td class="filter-status">Unbuilt</td>
-                  <td><span class="filter-context">Urban Planning</span></td>
-                  <td>
-                     <span class="filter-ideals">Futuristic</span>, 
-                     <span class="filter-ideals">Utopian</span>
-                  </td>
-                  <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
-               </tr>
+              <!-- ITEM 1: Walking City -->
+<tr id="id1" class="item unbuilt urbanism utopian">
+   <td>1</td>
+   <td class="filter-item"><a href="docs/walking_city.html">Walking City</a></td>
+   <td class="filter-year">1964</td>
+   <td class="filter-status">Unbuilt</td>
+   <td><span class="filter-context">Urbanism</span></td>
+   <td>
+       <span class="filter-ideals">Utopian</span>
+   </td>
+   <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+</tr>
                <tr class="hidden-info">
                   <td colspan="7">
                      <div class="container">
@@ -230,18 +257,17 @@
                   </td>
                </tr>
                <!-- ITEM 2: Continuous Monument -->
-               <tr id="id2" class="item unbuilt megastructure artistic dystopian before-2000">
-                  <td>2</td>
-                  <td class="filter-item"><a href="docs/continuous_monument.html">Continuous Monument</a></td>
-                  <td class="filter-year">1969</td>
-                  <td class="filter-status">Unbuilt</td>
-                  <td><span class="filter-context">Megastructure</span></td>
-                  <td>
-                     <span class="filter-ideals">Urban</span>, 
-                     <span class="filter-ideals">Dystopias</span>
-                  </td>
-                  <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
-               </tr>
+<tr id="id2" class="item unbuilt artistic-intervention dystopian">
+   <td>2</td>
+   <td class="filter-item"><a href="docs/continuous_monument.html">Continuous Monument</a></td>
+   <td class="filter-year">1969</td>
+   <td class="filter-status">Unbuilt</td>
+   <td><span class="filter-context">Artistic Intervention</span></td>
+   <td>
+       <span class="filter-ideals">Dystopian</span>
+   </td>
+   <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+</tr>
                <tr class="hidden-info">
                   <td colspan="7">
                      <div class="container">
@@ -263,18 +289,17 @@
                   </td>
                </tr>
                <!-- ITEM 3: Plan Voisin -->
-               <tr id="id3" class="item unbuilt urban_planning dystopian before-2000">
-                  <td>3</td>
-                  <td class="filter-item"><a href="docs/plan_voisin.html">Plan Voisin</a></td>
-                  <td class="filter-year">1925</td>
-                  <td class="filter-status">Unbuilt</td>
-                  <td><span class="filter-context">Urban Planning</span></td>
-                  <td>
-                     <span class="filter-ideals">Urban</span>, 
-                     <span class="filter-ideals">Dystopias</span>
-                  </td>
-                  <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
-               </tr>
+<tr id="id3" class="item unbuilt urbanism dystopian">
+   <td>3</td>
+   <td class="filter-item"><a href="docs/plan_voisin.html">Plan Voisin</a></td>
+   <td class="filter-year">1925</td>
+   <td class="filter-status">Unbuilt</td>
+   <td><span class="filter-context">Urbanism</span></td>
+   <td>
+       <span class="filter-ideals">Dystopian</span>
+   </td>
+   <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+</tr>
                <tr class="hidden-info">
                   <td colspan="7">
                      <div class="container">
@@ -295,19 +320,18 @@
                      </div>
                   </td>
                </tr>
-               <!-- ITEM 4: No-Stop City -->
-               <tr id="id4" class="item unbuilt urban_planning futuristic utopian before-2000">
-                  <td>4</td>
-                  <td class="filter-item"><a href="docs/no_stop_city.html">No-Stop City</a></td>
-                  <td class="filter-year">1970</td>
-                  <td class="filter-status">Unbuilt</td>
-                  <td><span class="filter-context">Urban Planning</span></td>
-                  <td>
-                     <span class="filter-ideals">Futuristic</span>, 
-                     <span class="filter-ideals">Utopian</span>
-                  </td>
-                  <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
-               </tr>
+              <!-- ITEM 4: No-Stop City -->
+<tr id="id4" class="item unbuilt urbanism utopian">
+   <td>4</td>
+   <td class="filter-item"><a href="docs/no_stop_city.html">No-Stop City</a></td>
+   <td class="filter-year">1970</td>
+   <td class="filter-status">Unbuilt</td>
+   <td><span class="filter-context">Urbanism</span></td>
+   <td>
+       <span class="filter-ideals">Utopian</span>
+   </td>
+   <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+</tr>
                <tr class="hidden-info">
                   <td colspan="7">
                      <div class="container">
@@ -329,18 +353,18 @@
                   </td>
                </tr>
                <!-- ITEM 5: Freedom Ship -->
-               <tr id="id5" class="item unbuilt megastructure urban_planning dystopian before-2000">
-                  <td>5</td>
-                  <td class="filter-item"><a href="docs/freedom_ship.html">Freedom Ship</a></td>
-                  <td class="filter-year">1990s</td>
-                  <td class="filter-status">Unbuilt</td>
-                  <td><span class="filter-context">Megastructure</span></td>
-                  <td>
-                     <span class="filter-ideals">Urban</span>, 
-                     <span class="filter-ideals">Dystopias</span>
-                  </td>
-                  <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
-               </tr>
+<tr id="id5" class="item unbuilt radical-living dystopian">
+   <td>5</td>
+   <td class="filter-item"><a href="docs/freedom_ship.html">Freedom Ship</a></td>
+   <td class="filter-year">1990s</td>
+   <td class="filter-status">Unbuilt</td>
+   <td><span class="filter-context">Radical Living</span></td>
+   <td>
+       <span class="filter-ideals">Dystopian</span>
+   </td>
+   <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+</tr>
+
                <tr class="hidden-info">
                   <td colspan="7">
                      <div class="container">
@@ -362,18 +386,18 @@
                   </td>
                </tr>
                <!-- ITEM 6: Nakagin Capsule Tower -->
-               <tr id="id6" class="item built housing futuristic modular before-2000">
-                  <td>6</td>
-                  <td class="filter-item"><a href="docs/nakagin_tower.html">Nakagin Capsule Tower</a></td>
-                  <td class="filter-year">1972</td>
-                  <td class="filter-status">Built, Demolished</td>
-                  <td><span class="filter-context">Housing</span></td>
-                  <td>
-                     <span class="filter-ideals">Futuristic</span>, 
-                     <span class="filter-ideals">Modular</span>
-                  </td>
-                  <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
-               </tr>
+<tr id="id6" class="item built radical-living innovation">
+   <td>6</td>
+   <td class="filter-item"><a href="docs/nakagin_tower.html">Nakagin Capsule Tower</a></td>
+   <td class="filter-year">1972</td>
+   <td class="filter-status">Built (Demolished)</td>
+   <td><span class="filter-context">Radical Living</span></td>
+   <td>
+       <span class="filter-ideals">Innovation</span>
+   </td>
+   <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+</tr>
+
                <tr class="hidden-info">
                   <td colspan="7">
                      <div class="container">
@@ -393,18 +417,18 @@
                   </td>
                </tr>
                <!-- ITEM 7: Kowloon Walled City -->
-               <tr id="id7" class="item built housing organic chaotic before-2000">
-                  <td>7</td>
-                  <td class="filter-item"><a href="docs/kowloon_walled_city.html">Kowloon Walled City</a></td>
-                  <td class="filter-year">1950s-1993</td>
-                  <td class="filter-status">Built, Demolished</td>
-                  <td><span class="filter-context">Housing</span></td>
-                  <td>
-                     <span class="filter-ideals">Organic</span>, 
-                     <span class="filter-ideals">Chaotic</span>
-                  </td>
-                  <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
-               </tr>
+<tr id="id7" class="item built radical-living dystopian">
+   <td>7</td>
+   <td class="filter-item"><a href="docs/kowloon_walled_city.html">Kowloon Walled City</a></td>
+   <td class="filter-year">1950s-1993</td>
+   <td class="filter-status">Built (Demolished)</td>
+   <td><span class="filter-context">Radical Living</span></td>
+   <td>
+       <span class="filter-ideals">Dystopian</span>
+   </td>
+   <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+</tr>
+
                <tr class="hidden-info">
                   <td colspan="7">
                      <div class="container">
@@ -423,19 +447,18 @@
                      </div>
                   </td>
                </tr>
-               <!-- ITEM 8: Torre David -->
-               <tr id="id8" class="item built housing organic chaotic after-2000">
-                  <td>8</td>
-                  <td class="filter-item"><a href="docs/torre_david.html">Torre David</a></td>
-                  <td class="filter-year">1990s-2014</td>
-                  <td class="filter-status">Built, Squatted, Cleared</td>
-                  <td><span class="filter-context">Housing</span></td>
-                  <td>
-                     <span class="filter-ideals">Organic</span>, 
-                     <span class="filter-ideals">Chaotic</span>
-                  </td>
-                  <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
-               </tr>
+              <!-- ITEM 8: Torre David -->
+<tr id="id8" class="item built radical-living dystopian">
+   <td>8</td>
+   <td class="filter-item"><a href="docs/torre_david.html">Torre David</a></td>
+   <td class="filter-year">1990s-2014</td>
+   <td class="filter-status">Built (Squatted, Cleared)</td>
+   <td><span class="filter-context">Radical Living</span></td>
+   <td>
+       <span class="filter-ideals">Dystopian</span>
+   </td>
+   <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+</tr>
                <tr class="hidden-info">
                   <td colspan="7">
                      <div class="container">
@@ -455,19 +478,19 @@
                   </td>
                </tr>
             
-               <!-- ITEM 9: Metaverse Urbanism -->
-               <tr id="id9" class="item unbuilt housing futuristic modular before-2000">
-                <td>9</td>
-                <td class="filter-item">Terraforming Mars<a href="docs/terraforming_mars.html"></a></td>
-                <td class="filter-year">2020s & Beyond</td>
-                <td class="filter-status">Unbuilt</td>
-                <td><span class="filter-context"></span></td>
-                <td>
-                  <span class="filter-ideals">Futuristic</span>, 
-                  <span class="filter-ideals">Utopian</span>
-                </td>
-                <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
-             </tr>
+              <!-- ITEM 9: Terraforming Mars -->
+<tr id="id9" class="item unbuilt tech-infrastructure innovation">
+   <td>9</td>
+   <td class="filter-item">Terraforming Mars<a href="docs/terraforming_mars.html"></a></td>
+   <td class="filter-year">2020s & Beyond</td>
+   <td class="filter-status">Unbuilt</td>
+   <td><span class="filter-context">Tech Infrastructure</span></td>
+   <td>
+       <span class="filter-ideals">Innovation</span>
+   </td>
+   <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+</tr>
+
              <tr class="hidden-info">
                 <td colspan="7">
                    <div class="container">
@@ -487,24 +510,24 @@
                 </td>
              </tr>
                <!-- ITEM 10: Futuro House -->
-               <tr id="id10" class="item built housing futuristic modular before-2000">
-                  <td>10</td>
-                  <td class="filter-item"><a href="docs/futuro_house.html">Futuro House</a></td>
-                  <td class="filter-year">1968</td>
-                  <td class="filter-status">Built, Removed</td>
-                  <td><span class="filter-context">Housing</span></td>
-                  <td>
-                     <span class="filter-ideals">Futuristic</span>, 
-                     <span class="filter-ideals">Modular</span>
-                  </td>
-                  <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
-               </tr>
+<tr id="id10" class="item built radical-living innovation">
+   <td>10</td>
+   <td class="filter-item"><a href="docs/futuro_house.html">Futuro House</a></td>
+   <td class="filter-year">1968</td>
+   <td class="filter-status">Built (Demolished)</td>
+   <td><span class="filter-context">Radical Living</span></td>
+   <td>
+       <span class="filter-ideals">Innovation</span>
+   </td>
+   <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+</tr>
+
                <tr class="hidden-info">
                   <td colspan="7">
                      <div class="container">
                         <div class="row">
                            <div class="col-md-4 details-left">
-                              <img class="film-image" src="img/catalogue/11_futuro_house.jpg.webp" alt="Futuro House Image">
+                              <img class="film-image" src="img/catalogue/10_futuro_house.jpg.webp" alt="Futuro House Image">
                            </div>
                            <div class="col-md-8 details-right">
 <p>Futuro House, designed by Finnish architect Matti Suuronen in 1968, is a prefabricated, UFO-shaped dwelling intended for easy transport and assembly. Made of fiberglass-reinforced plastic, it reflects the era’s fascination with space-age design and modular, adaptable housing concepts.</p>                              <p>Location: Finland</p>
@@ -517,23 +540,24 @@
                   </td>
                </tr>
                <!-- ITEM 11: LED News Ticker -->
-               <tr id="id11" class="item built technology_media technological before-2000">
-                  <td>11</td>
-                  <td class="filter-item"><a href="docs/led_news_ticker.html">LED News Ticker</a></td>
-                  <td class="filter-year">1980</td>
-                  <td class="filter-status">Built</td>
-                  <td><span class="filter-context">Technology & Media</span></td>
-                  <td>
-                     <span class="filter-ideals">Technological</span>
-                  </td>
-                  <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
-               </tr>
+<tr id="id11" class="item built tech-infrastructure innovation">
+   <td>11</td>
+   <td class="filter-item"><a href="docs/led_news_ticker.html">LED News Ticker</a></td>
+   <td class="filter-year">1980</td>
+   <td class="filter-status">Built</td>
+   <td><span class="filter-context">Tech Infrastructure</span></td>
+   <td>
+       <span class="filter-ideals">Innovation</span>
+   </td>
+   <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+</tr>
+
                <tr class="hidden-info">
                   <td colspan="7">
                      <div class="container">
                         <div class="row">
                            <div class="col-md-4 details-left">
-                              <img class="film-image" src="img/ticker.jpg" alt="LED News Ticker Image">
+                              <img class="film-image" src="img/catalogue/11_lednews.jpg" alt="LED News Ticker Image">
                            </div>
                            <div class="col-md-8 details-right">
 <p>The LED News Ticker, first introduced by media organizations like BBC in the 1980s, transformed building facades into real-time information displays. By integrating scrolling digital text into urban architecture, it revolutionized public communication, merging news dissemination with city landscapes.</p>                              <p>Location: London, UK</p>
@@ -545,19 +569,19 @@
                      </div>
                   </td>
                </tr>
-               <!-- ITEM 12: Arcosanti -->
-               <tr id="id12" class="item built housing ecological utopian before-2000">
-                  <td>12</td>
-                  <td class="filter-item"><a href="docs/arcosanti.html">Arcosanti</a></td>
-                  <td class="filter-year">1970-Present</td>
-                  <td class="filter-status">Built</td>
-                  <td><span class="filter-context">Housing</span></td>
-                  <td>
-                     <span class="filter-ideals">Futuristic</span>, 
-                     <span class="filter-ideals">Utopian</span>
-                  </td>
-                  <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
-               </tr>
+              <!-- ITEM 12: Arcosanti -->
+<tr id="id12" class="item built urbanism utopian">
+   <td>12</td>
+   <td class="filter-item"><a href="docs/arcosanti.html">Arcosanti</a></td>
+   <td class="filter-year">1970-Present</td>
+   <td class="filter-status">Built</td>
+   <td><span class="filter-context">Urbanism</span></td>
+   <td>
+       <span class="filter-ideals">Utopian</span>
+   </td>
+   <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+</tr>
+
                <tr class="hidden-info">
                   <td colspan="7">
                      <div class="container">
@@ -576,17 +600,17 @@
                   </td>
                </tr>
                <!-- ITEM 13: Wrapped Reichstag -->
-               <tr id="id13" class="item built artistic_intervention artistic before-2000">
-                  <td>13</td>
-                  <td class="filter-item"><a href="docs/wrapped_reichstag.html">Wrapped Reichstag</a></td>
-                  <td class="filter-year">1995</td>
-                  <td class="filter-status">Built, Temporary</td>
-                  <td><span class="filter-context">Artistic Intervention</span></td>
-                  <td>
-                     <span class="filter-ideals">Artistic</span>
-                  </td>
-                  <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
-               </tr>
+<tr id="id13" class="item built artistic-intervention deconstruction">
+   <td>13</td>
+   <td class="filter-item"><a href="docs/wrapped_reichstag.html">Wrapped Reichstag</a></td>
+   <td class="filter-year">1995</td>
+   <td class="filter-status">Built</td>
+   <td><span class="filter-context">Artistic Intervention</span></td>
+   <td>
+       <span class="filter-ideals">Deconstruction</span>
+   </td>
+   <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+</tr>
                <tr class="hidden-info">
                   <td colspan="7">
                      <div class="container">
@@ -605,19 +629,19 @@
                      </div>
                   </td>
                </tr>
-               <!-- ITEM 14: Building Cuts -->
-               <tr id="id14" class="item built artistic_intervention artistic deconstructive before-2000">
-                  <td>14</td>
-                  <td class="filter-item"><a href="docs/building_cuts.html">Building Cuts</a></td>
-                  <td class="filter-year">1970s</td>
-                  <td class="filter-status">Built, Destroyed</td>
-                  <td><span class="filter-context">Artistic Intervention</span></td>
-                  <td>
-                     <span class="filter-ideals">Artistic</span>, 
-                     <span class="filter-ideals">Deconstructive</span>
-                  </td>
-                  <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
-               </tr>
+              
+<!-- ITEM 14: Building Cuts -->
+<tr id="id14" class="item built artistic-intervention deconstruction">
+   <td>14</td>
+   <td class="filter-item"><a href="docs/building_cuts.html">Building Cuts</a></td>
+   <td class="filter-year">1970s</td>
+   <td class="filter-status">Built (Demolished)</td>
+   <td><span class="filter-context">Artistic Intervention</span></td>
+   <td>
+       <span class="filter-ideals">Deconstruction</span>
+   </td>
+   <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+</tr>
                <tr class="hidden-info">
                   <td colspan="7">
                      <div class="container">
@@ -636,19 +660,19 @@
                      </div>
                   </td>
                </tr>
-               <!-- ITEM 15: Neon Installations -->
-               <tr id="id15" class="item built artistic_intervention artistic technological before-2000">
-                  <td>15</td>
-                  <td class="filter-item"><a href="docs/neon_installations.html">Neon Installations</a></td>
-                  <td class="filter-year">1960s-1980s</td>
-                  <td class="filter-status">Built</td>
-                  <td><span class="filter-context">Artistic Intervention</span></td>
-                  <td>
-                     <span class="filter-ideals">Artistic</span>, 
-                     <span class="filter-ideals">Technological</span>
-                  </td>
-                  <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
-               </tr>
+              <!-- ITEM 15: Neon Installations -->
+<tr id="id15" class="item built artistic-intervention innovation">
+   <td>15</td>
+   <td class="filter-item"><a href="docs/neon_installations.html">Neon Installations</a></td>
+   <td class="filter-year">1960s-1980s</td>
+   <td class="filter-status">Built</td>
+   <td><span class="filter-context">Artistic Intervention</span></td>
+   <td>
+       <span class="filter-ideals">Innovation</span>
+   </td>
+   <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+</tr>
+
                <tr class="hidden-info">
                   <td colspan="7">
                      <div class="container">
@@ -667,19 +691,19 @@
                      </div>
                   </td>
                </tr>
-               <!-- ITEM 16: Hyperloop Stations -->
-               <tr id="id16" class="item unbuilt transportation futuristic technological after-2000">
-                  <td>16</td>
-                  <td class="filter-item"><a href="docs/hyperloop.html">Hyperloop Stations</a></td>
-                  <td class="filter-year">2010s-Present</td>
-                  <td class="filter-status">Unbuilt, Under Development</td>
-                  <td><span class="filter-context">Transportation</span></td>
-                  <td>
-                     <span class="filter-ideals">Futuristic</span>, 
-                     <span class="filter-ideals">Technological</span>
-                  </td>
-                  <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
-               </tr>
+              <!-- ITEM 16: Hyperloop Stations -->
+<tr id="id16" class="item unbuilt tech-infrastructure innovation">
+   <td>16</td>
+   <td class="filter-item"><a href="docs/hyperloop.html">Hyperloop Stations</a></td>
+   <td class="filter-year">2010s-Present</td>
+   <td class="filter-status">Unbuilt (UD)</td>
+   <td><span class="filter-context">Tech Infrastructure</span></td>
+   <td>
+       <span class="filter-ideals">Innovation</span>
+   </td>
+   <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+</tr>
+
                <tr class="hidden-info">
                   <td colspan="7">
                      <div class="container">
@@ -698,19 +722,18 @@
                      </div>
                   </td>
                </tr>
-               <!-- ITEM 17: AI-Designed Cities -->
-               <tr id="id17" class="item unbuilt urban_planning futuristic technological after-2000">
-                  <td>17</td>
-                  <td class="filter-item"><a href="docs/ai_designed_cities.html">AI-Designed Cities</a></td>
-                  <td class="filter-year">2020s & Beyond</td>
-                  <td class="filter-status">Unbuilt, Speculative</td>
-                  <td><span class="filter-context">Urban Planning</span></td>
-                  <td>
-                     <span class="filter-ideals">Futuristic</span>, 
-                     <span class="filter-ideals">Technological</span>
-                  </td>
-                  <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
-               </tr>
+             <!-- ITEM 17: AI-Designed Cities -->
+<tr id="id17" class="item unbuilt urbanism innovation">
+   <td>17</td>
+   <td class="filter-item"><a href="docs/ai_designed_cities.html">AI-Designed Cities</a></td>
+   <td class="filter-year">2020s & Beyond</td>
+   <td class="filter-status">Unbuilt</td>
+   <td><span class="filter-context">Urbanism</span></td>
+   <td>
+       <span class="filter-ideals">Innovation</span>
+   </td>
+   <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+</tr>
                <tr class="hidden-info">
                   <td colspan="7">
                      <div class="container">
@@ -730,49 +753,49 @@
                   </td>
                </tr>
                <!-- ITEM 18:  -->
-               <tr id="id18" class="item unbuilt artistic_intervention artistic ecological before-2000">
-                  <td>18</td>
-                  <td class="filter-item"><a href="docs/roden_crater.html"></a></td>
-                  <td class="filter-year"></td>
-                  <td class="filter-status">Unbuilt</td>
-                  <td><span class="filter-context"></span></td>
-                  <td>
-                     <span class="filter-ideals"></span>
-                     <span class="filter-ideals"></span>
-                  </td>
-                  <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
-               </tr>
-               <tr class="hidden-info">
-                  <td colspan="7">
-                     <div class="container">
-                        <div class="row">
-                           <div class="col-md-4 details-left">
-                              <img class="film-image" src="img/Roden-Crater-James-Turell.jpg" alt="Roden Crater Image">
-                           </div>
-                           <div class="col-md-8 details-right">
-                              <p>Roden Crater is an ongoing project by artist James Turrell, transforming an extinct volcano into a monumental observatory designed to capture and manipulate natural light and celestial events.</p>
-                              <p>Location: Arizona, USA</p>
-                              <p>Check out if you like: Land art. Light-based architecture. Cosmic and environmental design.</p>
-                              <p>Recommended by: Elena</p>
-                              <a href="docs/roden_crater.html" class="btn-watch-trailer">Read More</a>
-                           </div>
-                        </div>
+          <!-- ITEM 18: Roden Crater -->
+          <tr id="oase_no7" class="item unbuilt artistic_intervention deconstruction">
+            <td>18</td>
+            <td class="filter-item"><a href="docs/oase_no7.html">Oase No. 7</a></td>
+            <td class="filter-year">1972</td>
+            <td class="filter-status">Unbuilt</td>
+            <td><span class="filter-context">Artistic Intervention</span></td>
+            <td>
+               <span class="filter-ideals">Deconstruction</span>
+            </td>
+            <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+         </tr>
+         <tr class="hidden-info">
+            <td colspan="7">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-4 details-left">
+                        <img class="film-image" src="img/catalogue/18_Oase_No7.jpg" alt="Oase No. 7 Image">
                      </div>
-                  </td>
-               </tr>
-               <!-- ITEM 19: Metaverse Urbanism -->
-               <tr id="id19" class="item unbuilt virtual_space futuristic virtual after-2000">
-                  <td>19</td>
-                  <td class="filter-item"><a href="docs/metaverse_urbanism.html">Metaverse Urbanism</a></td>
-                  <td class="filter-year">2020s & Beyond</td>
-                  <td class="filter-status">Unbuilt, Speculative</td>
-                  <td><span class="filter-context">Virtual Space</span></td>
-                  <td>
-                     <span class="filter-ideals">Futuristic</span>, 
-                     <span class="filter-ideals">Virtual</span>
-                  </td>
-                  <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
-               </tr>
+                     <div class="col-md-8 details-right">
+                        <p>Oase No. 7 was a conceptual project by the Austrian collective Haus-Rucker-Co, designed in 1972. It featured an inflatable bubble attached to the facade of a historical building, creating a temporary spatial intervention that blurred the lines between inside and outside. This project aimed to challenge traditional architecture by integrating flexible and dynamic elements into rigid structures.</p>
+                        <p>Location: Austria</p>
+                        <p>Check out if you like: Radical architecture, inflatable structures, interactive urban installations.</p>
+                        <p>Recommended by: Elena</p>
+                        <a href="docs/oase_no7.html" class="btn-watch-trailer">Read More</a>
+                     </div>
+                  </div>
+               </div>
+            </td>
+         </tr>
+              <!-- ITEM 19: Metaverse Urbanism -->
+<tr id="id19" class="item unbuilt tech-infrastructure innovation">
+   <td>19</td>
+   <td class="filter-item"><a href="docs/metaverse_urbanism.html">Metaverse Urbanism</a></td>
+   <td class="filter-year">2020s & Beyond</td>
+   <td class="filter-status">Unbuilt</td>
+   <td><span class="filter-context">Tech Infrastructure</span></td>
+   <td>
+       <span class="filter-ideals">Innovation</span>
+   </td>
+   <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+</tr>
+
                <tr class="hidden-info">
                   <td colspan="7">
                      <div class="container">
@@ -791,19 +814,18 @@
                      </div>
                   </td>
                </tr>
-               <!-- ITEM 20: The Line -->
-               <tr id="id20" class="item unbuilt urban_planning futuristic utopian after-2000">
-                <td>20</td>
-                <td class="filter-item"><a href="docs/the_line.html">The Line</a></td>
-                <td class="filter-year">2023-Present</td>
-                <td class="filter-status">Unbuilt, Under Development</td>
-                <td><span class="filter-context">Urban Planning</span></td>
-                <td>
-                   <span class="filter-ideals">Futuristic</span>, 
-                   <span class="filter-ideals">Utopian</span>
-                </td>
-                <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
-             </tr>
+              <!-- ITEM 20: The Line -->
+<tr id="id20" class="item unbuilt urbanism utopian">
+   <td>20</td>
+   <td class="filter-item"><a href="docs/the_line.html">The Line</a></td>
+   <td class="filter-year">2023-Present</td>
+   <td class="filter-status">Unbuilt (UD)</td>
+   <td><span class="filter-context">Urbanism</span></td>
+   <td>
+       <span class="filter-ideals">Utopian</span>
+   </td>
+   <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+</tr>
              <tr class="hidden-info">
                 <td colspan="7">
                    <div class="container">

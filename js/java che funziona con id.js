@@ -16,21 +16,6 @@ function updateImage(category) {
     svgImage.setAttribute('xlink:href', imagePath);
 }
 
-function filterTable(value, selector) {
-    let hasMatch = false;
-    
-    document.querySelectorAll("tbody tr.item").forEach(row => {
-        const cell = row.querySelector(selector);
-        const match = cell && cell.textContent.trim().toLowerCase() === value.toString().toLowerCase();
-
-        row.style.display = match ? "" : "none";
-        if(match) hasMatch = true;
-    });
-
-    checkBackButton();
-    updateImage(hasMatch ? value : "default");
-}
-
 function checkBackButton() {
     const selectedItems = document.querySelectorAll("tr.item[style='display: none;']");
     backButtonContainer.classList.toggle("hidden", selectedItems.length === 0);
@@ -97,11 +82,6 @@ function toggleStatusDropdown() {
     });
 }
 
-function filterByStatus(status) {
-    filterTable(status === "all" ? "" : status, ".filter-status");
-    toggleStatusDropdown();
-}
-
 document.addEventListener("DOMContentLoaded", function () {
     // Initialize global elements
     backButtonContainer = document.querySelector(".back-button-container");
@@ -157,6 +137,7 @@ document.addEventListener("click", function(e) {
     }
 });
 
+
 // Context Dropdown
 function toggleContextDropdown() {
     const dropdown = document.getElementById("contextDropdown");
@@ -166,11 +147,6 @@ function toggleContextDropdown() {
     arrow.classList.toggle("desc");
     
     closeOtherDropdowns(dropdown);
-}
-
-function filterByContext(context) {
-    filterTable(context === "all" ? "" : context, ".filter-context");
-    toggleContextDropdown();
 }
 
 // Ideals Dropdown
@@ -184,10 +160,7 @@ function toggleIdealsDropdown() {
     closeOtherDropdowns(dropdown);
 }
 
-function filterByIdeals(ideal) {
-    filterTable(ideal === "all" ? "" : ideal, ".filter-ideals");
-    toggleIdealsDropdown();
-}
+
 
 // Funzione helper per chiudere altri dropdown
 function closeOtherDropdowns(currentDropdown) {
@@ -197,4 +170,36 @@ function closeOtherDropdowns(currentDropdown) {
             menu.closest("th")?.querySelector(".sort-arrow")?.classList.remove("desc");
         }
     });
+}
+
+
+
+// Nuova funzione di filtro generica
+function filterByClass(className, resetOthers = true) {
+    document.querySelectorAll("tr.item").forEach(row => {
+        const show = row.classList.contains(className);
+        row.style.display = show ? "" : "none";
+        if(show) row.classList.add("filtered");
+    });
+    
+    if(resetOthers) {
+        updateImage(className);
+        checkBackButton();
+    }
+}
+
+// Modifica i dropdown handler
+function filterByContext(context) {
+    filterByClass(context.toLowerCase().replace(' ', '-'));
+    toggleContextDropdown();
+}
+
+function filterByIdeals(ideal) {
+    filterByClass(ideal.toLowerCase());
+    toggleIdealsDropdown();
+}
+
+function filterByStatus(status) {
+    filterByClass(status.toLowerCase());
+    toggleStatusDropdown();
 }
