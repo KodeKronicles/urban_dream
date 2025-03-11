@@ -216,13 +216,12 @@
 /* Make the card border more transparent */
 .card {
     max-width: 320px;
-    margin: 0 auto;
+    margin: auto;
     transition: transform 0.3s ease-in-out;
-    border: 1px solid rgba(208, 45, 0, 0.3);  /* Adjust transparency */
+    border: 1px solid rgba(238, 60, 11, 0.754);  /* Adjust transparency */
     background: rgba(255, 255, 255, 0.85);  /* Slight transparency */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     height: 100%;
 }
 
@@ -262,9 +261,10 @@
 
 /* Ensure all card images have the same height */
 .card-img-top {
-    height: 200px;  /* Set uniform height */
     object-fit: cover;  /* Ensures images fill the space */
     object-position: center;
+    height: 180px; /* Mantiene immagini uniformi e più compatte */
+    object-fit: cover; /* Evita distorsioni */
 }
 
 
@@ -321,3 +321,4 @@ footer {
 .title-link:hover {
     text-decoration: underline; /* Aggiunge la sottolineatura al passaggio del mouse */
 }
+

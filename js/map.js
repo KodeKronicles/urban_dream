@@ -5,12 +5,21 @@ function updateImage(category) {
     const svgImage = document.querySelector('svg image');
     if (!svgImage) return;
 
-    const normalizedCategory = category?.toLowerCase() || 'default';
+
+    const normalizedCategory = category?.toLowerCase().replace(/\s+/g, '-') || 'default'    
     let imagePath = 'img/map/all.png';
     
     switch(normalizedCategory) {
         case 'unbuilt': imagePath = 'img/map/unbuilt.png'; break;
         case 'built': imagePath = 'img/map/built.png'; break;
+        case 'utopian': imagePath = 'img/map/utopian.png'; break;
+        case 'dystopian': imagePath = 'img/map/dystopian.png'; break;
+        case 'deconstruction': imagePath = 'img/map/deconstruction.png'; break;
+        case 'innovation': imagePath = 'img/map/innovation.png'; break;
+        case 'radical-living': imagePath = 'img/map/radical.png'; break;
+        case 'artistic-intervention': imagePath = 'img/map/artistic.png'; break;
+        case 'tech-infrastructure': imagePath = 'img/map/tech.png'; break;
+        case 'urbanism': imagePath = 'img/map/urbanism.png'; break;
     }
 
     svgImage.setAttribute('xlink:href', imagePath);
