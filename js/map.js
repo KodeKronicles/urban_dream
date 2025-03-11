@@ -5,7 +5,6 @@ function updateImage(category) {
     const svgImage = document.querySelector('svg image');
     if (!svgImage) return;
 
-
     const normalizedCategory = category?.toLowerCase().replace(/\s+/g, '-') || 'default'    
     let imagePath = 'img/map/all.png';
     

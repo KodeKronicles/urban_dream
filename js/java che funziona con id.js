@@ -1,3 +1,6 @@
+// CONSIDERA CHE USANDO QUESTO CODICE DEVI CAMBIARE CLASSE A QUELLI CON DOPPIA PAROLA E METTERLI COME radical-living
+// non ha update image implementato 
+
 let backButtonContainer;
 let backButton;
 
