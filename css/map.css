@@ -159,13 +159,7 @@
         }
         
 
-/* Aggiunge un margine negativo a sinistra per spostare l'elemento più a sinistra */
-.custom-margin {
-    margin-left: -30px; /* Puoi regolare il valore secondo le tue esigenze */
-    position: relative;
-    top: -27px;
-}
-     /*******************
+/*******************
  TOGGLE INFO STYLES
 ********************/
 .toggle-info {
@@ -259,12 +253,12 @@
 
         
         /* hover click nel catalogo mappa */
-           .clickable, .filter-year, .filter-context, .filter-status, .filter-ideals, .toggle-info, .filter-item {
+           .clickable, .filter-year, .filter-context, .filter-status, .filter-ideals, .toggle-info {
         cursor: pointer;
         text-decoration: none;
         transition: text-decoration 0.3s ease, font-weight 0.3s ease;
     }
-    .clickable:hover, .filter-year:hover, .filter-context:hover, .filter-status:hover, .filter-ideals:hover, .toggle-info:hover, .filter-item:hover {
+    .clickable:hover, .filter-year:hover, .filter-context:hover, .filter-status:hover, .filter-ideals:hover, .toggle-info:hover {
         text-decoration: underline;
     }
 
@@ -576,3 +570,4 @@ image {
 .filter-btn {
     margin: 0 5px; /* Mantiene i margini laterali dei bottoni */
 }
+
