@@ -140,7 +140,6 @@
     margin-right: 80px;
 }
     
-
 /* Info Section Styling */
 .info-section h1 {
     font-size: 3.5rem;
@@ -172,12 +171,13 @@
     color: #d02d00;
 }
 
+
+
 /* Spaziatura per allineare meglio con l'immagine */
 .row {
     justify-content: center; /* Centra il contenuto */
     margin: 40px 0; /* Aggiunge margine sopra e sotto */
 }
-
 
 .navbar-breaker {
     width: 100%;
@@ -185,7 +185,6 @@
     background-color: #d02d00; /* Imposta un colore di sfondo per renderlo visibile */
     margin-left: auto; /* Fa partire l'elemento da destra */
 }
-
 
 /* CARD STUFF */
 
@@ -224,7 +223,6 @@
     flex-direction: column;
     height: 100%;
 }
-
 
 /* Make card borders fully visible on hover */
 .card:hover {
@@ -303,8 +301,13 @@ footer {
 }
 
 
+.carousel {
+    max-height: 250px; /* Adjust this to make it shorter */
+    overflow: hidden; /* Prevents oversized images */
+}
+
 .carousel-inner img {
-    max-height: 500px; /* Limita l'altezza delle immagini */
+    max-height: 200px; /* Limita l'altezza delle immagini */
     object-fit: cover; /* Mantiene il focus sull'immagine */
 }
 .carousel-caption {
@@ -322,3 +325,13 @@ footer {
     text-decoration: underline; /* Aggiunge la sottolineatura al passaggio del mouse */
 }
 
+.narrow-carousel {
+    max-width: 100px; /* Adjust width */
+    max-height: 100px; /* Adjust height */
+    margin: auto; /* Center alignment */
+}
+
+.narrow-carousel img {
+    height: 100px; /* Keep images uniform */
+    object-fit: cover; /* Prevents distortion */
+}

@@ -501,6 +501,17 @@ a {
         padding: 8px 10px;
         font-size: 0.8rem;
     }
+    
+    /* Assicura che la tabella non si restringa troppo */
+    .table {
+        min-width: 100%;
+    }
+
+    /* Impedisce il taglio della tabella su mobile */
+    .table-container {
+        overflow-x: auto !important; /* Abilita lo scroll orizzontale se serve */
+        display: block !important;
+    }
 
     /* Hidden info sections */
     .hidden-info {
@@ -524,8 +535,6 @@ a {
     body {
         padding: 0 10px;
     }
-
-  
 }
 
 .image-mapper-shape {
@@ -570,4 +579,3 @@ image {
 .filter-btn {
     margin: 0 5px; /* Mantiene i margini laterali dei bottoni */
 }
-
