@@ -66,27 +66,181 @@
                     <div class="tab-pane fade show active" id="overview">
                         <div class="info-section">
                             <h1>Project Overview</h1>
-                            <h2>boooo</h2>
-                            <p>This documentation covers the structure, design, and implementation details of the Unbuilt Cities exhibition.</p>
+                            <p>
+                        The homepage follows a minimalistic yet engaging design to balance aesthetics and usability.
+                        A flowing grid animation showcases our chosen objects in a subtle yet catchy way. The lowered opacity
+                        ensures that while the images catch the eye, they do not distract from the overall experience.
+                      </p>
+                      <p>
+                        Below the main section, a brief ‘About’ section provides context for the project’s purpose, followed by
+                        an engaging timeline that highlights key urban planning milestones. At the very bottom, a map along with
+                        the museum's opening hours guides the user, and the footer features a clickable GitHub logo linking to the
+                        project repository.
+                      </p>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="structure">
                         <div class="info-section">
                             <h1>Content Structure</h1>
-                            <p>Details about site architecture, navigation, and how the exhibition content is organized.</p>
+                            <h2>Site architecture</h2>
+                      <p>The architecture of the website is designed to guide users through a virtual exhibition, with each page being designed for an intuitive experience.</p>
+                      <h3>Navigation bar</h3>
+                      <p>The anchoring point between all pages is a simple navigation bar, with a version that is slightly different visually being prepared for the home page for more visual distinction.</p>
+                      <p>On the left side of the navbar, we have placed the logo of the project, which also doubles as a home page button. On its' right side, there are five links, to Home, Exhibition, Map, Items and About pages respectively.</p>
+                      <p>The five-item list on the right transforms into a hamburger-button list on smaller widths to accommodate mobile devices.</p>
+                      <h3>Home page</h3>
+                      <p>The home page serves as an introduction to the virtual exhibitions, with the images of all the items presented via a three-row horizontal parallax scrolling div. Below it, a vertical timeline introducing the chief advancements in urbanism is presented. The home page culminates with a map showing the location of the exhibition and the opening pages.</p>
+                      <h3>Exhibition</h3>
+                      <p>The exhibition page serves as further introduction to the topic of the exhibition. There are five groups of items, further divided into subgroups (eg. location -> Europe). Clicking an item here redirects to a page containing its longest description.</p>
+                      <h3>Map</h3>
+                      <p>The map page is divided into two parts; the map proper, and the list of all items on exhibition. The map contains 20 clickable elements, each corresponding to an exhibition item, which filter the underlying list to show just one item.</p>
+                      <p>The list contains all 20 exhibition items with 6 attributes, on which the list can be sorted. Clicking an item extends a tab with additional information, both visual and textual, and an external link for further reference.</p>
+                      <h3>Item viewer</h3>
+                      <p>The item viewer page presents images and metadata of all exhibition items. There is one image per item, and its' display on the page is standardised. The item metadata contains information about time, place, type and clickable links to narratives. In the same section, below the metadata table, there are two button groups; the first one for changing the displayed item in the current narrative to next/previous, and the second for indicating and toggling between items in the current narrative.</p>
+                      <p>The section below contains textual information about the items, and the buttons to display more/less information.</p>
+                      <h3>Footer</h3>
+                      <p>The page contains a simple footer, showing the copyright and a link to the GitHub repository containing the project.</p>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="design">
                         <div class="info-section">
                             <h1>Design Elements</h1>
-                            <p>Explanation of the layout, colors, typography, and visual identity used in the project.</p>
+                            <h2>Layout</h2>
+                      <p>
+                        The homepage layout embraces a minimalistic design with a clear timeline guiding users through historical
+                        urban planning milestones. A grey vertical block is strategically positioned slightly to the left of the
+                        flowing grid, ensuring that the project name remains prominent while the imagery is allowed to breathe.
+                      </p>
+                      <h2>Grid Layout and Spacing</h2>
+                      <h3><b>Bootstrap Containers:</b></h3>
+                      <ul>
+                        <li>The <code>container-fluid</code> class ensures full-width adaptability, optimizing space usage.</li>
+                        <li>A combination of <code>col-md-2</code> for side elements and <code>col-md-10</code> for main content
+                          balances proportions and maintains an intuitive navigation flow.</li>
+                        <li>Bootstrap's grid system facilitates responsiveness by adjusting layouts based on screen width.</li>
+                      </ul>
+                      <h3><b>Margin and Padding Consistency:</b></h3>
+                      <ul>
+                        <li>Fixed units (<code>px</code>, <code>rem</code>) are used for elements requiring precise control,
+                          such as border widths and icons.</li>
+                        <li>Relative units (<code>%</code>, <code>em</code>, <code>vh</code>, <code>vw</code>) enhance flexibility,
+                          ensuring smooth layout adaptation across devices.</li>
+                        <li>Margins and paddings are carefully structured to avoid visual clutter while maintaining alignment and
+                          readability.</li>
+                      </ul>
+                      <h3>Recurring Percentages:</h3>
+                      <ul>
+                        <li><strong>7%</strong> for larger section separations, centering content and ensuring visual hierarchy.</li>
+                        <li><strong>5%</strong> for moderate spacing within content containers, maintaining readability and structure.</li>
+                        <li><strong>3%</strong> for tighter spacing, particularly between text and images, optimizing information
+                          density without overwhelming the user.</li>
+                      </ul>
+                      <h2>Typography and Colors</h2>
+                      <h3>Fonts:</h3>
+                      <ul>
+                        <li><strong>Inter</strong> – used for the navbar and general text, ensuring readability and a modern look.</li>
+                        <li><strong>Futura Maxi CG Bold</strong> – used for project titles, providing a bold and striking appearance.</li>
+                      </ul>
+                      <h3>Color Palette:</h3>
+                      <ul>
+                        <li>
+                          <strong>Primary Color:</strong> Deep red (<span style="color:#D02E02;">#D02E02</span>) is used for accents and branding.
+                        </li>
+                        <li>
+                          <strong>Secondary Colors:</strong> Grey (<span style="color:#E9E9E9;">#E9E9E9</span>) and Black maintain contrast and readability.
+                        </li>
+                        <li>
+                          <strong>User Feedback:</strong> Prolonged exposure to red text can cause eye strain; therefore, large text blocks may be transitioned to a more neutral red or grey shade.
+                        </li>
+                      </ul>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="functionality">
                         <div class="info-section">
                             <h1>Functionality</h1>
-                            <p>Overview of interactive elements, animations, and responsive behavior of the exhibition.</p>
-
+                            <h2>Interactive Features</h2>
+                      <h3><b>Flowing Grid Animation:</b></h3>
+                      <ul>
+                        <li>Implemented using <strong>CSS Grid Layout</strong> to create a structured and responsive design.</li>
+                        <li>CSS transitions and opacity settings ensure a smooth scrolling effect with a subtle fade.</li>
+                        <li>A JavaScript animation loop dynamically updates the grid’s position, creating an infinite horizontal scroll.</li>
+                        <li>Images maintain their aspect ratio and responsiveness using <code>object-fit: cover</code>.</li>
+                      </ul>
+                      <h3><b>Parallax Scrolling:</b></h3>
+                      <ul>
+                        <li>Implemented using CSS and JavaScript to create a dynamic depth effect as users scroll.</li>
+                        <li>Background images move at a different speed than foreground content, enhancing the immersive experience.</li>
+                        <li>Smooth scrolling transitions ensure the effect is visually appealing without disrupting readability.</li>
+                        <li>This effect is applied to key sections, such as the About and Map areas.</li>
+                      </ul>
+                      <h3><b>Navbar and Responsiveness:</b></h3>
+                      <ul>
+                        <li>The navbar dynamically adapts to different screen sizes.</li>
+                        <li>A custom navbar toggler improves the mobile experience.</li>
+                        <li>Dropdown width calculations prevent layout shifts when resizing.</li>
+                      </ul>
+                      <h3><b>Timeline Section:</b></h3>
+                      <ul>
+                        <li>Implemented using CSS animations and ScrollMagic.js.</li>
+                        <li>Timeline entries fade in when scrolled into view, creating a dynamic storytelling effect.</li>
+                        <li>Alternating even and odd items enhance readability and structure.</li>
+                      </ul>
+                      <h3><b>Counter Animation:</b></h3>
+                      <ul>
+                        <li>Dynamically counts to 19 to highlight exhibit items.</li>
+                        <li>Triggers when the element enters the viewport.</li>
+                        <li>Uses <code>aria-hidden</code> attributes to ensure accessibility.</li>
+                      </ul>
+                      <h3><b>Mobile Optimization:</b></h3>
+                      <ul>
+                        <li>Grid images resize based on screen width.</li>
+                        <li>On smaller screens, the timeline collapses into a single column and the red timeline line is hidden.</li>
+                        <li>The navbar toggler is optimized for smooth mobile interaction.</li>
+                      </ul>
+                      <h3>Responsiveness</h3>
+                            <p>The layout of the website has been developed to accommodate different screen sizes, in order to ensure a consistent browsing experience for users on computers and mobile devices. This has been achieved using:</p>
+                            <p><ul>
+                                <li><b>CSS media queries:</b> used to customise styling based on device characteristics (in our case: resolution).</li>
+                                <li><b>Flex grid system:</b> Bootstrap's flex grid systems allows for easy adaptation of content display according to used resolution.</li>
+                                <li><b>Scalable components</b> Some components used adjust dynamically to the viewport size, with margins and paddings scaling appropriately.</li>
+                                <li><b>Responsive images:</b> Images are resized according to the resolution used.</li>
+                            </ul></p>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="workflow">
+                        <div class="info-section">
+                            <h1>Workflow</h1>
+                            <h2>User Survey &amp; Improvements</h2>
+                      <ul>
+                        <li>
+                          <strong>Scaling issues and bugs on the homepage:</strong> Currently being addressed.
+                        </li>
+                        <li>
+                          <strong>Footer style inconsistency:</strong> Adjustments have been made for uniform styling.
+                        </li>
+                        <li>
+                          <strong>Readability concerns:</strong> Users reported that prolonged exposure to red text can cause eye strain. Large text blocks may be transitioned to a more neutral red or grey shade.
+                        </li>
+                        <li>
+                          <strong>Table in “Map” section:</strong>
+                          <ul>
+                            <li>3 out of 4 users suggested it should be open by default.</li>
+                            <li>1 user recommended improving the button prompt for better visibility.</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <strong>Issues with tapping the “+” button on mobile:</strong> Further testing is required for an optimal solution.
+                        </li>
+                        <li>
+                          <strong>Mobile map margins:</strong> Adjustments will be made to add more breathing space on the sides.
+                        </li>
+                        <li>
+                          <strong>Anchor texts:</strong> Hovering over hyperlinks does not provide anchor links, which could be used to describe the redirection.
+                        </li>
+                      </ul>
+                        </div>
+                    </div>
+                </div>
 
 
               <div class="col-md-10 p-0">
@@ -112,6 +266,30 @@
                   <div class="tab-pane fade" id="structure" role="tabpanel">
                     <div class="info-section p-4">
                       <h1 class="text-danger">Content Structure</h1>
+                      <h2>Site architecture</h2>
+                      <p>The architecture of the website is designed to guide users through a virtual exhibition, with each page being designed for an intuitive experience.</p>
+                      <h3>Navigation bar</h3>
+                      <p>The anchoring point between all pages is a simple navigation bar, with a version that is slightly different visually being prepared for the home page for more visual distinction.</p>
+                      <p>On the left side of the navbar, we have placed the logo of the project, which also doubles as a home page button. On its' right side, there are five links, to Home, Exhibition, Map, Items and About pages respectively.</p>
+                      <p>The five-item list on the right transforms into a hamburger-button list on smaller widths to accommodate mobile devices.</p>
+                      <h3>Home page</h3>
+                      <p>The home page serves as an introduction to the virtual exhibitions, with the images of all the items presented via a three-row horizontal parallax scrolling div. Below it, a vertical timeline introducing the chief advancements in urbanism is presented. The home page culminates with a map showing the location of the exhibition and the opening pages.</p>
+                      <h3>Exhibition</h3>
+                      <p>The exhibition page serves as further introduction to the topic of the exhibition. There are five groups of items, further divided into subgroups (eg. location -> Europe). Clicking an item here redirects to a page containing its longest description.</p>
+                      <h3>Map</h3>
+                      <p>The map page is divided into two parts; the map proper, and the list of all items on exhibition. The map contains 20 clickable elements, each corresponding to an exhibition item, which filter the underlying list to show just one item.</p>
+                      <p>The list contains all 20 exhibition items with 6 attributes, on which the list can be sorted. Clicking an item extends a tab with additional information, both visual and textual, and an external link for further reference.</p>
+                      <h3>Item viewer</h3>
+                      <p>The item viewer page presents images and metadata of all exhibition items. There is one image per item, and its' display on the page is standardised. The copyright for each image is provide in its lower right corner. The item metadata contains information about time, place, type and clickable links to narratives. In the same section, below the metadata table, there are two button groups; the first one for changing the displayed item in the current narrative to next/previous, and the second for indicating and toggling between items in the current narrative.</p>
+                      <p>The section below contains textual information about the items, and the buttons to display more/less information.</p>
+                      <h3>Footer</h3>
+                      <p>The page contains a simple footer, showing the copyright and a link to the GitHub repository containing the project.</p>
+                    </div>
+                  </div>
+                  <!-- Design Elements Tab -->
+                  <div class="tab-pane fade" id="design" role="tabpanel">
+                    <div class="info-section p-4">
+                      <h1 class="text-danger">Design Elements</h1>
                       <h2>Layout</h2>
                       <p>
                         The homepage layout embraces a minimalistic design with a clear timeline guiding users through historical
@@ -142,12 +320,6 @@
                         <li><strong>3%</strong> for tighter spacing, particularly between text and images, optimizing information
                           density without overwhelming the user.</li>
                       </ul>
-                    </div>
-                  </div>
-                  <!-- Design Elements Tab -->
-                  <div class="tab-pane fade" id="design" role="tabpanel">
-                    <div class="info-section p-4">
-                      <h1 class="text-danger">Design Elements</h1>
                       <h2>Typography and Colors</h2>
                       <h3>Fonts:</h3>
                       <ul>
@@ -211,6 +383,14 @@
                         <li>On smaller screens, the timeline collapses into a single column and the red timeline line is hidden.</li>
                         <li>The navbar toggler is optimized for smooth mobile interaction.</li>
                       </ul>
+                      <h3>Responsiveness</h3>
+                            <p>The layout of the website has been developed to accommodate different screen sizes, in order to ensure a consistent browsing experience for users on computers and mobile devices. This has been achieved using:</p>
+                            <p><ul>
+                                <li><b>CSS media queries:</b> used to customise styling based on device characteristics (in our case: resolution).</li>
+                                <li><b>Flex grid system:</b> Bootstrap's flex grid systems allows for easy adaptation of content display according to used resolution.</li>
+                                <li><b>Scalable components</b> Some components used adjust dynamically to the viewport size, with margins and paddings scaling appropriately.</li>
+                                <li><b>Responsive images:</b> Images are resized according to the resolution used.</li>
+                            </ul></p>
                     </div>
                   </div>
                   <!-- Workflow Tab -->
@@ -241,40 +421,14 @@
                         <li>
                           <strong>Mobile map margins:</strong> Adjustments will be made to add more breathing space on the sides.
                         </li>
+                        <li>
+                          <strong>Anchor texts:</strong> Hovering over hyperlinks does not provide anchor links, which could be used to describe the redirection.
+                        </li>
                       </ul>
-                      <h2>Workflow Steps</h2>
-                      <p>
-                        The development process involves multiple stages: research, planning, design, and implementation. User feedback is continuously integrated to refine usability and functionality.
-                      </p>
                     </div>
                   </div>
                 </div>
-              </div>
-         
-          
-
-
-
-
-
-                            
-                            <h3>Responsiveness</h3>
-                            <p>The layout of the website has been developed to accommodate different screen sizes, in order to ensure a consistent browsing experience for users on computers and mobile devices. This has been achieved using:</p>
-                            <p><ul>
-                                <li><b>CSS media queries:</b> used to customise styling based on device characteristics (in our case: resolution).</li>
-                                <li><b>Flex grid system:</b> Bootstrap's flex grid systems allows for easy adaptation of content display according to used resolution.</li>
-                                <li><b>Scalable components</b> Some components used adjust dynamically to the viewport size, with margins and paddings scaling appropriately.</li>
-                                <li><b>Responsive images:</b> Images are resized according to the resolution used.</li>
-                            </ul></p>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="workflow">
-                        <div class="info-section">
-                            <h1>Workflow</h1>
-                            <p>Steps involved in research, planning, design, and implementation of the exhibition.</p>
-                        </div>
-                    </div>
-                </div>
+              </div>   
             </div>
         </div>
     </div>
