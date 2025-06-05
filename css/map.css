@@ -505,9 +505,63 @@ image {
     height: 250px;
     width: 100%;
 }
+
+
 .tab-pane .row > .col-md-6 img {
-    width: 100%;
+    max-width: 80%;
     height: auto;
-    max-width: 100%;
-    border-radius: 5px;
+    aspect-ratio: 3 / 2; /* facoltativo: forza un rapporto orizzontale armonico */
+    object-fit: contain; /* evita tagli se una foto è molto più alta o larga */
+    display: block;
+    margin: 0 auto;
 }
+
+
+/* Reduce the height of the text inside the card */
+.card-body {
+    padding: 0.5rem 1rem;  /* Reduce padding to decrease height */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 60px;  /* Set a minimum height */
+}
+
+/* Make the card border more transparent */
+.card {
+    margin: auto;
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid rgba(7, 6, 6, 0.754);  /* Adjust transparency */
+    background: rgba(255, 255, 255, 0.85);  /* Slight transparency */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    border: 1px solid rgba(208, 45, 0, 0.6);  /* Increase border visibility */
+    background: rgba(255, 240, 235, 0.9);  /* Leggera sfumatura rossa */
+}
+
+/* Keep card title styling */
+.card-title {
+    text-align: center;
+    margin: 0.3rem auto;  /* Reduce top & bottom margin to decrease height */
+    font-size: 1rem;
+    font-weight: 400;
+    color: #080808;
+}
+
+/* Remove underline and set color for card titles */
+.card-title a {
+    text-decoration: none;  /* Removes underline */
+    color: #050505 !important;  /* Sets color to match theme */
+}
+
+/* Ensure underline appears ONLY on hover */
+.card-title a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px !important;
+}
+
