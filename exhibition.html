@@ -1124,62 +1124,74 @@
       </div>
       </div>
       <script>
-        document.addEventListener("DOMContentLoaded", function () {
-    // Seleziona tutti i pulsanti filtro e gli elementi da filtrare
-    const filterButtons = document.querySelectorAll(".filter-btn");
-    const filterItems = document.querySelectorAll(".filter-item");
+         document.addEventListener("DOMContentLoaded", function () {
+             // Seleziona tutti i pulsanti filtro e gli elementi da filtrare
+             const filterButtons = document.querySelectorAll(".filter-btn");
+             const filterItems = document.querySelectorAll(".filter-item");
+         
+             // Gestione click sui pulsanti filtro
+             filterButtons.forEach(button => {
+                 button.addEventListener("click", function (event) {
+                     event.preventDefault();
+         
+                     let filterValue = this.getAttribute("data-filter");
+                     let targetId = this.getAttribute("href") ? this.getAttribute("href").replace("#", "") : null;
+                     let targetElement = targetId ? document.getElementById(targetId) : null;
+         
+                     // Se il pulsante è un tab, scrolla verso la sua sezione
+                     if (targetElement) {
+                         let offset = targetElement.offsetTop - 100;
+                         window.scrollTo({ top: offset, behavior: "smooth" });
+         
+                         // Attiva la scheda corrispondente
+                         document.querySelectorAll('.tab-pane.active').forEach(tab => tab.classList.remove('show', 'active'));
+                         targetElement.classList.add('show', 'active');
+                     }
+         
+                     // Se il pulsante è un filtro
+                     if (filterValue) {
+                         filterItems.forEach(item => {
+                             item.style.display = item.classList.contains(filterValue) || filterValue === "all" ? "block" : "none";
+                         });
+         
+                         let firstVisibleItem = document.querySelector(`.filter-item.${filterValue}`);
+                         if (firstVisibleItem) {
+                             let offset = firstVisibleItem.offsetTop - 100;
+                             window.scrollTo({ top: offset, behavior: "smooth" });
+                         }
+                     }
+         
+                     // Cambia lo stato attivo del pulsante
+                     filterButtons.forEach(btn => btn.classList.remove("active"));
+                     this.classList.add("active");
+                 });
+             });
+         
+             // Attiva automaticamente il primo filtro interno quando si apre un tab specifico
+            const tabTriggers = [
+   { tabId: "time-tab", filterSelector: '#time .filter-btn[data-filter="before-2000"]' },
+   { tabId: "reality-tab", filterSelector: '#reality .filter-btn[data-filter="in-theory"]' },
+   { tabId: "context-tab", filterSelector: '#context .filter-btn[data-filter="urbanism"]' },
+   { tabId: "ideals-tab", filterSelector: '#ideals .filter-btn[data-filter="utopian"]' },
+   { tabId: "space-tab", filterSelector: '#space .filter-btn[data-filter="global"]' }
+];
 
-    filterButtons.forEach(button => {
-        button.addEventListener("click", function (event) {
-            event.preventDefault();
-
-            let filterValue = this.getAttribute("data-filter");
-            let targetId = this.getAttribute("href") ? this.getAttribute("href").replace("#", "") : null;
-            let targetElement = targetId ? document.getElementById(targetId) : null;
-
-            // Se il pulsante è un tab, scrolla verso la sua sezione
-            if (targetElement) {
-                let offset = targetElement.offsetTop - 100; // Regola l'offset in base alla navbar
-                window.scrollTo({
-                    top: offset,
-                    behavior: "smooth"
-                });
-
-                // Attiva la scheda corrispondente
-                document.querySelectorAll('.tab-pane.active').forEach(tab => tab.classList.remove('show', 'active'));
-                targetElement.classList.add('show', 'active');
-            }
-
-            // Se il pulsante è un filtro, scrolla verso la sezione con le card
-            if (filterValue) {
-                filterItems.forEach(item => {
-                    if (filterValue === "all" || item.classList.contains(filterValue)) {
-                        item.style.display = "block"; // Mostra gli elementi corrispondenti
-                    } else {
-                        item.style.display = "none"; // Nasconde gli altri
-                    }
-                });
-
-                // Scorri verso la sezione con le card filtrate
-                let firstVisibleItem = document.querySelector(`.filter-item.${filterValue}`);
-                if (firstVisibleItem) {
-                    let offset = firstVisibleItem.offsetTop - 100; // Offset per navbar
-                    window.scrollTo({
-                        top: offset,
-                        behavior: "smooth"
-                    });
-                }
-            }
-
-            // Cambia lo stato attivo del pulsante
-            filterButtons.forEach(btn => btn.classList.remove("active"));
-            this.classList.add("active");
-        });
-    });
-});
-
-
-        </script>
+         
+             tabTriggers.forEach(entry => {
+                 const tabButton = document.getElementById(entry.tabId);
+                 const filterButton = document.querySelector(entry.filterSelector);
+         
+                 if (tabButton && filterButton) {
+                     tabButton.addEventListener("click", () => {
+                         setTimeout(() => {
+                             filterButton.click();
+                         }, 150);
+                     });
+                 }
+             });
+         });
+         </script>
+         
         <footer class="site-footer text-center">
          <div>
             <p>&copy; 2025. Urban Dream — The Architectures of Tomorrow. All rights reserved.</p>
