@@ -13,8 +13,8 @@ function updateImage(category) {
         case 'built': imagePath = 'img/map/built.png'; break;
         case 'utopian': imagePath = 'img/map/utopian.png'; break;
         case 'dystopian': imagePath = 'img/map/dystopian.png'; break;
-        case 'deconstruction': imagePath = 'img/map/deconstruction.png'; break;
-        case 'innovation': imagePath = 'img/map/innovation.png'; break;
+        case 'deconstructive': imagePath = 'img/map/deconstruction.png'; break;
+        case 'innovative': imagePath = 'img/map/innovation.png'; break;
         case 'radical-living': imagePath = 'img/map/radical.png'; break;
         case 'artistic-intervention': imagePath = 'img/map/artistic.png'; break;
         case 'tech-infrastructure': imagePath = 'img/map/tech.png'; break;

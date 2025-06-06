@@ -442,20 +442,57 @@ a {
         padding: 0 10px;
     }
 
-    .hidden-info .row {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .hidden-info .details-left,
-    .hidden-info .details-right {
-        text-align: center;
-        flex: 1;
-    }
 
-    .hidden-info .details-right {
-        padding-left: 0;
-    }
+/* 1) Container .hidden-info: padding orizzontale ridotto */
+.hidden-info {
+    max-height: 80vh;            /* limite di altezza */
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-left: 0.5rem;        /* margini laterali stretti */
+    padding-right: 0.5rem;
+}
+
+/* 2) Layout sempre in colonna */
+.hidden-info .row {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+    padding: 0.5rem 0;           /* solo padding verticale */
+    box-sizing: border-box;
+}
+
+/* 3) Sezioni full-width con padding ridotto */
+.hidden-info .details-left,
+.hidden-info .details-right {
+    width: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+/* 4) Immagine responsive */
+.hidden-info .film-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* 5) Testo giustificato e leggibile */
+.hidden-info .details-right {
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+.hidden-info .details-right p {
+    margin-bottom: 0.75rem;
+    text-align: justify;
+}
+
+/* 6) Se altrove hai media query che re-impongono due colonne,
+      lasciale fuori da questo blocco o impostale su min-width > 768px */
+      
 }
 
 .image-mapper-shape {
@@ -540,7 +577,7 @@ image {
 
 .card:hover {
     transform: scale(1.03);
-    border: 1px solid rgba(208, 45, 0, 0.6);  /* Increase border visibility */
+    border: 1px solid rgba(3, 3, 3, 0.6);  /* Increase border visibility */
     background: rgba(255, 240, 235, 0.9);  /* Leggera sfumatura rossa */
 }
 
@@ -565,3 +602,29 @@ image {
     text-underline-offset: 4px !important;
 }
 
+
+/* ------------------------------------------------------------------ */
+/*  STILI MOBILE  (schermi ≤ 768 px)                                  */
+/* ------------------------------------------------------------------ */
+@media (max-width: 768px) {
+
+    /* ----- 1. Distanza fra testo introduttivo e immagine ----------- */
+    .info-section {               /* colonna con il testo “The Exhibition …” */
+        margin-bottom: 0.5rem;    /* riduci/ingrandisci a piacere */
+    }
+    .info-section br {            /* se hai <br> nel markup li neutralizzi */
+        display: none;
+    }
+
+    /* ----- 2. Immagine principale ---------------------------------- */
+    .container .row img.img-fluid.w-80,
+    .container .row img.img-fluid.w-55 {   /* entrambe le possibili larghezze */
+        margin-top: 0;             /* niente spazio sopra */
+        margin-bottom: 1rem;       /* ≈ 16 px sotto l’immagine (verso i bottoni) */
+    }
+
+    /* ----- 3. Gruppo di bottoni (tab) ------------------------------ */
+    #myTab.btn-group {
+        margin-top: 0.5rem;        /* piccolo distacco sopra i bottoni */
+    }
+}
