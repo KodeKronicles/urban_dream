@@ -628,3 +628,16 @@ image {
         margin-top: 0.5rem;        /* piccolo distacco sopra i bottoni */
     }
 }
+
+.card-container,
+.custom-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card-container .col,
+.custom-card-wrapper .col {
+  flex: 1 0 calc(33.333% - 1rem);
+  box-sizing: border-box;
+}

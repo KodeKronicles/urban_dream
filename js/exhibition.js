@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const value = item.info[fieldName];
             if (!value) return;
   
-            const key = value.trim().toLowerCase(); // 🟢 forza lowercase per compatibilità filtro
+            const key = value.trim().toLowerCase();
             if (!grouped[key]) grouped[key] = [];
             grouped[key].push(item);
           });
