@@ -1,3 +1,68 @@
+
+// Inserisce dinamicamente le righe della tabella da data2.json
+
+document.addEventListener("DOMContentLoaded", function() {
+    fetch('data2.json')  
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+        const tableBody = document.getElementById('dynamicTableBody');
+        if (!tableBody) {
+          console.error("Elemento #dynamicTableBody non trovato!");
+          return;
+        }
+  
+        data.items.forEach(item => {
+          const mainRow = document.createElement('tr');
+          mainRow.className = `item ${item.info.Status.toLowerCase()} ${item.info.Context.toLowerCase().replace(/\s+/g, '_')} ${item.info.Ideals.toLowerCase()}`;
+          mainRow.id = `id${item.id}`;
+  
+          mainRow.innerHTML = `
+            <td>${item.id}</td>
+            <td class="filter-item">${item.shortName}</td>
+            <td class="filter-year">${item.info.Date}</td>
+            <td class="filter-status">${item.info.Status}</td>
+            <td><span class="filter-context">${item.info.Context}</span></td>
+            <td><span class="filter-ideals">${item.info.Ideals}</span></td>
+            <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+          `;
+  
+          const detailRow = document.createElement('tr');
+          detailRow.className = 'hidden-info';
+          detailRow.style.display = 'none';
+          detailRow.innerHTML = `
+            <td colspan="7">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-4 details-left">
+                    <img class="film-image" src="${item.image1}" alt="${item.shortName} Image">
+                  </div>
+                  <div class="col-md-8 details-right">
+                    <p>${item.mediumInfo || item.shortInfo}</p>
+                    <p>Location: ${item.info.Location}</p>
+                    <p>Check out if you like: ${item.shortInfo}</p>
+                    <p>Recommended by: ${item.info["Recommended by"]}</p>
+                    <a href="${item.longInfo}" class="btn-watch-trailer">Read More</a>
+                  </div>
+                </div>
+              </div>
+            </td>
+          `;
+  
+          tableBody.appendChild(mainRow);
+          tableBody.appendChild(detailRow);
+        });
+      })
+      .catch(error => {
+        console.error("Errore nel caricamento del JSON:", error);
+      });
+  });
+
+  
 let backButtonContainer;
 let backButton;
 
