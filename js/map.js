@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <p>Location: ${item.info.Location}</p>
                     <p>Check out if you like: ${item.shortInfo}</p>
                     <p>Recommended by: ${item.info["Recommended by"]}</p>
-                    <a href="${item.longInfo}" class="btn-watch-trailer">Read More</a>
+                    <a href="${item.info.Link}" target="_blank" class="btn-watch-trailer">Read More</a>
                   </div>
                 </div>
               </div>
@@ -57,9 +57,6 @@ document.addEventListener("DOMContentLoaded", function() {
           tableBody.appendChild(detailRow);
         });
       })
-      .catch(error => {
-        console.error("Errore nel caricamento del JSON:", error);
-      });
   });
 
   

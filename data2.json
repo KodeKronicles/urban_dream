@@ -32,6 +32,7 @@
                 "Context": "Urban",
                 "Ideals": "Utopian",
                 "Reality": "In Theory",
+                "Link": "https://en.wikipedia.org/wiki/Ron_Herron#Walking_City",
                 "Recommended by": "Elena"
             },
             "shortInfo": "A visionary concept of mobile, self-sustaining cities that could move across landscapes.",
@@ -56,6 +57,7 @@
                 "Context": "Artistic",
                 "Ideals": "Dystopian",
                 "Reality": "In Theory",
+                "Link": "https://en.wikipedia.org/wiki/Superstudio",
                 "Recommended by": "Elena"
             },
             "shortInfo": "A satirical design of a megastructure that wraps around the Earth.",
@@ -80,6 +82,7 @@
                 "Context": "Urban",
                 "Ideals": "Dystopian",
                 "Reality": "In Theory",
+                "Link": "https://en.wikipedia.org/wiki/Plan_Voisin#:~:text=The%20Plan%20Voisin%20was%20a,Bank%20of%20the%20River%20Seine.",
                 "Recommended by": "Hubert"             
             },
             "shortInfo": "A radical urban plan that proposed demolishing historic Paris to build modernist skyscrapers.",
@@ -103,6 +106,7 @@
                 "Context": "Urban",
                 "Ideals": "Utopian",
                 "Reality": "In Theory",
+                "Link": "https://en.wikipedia.org/wiki/Archizoom_Associati",
                 "Recommended by": "Hubert"       
             },
             "shortInfo": "A conceptual city without boundaries, an endless grid challenging consumerist Urban.",
@@ -127,6 +131,7 @@
                 "Context": "Radical",
                 "Ideals": "Dystopian",
                 "Reality": "In Theory",
+                "Link": "https://en.wikipedia.org/wiki/Freedom_Ship",
                 "Recommended by": "Elena"           
             },
             "shortInfo": "A proposed floating city that aimed to be a tax-free, sovereign urban nation.",
@@ -150,6 +155,7 @@
                 "Context": "Radical",
                 "Ideals": "Innovative",
                 "Reality": "In Practice",
+                "Link": "https://en.wikipedia.org/wiki/Nakagin_Capsule_Tower",
                 "Recommended by": "Alice"           
             },
             "shortInfo": "A modular housing project made of interchangeable pods, designed for rapid urban life.",
@@ -173,6 +179,7 @@
                 "Context": "Radical",
                 "Ideals": "Dystopian",
                 "Reality": "In Practice",
+                "Link": "https://en.wikipedia.org/wiki/Kowloon_Walled_City",
                 "Recommended by": "Elena"           
             },
             "shortInfo": "A hyper-dense, unregulated urban block that housed 33,000 people in an area of just 2.7 hectares.",
@@ -196,10 +203,11 @@
                 "Context": "Radical",
                 "Ideals": "Dystopian",
                 "Reality": "In Practice",
+                "Link": "https://en.wikipedia.org/wiki/Tower_of_David",
                 "Recommended by": "Hubert"          
             },
             "shortInfo": "An abandoned skyscraper that became a vertical slum in Caracas.",
-            "mediumInfo": "",
+            "mediumInfo": "Torre David, located in Caracas, is an unfinished skyscraper that was informally occupied after Venezuela's economic collapse. Abandoned during construction, it became home to thousands of residents who adapted the space into a vertical slum, creating a self-organized, improvised urban community that challenged traditional notions of architecture and housing.",
             "longInfo": "docs/torre_david.html"
         },
         
@@ -217,9 +225,10 @@
                 "Status": "Unbuilt",
                 "Space" : "Global",
                 "Time": "After 2000",
-                "Context": "Innovative",
-                "Ideals": "Technological",
+                "Context": "Technological",
+                "Ideals": "Innovative",
                 "Reality": "In Theory",
+                "Link": "https://parametric-architecture.com/terraforming-mars-elon-musks-vision/?srsltid=AfmBOopY6Kd0ZK2qpkamep48NpldT2Lu8k8Ai_qZJneiEYi9EWPpBAs9",
                 "Recommended by": "Alice"           
             },
             "shortInfo": "Designing planetary-scale urban systems for human survival on Mars.",
@@ -242,7 +251,8 @@
                 "Time": "Before 2000",
                 "Context": "Radical",
                 "Ideals": "Utopian",
-                "Reality": "In Practise",
+                "Reality": "In practice",
+                "Link": "https://thefuturohouse.com/",
                 "Recommended by": "Elena"            
             },
             "shortInfo": "A mass-produced, UFO-shaped house designed for modular and futuristic living.",
@@ -258,7 +268,7 @@
             "image2": "img/catalogue/11_lednews.jpg",
             "copyright": "\u00a9 BBC",
             "info": {
-                "Name": "BBC\u2019s First LED News Ticker",
+                "Name": "BBC's First LED News Ticker",
                 "Date": "1980",
                 "Location": "London, UK",
                 "Status": "Built",
@@ -266,11 +276,12 @@
                 "Time": "Before 2000",
                 "Context": "Technological",
                 "Ideals": "Innovative",
-                "Reality": "In Practise",
-                "Recommended by": "Hubert"           
+                "Reality": "In practice",
+                "Link": "https://en.wikipedia.org/wiki/News_ticker",
+                "Recommended by": "Alice"           
             },
             "shortInfo": "The first electronic news ticker, turning buildings into media interfaces.",
-            "mediumInfo": "",
+            "mediumInfo": "Installed in 1980, the BBC’s first LED News Ticker turned the building’s facade into a real-time communication tool. It was one of the first examples of media architecture, blending information technology with urban space.",
             "longInfo": "docs/led_news_ticker.html"
         },
         {
@@ -289,11 +300,12 @@
                 "Time": "Before 2000",
                 "Context": "Urban",
                 "Ideals": "Utopian",
-                "Reality": "In Practise",
+                "Reality": "In practice",
+                "Link": "https://en.wikipedia.org/wiki/Arcosanti",
                 "Recommended by": "Alice"            
             },
             "shortInfo": "A self-sufficient city experiment blending architecture and ecology.",
-            "mediumInfo": "Arcosanti, founded by Paolo Soleri, is an ongoing architectural experiment that aims to integrate urban planning with ecological principles, promoting sustainable living.",
+            "mediumInfo": "Founded by Paolo Soleri, Arcosanti is an experimental town in Arizona that embodies the concept of “arcology,” merging architecture and ecology. Built by volunteers, it explores sustainable urban living through compact design, renewable energy, and communal spaces, offering a real-world prototype for alternative city models.",
             "longInfo": "docs/arcosanti.html"
         },
 
@@ -313,7 +325,8 @@
                 "Time": "Before 2000",
                 "Context": "Artistic",
                 "Ideals": "Deconstructive",
-                "Reality": "In Practise",
+                "Reality": "In practice",
+                "Link": "https://christojeanneclaude.net/artworks/wrapped-reichstag/",
                 "Recommended by": "Elena"            
             },
             "shortInfo": "A temporary wrapping of Berlin\u2019s Reichstag in silver fabric, transforming its perception.",
@@ -337,7 +350,8 @@
                 "Time": "Before 2000",
                 "Context": "Artistic",
                 "Ideals": "Deconstructive",
-                "Reality": "In Practise",
+                "Reality": "In practice",
+                "Link": "https://www.archdaily.cl/cl/02-124790/arte-y-arquitectura-building-cuts-gordon-matta-clark",
                 "Recommended by": "Alice"            
             },
             "shortInfo": "Architectural interventions where buildings were cut open to reveal hidden spaces.",
@@ -362,7 +376,8 @@
                 "Time": "Before 2000",
                 "Context": "Artistic",
                 "Ideals": "Innovative",
-                "Reality": "In Practise",
+                "Reality": "In practice",
+                "Link": "https://www.neonsigns.hk/neon-in-visual-culture/the-urban-and-cultural-imagery-of-neon/?lang=en",
                 "Recommended by": "Hubert"            
             },
             "shortInfo": "The use of neon lights to transform architectural perception and urban spaces.",
@@ -388,6 +403,7 @@
                 "Context": "Technological",
                 "Ideals": "Innovative",
                 "Reality": "In Theory",
+                "Link": "https://www.hyperloopdesign.net/station",
                 "Recommended by": "Hubert"            
             },
             "shortInfo": "High-speed underground vacuum trains designed to reshape urban transport.",
@@ -411,6 +427,7 @@
                 "Context": "Urban",
                 "Ideals": "Innovative",
                 "Reality": "In Theory",
+                "Link": "https://www.archdaily.com/1012951/artificial-intelligence-and-urban-planning-technology-as-a-tool-for-city-design",
                 "Recommended by": "Elena"            
             },
             "shortInfo": "Cities designed using artificial intelligence for optimal urban layouts.",
@@ -433,12 +450,13 @@
                 "Space" : "Europe",
                 "Time": "Before 2000",
                 "Context": "Artistic",
-                "Ideals": "Deconstruction",
+                "Ideals": "Deconstructive",
                 "Reality": "In Theory",
+                "Link": "https://architectuul.com/architecture/oase-no-7",
                 "Recommended by": "Alice"            
             },
             "shortInfo": "A radical intervention that merged architecture and air structures.",
-            "mediumInfo": "Oase No. 7 was an inflatable bubble attached to a historical building, designed by Haus-Rucker-Co. It challenged urban permanence, inviting playful and experimental uses of space.",
+            "mediumInfo": "Oase No. 7 was a radical installation by Haus-Rucker-Co that attached a transparent inflatable dome to a baroque building in Vienna. It created a bubble of air and imagination, symbolizing escapism and urban critique. The project challenged the rigidity of historical architecture through playful, temporary intervention.",
             "longInfo": "docs/Oase_No7.html"
         },
         
@@ -459,10 +477,11 @@
                 "Context": "Technological",
                 "Ideals": "Innovative",
                 "Reality": "In Theory",
+                "Link": "https://www.sciencedirect.com/science/article/pii/S2667345223000573",
                 "Recommended by": "Hubert"            
             },
             "shortInfo": "Digital cities built in virtual environments for a decentralized future.",
-            "mediumInfo": "Metaverse Urban explores how digital architecture can create immersive, functional spaces that exist entirely online. These virtual cities redefine the idea of place, ownership, and interaction.",
+            "mediumInfo": "Metaverse Urban refers to the creation of virtual cities where architecture exists entirely in digital space. Enabled by platforms like Meta and VR technologies, these environments propose new forms of interaction, property, and governance, redefining what it means to design, inhabit, and share space in a decentralized future.",
             "longInfo": "docs/metaverse_Urban.html"
         },
         {
@@ -482,6 +501,7 @@
                 "Context": "Urban",
                 "Ideals": "Utopian",
                 "Reality": "In Theory",
+                "Link": "https://en.wikipedia.org/wiki/The_Line,_Saudi_Arabia",
                 "Recommended by": "Elena"            
             },
             "shortInfo": "A controversial, 170km-long linear city designed to house 9 million people.",
