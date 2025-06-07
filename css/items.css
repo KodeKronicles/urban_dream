@@ -299,6 +299,17 @@ p {
     margin-right: auto;
     width: 50%;
 }
+
+.site-footer {
+    background-color: white;
+    color: #d02d00;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 2px solid #d02d00;
+    font-size: 14px;
+    margin-top: 40px;
+} 
+
 /*******************
 FOOTER (Alice style)
 ********************/
