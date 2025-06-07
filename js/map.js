@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
               <div class="container">
                 <div class="row">
                   <div class="col-md-4 details-left">
-                    <img class="film-image" src="${item.image1}" alt="${item.shortName} Image">
+                    <img class="film-image" src="${item.image2}" alt="${item.shortName} Image">
                   </div>
                   <div class="col-md-8 details-right">
                     <p>${item.mediumInfo || item.shortInfo}</p>

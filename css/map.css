@@ -46,6 +46,12 @@ h1 {
     margin-left: auto; /* Fa partire l'elemento da destra */
 }
 
+.navbar-nav a.nav-link.active {
+    color: #d02e02;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+}
+
 .table-container {
     width: 100%;
     max-width: 100%;
