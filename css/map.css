@@ -4,40 +4,29 @@
     font-weight: normal;
     font-style: normal;
 }
-        
-        /*******************
-         BASE STYLES
-        ********************/
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #fff;
-            color: #d02d00 !important;
-            margin: 0;
-            padding: 0;
-            overflow-x: visible !important; /* Previene lo scroll orizzontale che nasconde il dropdown */
 
-        }
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fff;
+    color: #d02d00 !important;
+    margin: 0;
+    padding: 0;
+    overflow-x: visible !important; /* Previene lo scroll orizzontale che nasconde il dropdown */
+}
 
-        .container {
-            width: 100%;
-            text-align: center;
-            padding: 0;
-        }
+.container {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+}
 
-        h1 {
-            font-size: 4rem;
-            font-weight: normal;
-            color: #d02d00;
-            margin: 20px 0 10px 0; /* Modificato il margine sinistro a 0 */
-            text-align: left;
-        }
-
-        .navbar-text {
-            font-size: 13px;
-            color: #d02d00;
-            text-align: left;
-            margin-left: 20px;
-        }
+h1 {
+    font-size: 4rem;
+    font-weight: normal;
+    color: #d02d00;
+    margin: 20px 0 10px 0; /* Modificato il margine sinistro a 0 */
+    text-align: left;
+}
 
 .navbar-nav a {
     color: #d02e02;
@@ -56,112 +45,77 @@
     background-color: #d02d00; /* Imposta un colore di sfondo per renderlo visibile */
     margin-left: auto; /* Fa partire l'elemento da destra */
 }
-        
-        /*******************
-         TABLE LAYOUT
-        ********************/
-        .table-container {
-            width: 100%;
-            max-width: 100%;
-            overflow-x: auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 10px;
-            margin-top: 22px; /* Aggiunge un margine superiore */
 
-        }
-
-        .table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 0;
-        }
-        
-        th, td {
-            border-left: none;
-            border-right: none;
-            border-bottom: 1px solid #d02d00;
-            padding: 10px;
-            text-align: left;
-            font-size: 0.9rem;
-            color: #d02d00 !important;
-            vertical-align: top; /* so text lines up at top with images */
-            border-bottom: 1px solid #d02d00;
-        }
-    
-        .expanded td {
-  border-bottom: none !important;
+.table-container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 22px;
 }
 
-        th {
-            cursor: pointer;
-            font-weight: normal;
-            position: relative;
-            padding-right: 20px;
-            border-bottom: 4px solid #d02d00; 
-            border-top: none;
-            color: #d02d00 !important;
-        }
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+}
 
-        /* Sorting arrow styles */
-        th .sort-arrow {
-            font-size: 12px;
-            position: relative;
-            margin-left: 5px;
-            display: inline-block;
-            transition: transform 0.3s;
-            color: rgba(192, 57, 43, 0.5); /* Rosso più chiaro */
-            transition: color 0.3s ease;
-        }
+th, td {
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #d02d00;
+    padding: 10px;
+    text-align: left;
+    font-size: 0.9rem;
+    color: #d02d00 !important;
+    vertical-align: top; /* so text lines up at top with images */
+    border-bottom: 1px solid #d02d00;
+}
 
-        th .sort-arrow:hover {
-        color: #d02d00; /* Rosso pieno */
-        cursor: pointer;
-        }
+.expanded td {
+border-bottom: none !important;
+}
 
-        th.desc .sort-arrow, .sort-arrow.desc {
-            transform: rotate(180deg);
-        }
-        th:last-child .sort-arrow {
-            display: inline-block;
-        }
+th {
+    cursor: pointer;
+    font-weight: normal;
+    position: relative;
+    padding-right: 20px;
+    border-bottom: 4px solid #d02d00; 
+    border-top: none;
+    color: #d02d00 !important;
+}
 
-        thead tr {
-            border-top: none;
-            border-bottom: 2px solid #d02d00; /* Linea più spessa sotto il titolo */
-        }
+th .sort-arrow {
+    font-size: 12px;
+    position: relative;
+    margin-left: 5px;
+    display: inline-block;
+    transition: transform 0.3s;
+    color: rgba(192, 57, 43, 0.5);
+    transition: color 0.3s ease;
+}
 
-        /* back button */
-        .back-button-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-            margin: 15px 10px;
-    
-        }
-        .back-button {
-            background-color: red;
-            color: white;
-            padding: 10px 20px;
-            font-size: 15px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-bottom: 20px; /* Aggiunge un margine inferiore */
+th .sort-arrow:hover {
+color: #d02d00;
+cursor: pointer;
+}
 
-        }
-        .back-button:hover {
-            background-color: darkred;
-        }
-        .hidden {
-            display: none;
-        }
-        
+th.desc .sort-arrow, .sort-arrow.desc {
+    transform: rotate(180deg);
+}
+th:last-child .sort-arrow {
+    display: inline-block;
+}
 
-/*******************
- TOGGLE INFO STYLES
-********************/
+thead tr {
+    border-top: none;
+    border-bottom: 2px solid #d02d00; /* Linea più spessa sotto il titolo */
+}
+
 .toggle-info {
     cursor: pointer;
     font-weight: normal;
@@ -170,7 +124,6 @@
     text-align: center;
 }
 
-/* Sezione nascosta */
 .hidden-info {
     display: none;
     background-color: #fff;
@@ -207,13 +160,6 @@
     padding-left: 9.55%; /* Regola questo valore in base alle tue esigenze */
     box-sizing: border-box;
     font-size: 0.9rem;
-
-}
-
-@media (max-width: 768px) {
-    .hidden-info .details-right {
-        padding-left: 0;
-    }
 }
 
 /* Stile del pulsante */
@@ -234,89 +180,67 @@
     border: 2px solid #d02d00 !important;
     text-decoration: none !important;
 }
-
-
-/* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
-    .hidden-info .row {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hidden-info .details-left,
-    .hidden-info .details-right {
-        text-align: center;
-        flex: 1;
-    }
+        
+/* hover click nel catalogo mappa */
+.clickable, .filter-year, .filter-context, .filter-status, .filter-ideals, .toggle-info {
+    cursor: pointer;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease, font-weight 0.3s ease;
 }
 
+.clickable:hover, .filter-year:hover, .filter-context:hover, .filter-status:hover, .filter-ideals:hover, .toggle-info:hover {
+    text-decoration: underline;
+}
 
-        
-        /* hover click nel catalogo mappa */
-           .clickable, .filter-year, .filter-context, .filter-status, .filter-ideals, .toggle-info {
-        cursor: pointer;
-        text-decoration: none;
-        transition: text-decoration 0.3s ease, font-weight 0.3s ease;
-    }
-    .clickable:hover, .filter-year:hover, .filter-context:hover, .filter-status:hover, .filter-ideals:hover, .toggle-info:hover {
-        text-decoration: underline;
-    }
+.back-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
 
+.back-button {
+    background-color: transparent;
+    color: #d02d00;
+    padding: 0.5em 1em;
+    font-size: 1.1rem;
+    border: 1px solid #d02d00;
+    cursor: pointer;
+    border-radius: 0;
+    transition: none;
+    text-decoration: none;
+    background-color: #fff;
+}
 
-    .back-button-container {
-        display: flex;
-        justify-content: center;
-        margin-top: 15px;
-    }
-    
-    .back-button {
-        background-color: transparent;
-        color: #d02d00;
-        padding: 0.5em 1em;
-        font-size: 1.1rem;
-        border: 1px solid #d02d00;
-        cursor: pointer;
-        border-radius: 0;
-        transition: none;
-        text-decoration: none;
-        background-color: #fff;
-    }
-
-
-    .back-button:hover,
-    .back-button:focus,
-    .back-button:active {
+.back-button:hover,
+.back-button:focus,
+.back-button:active {
     color: #d02d00 !important; /* Mantiene il colore rosso fisso */
     background-color: transparent !important; /* Evita cambiamenti di sfondo */
     border: 2px solid #d02d00 !important; /* Mantiene il bordo rosso */
     text-decoration: none !important; /* Evita sottolineature */
     outline: none !important; /* Evita bordi di focus */
 }
-    
-    .hidden {
-        display: none;
-    }
 
+.hidden {
+    display: none;
+}
 
-    /*   FOOTER STYLES
-
-    .site-footer {
-        background-color: white;
-        color: #d02d00;
-        text-align: center;
-        padding: 20px 0;
-        border-top: 2px solid #d02d00;
-        font-size: 14px;
-        margin-top: 40px;
-    } */
+.site-footer {
+    background-color: white;
+    color: #d02d00;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 2px solid #d02d00;
+    font-size: 14px;
+    margin-top: 40px;
+} 
 
 
 /*******************
 FOOTER (Alice style)
 ********************/
-
+/*
 footer {
-    margin-top: 0;  /* Force no gap above the footer */
     padding: 5px 0;
     width: 100%;
     background-color: #D02E02;
@@ -324,27 +248,24 @@ footer {
     text-align: center;
     position: relative;
 }
-
+*/
 .github-logo {
-    width: 65px; /* Adjust size as needed */
+    width: 65px;
     height: auto;
     display: block;
     margin: 10px auto 0;
 }
     
-    /* Riduci il padding orizzontale tra le colonne ID e Title */
-.table td:first-child, .table th:first-child {
-    padding-right: 2px; /* Riduci lo spazio a destra della colonna ID */
+/* Riduci la larghezza della colonna ID e Riduci il padding orizzontale tra le colonne ID e Title */
+.table td:first-child,
+.table th:first-child {
+    padding-right: 2px;
+    width: 40px; /* Imposta una larghezza fissa per la colonna ID */
+    text-align: center; /* Centra il contenuto della colonna ID */
 }
 
 .table td:nth-child(2), .table th:nth-child(2) {
     padding-left: 6px; /* Riduci lo spazio a sinistra della colonna Title */
-}
-
-/* Opzionale: riduci la larghezza della colonna ID */
-.table td:first-child, .table th:first-child {
-    width: 40px; /* Imposta una larghezza fissa per la colonna ID */
-    text-align: center; /* Centra il contenuto della colonna ID */
 }
 
 a {
@@ -357,7 +278,6 @@ a {
     padding-top: 3rem;
 }
 
-/* Info Section Styling */
 .info-section h1 {
     font-size: 3.5rem;
     font-weight: 400;
@@ -381,7 +301,6 @@ a {
     text-align: justify;
     color: #d02d00;
     max-width: 600px; /* Imposta una larghezza massima per restringere il paragrafo */
-
 }
 
 .info-section h3 {
@@ -392,14 +311,11 @@ a {
     text-align: justify;
 }
 
-
 .underline {
     text-decoration: underline;
     text-underline-offset: 4px;
     text-decoration-thickness: 1.4px; /* Aumenta lo spessore della linea */
 }
-
-/* mostra il menu dropdown */
 
 .dropdown-menu.show {
     display: block !important; /* Mostra il dropdown quando ha la classe show */
@@ -446,15 +362,9 @@ a {
     margin: 5px 0;
 }
 
-.hidden {
-    display: none;
-}
-
 .nav-link {
     margin-left: 1rem;
 }
-
-
 
 @media (max-width: 768px) {
     /* Navbar adjustments */
@@ -501,8 +411,7 @@ a {
         padding: 8px 10px;
         font-size: 0.8rem;
     }
-    
-    /* Assicura che la tabella non si restringa troppo */
+
     .table {
         min-width: 100%;
     }
@@ -513,12 +422,10 @@ a {
         display: block !important;
     }
 
-    /* Hidden info sections */
     .hidden-info {
         padding: 1rem;
     }
 
-    /* Footer adjustments */
     footer {
         padding: 15px 10px;
     }
@@ -531,10 +438,61 @@ a {
         width: 50px;
     }
 
-    /* General spacing */
     body {
         padding: 0 10px;
     }
+
+
+
+/* 1) Container .hidden-info: padding orizzontale ridotto */
+.hidden-info {
+    max-height: 80vh;            /* limite di altezza */
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-left: 0.5rem;        /* margini laterali stretti */
+    padding-right: 0.5rem;
+}
+
+/* 2) Layout sempre in colonna */
+.hidden-info .row {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+    padding: 0.5rem 0;           /* solo padding verticale */
+    box-sizing: border-box;
+}
+
+/* 3) Sezioni full-width con padding ridotto */
+.hidden-info .details-left,
+.hidden-info .details-right {
+    width: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+/* 4) Immagine responsive */
+.hidden-info .film-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* 5) Testo giustificato e leggibile */
+.hidden-info .details-right {
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+.hidden-info .details-right p {
+    margin-bottom: 0.75rem;
+    text-align: justify;
+}
+
+/* 6) Se altrove hai media query che re-impongono due colonne,
+      lasciale fuori da questo blocco o impostale su min-width > 768px */
+      
 }
 
 .image-mapper-shape {
@@ -550,32 +508,123 @@ a {
 
 image {
     pointer-events: none;
-    transition: opacity 0.3s ease; /* Aggiungi transizione */
+    transition: opacity 0.3s ease;
 }
 
-
-
-
-
-
-/* Aggiungi queste regole */
-.row.row-cols-1.row-cols-md-3.g-4 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin: 0 -0.5rem; /* Compensa il gap per allineare con i bottoni */
-}
-
-.row.row-cols-1.row-cols-md-3.g-4 > .col {
-    padding: 0 0.5rem; /* Mantiene l'allineamento con i margini dei bottoni */
+.custom-margin svg {
     width: 100%;
+    height: auto;
+    display: block;
 }
 
-/* Mantieni lo stile esistente dei bottoni */
+/* solo per exhibition pare*/
+
 .btn-group {
-    margin-bottom: 1.5rem; /* Aggiunge spazio sotto i bottoni */
+    margin-bottom: 3rem; /* Aggiunge spazio sotto i bottoni */
 }
 
 .filter-btn {
     margin: 0 5px; /* Mantiene i margini laterali dei bottoni */
+}
+
+/* fine solo per exhibition*/
+
+.region-btn-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 250px;
+    width: 100%;
+}
+
+
+.tab-pane .row > .col-md-6 img {
+    max-width: 80%;
+    height: auto;
+    aspect-ratio: 3 / 2; /* facoltativo: forza un rapporto orizzontale armonico */
+    object-fit: contain; /* evita tagli se una foto è molto più alta o larga */
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Reduce the height of the text inside the card */
+.card-body {
+    padding: 0.5rem 1rem;  /* Reduce padding to decrease height */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 60px;  /* Set a minimum height */
+}
+
+/* Make the card border more transparent */
+.card {
+    margin: auto;
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid rgba(7, 6, 6, 0.754);  /* Adjust transparency */
+    background: rgba(255, 255, 255, 0.85);  /* Slight transparency */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    border: 1px solid rgba(3, 3, 3, 0.6);  /* Increase border visibility */
+    background: rgba(255, 240, 235, 0.9);  /* Leggera sfumatura rossa */
+}
+
+/* Keep card title styling */
+.card-title {
+    text-align: center;
+    margin: 0.3rem auto;  /* Reduce top & bottom margin to decrease height */
+    font-size: 1rem;
+    font-weight: 400;
+    color: #080808;
+}
+
+/* Remove underline and set color for card titles */
+.card-title a {
+    text-decoration: none;  /* Removes underline */
+    color: #050505 !important;  /* Sets color to match theme */
+}
+
+/* Ensure underline appears ONLY on hover */
+.card-title a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px !important;
+}
+
+
+/* ------------------------------------------------------------------ */
+/*  STILI MOBILE  (schermi ≤ 768 px)                                  */
+/* ------------------------------------------------------------------ */
+@media (max-width: 768px) {
+
+    /* ----- 1. Distanza fra testo introduttivo e immagine ----------- */
+    .info-section {               /* colonna con il testo “The Exhibition …” */
+        margin-bottom: 0.5rem;    /* riduci/ingrandisci a piacere */
+    }
+    .info-section br {            /* se hai <br> nel markup li neutralizzi */
+        display: none;
+    }
+
+    /* ----- 2. Immagine principale ---------------------------------- */
+    .container .row img.img-fluid.w-80,
+    .container .row img.img-fluid.w-55 {   /* entrambe le possibili larghezze */
+        margin-top: 0;             /* niente spazio sopra */
+        margin-bottom: 1rem;       /* ≈ 16 px sotto l’immagine (verso i bottoni) */
+    }
+
+    /* ----- 3. Gruppo di bottoni (tab) ------------------------------ */
+    #myTab.btn-group {
+        margin-top: 0.5rem;        /* piccolo distacco sopra i bottoni */
+    }
 }
