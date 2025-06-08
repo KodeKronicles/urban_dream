@@ -4,20 +4,11 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Exhibition</title>
-      <!-- ADD PNG ICON FOR THE TAB VIEW Favicons -->
-<!-- Favicon per tutti i browser -->
-<link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
-
-<!-- Favicon per Safari e dispositivi Apple -->
-<link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png">
-
-<!-- Favicon per i browser moderni -->
-<link rel="manifest" href="img/favicon_io/site.webmanifest">
-
-      <!-- Google Font: Inter -->
+      <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png">
+      <link rel="manifest" href="img/favicon_io/site.webmanifest">
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-      <!-- Bootstrap CSS -->
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
       <link rel="stylesheet" href="css/map.css">
@@ -28,7 +19,6 @@
 
       <nav class="navbar navbar-expand-lg">
          <div class="container-fluid">
-            <!-- change class to just container to move logo -->
             <a class="navbar-brand" href="index.html">
             <img src="img/circle_icon.png" alt="Unbuilt City Logo" width="55" height="55" class="d-inline-block align-text-top">
             </a>
@@ -57,10 +47,8 @@
          </div>
       </nav>
 
-
-      <div class="container mt-5"> <!-- mt-5 is a class that adds a margin-top spacing of 3rem (or 48px) to an HTML element -->
-         <div class="row align-items-start">             <!-- definisce come allineare gli elementi (colonne) all'interno di una riga (row) all'inizio della riga stessa, ovvero in alto -->
-            <!-- Colonna Testo -->
+      <div class="container mt-5">
+         <div class="row align-items-start">
             <div class="col-md-6 info-section mt-0 pt-0">
                <h1>The Exhibition</h1>
                <h2>Exploring the Boundaries of Architecture</h2>
@@ -74,11 +62,10 @@
                 </p>
                </br>
             </br>
-
             </div>
 
             <div class="col-md-6">
-                <img class="img-fluid w-80" src="img/exhibition/DALL·E 2025-03-14 17.38.45 - A wide, horizontal black and white minimalist sketch of a futuristic cityscape. The drawing features continuous sleek skyscrapers, floating platforms, 2.jpeg" alt="">
+                <img class="img-fluid" src="img/exhibition/DALL·E 2025-03-14 17.38.45 - A wide, horizontal black and white minimalist sketch of a futuristic cityscape. The drawing features continuous sleek skyscrapers, floating platforms, 2.jpeg" alt="">
             </div>
             <div class="btn-group" id="myTab" role="tablist">
                <button type="button" class="btn btn-outline-danger filter-btn active" id="space-tab" data-bs-toggle="pill" data-bs-target="#space" role="tab" aria-controls="space" aria-selected="true">SPACE</button>
@@ -87,8 +74,6 @@
                <button type="button" class="btn btn-outline-danger filter-btn" id="context-tab" data-bs-toggle="pill" data-bs-target="#context" role="tab" aria-controls="context" aria-selected="false">CONTEXT</button>
                <button type="button" class="btn btn-outline-danger filter-btn" id="ideals-tab" data-bs-toggle="pill" data-bs-target="#ideals" role="tab" aria-controls="ideals" aria-selected="false">IDEALS</button>
              </div>
-             
-          
         </div>
 
         <div class="col-12">
@@ -103,9 +88,7 @@
             <div class="col-md-6 info-section order-2">
                <h2>In Space — How Architecture Redefines Geography</h2>
                <p>Space is never just a container — it’s constructed, contested, imagined. Architecture doesn’t only fill space; it defines how we move, dwell, gather, escape. This section explores spatial visions that stretch the limits: cities that float, buildings that move, environments shaped by data or desire. Here, space becomes something elastic, reactive, alive.</p>
-
                <p>You’ll encounter structures that dissolve boundaries, architectures without sites, and geographies rewritten by technology or ideology. These works reject fixed grids in favor of fluid systems, ephemeral zones, radical forms of inhabitation. In each case, space is not a given — it’s an argument, a question, a proposal.</p>
-
                </br>
                <div class="btn-group" role="group" aria-label="Region filters">
                 <button type="button" class="btn btn-outline-danger filter-btn" data-filter="global">GLOBAL</button>
@@ -115,15 +98,9 @@
                </div>
             </div>
             </div>
-      
-            <div class="card-wrapper">
-
-
-            </div>
-
+            <div class="card-wrapper"></div>
          </div>
 
-            
          <div class="tab-pane fade" id="time" role="tabpanel">
             <div class="row align-items-start">
 
@@ -131,22 +108,19 @@
                <img class="img-fluid" src="img/exhibition/clock_transparent.png" alt="">
             </div>
 
-
             <div class="col-md-6 info-section order-2">
                <h2>In Time — How Architecture Shapes and Is Shaped by History</h2>
                <p>Architecture is shaped by time — and shapes it in return. Every project captures a temporal tension: the urgency of the present, the weight of the past, the pull of imagined futures. In this section, time is not linear but layered. You'll move across decades and ideologies, from mid-century utopias to post-digital experiments, tracing how each era leaves its mark on space.</p>
                <p>Some projects resurrect forgotten traditions; others anticipate worlds not yet possible. Time appears as ruin, as memory, as glitch. Whether fast-forwarding into speculative futures or slowing down to reclaim lost rhythms, these works ask what it means to build in a moment — and for moments yet to come.</p>
-</br>
+               </br>
                <div class="btn-group" role="group" aria-label="Time filters">
                   <button type="button" class="btn btn-outline-danger filter-btn" data-filter="before-2000">BEFORE 2000</button>
                   <button type="button" class="btn btn-outline-danger filter-btn" data-filter="after-2000">AFTER 2000</button>
                </div>
             </div>
          </div>
-
          <div class="card-wrapper"></div>
          </div>
-
 
          <div class="tab-pane fade" id="reality" role="tabpanel">
             <div class="row align-items-start">
@@ -157,11 +131,8 @@
                <div class="col-md-6 info-section order-2">
                   <h2>In Reality — From Speculative Concepts to Realized Projects</h2>
                   <p>Not everything here was built — but that doesn’t make it any less real. Architecture begins in the imaginary: sketches, dreams, provocations that test the boundaries of what can be made. This section navigates that in-between space where speculation meets intention. Some projects remain unbuilt manifestos; others materialized in altered forms. All of them reveal the power of architectural thought to shape reality, even when it never touches the ground.</p>
-
-<p>You’ll find virtual cities, paper megastructures, and proposals too radical for their time. But you’ll also see how these visions influence culture, policy, and the built world. The unbuilt speaks loudly — challenging norms, expanding vocabularies, bending the rules of what counts as architecture. Reality, here, is porous. What matters isn’t always what stands, but what stirs.</p>
+                  <p>You’ll find virtual cities, paper megastructures, and proposals too radical for their time. But you’ll also see how these visions influence culture, policy, and the built world. The unbuilt speaks loudly — challenging norms, expanding vocabularies, bending the rules of what counts as architecture. Reality, here, is porous. What matters isn’t always what stands, but what stirs.</p>
                   <br>
-              
-                  
                <div class="btn-group" role="group" aria-label="Reality filters">
                   <button type="button" class="btn btn-outline-danger filter-btn" data-filter="in-theory">IN THEORY</button>
                   <button type="button" class="btn btn-outline-danger filter-btn" data-filter="in-practice">IN PRACTICE</button>
@@ -174,7 +145,7 @@
          <div class="tab-pane fade" id="context" role="tabpanel">
             <div class="row align-items-start">
 
-    <div class="col-md-6 order-1">
+            <div class="col-md-6 order-1">
                <img class="img-fluid" src="img/exhibition/ai.png" alt="">
             </div>
 
@@ -192,27 +163,21 @@
                </div>
             </div>
          </div>
-
          <div class="card-wrapper"></div>
          </div>
 
-
          <div class="tab-pane fade" id="ideals" role="tabpanel">
-
             <div class="row align-items-start">
                <div class="col-md-6 order-1">
                   <img class="img-fluid" src="img/exhibition/futuro_transparent_small.png" alt=""
                   style="width:70%;">
-                            </div>
+                  </div>
    
                <div class="col-md-6 info-section order-2">
                   <h2>In Ideals — The Values Behind Architectural Concepts</h2>
                   <p>Each architectural line embodies a stance—toward order or disruption, harmony or provocation. Buildings are visible values: blueprints that decide who belongs, how we live, what we keep, and what we erase. Whether utopian or dystopian, every project asks more questions than it answers.</p>
-
-<p>Here, ideals become concrete. You’ll see megastructures of hope, vertical ecologies, inflatable critiques of tradition, and gravity-defying virtual worlds. Loud or quiet, each one challenges us: what world will we build, and who gets to build it?</p>
-
-               </br>
-
+                  <p>Here, ideals become concrete. You’ll see megastructures of hope, vertical ecologies, inflatable critiques of tradition, and gravity-defying virtual worlds. Loud or quiet, each one challenges us: what world will we build, and who gets to build it?</p>
+                  </br>
                   <div class="btn-group" role="group" aria-label="Ideals filters">
                   <button type="button" class="btn btn-outline-danger filter-btn" data-filter="utopian">UTOPIAN</button>
                   <button type="button" class="btn btn-outline-danger filter-btn" data-filter="dystopian">DYSTOPIAN</button>
@@ -221,14 +186,11 @@
                </div>
             </div>
          </div>
-
          <div class="card-wrapper"></div>
-
          </div>
       </div>
       </div>
       </div>
-   
          
         <footer class="site-footer text-center">
          <div>

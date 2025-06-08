@@ -4,19 +4,11 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Map</title>
-      <!-- ADD PNG ICON FOR THE TAB VIEW Favicons -->
-<!-- Favicon per tutti i browser -->
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
-
-<!-- Favicon per Safari e dispositivi Apple -->
 <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png">
-
-<!-- Favicon per i browser moderni -->
 <link rel="manifest" href="img/favicon_io/site.webmanifest">
-      <!-- Google Font: Inter -->
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-      <!-- Bootstrap CSS -->
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
       <link rel="stylesheet" href="css/map.css">
@@ -24,7 +16,6 @@
    <body>
       <nav class="navbar navbar-expand-lg">
          <div class="container">
-            <!-- change class to just container to move logo -->
             <a class="navbar-brand" href="index.html">
             <img src="img/circle_icon.png" alt="Unbuilt City Logo" width="55" height="55" class="d-inline-block align-text-top">
             </a>
@@ -55,7 +46,6 @@
       <div class="container mt-5">
          <div class="row align-items-start">
          
-            <!-- Colonna Testo -->
             <div class="col-md-6 info-section mt-0 pt-0">
                <h1>The Map</h1>
                <h2>Navigate Visionary Urban Concepts.</h2>
@@ -63,7 +53,7 @@
                </p>
                <p>Click on the circles to discover each project's details, including its context, ideals, and historical significance.</p>
             </div>
-            <!-- Colonna Immagine -->
+
             <div class="col-md-6 mt-0 pt-0 custom-margin">
                <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <image xlink:href="img/map/all.png"></image>
@@ -169,13 +159,10 @@
                       </g>
                   </a>
               </svg>
-              
-              
             </div>
          </div>
       </div>
 
-      <!-- Tabella degli item -->
       <div class="table-container">
          <table class="table" id="Table">
             <thead>
@@ -183,7 +170,6 @@
                   <th onclick="sortTable(0, this)">ID<span class="sort-arrow">↑</span></th>
                   <th onclick="sortTable(1, this)">Title<span class="sort-arrow">↑</span></th>
                   <th onclick="sortTable(2, this)">Year<span class="sort-arrow">↑</span></th>
-                  <!-- Modifica l'header della colonna Status -->
                   <th class="status-header">
                      <div class="custom-dropdown">
                         <div class="dropdown-trigger" onclick="toggleStatusDropdown()">
@@ -196,42 +182,37 @@
                         </div>
                      </div>
                   </th>
-                    <!-- Context Dropdown -->
-<th class="status-header">
-   <div class="custom-dropdown">
-       <div class="dropdown-trigger" onclick="toggleContextDropdown()">
-           Context
-           <span class="sort-arrow">↑</span>
-       </div>
-       <div id="contextDropdown" class="dropdown-menu">
-           <div class="menu-item" onclick="filterByContext('urban')">Urbanism</div>
-           <div class="menu-item" onclick="filterByContext('artistic')">Artistic Intervention</div>
-           <div class="menu-item" onclick="filterByContext('radical')">Radical Living</div>
-           <div class="menu-item" onclick="filterByContext('technological')">Tech Infrastructure</div>
-       </div>
-   </div>
-</th>
-
-<!-- Ideals Dropdown -->
-<th class="status-header">
-   <div class="custom-dropdown">
-       <div class="dropdown-trigger" onclick="toggleIdealsDropdown()">
-           Ideal
-           <span class="sort-arrow">↑</span>
-       </div>
-       <div id="idealsDropdown" class="dropdown-menu">
-           <div class="menu-item" onclick="filterByIdeals('utopian')">Utopian</div>
-           <div class="menu-item" onclick="filterByIdeals('dystopian')">Dystopian</div>
-           <div class="menu-item" onclick="filterByIdeals('innovative')">Innovative</div>
-           <div class="menu-item" onclick="filterByIdeals('deconstructive')">Deconstructive</div>
-       </div>
-   </div>
-</th>       <th></th>
-               </tr>
+                <th class="status-header">
+                <div class="custom-dropdown">
+                    <div class="dropdown-trigger" onclick="toggleContextDropdown()">
+                        Context
+                        <span class="sort-arrow">↑</span>
+                    </div>
+                    <div id="contextDropdown" class="dropdown-menu">
+                        <div class="menu-item" onclick="filterByContext('urban')">Urbanism</div>
+                        <div class="menu-item" onclick="filterByContext('artistic')">Artistic Intervention</div>
+                        <div class="menu-item" onclick="filterByContext('radical')">Radical Living</div>
+                        <div class="menu-item" onclick="filterByContext('technological')">Tech Infrastructure</div>
+                    </div>
+                </div>
+                </th>
+                <th class="status-header">
+                <div class="custom-dropdown">
+                    <div class="dropdown-trigger" onclick="toggleIdealsDropdown()">
+                        Ideal
+                        <span class="sort-arrow">↑</span>
+                    </div>
+                    <div id="idealsDropdown" class="dropdown-menu">
+                        <div class="menu-item" onclick="filterByIdeals('utopian')">Utopian</div>
+                        <div class="menu-item" onclick="filterByIdeals('dystopian')">Dystopian</div>
+                        <div class="menu-item" onclick="filterByIdeals('innovative')">Innovative</div>
+                        <div class="menu-item" onclick="filterByIdeals('deconstructive')">Deconstructive</div>
+                    </div>
+                </div>
+                </th><th></th></tr>
             </thead>
 
             <tbody id="dynamicTableBody">
-               
             </tbody>
          </table>
       </div>
@@ -239,6 +220,7 @@
       <div class="back-button-container hidden">
          <button id="backButton" class="back-button">Back</button>
       </div>
+
      <footer class="site-footer text-center">
          <div>
             <p>&copy; 2025. Urban Dream — The Architectures of Tomorrow. All rights reserved.</p>
@@ -248,19 +230,7 @@
          </div> 
       </footer>
 
-      <!-- 3. CARICA PRIMA Bootstrap POI il tuo script -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/map.js"></script>
-       <!-- FOOTER -->
- <!-- 
-    <footer>
-        <p>URBAN DREAM</p>
-        <p>© 2025</p>
-        <a href="https://github.com/KodeKronicles" target="_blank">
-            <img src="img/GHLogo.png" alt="GitHub" class="github-logo">
-        </a>
-    </footer>
-   -->
-      
-   </body>
+</body>
 </html>

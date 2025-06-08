@@ -39,19 +39,6 @@ h1 {
     font-family: 'Inter', sans-serif;
 }
 
-.navbar-breaker {
-    width: 90%;
-    height: 2px; /* Imposta un'altezza per renderlo visibile */
-    background-color: #d02d00; /* Imposta un colore di sfondo per renderlo visibile */
-    margin-left: auto; /* Fa partire l'elemento da destra */
-}
-
-.navbar-nav a.nav-link.active {
-    color: #d02e02;
-    font-weight: bold;
-    font-family: 'Inter', sans-serif;
-}
-
 .table-container {
     width: 100%;
     max-width: 100%;
@@ -240,27 +227,6 @@ thead tr {
     font-size: 14px;
     margin-top: 40px;
 } 
-
-
-/*******************
-FOOTER (Alice style)
-********************/
-/*
-footer {
-    padding: 5px 0;
-    width: 100%;
-    background-color: #D02E02;
-    color: white;
-    text-align: center;
-    position: relative;
-}
-*/
-.github-logo {
-    width: 65px;
-    height: auto;
-    display: block;
-    margin: 10px auto 0;
-}
     
 /* Riduci la larghezza della colonna ID e Riduci il padding orizzontale tra le colonne ID e Title */
 .table td:first-child,
@@ -315,12 +281,6 @@ a {
     margin-bottom: 1rem;
     color: #d02d00;
     text-align: justify;
-}
-
-.underline {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    text-decoration-thickness: 1.4px; /* Aumenta lo spessore della linea */
 }
 
 .dropdown-menu.show {
@@ -401,13 +361,6 @@ a {
         margin-bottom: 0.8rem;
     }
 
-    /* Image column */
-    .custom-margin-left {
-        margin-left: 0;
-        padding: 0 15px;
-    }
-
-    /* Table adjustments */
     .table-container {
         margin: 15px 0;
         padding: 0 10px;
@@ -422,7 +375,6 @@ a {
         min-width: 100%;
     }
 
-    /* Impedisce il taglio della tabella su mobile */
     .table-container {
         overflow-x: auto !important; /* Abilita lo scroll orizzontale se serve */
         display: block !important;
@@ -440,17 +392,10 @@ a {
         margin-bottom: 5px;
     }
 
-    .github-logo {
-        width: 50px;
-    }
-
     body {
         padding: 0 10px;
     }
 
-
-
-/* 1) Container .hidden-info: padding orizzontale ridotto */
 .hidden-info {
     max-height: 80vh;            /* limite di altezza */
     overflow-y: auto;
@@ -523,33 +468,6 @@ image {
     display: block;
 }
 
-/* solo per exhibition pare*/
-
-.btn-group {
-    margin-bottom: 3rem; /* Aggiunge spazio sotto i bottoni */
-}
-
-.filter-btn {
-    margin: 0 5px; /* Mantiene i margini laterali dei bottoni */
-}
-
-/* fine solo per exhibition*/
-
-.region-btn-group {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 1.5rem;
-}
-
-.card-img-top {
-    object-fit: cover;
-    height: 250px;
-    width: 100%;
-}
-
-
 .tab-pane .row > .col-md-6 img {
     max-width: 80%;
     height: auto;
@@ -558,7 +476,6 @@ image {
     display: block;
     margin: 0 auto;
 }
-
 
 /* Reduce the height of the text inside the card */
 .card-body {
@@ -581,6 +498,12 @@ image {
     height: 100%;
 }
 
+.card-img-top {
+    object-fit: cover;
+    height: 250px;
+    width: 100%;
+}
+
 .card:hover {
     transform: scale(1.03);
     border: 1px solid rgba(3, 3, 3, 0.6);  /* Increase border visibility */
@@ -594,18 +517,6 @@ image {
     font-size: 1rem;
     font-weight: 400;
     color: #080808;
-}
-
-/* Remove underline and set color for card titles */
-.card-title a {
-    text-decoration: none;  /* Removes underline */
-    color: #050505 !important;  /* Sets color to match theme */
-}
-
-/* Ensure underline appears ONLY on hover */
-.card-title a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px !important;
 }
 
 
@@ -634,4 +545,19 @@ image {
         margin-top: 0.5rem;        /* piccolo distacco sopra i bottoni */
     }
 }
+
+
+/* === EXHIBITION-ONLY CLASSES === */
+/* solo per exhibition*/
+
+.btn-group {
+    margin-bottom: 3rem; /* Aggiunge spazio sotto i bottoni */
+}
+
+.filter-btn {
+    margin: 0 5px; /* Mantiene i margini laterali dei bottoni */
+}
+
+/* fine solo per exhibition*/
+
 
