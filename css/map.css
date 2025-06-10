@@ -290,6 +290,7 @@ thead tr {
   flex: 0 0 30%;
   max-width: 400px;
   text-align: center;
+  align-self: center;
 }
 
 .details-right {
