@@ -1,72 +1,117 @@
-document.addEventListener("DOMContentLoaded", function() {
-    fetch('data2.json')  
+/* ============================================
+   1. INIZIALIZZAZIONE - DOM Ready e JSON Fetch
+=============================================== */
+document.addEventListener("DOMContentLoaded", function () {
+    backButtonContainer = document.querySelector(".back-button-container");
+    backButton = document.getElementById("backButton");
+
+    backButton.addEventListener("click", handleBackButton);
+    setupImageMapClicks();
+    setupTableClicks();
+
+    fetchAndRenderData();
+});
+
+/* ============================================
+   2. FETCH DATI E COSTRUZIONE TABELLA
+=============================================== */
+function fetchAndRenderData() {
+    fetch('data2.json')
         .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
+            if (!response.ok) throw new Error('Network response was not ok');
             return response.json();
         })
         .then(data => {
-        const tableBody = document.getElementById('dynamicTableBody');
-        if (!tableBody) {
-          console.error("Elemento #dynamicTableBody non trovato!");
-          return;
-        }
-  
-        data.items.forEach(item => {
-          const mainRow = document.createElement('tr');
-          mainRow.className = `item ${item.info.Status.toLowerCase()} ${item.info.Context.toLowerCase().replace(/\s+/g, '_')} ${item.info.Ideals.toLowerCase()}`;
-          mainRow.id = `id${item.id}`;
-  
-          mainRow.innerHTML = `
-            <td>${item.id}</td>
-            <td class="filter-item">${item.shortName}</td>
-            <td class="filter-year">${item.info.Date}</td>
-            <td class="filter-status">${item.info.Status}</td>
-            <td><span class="filter-context">${item.info.Context}</span></td>
-            <td><span class="filter-ideals">${item.info.Ideals}</span></td>
-            <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
-          `;
-  
-          const detailRow = document.createElement('tr');
-          detailRow.className = 'hidden-info';
-          detailRow.style.display = 'none';
-          detailRow.innerHTML = `
-            <td colspan="7">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-4 details-left">
-                    <img class="film-image" src="${item.image2}" alt="${item.shortName} Image">
-                  </div>
-                  <div class="col-md-8 details-right">
-                    <p>${item.mediumInfo || item.shortInfo}</p>
-                    <p>Location: ${item.info.Location}</p>
-                    <p>Check out if you like: ${item.shortInfo}</p>
-                    <p>Recommended by: ${item.info["Recommended by"]}</p>
-                    <a href="${item.info.Link}" target="_blank" class="read-more">Read More</a>
-                  </div>
-                </div>
-              </div>
-            </td>
-          `;
-  
-          tableBody.appendChild(mainRow);
-          tableBody.appendChild(detailRow);
+            const tableBody = document.getElementById('dynamicTableBody');
+            if (!tableBody) return;
+            data.items.forEach(item => insertTableRows(item, tableBody));
         });
-      })
-  });
+}
 
-  
-let backButtonContainer;
-let backButton;
+function insertTableRows(item, tableBody) {
+    const mainRow = document.createElement('tr');
+    mainRow.className = `item ${item.info.Status.toLowerCase()} ${item.info.Context.toLowerCase().replace(/\s+/g, '_')} ${item.info.Ideals.toLowerCase()}`;
+    mainRow.id = `id${item.id}`;
+    mainRow.innerHTML = `
+        <td>${item.id}</td>
+        <td class="filter-item">${item.shortName}</td>
+        <td class="filter-year">${item.info.Date}</td>
+        <td class="filter-status">${item.info.Status}</td>
+        <td><span class="filter-context">${item.info.Context}</span></td>
+        <td><span class="filter-ideals">${item.info.Ideals}</span></td>
+        <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
+    `;
+
+    const detailRow = document.createElement('tr');
+    detailRow.className = 'hidden-info';
+    detailRow.style.display = 'none';
+    detailRow.innerHTML = `
+        <td colspan="7">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 details-left">
+                        <img class="film-image" src="${item.image2}" alt="${item.shortName} Image">
+                    </div>
+                    <div class="col-md-8 details-right">
+                        <p>${item.mediumInfo || item.shortInfo}</p>
+                        <p>Location: ${item.info.Location}</p>
+                        <p>Check out if you like: ${item.shortInfo}</p>
+                        <p>Recommended by: ${item.info["Recommended by"]}</p>
+                        <a href="${item.info.Link}" target="_blank" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </td>
+    `;
+
+    tableBody.appendChild(mainRow);
+    tableBody.appendChild(detailRow);
+}
+
+/* ============================================
+   3. FUNZIONI DI INTERAZIONE
+=============================================== */
+function toggleInfo(event, element) {
+    event.stopPropagation();
+    const mainRow = element.closest('tr');
+    const infoRow = mainRow.nextElementSibling;
+    if (!infoRow || !infoRow.classList.contains('hidden-info')) return;
+
+    if (infoRow.style.display === "none" || !infoRow.style.display) {
+        infoRow.style.display = "table-row";
+        mainRow.classList.add("expanded");
+        element.textContent = "×";
+    } else {
+        infoRow.style.display = "none";
+        mainRow.classList.remove("expanded");
+        element.textContent = "+";
+    }
+}
+
+function filterTable(value, selector) {
+    let hasMatch = false;
+    document.querySelectorAll("tbody tr.item").forEach(row => {
+        const cell = row.querySelector(selector);
+        const match = cell && cell.textContent.trim().toLowerCase() === value.toString().toLowerCase();
+        row.style.display = match ? "" : "none";
+        if (match) hasMatch = true;
+    });
+    checkBackButton();
+    updateImage(hasMatch ? value : "default");
+}
+
+function checkBackButton() {
+    const selectedItems = document.querySelectorAll("tr.item[style='display: none;']");
+    backButtonContainer.classList.toggle("hidden", selectedItems.length === 0);
+}
 
 function updateImage(category) {
     const svgImage = document.querySelector('svg image');
     if (!svgImage) return;
 
-    const normalizedCategory = category?.toLowerCase().replace(/\s+/g, '-') || 'default'    
+    const normalizedCategory = category?.toLowerCase().replace(/\s+/g, '-') || 'default';
     let imagePath = 'img/map/all.png';
-    
+
     switch(normalizedCategory) {
         case 'unbuilt': imagePath = 'img/map/unbuilt.png'; break;
         case 'built': imagePath = 'img/map/built.png'; break;
@@ -83,62 +128,20 @@ function updateImage(category) {
     svgImage.setAttribute('xlink:href', imagePath);
 }
 
-function filterTable(value, selector) {
-    let hasMatch = false;
-    
-    document.querySelectorAll("tbody tr.item").forEach(row => {
-        const cell = row.querySelector(selector);
-        const match = cell && cell.textContent.trim().toLowerCase() === value.toString().toLowerCase();
-
-        row.style.display = match ? "" : "none";
-        if(match) hasMatch = true;
-    });
-
-    checkBackButton();
-    updateImage(hasMatch ? value : "default");
-}
-
-function checkBackButton() {
-    const selectedItems = document.querySelectorAll("tr.item[style='display: none;']");
-    backButtonContainer.classList.toggle("hidden", selectedItems.length === 0);
-}
-
-function toggleInfo(event, element) {
-    event.stopPropagation();
-    
-    const mainRow = element.closest('tr');
-    const infoRow = mainRow.nextElementSibling;
-
-    if (!infoRow || !infoRow.classList.contains('hidden-info')) return;
-
-    if (infoRow.style.display === "none" || !infoRow.style.display) {
-        infoRow.style.display = "table-row";
-        mainRow.classList.add("expanded");
-        element.textContent = "×";
-    } else {
-        infoRow.style.display = "none";
-        mainRow.classList.remove("expanded");
-        element.textContent = "+";
-    }
-}
-
 function sortTable(columnIndex, element) {
     const table = document.getElementById("Table");
     const tbody = table.querySelector("tbody");
     const rows = Array.from(tbody.querySelectorAll("tr:not(.hidden-info)"));
     const direction = element.classList.contains("desc") ? "asc" : "desc";
 
-    // Salva stato espanso
     const expandedRows = [];
     document.querySelectorAll("tr.expanded").forEach(row => {
         expandedRows.push(row.id);
     });
 
-    // Aggiorna indicatori
     document.querySelectorAll("th").forEach(th => th.classList.remove("desc"));
     if (direction === "desc") element.classList.add("desc");
-    
-    // Salva le righe nascoste associate
+
     const hiddenRows = [];
     rows.forEach(row => {
         const hiddenRow = row.nextElementSibling;
@@ -151,7 +154,6 @@ function sortTable(columnIndex, element) {
         }
     });
 
-    // Ordina righe principali
     rows.sort((rowA, rowB) => {
         const cellA = rowA.cells[columnIndex].textContent.trim();
         const cellB = rowB.cells[columnIndex].textContent.trim();
@@ -162,33 +164,27 @@ function sortTable(columnIndex, element) {
                 ? parseFloat(cellA) - parseFloat(cellB) 
                 : parseFloat(cellB) - parseFloat(cellA);
         }
-        
+
         return direction === "asc"
             ? cellA.localeCompare(cellB, undefined, { numeric: true })
             : cellB.localeCompare(cellA, undefined, { numeric: true });
     });
 
-    // Ricostruisci tabella
     tbody.innerHTML = "";
     rows.forEach(row => {
         tbody.appendChild(row);
-        
-        // Trova e aggiungi riga nascosta associata
         const hiddenRowData = hiddenRows.find(hr => hr.mainId === row.id);
         if (hiddenRowData) {
             tbody.appendChild(hiddenRowData.element);
         }
     });
 
-    // Ripristina stato espanso
     expandedRows.forEach(id => {
         const row = document.getElementById(id);
         if (row) {
             row.classList.add("expanded");
             const toggleBtn = row.querySelector(".toggle-info");
             if (toggleBtn) toggleBtn.textContent = "×";
-            
-            // Ripristina visualizzazione riga nascosta
             const infoRow = row.nextElementSibling;
             if (infoRow && infoRow.classList.contains("hidden-info")) {
                 infoRow.style.display = "table-row";
@@ -197,13 +193,54 @@ function sortTable(columnIndex, element) {
     });
 }
 
+/* ============================================
+   4. EVENTI UTENTE
+=============================================== */
+function handleBackButton() {
+    document.querySelectorAll("tr.item").forEach(row => {
+        row.style.display = "";
+    });
+    checkBackButton();
+    updateImage("default");
+}
+
+function setupImageMapClicks() {
+    document.querySelectorAll('.image-mapper-shape').forEach(circle => {
+        circle.addEventListener('click', function(e) {
+            const anchor = e.target.closest('a');
+            const itemId = anchor?.getAttribute('xlink:title')?.replace('id', '');
+            if(itemId) {
+                filterTable(itemId, 'td:first-child');
+                document.querySelector('.table-container')?.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+}
+
+function setupTableClicks() {
+    document.querySelector('tbody').addEventListener('click', function(e) {
+        if (e.target.classList.contains('toggle-info')) {
+            toggleInfo(e, e.target);
+        }
+        if (e.target.classList.contains('filter-year') || 
+            e.target.classList.contains('filter-context') ||
+            e.target.classList.contains('filter-status') ||
+            e.target.classList.contains('filter-ideals')) {
+            const selector = `.${e.target.classList[0]}`;
+            filterTable(e.target.textContent, selector);
+        }
+    });
+}
+
+/* ============================================
+   5. DROPDOWN & FILTRI AVANZATI
+=============================================== */
 function toggleStatusDropdown() {
     const dropdown = document.getElementById("statusDropdown");
     const arrow = document.querySelector(".status-header .sort-arrow");
-    
     dropdown.classList.toggle("show");
     arrow.classList.toggle("desc");
-    
+
     document.querySelectorAll(".dropdown-menu").forEach(menu => {
         if (menu !== dropdown) {
             menu.classList.remove("show");
@@ -217,14 +254,11 @@ function filterByStatus(status) {
     toggleStatusDropdown();
 }
 
-// Context Dropdown
 function toggleContextDropdown() {
     const dropdown = document.getElementById("contextDropdown");
     const arrow = document.querySelector(".status-header:nth-child(5) .sort-arrow");
-    
     dropdown.classList.toggle("show");
     arrow.classList.toggle("desc");
-    
     closeOtherDropdowns(dropdown);
 }
 
@@ -233,14 +267,11 @@ function filterByContext(context) {
     toggleContextDropdown();
 }
 
-// Ideals Dropdown
 function toggleIdealsDropdown() {
     const dropdown = document.getElementById("idealsDropdown");
     const arrow = document.querySelector(".status-header:nth-child(6) .sort-arrow");
-    
     dropdown.classList.toggle("show");
     arrow.classList.toggle("desc");
-    
     closeOtherDropdowns(dropdown);
 }
 
@@ -249,7 +280,6 @@ function filterByIdeals(ideal) {
     toggleIdealsDropdown();
 }
 
-// Funzione helper per chiudere altri dropdown
 function closeOtherDropdowns(currentDropdown) {
     document.querySelectorAll(".dropdown-menu").forEach(menu => {
         if (menu !== currentDropdown) {
@@ -259,52 +289,9 @@ function closeOtherDropdowns(currentDropdown) {
     });
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Initialize global elements
-    backButtonContainer = document.querySelector(".back-button-container");
-    backButton = document.getElementById("backButton");
-
-    // Back button handler
-    backButton.addEventListener("click", function() {
-        document.querySelectorAll("tr.item").forEach(row => {
-            row.style.display = "";
-        });
-        checkBackButton();
-        updateImage("default");
-    });
-
-    // Map circles click handler
-    document.querySelectorAll('.image-mapper-shape').forEach(circle => {
-        circle.addEventListener('click', function(e) {
-            const anchor = e.target.closest('a');
-            const itemId = anchor?.getAttribute('xlink:title')?.replace('id', '');
-            if(itemId) {
-                filterTable(itemId, 'td:first-child');
-                document.querySelector('.table-container')?.scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-    });
-
-    // Delegazione eventi per la tabella
-    document.querySelector('tbody').addEventListener('click', function(e) {
-        // Gestione toggle info
-        if (e.target.classList.contains('toggle-info')) {
-            toggleInfo(e, e.target);
-        }
-        
-        // Gestione filtri
-        if (e.target.classList.contains('filter-year') || 
-            e.target.classList.contains('filter-context') ||
-            e.target.classList.contains('filter-status') ||
-            e.target.classList.contains('filter-ideals')) {
-            
-            const selector = `.${e.target.classList[0]}`;
-            filterTable(e.target.textContent, selector);
-        }
-    });
-});
-
-// Global click handler for dropdowns
+/* ============================================
+   6. CLICK FUORI DAI DROPDOWN
+=============================================== */
 document.addEventListener("click", function(e) {
     if (!e.target.closest(".status-header")) {
         document.querySelectorAll(".dropdown-menu").forEach(menu => menu.classList.remove("show"));

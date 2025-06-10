@@ -1,9 +1,15 @@
+/* ============================================
+   1. INIZIALIZZAZIONE - DOM Ready e JSON Fetch
+=============================================== */
 document.addEventListener("DOMContentLoaded", () => {
   fetch("data2.json")
     .then(res => res.json())
     .then(data => {
       const items = data.items;
 
+      /* ============================================
+         2. GENERAZIONE CARD NEI TAB TEMATICI
+      =============================================== */
       const tabs = {
         space: "Space",
         time: "Time",
@@ -16,9 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const section = document.querySelector(`#${tabId} .card-wrapper`);
         if (!section) return;
 
-        // Imposta classi bootstrap sulla sezione (card-wrapper)
         section.className = "card-wrapper";
-        section.innerHTML = ""; // svuota
+        section.innerHTML = "";
 
         items.forEach(item => {
           const value = item.info[fieldName];
@@ -42,15 +47,16 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       });
 
-      // Funzione filtro
+      /* ============================================
+         3. FUNZIONE DI FILTRAGGIO PER CATEGORIA
+      =============================================== */
       function applyFilter(tabId, filter, shouldScroll = true) {
         const tabPane = document.getElementById(tabId);
         if (!tabPane) return;
-      
+
         const cards = tabPane.querySelectorAll(".card-wrapper .filter-item");
-      
         let firstVisible = null;
-      
+
         cards.forEach(card => {
           if (card.classList.contains(filter)) {
             card.style.display = "block";
@@ -59,22 +65,20 @@ document.addEventListener("DOMContentLoaded", () => {
             card.style.display = "none";
           }
         });
-      
-        // Scroll se serve
+
         if (shouldScroll && firstVisible) {
           const offset = firstVisible.getBoundingClientRect().top + window.scrollY - 80;
-          window.scrollTo({
-            top: offset,
-            behavior: "smooth"
-          });
+          window.scrollTo({ top: offset, behavior: "smooth" });
         }
-      
+
         tabPane.querySelectorAll(".filter-btn").forEach(b => {
           b.classList.toggle("active", b.getAttribute("data-filter") === filter);
         });
       }
-      
-      // Click filtro
+
+      /* ============================================
+         4. EVENTI FILTRO PER PULSANTI
+      =============================================== */
       document.querySelectorAll(".filter-btn").forEach(btn => {
         btn.addEventListener("click", function () {
           const filter = this.getAttribute("data-filter");
@@ -85,22 +89,23 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       });
 
-      // Scroll morbido al cambio tab
+      /* ============================================
+         5. SCROLL MORBIDO AL CAMBIO TAB
+      =============================================== */
       document.querySelectorAll('#myTab button[data-bs-toggle="pill"]').forEach(button => {
         button.addEventListener("shown.bs.tab", function () {
           const targetId = this.getAttribute("data-bs-target");
           const targetEl = document.querySelector(targetId);
           if (targetEl) {
             const offset = targetEl.getBoundingClientRect().top + window.scrollY - 80;
-            window.scrollTo({
-              top: offset,
-              behavior: "smooth"
-            });
+            window.scrollTo({ top: offset, behavior: "smooth" });
           }
         });
       });
 
-      // Filtro iniziale
+      /* ============================================
+         6. FILTRO INIZIALE E CAMBIO AUTOMATICO TAB
+      =============================================== */
       const defaultFilters = {
         space: "global",
         time: "before-2000",
@@ -118,7 +123,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
 
-      // Applica filtro automatico al cambio tab
       document.querySelectorAll('#myTab button[data-bs-toggle="pill"]').forEach(button => {
         button.addEventListener("shown.bs.tab", function () {
           const tabId = this.getAttribute("data-bs-target")?.replace("#", "");
