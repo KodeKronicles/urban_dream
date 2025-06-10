@@ -1,6 +1,3 @@
-
-// Inserisce dinamicamente le righe della tabella da data2.json
-
 document.addEventListener("DOMContentLoaded", function() {
     fetch('data2.json')  
         .then(response => {
@@ -46,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <p>Location: ${item.info.Location}</p>
                     <p>Check out if you like: ${item.shortInfo}</p>
                     <p>Recommended by: ${item.info["Recommended by"]}</p>
-                    <a href="${item.info.Link}" target="_blank" class="btn-watch-trailer">Read More</a>
+                    <a href="${item.info.Link}" target="_blank" class="read-more">Read More</a>
                   </div>
                 </div>
               </div>

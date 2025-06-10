@@ -1,0 +1,223 @@
+/* ------------------------------------------------------------------ */
+/*  FONT + BASE                                                      */
+/* ------------------------------------------------------------------ */
+@font-face {
+  font-family: "Inter";
+  src: url('../fonts/Inter.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+  color: #d02d00 !important;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+.container {
+  width: 100%;
+  padding-inline: 1rem;
+  margin-inline: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+  align-items: flex-start;
+}
+
+/* ------------------------------------------------------------------ */
+/*  NAVBAR                                                            */
+/* ------------------------------------------------------------------ */
+.navbar-nav a {
+  color: #d02e02;
+  font-family: 'Inter', sans-serif;
+}
+
+.navbar-nav a.nav-link.active {
+  color: #d02e02;
+  font-weight: bold;
+}
+
+.nav-link {
+  margin-inline: 0.5rem;
+}
+
+/* ------------------------------------------------------------------ */
+/*  TESTO INFO-SECTION                                                */
+/* ------------------------------------------------------------------ */
+.info-section {
+  flex: 1 1 45%;
+  min-width: 300px;
+  padding-top: 3rem;
+}
+
+.info-section h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 400;
+  margin: 2rem 0 1rem 0;
+  text-align: left;    
+  color: #d02d00;
+}
+
+.info-section h2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #d02d00;
+  text-align: justify;
+}
+
+.info-section p, .info-section h3 {
+  font-size: 0.95rem;
+  text-align: justify;
+  margin-bottom: 1rem;
+  color: #d02d00;
+  max-width: 600px;
+}
+
+/* ------------------------------------------------------------------ */
+/*  IMMAGINI LATERALI                                                 */
+/* ------------------------------------------------------------------ */
+.col-md-6 img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.tab-pane .row > .col-md-6 img {
+  max-height: 320px;
+  object-fit: contain;
+  width: 100%;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+/* ------------------------------------------------------------------ */
+/*  CARDS                                                             */
+/* ------------------------------------------------------------------ */
+.card {
+  margin: auto;
+  transition: transform 0.3s ease-in-out;
+  border: 1px solid rgba(7, 6, 6, 0.754);
+  background: rgba(255, 255, 255, 0.85);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 250px;
+  width: 100%;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  border: 1px solid rgba(3, 3, 3, 0.6);
+  background: rgba(255, 240, 235, 0.9);
+}
+
+.card-body {
+  padding: 0.5rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 60px;
+}
+
+.card-title {
+  text-align: center;
+  margin: 0.3rem auto;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #080808;
+}
+
+.btn-group {
+  margin-bottom: 3rem;
+}
+
+.filter-btn {
+  margin: 0 5px;
+}
+
+/* ------------------------------------------------------------------ */
+/*  FOOTER                                                            */
+/* ------------------------------------------------------------------ */
+.site-footer {
+  background-color: white;
+  color: #d02d00;
+  text-align: center;
+  padding: 2vw 0;
+  border-top: 2px solid #d02d00;
+  font-size: 14px;
+  margin-top: 40px;
+} 
+
+.site-footer a {
+  color: #333;
+  margin-top: 0.2rem;
+  display: inline-block;
+}
+
+.site-footer i {
+  font-size: 1.4rem;
+}
+
+/* ------------------------------------------------------------------ */
+/*  STILI RESPONSIVE                                                 */
+/* ------------------------------------------------------------------ */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .info-section {
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+  }
+
+  .info-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .info-section br {
+    display: none;
+  }
+
+  .col-md-6 img {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  #myTab.btn-group {
+    margin-top: 0.5rem;
+  }
+
+  .container.mt-5 {
+    margin-top: 1rem !important;
+    padding: 0 15px;
+  }
+
+  footer {
+    padding: 15px 10px;
+  }
+
+  footer p {
+    margin-bottom: 5px;
+  }
+
+  body {
+    padding: 0 10px;
+  }
+}
