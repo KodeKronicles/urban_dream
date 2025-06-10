@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!section) return;
 
         // Imposta classi bootstrap sulla sezione (card-wrapper)
-        section.className = "row row-cols-1 row-cols-md-3 g-4 card-wrapper";
+        section.className = "card-wrapper";
         section.innerHTML = ""; // svuota
 
         items.forEach(item => {

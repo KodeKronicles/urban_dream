@@ -124,15 +124,6 @@ body {
   background: rgba(255, 240, 235, 0.9);
 }
 
-.card-body {
-  padding: 0.5rem 1rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 60px;
-}
-
 .card-title {
   text-align: center;
   margin: 0.3rem auto;
@@ -151,9 +142,17 @@ body {
   margin: 0 5px;
 }
 
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+}
+
 /* ------------------------------------------------------------------ */
 /*  FOOTER                                                            */
 /* ------------------------------------------------------------------ */
+
 .site-footer {
   background-color: white;
   color: #d02d00;
@@ -175,7 +174,7 @@ body {
 }
 
 /* ------------------------------------------------------------------ */
-/*  STILI RESPONSIVE                                                 */
+/*  STILI RESPONSIVE                                                  */
 /* ------------------------------------------------------------------ */
 @media (max-width: 768px) {
   .row {
@@ -221,5 +220,19 @@ body {
 
   body {
     padding: 0 10px;
+  }
+}
+
+/* Responsive: 2 colonne su tablet */
+@media (max-width: 992px) {
+  .card-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive: 1 colonna su smartphone */
+@media (max-width: 576px) {
+  .card-wrapper {
+    grid-template-columns: 1fr;
   }
 }
