@@ -236,3 +236,25 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 768px) {
+  .btn-group {
+    margin: 1rem auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.1rem;
+    flex-wrap: nowrap;
+    flex-shrink: 1;
+    max-width: 100%;
+  }
+
+  .filter-btn {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+    line-height: 1;
+    white-space: nowrap;
+    flex: 0 1 auto;     /* non cresce troppo */
+  }
+
+}
