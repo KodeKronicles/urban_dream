@@ -149,6 +149,16 @@ body {
   padding: 2rem;
 }
 
+.card-title a {
+    text-decoration: none;
+    color: #050505 !important;
+}
+
+.card-title a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px !important;
+}
+
 /* ------------------------------------------------------------------ */
 /*  FOOTER                                                            */
 /* ------------------------------------------------------------------ */
