@@ -38,11 +38,12 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="card h-100">
               <img src="${item.image1}" class="card-img-top img-fluid" alt="${item.shortName}">
               <div class="card-body">
-               <h5 class="card-title">${item.shortName}</h5>
+                <h5 class="card-title">
+                  <a href="${item.info.Link}" target="_blank">${item.shortName}</a>
+                </h5>
               </div>
             </div>
           `;
-
           section.appendChild(col);
         });
       });
