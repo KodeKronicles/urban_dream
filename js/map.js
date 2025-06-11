@@ -233,49 +233,29 @@ function setupTableClicks() {
 /* ============================================
    5. DROPDOWN & FILTRI AVANZATI
 =============================================== */
-function toggleStatusDropdown() {
-    const dropdown = document.getElementById("statusDropdown");
-    const arrow = document.querySelector(".status-header .sort-arrow");
-    dropdown.classList.toggle("show");
-    arrow.classList.toggle("desc");
-
-    document.querySelectorAll(".dropdown-menu").forEach(menu => {
-        if (menu !== dropdown) {
-            menu.classList.remove("show");
-            menu.closest("th")?.querySelector(".sort-arrow")?.classList.remove("desc");
-        }
-    });
-}
 
 function filterByStatus(status) {
     filterTable(status === "all" ? "" : status, ".filter-status");
-    toggleStatusDropdown();
-}
-
-function toggleContextDropdown() {
-    const dropdown = document.getElementById("contextDropdown");
-    const arrow = document.querySelector(".status-header:nth-child(5) .sort-arrow");
-    dropdown.classList.toggle("show");
-    arrow.classList.toggle("desc");
-    closeOtherDropdowns(dropdown);
+    toggleDropdown("statusDropdown", 4);
 }
 
 function filterByContext(context) {
     filterTable(context === "all" ? "" : context, ".filter-context");
-    toggleContextDropdown();
-}
-
-function toggleIdealsDropdown() {
-    const dropdown = document.getElementById("idealsDropdown");
-    const arrow = document.querySelector(".status-header:nth-child(6) .sort-arrow");
-    dropdown.classList.toggle("show");
-    arrow.classList.toggle("desc");
-    closeOtherDropdowns(dropdown);
+    toggleDropdown("contextDropdown", 5);
 }
 
 function filterByIdeals(ideal) {
     filterTable(ideal === "all" ? "" : ideal, ".filter-ideals");
-    toggleIdealsDropdown();
+    toggleDropdown("idealsDropdown", 6);
+}
+
+function toggleDropdown(dropdownId, columnIndex) {
+    const dropdown = document.getElementById(dropdownId);
+    const arrow = document.querySelector(`.status-header:nth-child(${columnIndex}) .sort-arrow`);
+    
+    dropdown.classList.toggle("show");       // apre o chiude il menu
+    arrow.classList.toggle("desc");          // ruota la freccia
+    closeOtherDropdowns(dropdown);           // chiude gli altri
 }
 
 function closeOtherDropdowns(currentDropdown) {
