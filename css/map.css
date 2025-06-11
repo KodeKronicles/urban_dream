@@ -273,11 +273,21 @@ thead tr {
 /* ------------------------------------------------------------------ */
 /*  HIDDEN INFO                                                       */
 /* ------------------------------------------------------------------ */
+
 .hidden-info {
   display: none;
   padding: 2vw;
   background: #fff;
   color: #d02d00;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(-5px);
+}
+
+.hidden-info.show {
+  display: table-row !important;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .hidden-info .row {
