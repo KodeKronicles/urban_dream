@@ -426,6 +426,14 @@ thead tr {
     box-sizing: border-box;
   }
 
+  .hidden-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 5px;
+  margin: 0 auto;
+  }
+
   .hidden-info .row {
     display: flex;
     flex-wrap: nowrap;
@@ -559,5 +567,11 @@ thead tr {
   .table th, .table td {
     padding: 0.2rem;
     font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hidden-img {
+    max-width: 90vw;
   }
 }

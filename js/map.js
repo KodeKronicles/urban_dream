@@ -50,7 +50,7 @@ function insertTableRows(item, tableBody) {
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 details-left">
-                        <img class="film-image" src="${item.image2}" alt="${item.shortName} Image">
+                        <img class="hidden-img" src="${item.image2}" alt="${item.shortName} Image">
                     </div>
                     <div class="col-md-8 details-right">
                         <p>${item.mediumInfo || item.shortInfo}</p>
@@ -75,7 +75,6 @@ function toggleInfo(event, element) {
     event.stopPropagation();
     const mainRow = element.closest('tr');
     const infoRow = mainRow.nextElementSibling;
-    if (!infoRow || !infoRow.classList.contains('hidden-info')) return;
 
     if (infoRow.style.display === "none" || !infoRow.style.display) {
         infoRow.style.display = "table-row";
@@ -100,14 +99,8 @@ function filterTable(value, selector) {
     updateImage(hasMatch ? value : "default");
 }
 
-function checkBackButton() {
-    const selectedItems = document.querySelectorAll("tr.item[style='display: none;']");
-    backButtonContainer.classList.toggle("hidden", selectedItems.length === 0);
-}
-
 function updateImage(category) {
     const svgImage = document.querySelector('svg image');
-    if (!svgImage) return;
 
     const normalizedCategory = category?.toLowerCase().replace(/\s+/g, '-') || 'default';
     let imagePath = 'img/map/all.png';
@@ -202,6 +195,11 @@ function handleBackButton() {
     });
     checkBackButton();
     updateImage("default");
+}
+
+function checkBackButton() {
+    const selectedItems = document.querySelectorAll("tr.item[style='display: none;']");
+    backButtonContainer.classList.toggle("hidden", selectedItems.length === 0);
 }
 
 function setupImageMapClicks() {
