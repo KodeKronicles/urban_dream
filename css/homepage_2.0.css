@@ -424,7 +424,7 @@ INTERMEDIATE screens
         right: calc(50%);
         text-align: right;
         transform: translateX(-50px); */
-        left: calc(47% - clamp(48%, 48vw, 65%));
+        left: calc(47% - clamp(40%, 40vw, 65%));
         text-align: right;
         transform: translateX(0);        
     }
