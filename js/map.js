@@ -87,7 +87,20 @@ function toggleInfo(event, element) {
     }
 }
 
+function collapseAllInfoRows() {
+    document.querySelectorAll("tr.item.expanded").forEach(mainRow => {
+        mainRow.classList.remove("expanded");
+        const toggleBtn = mainRow.querySelector(".toggle-info");
+        if (toggleBtn) toggleBtn.textContent = "+";
+        const infoRow = mainRow.nextElementSibling;
+        if (infoRow && infoRow.classList.contains("hidden-info")) {
+            infoRow.style.display = "none";
+        }
+    });
+}
+
 function filterTable(value, selector) {
+    collapseAllInfoRows();
     let hasMatch = false;
     document.querySelectorAll("tbody tr.item").forEach(row => {
         const cell = row.querySelector(selector);
