@@ -12,13 +12,6 @@ body {
     font-weight: normal; /* Ensures the default weight is applied */
 }
 
-@font-face {
-    font-family: 'Futura Maxi CG Bold';
-    src: url('FUTURA.ttf') format('truetype'); /* Ensure the correct format */
-    font-weight: normal; /* Adjust if needed */
-    font-style: normal;
-}
-
 .text {
     color: black;
     font-size: 16px;
@@ -412,9 +405,9 @@ TIMELINE
 INTERMEDIATE screens
 *******************/
 
-@media (max-width: 1162px) and (min-width: 770px) {
+@media (max-width: 1220px) and (min-width: 770px) {
     .timeline-item {
-        width: clamp(48%, 48vw, 65%);
+        width: clamp(40%, 40vw, 65%);
         padding: 20px;
     }
     .timeline-item:nth-child(odd) {
@@ -499,7 +492,6 @@ MAP SECTION
 ***********/
 
 .map-section {
-    width: 100vw; 
     margin-left: calc(-50vw + 50%);
     background-color: white;
     padding: 50px 20px 0 20px;  /* Top and side padding only, no bottom padding */
@@ -543,6 +535,17 @@ MAP SECTION
 /*******************
 FOOTER
 ********************/
+.site-footer {
+    margin-top: 0;  /* Force no gap above the footer */
+    padding: 40px 0;
+    width: 100%;
+    background-color: white;
+    color: #d02d00;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 2px solid #d02d00;
+    font-size: 14px;
+} 
 
 footer {
     margin-top: 0;  /* Force no gap above the footer */
@@ -564,3 +567,4 @@ footer {
 .nav-link {
     margin-left: 1rem;
 }
+
