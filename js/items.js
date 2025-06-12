@@ -2,14 +2,15 @@ var items = []
 var narratives = []
 var narrativeItems = []
 var currentSelection = []
-var currentNarrative =""
-var currentValue=""
+var currentNarrative = ""
+var currentValue = ""
 var currentSort = ""
+var currentId = ""
 
 
 document.addEventListener("DOMContentLoaded", async function(event) {
 	console.log(" DO NOT PEEP o((>ω< ))o")
-	fetch('https://raw.githubusercontent.com/KodeKronicles/citylife/refs/heads/main/data.json')
+	fetch('https://raw.githubusercontent.com/KodeKronicles/urban_dream/refs/heads/main/data.json')
 	.then(response => response.json())
 	.then(data => {	
 		items = data.items
@@ -23,8 +24,9 @@ document.addEventListener("DOMContentLoaded", async function(event) {
 		)
 		urlHash = window.location.hash.substring(1).toLowerCase();
 
-		currentNarrative = narrativeObject[urlHash] || data.meta.startNarrative
+		currentNarrative = data.meta.startNarrative
 		currentValue = data.meta.startValue
+		currentId = parseInt(urlHash) || data.meta.startWith + 1
 		prepareNarratives()
 	})
 });
@@ -33,15 +35,15 @@ document.addEventListener("DOMContentLoaded", async function(event) {
 
 function prepareNarratives() {
 	currentSelection = items.filter(item => 
-		narrativeItems[narratives.indexOf(currentNarrative)].includes(item['@sort'])
+		narrativeItems[narratives.indexOf(currentNarrative)].includes(item['id'])
 	)
 	currentSelection.sort( (i,j) =>  
-		i['@sort'] < j['@sort'] ? -1 : 1 
+		i['id'] < j['id'] ? -1 : 1 
 	)
 	if (currentSelection.length==0) 
 		currentSelection = items	
 
-	var index  = currentSelection.findIndex( i => i['@sort'] == currentSort )
+	var index  = currentSelection.findIndex( i => i['id'] == currentId )
 	if (index == -1) index = 0
 	showInfo(index)
 }
@@ -49,14 +51,11 @@ function prepareNarratives() {
 function showInfo(index) {
 	var item = currentSelection[index]
 	currentSort = item['@sort']
-	inner("currentNarrative", currentNarrative);
-	//var image = byId("imageCardImage");
-	//var imgpath = item.image1;
-	//image.src = imgpath;
+	currentId = item['id']
+	inner("currentNarrative", "<a href='#'>" + currentNarrative + "</a>");
 	var imgdiv = byId("img1-div");
-	var imgpath = "url('"+item.image1+"')";
+	var imgpath = "url('"+item.image3+"')";
 	imgdiv.style.backgroundImage = imgpath;
-	//imgdiv.style.display = "block";
 	imgdiv.style.height = "100%";
 	imgdiv.style.width = "100%";
 	imgdiv.style.backgroundRepeat = "no-repeat";
@@ -103,20 +102,28 @@ function hideLongInfo() {
 }
 
 function createInfoTable(item) {
-	inner("tableName", "<h3>"+ item.shortName +"</h3>")
-	inner("tableTime", item.info.Date)
-	inner("tablePlace", item.info.Location)
-	inner("tableType", item.info.Type)
+	inner("tableName", "<h3>" + item.shortName + "</h3>");
 
-	var indices = narrativeItems
-		.map((list, index) => list.includes(item['@sort']) ? index : -1)
-		.filter(index => index !== -1);
+	const fields = [
+		{ id: "tableDate", key: "Date" },
+		{ id: "tableLocation", key: "Location" },
+		{ id: "tableStatus", key: "Status" },
+		{ id: "tableSpace", key: "Space" },
+		{ id: "tableTime", key: "Time" },
+		{ id: "tableContext", key: "Context" },
+		{ id: "tableIdeals", key: "Ideals" },
+		{ id: "tableReality", key: "Reality" },
+	];
 
-	var links = indices.map(index => 
-		`<a style="margin-bottom:10rem;" href="#" onclick="changeNarrative('${narratives[index]}', currentValue)">${narratives[index]}</a>`
-	).join(" | ");
+	fields.forEach(({ id, key }) => {
+		const value = item.info[key];
+		const html = `<a href="#" onclick="changeNarrative('${value}', currentValue)">${value}</a>`;
+		inner(id, html);
+	});
 
-	inner("tableLinks", links);
+	document.getElementById("currentNarrative").onclick = function () {
+	changeNarrative("Exhibition", currentValue);
+	};
 }
 
 function prepareNavigationButtons(index) {
@@ -138,11 +145,9 @@ function prepareNavigationButtons(index) {
 	buttons.forEach((button, i) => {
 		if (i < currentSelection.length) {
 			button.style.display = "inline-block";
-			// Reset all buttons to btn-danger
 			button.classList.remove('btn-outline-danger');
 			button.classList.add('btn-danger');
 			
-			// Set the button corresponding to the current index to btn-outline-danger
 			if (i === index) {
 				button.classList.remove('btn-danger');
 				button.classList.add('btn-outline-danger');
@@ -159,7 +164,6 @@ function changeNarrative(narrative,value) {
 		currentNarrative = narrative
 		currentValue = value
 		prepareNarratives()
-
 }
 
 function byId(id) {
