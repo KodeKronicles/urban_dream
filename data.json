@@ -1,7 +1,7 @@
 {
     "meta": {
         "startWith": 0,
-        "startNarrative": "Timeline",
+        "startNarrative": "Exhibition",
         "startValue": "Walking City",
         "narratives": [
             "Exhibition",
@@ -57,6 +57,7 @@
             "shortName": "Walking City",
             "image1": "img/b&w/1_walking_city.jpeg",
             "image2": "img/catalogue/1_walking_city.png",
+            "image3": "img/Walking city.gif",
             "copyright": "\u00a9 Archigram",
             "info": {
                 "Name": "Walking City",
@@ -82,6 +83,7 @@
             "shortName": "Continuous Monument",
             "image1": "img/b&w/2_continuousmonument.jpeg",
             "image2": "img/catalogue/2_continuousmonument.png",
+            "image3": "img/SUPERSTUDIO REVISITADO.jpg",
             "copyright": "\u00a9 Superstudio",
             "info": {
                 "Name": "Continuous Monument",
@@ -107,6 +109,7 @@
             "shortName": "Plan Voisin",
             "image1": "img/b&w/3_plan_voisin.png.jpeg",
             "image2": "img/catalogue/3_plan_voisin.png.webp",
+            "image3": "img/Corbusier.jpg",
             "copyright": "\u00a9 Le Corbusier",
             "info": {
                 "Name": "Plan Voisin",
@@ -131,6 +134,7 @@
             "shortName": "No-Stop City",
             "image1": "img/b&w/4_nostop.jpg.jpeg",
             "image2": "img/catalogue/4_nostop.jpg.jpeg",
+            "image3": "img/No-stop city.jpg",
             "copyright": "\u00a9 Archizoom",
             "info": {
                 "Name": "No-Stop City",
@@ -156,6 +160,7 @@
             "shortName": "The Freedom Ship",
             "image1": "img/b&w/5_freedom_ship.jpeg",
             "image2": "img/catalogue/5_freedom_ship.webp",
+            "image3": "img/freedom_ship.jpg",
             "copyright": "\u00a9 Freedom Ship International",
             "info": {
                 "Name": "Freedom Ship",
@@ -180,6 +185,7 @@
             "shortName": "Nakagin Capsule Tower",
             "image1": "img/b&w/6_NakaginCapsuleTower.jpeg",
             "image2": "img/catalogue/6_NakaginCapsuleTower.jpeg",
+            "image3": "img/Capsule tower.jpg",
             "copyright": "\u00a9 Kisho Kurokawa",
             "info": {
                 "Name": "Nakagin Capsule Tower",
@@ -204,6 +210,7 @@
             "shortName": "Kowloon Walled City",
             "image1": "img/b&w/7_Kowloon_walled_city.jpg",
             "image2": "img/catalogue/7_Kowloon_walled_city.jpg",
+            "image3": "img/Kowloon.jpg",
             "copyright": "\u00a9 Various",
             "info": {
                 "Name": "Kowloon Walled City",
@@ -228,6 +235,7 @@
             "shortName": "Torre David",
             "image1": "img/b&w/8_torre_david.jpg",
             "image2": "img/catalogue/8_torre_david.jpg",
+            "image3": "img/Torre de David.jpg",
             "copyright": "\u00a9 Urban-Think Tank",
             "info": {
                 "Name": "Torre David",
@@ -253,6 +261,7 @@
             "shortName": "Terraforming Mars",
             "image1": "img/b&w/9_terraforming_mars.jpg",
             "image2": "img/catalogue/9_terraforming_mars.jpg",
+            "image3": "img/Mars Terraforming.jpg",
             "copyright": "\u00a9 NASA",
             "info": {
                 "Name": "Terraforming Mars",
@@ -277,6 +286,7 @@
             "shortName": "Futuro House",
             "image1": "img/b&w/10_futuro_house.jpg.jpeg",
             "image2": "img/catalogue/10_futuro_house.jpg.webp",
+            "image3": "img/FuturoHouse.jpg",
             "copyright": "\u00a9 Matti Suuronen",
             "info": {
                 "Name": "Futuro House",
@@ -302,6 +312,7 @@
             "shortName": "LED News Ticker",
             "image1": "img/b&w/11_lednews.jpg",
             "image2": "img/catalogue/11_lednews.jpg",
+            "image3": "img/ticker.jpg",
             "copyright": "\u00a9 BBC",
             "info": {
                 "Name": "BBC's First LED News Ticker",
@@ -326,6 +337,7 @@
             "shortName": "Arcosanti",
             "image1": "img/b&w/12_arcosanti.jpg",
             "image2": "img/catalogue/12_arcosanti.jpg",
+            "image3": "img/Arcosanti.jpg",
             "copyright": "\u00a9 Paolo Soleri",
             "info": {
                 "Name": "Arcosanti",
@@ -351,6 +363,7 @@
             "shortName": "Wrapped Reichstag",
             "image1": "img/b&w/13_wrapped_reichstag.jpeg",
             "image2": "img/catalogue/13_wrapped_reichstag.png",
+            "image3": "img/Reichstag.jpg",
             "copyright": "\u00a9 Christo & Jeanne-Claude",
             "info": {
                 "Name": "Wrapped Reichstag",
@@ -376,6 +389,7 @@
             "shortName": "Building Cuts",
             "image1": "img/b&w/14_building_cuts.jpg",
             "image2": "img/catalogue/14_building_cuts.jpg",
+            "image3": "img/Behind the Wall.jpg",
             "copyright": "\u00a9 Gordon Matta-Clark",
             "info": {
                 "Name": "Building Cuts",
@@ -402,6 +416,7 @@
             "shortName": "Neon Installations",
             "image1": "img/b&w/15_neon.jpeg",
             "image2": "img/catalogue/15_neon.webp",
+            "image3": "img/neon.jpg",
             "copyright": "\u00a9 Dan Flavin",
             "info": {
                 "Name": "Neon Installations",
@@ -428,6 +443,7 @@
             "shortName": "Hyperloop Stations",
             "image1": "img/b&w/16_hyperloop_stations.jpeg",
             "image2": "img/catalogue/16_hyperloop_stations.png",
+            "image3": "img/HyperLoop.jpg",
             "copyright": "\u00a9 Various",
             "info": {
                 "Name": "Hyperloop Stations",
@@ -452,6 +468,7 @@
             "shortName": "AI-Designed Cities",
             "image1": "img/b&w/17_aidesignes_cities.jpg.jpeg",
             "image2": "img/catalogue/17_aidesignes_cities.jpg.webp",
+            "image3": "img/AI Zaha Hadid.jpg",
             "copyright": "\u00a9 Various",
             "info": {
                 "Name": "AI-Designed Cities",
@@ -477,6 +494,7 @@
             "shortName": "Oase No. 7",
             "image1": "img/b&w/18_Oase_No7.jpg",
             "image2": "img/catalogue/18_Oase_No7.jpg",
+            "image3": "img/catalogue/18_Oase_No7.jpg",
             "copyright": "\u00a9 Haus-Rucker-Co",
             "info": {
                 "Name": "Oase No. 7",
@@ -502,6 +520,7 @@
             "shortName": "Metaverse Urban",
             "image1": "img/b&w/19_metaverse_urbanism.jpg",
             "image2": "img/catalogue/19_metaverse_urbanism.jpg",
+            "image3": "img/AI city.jpeg",
             "copyright": "\u00a9 Meta",
             "info": {
                 "Name": "Metaverse Urban",
@@ -526,6 +545,7 @@
             "shortName": "The Line",
             "image1": "img/b&w/20_theline.jpeg",
             "image2": "img/catalogue/20_theline.jpeg",
+            "image3": "img/The Line.jpg",
             "copyright": "\u00a9 Saudi Arabia",
             "info": {
                 "Name": "The Line",
