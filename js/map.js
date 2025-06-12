@@ -144,18 +144,13 @@ function updateImage(category) {
         case 'dystopian': imagePath = 'img/map/dystopian.png'; break;
         case 'deconstructive': imagePath = 'img/map/deconstruction.png'; break;
         case 'innovative': imagePath = 'img/map/innovation.png'; break;
-        case 'radical-living': imagePath = 'img/map/radical.png'; break;
-        case 'artistic-intervention': imagePath = 'img/map/artistic.png'; break;
-        case 'tech-infrastructure': imagePath = 'img/map/tech.png'; break;
-        case 'urbanism': imagePath = 'img/map/urbanism.png'; break;
+        case 'radical': imagePath = 'img/map/radical.png'; break;
+        case 'artistic': imagePath = 'img/map/artistic.png'; break;
+        case 'technological': imagePath = 'img/map/tech.png'; break;
+        case 'urban': imagePath = 'img/map/urbanism.png'; break;
     }
 
-    svgImage.classList.add('fade-out');
-
-    setTimeout(() => {
-        svgImage.setAttribute('xlink:href', imagePath);
-        svgImage.classList.remove('fade-out');
-    }, 300);
+svgImage.setAttribute('xlink:href', imagePath);
 }
 
 function sortTable(columnIndex, element) {
