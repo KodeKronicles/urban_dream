@@ -2,7 +2,7 @@
    1. INIZIALIZZAZIONE - DOM Ready e JSON Fetch
 =============================================== */
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("data2.json")
+  fetch("data.json")
     .then(res => res.json())
     .then(data => {
       const items = data.items;
