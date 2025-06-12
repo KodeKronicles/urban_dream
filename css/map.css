@@ -585,3 +585,8 @@ thead tr {
     max-width: 90vw;
   }
 }
+
+
+html {
+  zoom: 1; /* forza lo scale 1:1 */
+}
