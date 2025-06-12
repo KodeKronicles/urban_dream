@@ -76,16 +76,23 @@ function toggleInfo(event, element) {
     const mainRow = element.closest('tr');
     const infoRow = mainRow.nextElementSibling;
 
-    if (infoRow.style.display === "none" || !infoRow.style.display) {
-        infoRow.style.display = "table-row";
+    if (!infoRow.classList.contains("show")) {
+        infoRow.style.display = "table-row"; // serve per il primo frame
+        requestAnimationFrame(() => {
+            infoRow.classList.add("show");
+        });
         mainRow.classList.add("expanded");
         element.textContent = "×";
     } else {
-        infoRow.style.display = "none";
+        infoRow.classList.remove("show");
+        setTimeout(() => {
+            infoRow.style.display = "none";
+        }, 300); // matcha la durata della transizione
         mainRow.classList.remove("expanded");
         element.textContent = "+";
     }
 }
+
 
 function collapseAllInfoRows() {
     document.querySelectorAll("tr.item.expanded").forEach(mainRow => {
@@ -114,11 +121,10 @@ function filterTable(value, selector) {
 
 function updateImage(category) {
     const svgImage = document.querySelector('svg image');
-
     const normalizedCategory = category?.toLowerCase().replace(/\s+/g, '-') || 'default';
     let imagePath = 'img/map/all.png';
 
-    switch(normalizedCategory) {
+    switch (normalizedCategory) {
         case 'unbuilt': imagePath = 'img/map/unbuilt.png'; break;
         case 'built': imagePath = 'img/map/built.png'; break;
         case 'utopian': imagePath = 'img/map/utopian.png'; break;
@@ -131,7 +137,12 @@ function updateImage(category) {
         case 'urbanism': imagePath = 'img/map/urbanism.png'; break;
     }
 
-    svgImage.setAttribute('xlink:href', imagePath);
+    svgImage.classList.add('fade-out');
+
+    setTimeout(() => {
+        svgImage.setAttribute('xlink:href', imagePath);
+        svgImage.classList.remove('fade-out');
+    }, 300);
 }
 
 function sortTable(columnIndex, element) {
