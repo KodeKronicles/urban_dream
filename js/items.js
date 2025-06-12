@@ -54,7 +54,7 @@ function showInfo(index) {
 	currentId = item['id']
 	inner("currentNarrative", "<a href='#'>" + currentNarrative + "</a>");
 	var imgdiv = byId("img1-div");
-	var imgpath = "url('"+item.image3+"')";
+	var imgpath = "url('"+item.image1+"')";
 	imgdiv.style.backgroundImage = imgpath;
 	imgdiv.style.height = "100%";
 	imgdiv.style.width = "100%";
