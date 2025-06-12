@@ -56,8 +56,8 @@ img, svg {
   background: #fff;
   color: #d02d00;
   text-align: center;
-  padding: 2vw 0;
-  border-top: 1px solid #d02d00;
+  padding: 1rem 0;
+  border-top: 2px solid #d02d00;
   font-size: 0.875rem;
   margin-top: 40px;
 }

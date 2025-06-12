@@ -53,12 +53,12 @@
         <div class="row m-0">
             <div class="col-md-2 p-0">
                 <ul class="nav nav-pills flex-column" id="docTab" role="tablist">
-                    <li class="nav-item"><a class="nav-link active" id="overview-tab" data-bs-toggle="pill" href="#overview">OVERVIEW ></a></li>
-                    <li class="nav-item"><a class="nav-link" id="structure-tab" data-bs-toggle="pill" href="#structure">CONTENT STRUCTURE ></a></li>
-                    <li class="nav-item"><a class="nav-link" id="design-tab" data-bs-toggle="pill" href="#design">DESIGN ELEMENTS ></a></li>
-                    <li class="nav-item"><a class="nav-link" id="logo-tab" data-bs-toggle="pill" href="#logo">LOGO ></a></li>
+                    <li class="nav-item"><a class="nav-link active" id="overview-tab" data-bs-toggle="pill" href="#overview">OVERVIEW</a></li>
+<li class="nav-item"><a class="nav-link" id="structure-tab" data-bs-toggle="pill" href="#structure">STRUCTURE</a></li>
+<li class="nav-item"><a class="nav-link" id="design-tab" data-bs-toggle="pill" href="#design">DESIGN</a></li>
+<li class="nav-item"><a class="nav-link" id="logo-tab" data-bs-toggle="pill" href="#logo">LOGO</a></li>
+<li class="nav-item"><a class="nav-link" id="functionality-tab" data-bs-toggle="pill" href="#functionality">FUNCTIONALITY</a></li>
 
-                    <li class="nav-item"><a class="nav-link" id="functionality-tab" data-bs-toggle="pill" href="#functionality">FUNCTIONALITY ></a></li>
                 </ul>
             </div>
             
@@ -66,7 +66,7 @@
                 <div class="tab-content">
                     <div class="tab-pane fade show active" id="overview">
                         <div class="info-section">
-                            <h1>Project Overview</h1>
+                            <h1>Overview</h1>
         <p>Urban Dream is a digital exhibition that dives into some of the most radical, ambitious, and sometimes outright impossible architectural ideas. It is a space where unbuilt cities, speculative projects, and experimental urban concepts are brought together to show how architecture is not just about constructing buildings but about imagining new ways of living.</p>
         <p>The project was developed as part of the "Information Modeling and Web Technologies" course in the Master's Degree in Digital Humanities and Digital Knowledge at the University of Bologna, under the supervision of Professor Fabio Vitali. It is the result of a collaborative effort between Alisa Antonova, Elena Binotti, and Hubert Krzywonos, combining digital curation, interactive design, and historical research to create an accessible and engaging platform.</p>
         
@@ -100,7 +100,7 @@
                     </div>
                     <div class="tab-pane fade" id="structure">
                         <div class="info-section">
-                            <h1>Content Structure</h1>
+                            <h1>Structure</h1>
         <p>Urban Dream is designed as an interactive digital exhibition, structured to provide users with multiple entry points into the world of speculative and visionary architecture. Rather than a linear presentation, the website offers a dynamic and exploratory approach, allowing visitors to engage with projects based on their thematic, historical, and spatial significance. The content is carefully organized to balance accessibility with depth, ensuring that both casual visitors and more dedicated researchers can navigate the exhibition in a way that suits their interests.</p>
         
         <h2>Site Architecture and Navigation</h2>
@@ -130,7 +130,7 @@
                     </div>
                     <div class="tab-pane fade" id="design">
                         <div class="info-section">
-                            <h1>Design Elements</h1>
+                            <h1>Design</h1>
         <p>Urban Dream is built around a strong visual identity that makes the experience both aesthetically compelling and functionally intuitive. The project's design choices reinforce its core themes: radical urban visions, speculative architecture, and the intersection of history and the future. Every layout decision, typography selection, and color scheme contributes to a sense of immersion, creating a space where users can explore ideas beyond the physical limits of traditional exhibitions.</p>
         
         <h2>Design Philosophy</h2>
@@ -209,7 +209,7 @@ The visual identity of Urban Dream originated from a deliberately minimal design
 
                     <div class="tab-pane fade" id="logo">
                         <div class="info-section">
-                            <h1>The Logo</h1>
+                            <h1>Logo</h1>
         <h2>The Urban Dream Logo: A Human at the Center of the City</h2>
         <p>The Urban Dream logo is a bold, minimalist representation of the relationship between humans and the city. Its design can be seen as a stylized human figure, represented by the central opening, surrounded by concentric rings that symbolize the layered structure of an urban environment. This creates a strong visual metaphor: the city is not just a collection of buildings but a space shaped by human presence, movement, and interaction.</p>
         
@@ -294,31 +294,14 @@ The visual identity of Urban Dream originated from a deliberately minimal design
                 </div>
 
 
-    <footer>
-        <p>URBAN DREAM</p>
-        <p>© 2025</p>
-        <a href="https://github.com/KodeKronicles" target="_blank">
-            <img src="img/GHLogo.png" alt="GitHub" class="github-logo">
-        </a>
-    </footer>
-        
-    <script src="script.js"></script>
+          <footer class="site-footer">
+   <div>
+      <p>&copy; 2025. Urban Dream — The Architectures of Tomorrow. All rights reserved.</p>
+      <a href="https://github.com/KodeKronicles/urban_dream" target="_blank">
+         <i class="fab fa-github"></i>
+      </a>
+   </div>
+</footer>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var controller = new ScrollMagic.Controller();
-    
-            new ScrollMagic.Scene({
-                triggerElement: ".parallax-section",
-                triggerHook: 1, // Start the effect when the top of .parallax-section is at the top of the viewport
-                duration: "100%"
-            })
-            .setTween(gsap.from(".parallax-section", { opacity: 0, y: 100, duration: 1 }))
-            .addTo(controller);
-        });
-    </script>
-
-
-    
 </body>
 </html>

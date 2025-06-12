@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
    2. FETCH DATI E COSTRUZIONE TABELLA
 =============================================== */
 function fetchAndRenderData() {
-    fetch('data2.json')
+    fetch('data.json')
         .then(response => {
             if (!response.ok) throw new Error('Network response was not ok');
             return response.json();
@@ -70,29 +70,38 @@ function insertTableRows(item, tableBody) {
 
 /* ============================================
    3. FUNZIONI DI INTERAZIONE
-=============================================== */
-function toggleInfo(event, element) {
+=============================================== */function toggleInfo(event, element) {
     event.stopPropagation();
     const mainRow = element.closest('tr');
     const infoRow = mainRow.nextElementSibling;
+    const alreadyExpanded = mainRow.classList.contains("expanded");
 
-    if (!infoRow.classList.contains("show")) {
-        infoRow.style.display = "table-row"; // serve per il primo frame
-        requestAnimationFrame(() => {
-            infoRow.classList.add("show");
-        });
-        mainRow.classList.add("expanded");
-        element.textContent = "×";
-    } else {
-        infoRow.classList.remove("show");
-        setTimeout(() => {
-            infoRow.style.display = "none";
-        }, 300); // matcha la durata della transizione
-        mainRow.classList.remove("expanded");
-        element.textContent = "+";
-    }
+    // Chiudi tutte le righe info attive PRIMA
+    document.querySelectorAll("tr.item.expanded").forEach(row => {
+        row.classList.remove("expanded");
+        const toggleBtn = row.querySelector(".toggle-info");
+        if (toggleBtn) toggleBtn.textContent = "+";
+        const next = row.nextElementSibling;
+        if (next && next.classList.contains("hidden-info")) {
+            next.classList.remove("show");
+            next.style.display = "none";
+        }
+    });
+
+    // Se clicchi su una già aperta, non riaprirla
+    if (alreadyExpanded) return;
+
+    // Altrimenti apri la nuova riga
+    infoRow.style.display = "table-row";
+    requestAnimationFrame(() => {
+        infoRow.classList.add("show");
+    });
+    mainRow.classList.add("expanded");
+    element.textContent = "×";
+
+    const offset = mainRow.getBoundingClientRect().top + window.scrollY - 100;
+    window.scrollTo({ top: offset, behavior: 'smooth' });
 }
-
 
 function collapseAllInfoRows() {
     document.querySelectorAll("tr.item.expanded").forEach(mainRow => {
@@ -101,10 +110,14 @@ function collapseAllInfoRows() {
         if (toggleBtn) toggleBtn.textContent = "+";
         const infoRow = mainRow.nextElementSibling;
         if (infoRow && infoRow.classList.contains("hidden-info")) {
-            infoRow.style.display = "none";
+            infoRow.classList.remove("show");
+            setTimeout(() => {
+                infoRow.style.display = "none";
+            }, 300);
         }
     });
 }
+
 
 function filterTable(value, selector) {
     collapseAllInfoRows();
