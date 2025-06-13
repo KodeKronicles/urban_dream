@@ -36,7 +36,7 @@ function insertTableRows(item, tableBody) {
         <td>${item.id}</td>
         <td class="filter-item">${item.shortName}</td>
         <td class="filter-year">${item.info.Date}</td>
-        <td class="filter-status">${item.info.Status}</td>
+        <td class="filter-reality">${item.info.Reality}</td>
         <td><span class="filter-context">${item.info.Context}</span></td>
         <td><span class="filter-ideals">${item.info.Ideals}</span></td>
         <td class="toggle-info" onclick="toggleInfo(event, this)">+</td>
@@ -256,9 +256,10 @@ function setupTableClicks() {
 =============================================== */
 
 function filterByStatus(status) {
-    filterTable(status === "all" ? "" : status, ".filter-status");
+    filterTable(status === "all" ? "" : status, ".filter-reality");
     toggleDropdown("statusDropdown", 4);
 }
+
 
 function filterByContext(context) {
     filterTable(context === "all" ? "" : context, ".filter-context");
