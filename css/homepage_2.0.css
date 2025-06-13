@@ -490,6 +490,10 @@ MOBILE
 /***********
 MAP SECTION
 ***********/
+.btn-container {
+    text-align: center;
+    padding-bottom: 40px;
+}
 
 .map-section {
     margin-left: calc(-50vw + 50%);
