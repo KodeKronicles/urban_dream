@@ -243,7 +243,7 @@ function setupTableClicks() {
         }
         if (e.target.classList.contains('filter-year') || 
             e.target.classList.contains('filter-context') ||
-            e.target.classList.contains('filter-status') ||
+            e.target.classList.contains('filter-reality') ||
             e.target.classList.contains('filter-ideals')) {
             const selector = `.${e.target.classList[0]}`;
             filterTable(e.target.textContent, selector);

@@ -328,7 +328,7 @@ thead tr {
 /* ------------------------------------------------------------------ */
 /*  VARI UTILI                                                        */
 /* ------------------------------------------------------------------ */
-.clickable, .filter-year, .filter-context, .filter-status, .filter-ideals, .toggle-info {
+.clickable, .filter-year, .filter-context, .filter-reality, .filter-ideals, .toggle-info {
   cursor: pointer;
   text-decoration: none;
   transition: 0.3s ease;
