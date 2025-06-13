@@ -89,18 +89,19 @@
                   <th onclick="sortTable(0, this)">ID<span class="sort-arrow">↑</span></th>
                   <th onclick="sortTable(1, this)">Title<span class="sort-arrow">↑</span></th>
                   <th onclick="sortTable(2, this)">Year<span class="sort-arrow">↑</span></th>
-                  <th class="status-header">
+                <th class="status-header">
                      <div class="custom-dropdown">
                         <div class="dropdown-trigger" onclick="toggleDropdown('statusDropdown', 4)">
-                           Status
+                           Reality
                            <span class="sort-arrow">↑</span>
                         </div>
                         <div id="statusDropdown" class="dropdown-menu">
-                           <div class="menu-item" onclick="filterByStatus('unbuilt')">Unbuilt</div>
-                           <div class="menu-item" onclick="filterByStatus('built')">Built</div>
+                           <div class="menu-item" onclick="filterByStatus('in theory')">In Theory</div>
+                           <div class="menu-item" onclick="filterByStatus('in practice')">In Practice</div>
                         </div>
                      </div>
                   </th>
+
                 <th class="status-header">
                 <div class="custom-dropdown">
                     <div class="dropdown-trigger" onclick="toggleDropdown('contextDropdown', 5)">
