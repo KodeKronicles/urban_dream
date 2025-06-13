@@ -57,6 +57,8 @@
 <li class="nav-item"><a class="nav-link" id="structure-tab" data-bs-toggle="pill" href="#structure">STRUCTURE</a></li>
 <li class="nav-item"><a class="nav-link" id="design-tab" data-bs-toggle="pill" href="#design">DESIGN</a></li>
 <li class="nav-item"><a class="nav-link" id="logo-tab" data-bs-toggle="pill" href="#logo">LOGO</a></li>
+<li class="nav-item"><a class="nav-link" id="logo-tab" data-bs-toggle="pill" href="#themap">MAP</a></li>
+<li class="nav-item"><a class="nav-link" id="logo-tab" data-bs-toggle="pill" href="#exhibition">EXHIBITION</a></li>
 <li class="nav-item"><a class="nav-link" id="functionality-tab" data-bs-toggle="pill" href="#functionality">FUNCTIONALITY</a></li>
 
                 </ul>
@@ -66,7 +68,7 @@
                 <div class="tab-content">
                     <div class="tab-pane fade show active" id="overview">
                         <div class="info-section">
-                            <h1>Overview</h1>
+                            <h1>The Overview</h1>
         <p>Urban Dream is a digital exhibition that dives into some of the most radical, ambitious, and sometimes outright impossible architectural ideas. It is a space where unbuilt cities, speculative projects, and experimental urban concepts are brought together to show how architecture is not just about constructing buildings but about imagining new ways of living.</p>
         <p>The project was developed as part of the "Information Modeling and Web Technologies" course in the Master's Degree in Digital Humanities and Digital Knowledge at the University of Bologna, under the supervision of Professor Fabio Vitali. It is the result of a collaborative effort between Alisa Antonova, Elena Binotti, and Hubert Krzywonos, combining digital curation, interactive design, and historical research to create an accessible and engaging platform.</p>
         
@@ -100,7 +102,7 @@
                     </div>
                     <div class="tab-pane fade" id="structure">
                         <div class="info-section">
-                            <h1>Structure</h1>
+                            <h1>The Structure</h1>
         <p>Urban Dream is designed as an interactive digital exhibition, structured to provide users with multiple entry points into the world of speculative and visionary architecture. Rather than a linear presentation, the website offers a dynamic and exploratory approach, allowing visitors to engage with projects based on their thematic, historical, and spatial significance. The content is carefully organized to balance accessibility with depth, ensuring that both casual visitors and more dedicated researchers can navigate the exhibition in a way that suits their interests.</p>
         
         <h2>Site Architecture and Navigation</h2>
@@ -130,7 +132,7 @@
                     </div>
                     <div class="tab-pane fade" id="design">
                         <div class="info-section">
-                            <h1>Design</h1>
+                            <h1>The Design</h1>
         <p>Urban Dream is built around a strong visual identity that makes the experience both aesthetically compelling and functionally intuitive. The project's design choices reinforce its core themes: radical urban visions, speculative architecture, and the intersection of history and the future. Every layout decision, typography selection, and color scheme contributes to a sense of immersion, creating a space where users can explore ideas beyond the physical limits of traditional exhibitions.</p>
         
         <h2>Design Philosophy</h2>
@@ -141,8 +143,8 @@ The visual identity of Urban Dream originated from a deliberately minimal design
         <h2>Typography and Colors</h2>
         <p>One of the first things that stands out in Urban Dream is its bold use of typography. The project primarily employs two fonts:</p>
         <ul>
-            <li><strong>Inter</strong> → A clean, modern sans-serif font that ensures readability across different screen sizes. It is used for the majority of the text, including body content and navigation.</li>
-            <li><strong>Futura Maxi CG Bold</strong> → A geometric and striking typeface used for headings and key elements. It reflects the project's futuristic and architectural aesthetic while adding a distinctive character to titles.</li>
+            <li>Inter → A clean, modern sans-serif font that ensures readability across different screen sizes. It is used for the majority of the text, including body content and navigation.</li>
+            <li>Futura Maxi CG Bold → A geometric and striking typeface used for headings and key elements. It reflects the project's futuristic and architectural aesthetic while adding a distinctive character to titles.</li>
         </ul>
         <p>The color palette is intentionally limited but powerful. The dominant shade is deep red (#D02E02), used for headings, buttons, and interactive elements. Red has been chosen for its association with boldness, revolution, and avant-garde ideas, all of which are central to the themes of the exhibition. To balance this intensity, the background remains predominantly white, while black and gray tones provide contrast and enhance readability.</p>
         <p>The hover effects subtly reinforce the visual style without overwhelming the user. Instead of drastic color shifts, elements become slightly darker or gain a subtle underline when interacted with, maintaining consistency across the design.</p>
@@ -209,7 +211,7 @@ The visual identity of Urban Dream originated from a deliberately minimal design
 
                     <div class="tab-pane fade" id="logo">
                         <div class="info-section">
-                            <h1>Logo</h1>
+                            <h1>The Logo</h1>
         <h2>The Urban Dream Logo: A Human at the Center of the City</h2>
         <p>The Urban Dream logo is a bold, minimalist representation of the relationship between humans and the city. Its design can be seen as a stylized human figure, represented by the central opening, surrounded by concentric rings that symbolize the layered structure of an urban environment. This creates a strong visual metaphor: the city is not just a collection of buildings but a space shaped by human presence, movement, and interaction.</p>
         
@@ -230,10 +232,103 @@ The visual identity of Urban Dream originated from a deliberately minimal design
                         </div>
                     </div>
 
+<div class="tab-pane fade" id="themap">
+  <div class="info-section">
+    <h1>The Map</h1>
+    <h2>A Symbolic Cartography of Possibilities</h2>
+    <p>The map featured in Urban Dream is not a traditional geographic tool. Instead, it acts as a conceptual landscape — a symbolic cartography where visionary architecture is mapped not by coordinates, but by ideas. Circles placed over a stylized image represent unbuilt cities, radical blueprints, and unrealized futures. This visual layer offers immediate access to a curated selection of architectural experiments, emphasizing their spatial imagination rather than their physical location.</p>
+    <p>Each clickable point is more than just a marker: it’s a narrative entry. By interacting with the map, users uncover projects that challenge norms, reimagine the built environment, and reflect utopian or dystopian aspirations. The aesthetic is minimalist but charged with conceptual meaning — a flat surface that evokes depth through interaction.</p>
+
+    <h2>Interactive Navigation and Discovery</h2>
+    <p>The interactive behavior is central to how the map functions. Users are encouraged to click directly on the circles embedded in the SVG layout. Each point is tied to a unique identifier, which retrieves additional information connected to that specific project. This allows seamless movement between spatial exploration and metadata consultation — bridging visual engagement with structured knowledge.</p>
+    <p>While the map offers an abstract overview, it’s tightly connected to a more systematic component placed just below: a dynamic, responsive table that serves as the second core of the page.</p>
+
+    <h2>The Table as Catalogue</h2>
+    <p>This table was created out of a personal and curatorial need: the desire to maintain a transparent, coherent catalogue of all the architectural projects presented within Urban Dream. Its primary function is to expose the metadata of each project in a format that is easy to read, compare, and analyze.</p>
+    <p>Each row represents a project, while the columns reflect key conceptual and factual elements:</p>
+    <ul>
+      <li>ID</li>
+      <li>Title</li>
+      <li>Year of conception or design</li>
+      <li>Status (Built / Unbuilt)</li>
+      <li>Context (Urban, Artistic, Radical, Technological)</li>
+      <li>Ideal (Utopian, Dystopian, Innovative, Deconstructive)</li>
+    </ul>
+    <p>The design ensures that the table is not static: every column header can be clicked to sort the dataset in ascending or descending order, allowing for chronological, alphabetical, or thematic reading.</p>
+    <p>But beyond simple sorting, the most distinctive feature lies in the embedded dropdown menus that let users filter the dataset interactively. For example, one can isolate all radical projects, or all unbuilt utopian proposals. The filters are combinable, making it possible to perform complex queries like:</p>
+    <ul>
+      <li>“Show only built projects with deconstructive ideals”</li>
+      <li>“Compare artistic vs technological proposals from the same year”</li>
+      <li>“Identify which utopian concepts remain unrealized”</li>
+    </ul>
+    <p>Each change updates the table live, without reloading the page — creating a fluid, exploratory experience.</p>
+
+    <h2>From Metadata to Meaning</h2>
+    <p>The table isn’t just a digital spreadsheet — it’s a curatorial tool that transforms raw data into insight. It invites users to read across projects, trace patterns, recognize clusters, or notice absences. It allows for comparative readings: by ideal, by status, by historical moment.</p>
+    <p>This form of metadata navigation reflects a deeper ambition of Urban Dream: to explore how unbuilt visions can still shape critical discourse. By exposing their structure, intentions, and typologies, the table contributes to a new kind of architectural archive — one that treats speculation as material worthy of analysis.</p>
+
+    <h2>A Tool for Critical Curation</h2>
+    <p>Together, the map and the table construct a two-layered system: the visual and the analytical. One appeals to intuitive exploration, the other to structured reflection. This dual interface allows the audience to approach the project in multiple ways — spatially, conceptually, historically.</p>
+    <p>For curators, designers, or researchers, this tool can support deeper study. For general audiences, it offers a guided but flexible route through a landscape of ideas. In both cases, it enables a form of critical curation, where filters and interactions become methods to rethink how we catalogue what has not yet — or never — been built.</p>
+
+    <h2>The Architecture of the Unbuilt</h2>
+    <p>Urban Dream doesn’t aim to recover the past or predict the future. Instead, it carves out a space for what exists in between: imagined cities, radical thoughts, incomplete manifestos. This map and catalogue are part of that gesture — giving form to the unbuilt, and turning metadata into meaning.</p>
+  </div>
+</div>
+
+<div class="tab-pane fade" id="exhibition">
+  <div class="info-section">
+    <h1>The Exhibition</h1>
+
+    <h2>General Layout</h2>
+    <p>The Exhibition page is one of the core components of the Urban Dream platform. It is structured to guide users through a curated selection of architectural projects using a thematic and highly visual approach. The page is organized into three main sections:</p>
+    <ul>
+      <li>Introductory header — Positioned at the top, it combines a representative image with a descriptive overview of the exhibition.</li>
+      <li>Tab selector — A navigation bar with five conceptual categories: Space, Time, Reality, Context, and Ideals.</li>
+      <li>Dynamic content per tab — Each tab contains a dedicated section with textual explanation, interactive filters, and a responsive grid of project cards.</li>
+    </ul>
+
+    <h2>Mechanism of Thematic Categories</h2>
+    <p>The tab system uses Bootstrap’s <code>tab-pane</code> architecture with <code>data-bs-toggle="pill"</code>. Each thematic section is marked by a unique ID (e.g., <code>#space</code>, <code>#time</code>, etc.) and is activated client-side, meaning navigation occurs without reloading the page. This system allows users to engage with architectural content through semantic categories instead of chronological or geographic filters.</p>
+
+    <h2>Filtering System</h2>
+    <p>Each tab section includes a local filtering system, implemented with button groups (<code>.btn-group</code>). Each button carries a <code>data-filter</code> attribute corresponding to CSS classes assigned to project cards. When a button is clicked, a JavaScript function in <code>exhibition.js</code> toggles the visibility of cards based on matching filters. This behavior is instantaneous and does not require page reloads.</p>
+    <p>Example filters include:</p>
+    <ul>
+      <li>SPACE: <code>global</code>, <code>europe</code>, <code>asia</code>, <code>america</code></li>
+      <li>TIME: <code>before-2000</code>, <code>after-2000</code></li>
+      <li>REALITY: <code>in-theory</code>, <code>in-practice</code></li>
+      <li>CONTEXT: <code>urban</code>, <code>artistic</code>, <code>radical</code>, <code>technological</code></li>
+      <li>IDEALS: <code>utopian</code>, <code>dystopian</code>, <code>innovative</code>, <code>deconstructive</code></li>
+    </ul>
+
+    <h2>The Project Cards</h2>
+    <p>Each architectural project is displayed as a card that includes:</p>
+    <ul>
+      <li>A preview image</li>
+      <li>A title (optionally linked to a detailed entry)</li>
+      <li>Filterable metadata implemented as CSS classes</li>
+    </ul>
+    <p>The cards are wrapped within a responsive grid (<code>.card-wrapper</code>) that adapts based on device width:</p>
+    <ul>
+      <li>3 columns on desktop</li>
+      <li>2 columns on tablet</li>
+      <li>1 column on mobile</li>
+    </ul>
+    <p>Hover effects and high contrast ensure readability and enhance interaction.</p>
+
+    <h2>Responsiveness and Accessibility</h2>
+    <p>The exhibition stylesheet defines responsive behavior through media queries. The layout adapts fluidly to different devices, with filter buttons wrapping on small screens and font sizes scaling appropriately. Colors (deep red, white, black) are selected to guarantee accessibility and maintain visual consistency.</p>
+
+    <h2>Customizability</h2>
+    <p>The entire system is designed to be extensible. New thematic tabs can be added by replicating the <code>tab-pane</code> structure and assigning corresponding filters and IDs. New cards can be introduced into any section, provided they include appropriate <code>class</code> attributes for filtering. The current JavaScript allows single-filter logic, but it can be expanded to support multiple simultaneous filters in future versions.</p>
+  </div>
+</div>
+
 
                     <div class="tab-pane fade" id="functionality">
                         <div class="info-section">
-                            <h1>Functionality</h1>
+                            <h1>The Functionality</h1>
         <p>Urban Dream is more than just a static exhibition—it is designed as an interactive and dynamic digital space where users can explore, filter, and engage with speculative architecture. The project's functionality is built using JavaScript, which plays a key role in making the experience seamless, responsive, and engaging. The website's interactive components, such as the filtering system, sorting mechanisms, toggle displays, and map navigation, all contribute to a user experience that is fluid and adaptable.</p>
         
         <h2>Filtering and Sorting System</h2>
