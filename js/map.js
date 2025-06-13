@@ -70,7 +70,8 @@ function insertTableRows(item, tableBody) {
 
 /* ============================================
    3. FUNZIONI DI INTERAZIONE
-=============================================== */function toggleInfo(event, element) {
+=============================================== */
+function toggleInfo(event, element) {
     event.stopPropagation();
     const mainRow = element.closest('tr');
     const infoRow = mainRow.nextElementSibling;
@@ -203,19 +204,7 @@ function sortTable(columnIndex, element) {
             tbody.appendChild(hiddenRowData.element);
         }
     });
-
-    expandedRows.forEach(id => {
-        const row = document.getElementById(id);
-        if (row) {
-            row.classList.add("expanded");
-            const toggleBtn = row.querySelector(".toggle-info");
-            if (toggleBtn) toggleBtn.textContent = "×";
-            const infoRow = row.nextElementSibling;
-            if (infoRow && infoRow.classList.contains("hidden-info")) {
-                infoRow.style.display = "table-row";
-            }
-        }
-    });
+   
 }
 
 /* ============================================
