@@ -105,8 +105,9 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       /* ============================================
-         6. FILTRO INIZIALE E CAMBIO AUTOMATICO TAB
+        6. FILTRO INIZIALE E CAMBIO AUTOMATICO TAB
       =============================================== */
+
       const defaultFilters = {
         space: "global",
         time: "before-2000",
@@ -115,21 +116,22 @@ document.addEventListener("DOMContentLoaded", () => {
         ideals: "utopian"
       };
 
+      function applyDefaultFilter(tabId) {
+        const filter = defaultFilters[tabId];
+        if (filter) applyFilter(tabId, filter, false);
+      }
+
       window.addEventListener("load", () => {
         const activeTabPane = document.querySelector(".tab-pane.active.show");
-        if (activeTabPane) {
-          const tabId = activeTabPane.id;
-          const filter = defaultFilters[tabId];
-          if (filter) applyFilter(tabId, filter, false);
-        }
+        if (activeTabPane) applyDefaultFilter(activeTabPane.id);
       });
 
       document.querySelectorAll('#myTab button[data-bs-toggle="pill"]').forEach(button => {
         button.addEventListener("shown.bs.tab", function () {
           const tabId = this.getAttribute("data-bs-target")?.replace("#", "");
-          const filter = defaultFilters[tabId];
-          if (filter) applyFilter(tabId, filter, false);
+          if (tabId) applyDefaultFilter(tabId);
         });
       });
+
     });
 });
